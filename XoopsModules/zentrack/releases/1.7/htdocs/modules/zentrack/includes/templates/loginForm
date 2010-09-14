@@ -1,0 +1,53 @@
+<? 
+  if( !ZT_DEFINED ) { die("Illegal Access"); }
+  $hotkeys->loadSection('login');
+  $GLOBALS['zt_hotkeys'] = $hotkeys;
+?>
+
+<blockquote><br>
+
+  <p>&nbsp;</p>
+
+  <p><span class="big"><b><?=tr("Welcome!  Please Log On.")?></b></span></p>
+
+  <p><b><i style="color:red"><?tr("Login and passphrase are case sensitive!")?></i></b></p>
+
+  <form method="post" name="loginForm" action="<?=$SCRIPT_NAME?><?=($id)? "?id=".$zen->checkNum($id) : ""?>">
+  
+  <input type='hidden' name='TODO' value='Log On'>
+
+  <input type=text name=username value='<?=strip_tags($zentrackUsername)?>' width=20 maxlength=20 title="<?=$hotkeys->tt("Login Name")?>">&nbsp;<?=$hotkeys->ll("Login Name")?>
+
+  <br>
+
+  <input type="password" name="passphrase" width=20 maxlength=20 title="<?=$hotkeys->tt("Password")?>">&nbsp;<?=$hotkeys->ll("Password")?>
+
+  <p>
+  
+  <? if( $zen && $zen->settingOn('allow_pwd_save') ) { ?>
+  <p>
+  <input type='checkbox' name='save_my_password' value='1'> <?=$hotkeys->ll("In the future, log me in automatically (using a cookie)")?>
+  </p>
+  <?  }  ?>
+
+  <? renderDivButton( $hotkeys->find('Log On'), 'window.document.loginForm.submit()' ); ?>
+
+  </form>
+
+</blockquote>
+
+<script type='text/javascript'>
+  var f = function() {
+    var f = window.document.loginForm;
+    if( f.username.value == "" ) {
+      f.username.focus();
+    }
+    else if( f.passphrase.value == "" ) {
+      f.passphrase.focus();
+    }
+    else {
+      f.TODO.focus();
+    }  
+  }
+  addToOnload( f );
+</script>

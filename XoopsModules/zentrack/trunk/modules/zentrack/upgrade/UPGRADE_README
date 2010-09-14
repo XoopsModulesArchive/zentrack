@@ -1,0 +1,13 @@
+Please read the following information carefully and decide on how to proceed from here.
+
+A number of upgrade files have been supplied (see 'older' directory for pre-2.6 upgrades) to help move from  one version to the next. You will need to run each one sequentially (sorry, I haven't had time to create combined upgrade files) from your particular install to the most recent.
+
+ZentrackXoopsUsers:
+New module users are NO LONGER AUTO CREATED. I have modified the standard Zentrack User Admin screen to integrate with Xoops. This means that when you add users to Xoops they will get an error message saying they do not have permission to access the module until such times as you add them to ZentrackXoops.
+
+ADMINISTRATOR:
+ZentrackXoops now integrates with Xoops Admin System and also complies with the Xoops Groups permission mechanism. By default Webmasters have the required privileges to access the Module admin screens, however you can create your own group and give it the necessary permissions to access the admin screens.
+
+
+Cheers
+Duncs

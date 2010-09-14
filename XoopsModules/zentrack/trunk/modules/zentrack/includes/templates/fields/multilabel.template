@@ -1,0 +1,3 @@
+<select name='{field_name}' size='1' style='visibility: hidden;' {field_multiple} >
+{list:field_choices:"<option value='"+index+"'"+selected+">"+value+"</option>"}
+</select><div id='{field_name}LabelText'>{field_label}</div>

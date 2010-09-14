@@ -1,0 +1,115 @@
+
+{zen:system_name} Email Gateway Help
+
+-----------------
+Overview
+-----------------
+
+The {zen:system_name} email gateway provides an interface for users to perform actions on request tickets via email.
+
+NOTE:  MOST USERS ARE SIMPLY LOOKING TO SEND AN EMAIL AND CREATE A TICKET.  This is not the interface for that purpose.  A seperate email address may be available from your administrator for this purpose.  This interface is designed to provide administrative capabilities (at the cost of additional complexity)
+
+Actions are performed by replying to any email post with the following text format in the subject:
+
+#nnnn: action
+
+where nnnn is the ticket to modify, and action is the task to peform. (see below for more info on actions)
+
+Any comments about the action may be entered in the body of the document.
+
+Occasionally special options and instructions may be included in the body of the email, this is usually done by using an @property: tag at the beginning of the line.  See the specific actions for details.
+
+When replying, you do not need to worry about removing any quoted text in your reply(i.e. the line begins with 1 or more > marks), these will be stripped out.  
+
+You may, optionally, recieve forms via email to complete certain actions by sending an email with #nnnn: template action in the subject, see Templates below for more info.
+
+Additionally, if you are filling out a form mailed to you by the system, you also do not need to be concerned if your form becomes quoted (with > marks) when you hit reply... you may fill it out and submit it with the > marks in place.
+
+-----------------
+Unsubscribe
+-----------------
+
+To remove yourself from a notify list for a specific ticket, you need only to reply with the text:
+
+#nnnn: remove
+
+In the subject, where nnnn is the ticket number.
+
+-----------------
+Permissions
+-----------------
+
+In general, you must either be on the notify list for a ticket, or be a registered user in the system to have any access priviledges (other than this help menu).
+
+Additionally, the email gateway has its own access priviledges set by the systems administrator, and these must be met for any action attempted via the gateway.
+
+Note that there are special requirements for each action you might wish to take.  Some actions will require that you are the owner, others may require that the ticket be unowned.  Several are dependant on the ticket having an open or pending status.
+
+At any time that you are unsure what options are available to you, use the #nnnn: options subject to retrieve a listing of actions you can perform.
+
+-----------------
+Actions
+-----------------
+
+NOTE: Not all of the actions listed here will be available for every ticket at any given time.  To get a list of optons applicable for a specific ticket, see the options action below.
+
+The nnnn listed in the actions below represents the ticket id number.
+
+#nnnn: options - returns a list of options which are applicable for the given ticket, at the current time.
+
+#nnnn: accept - This will place a ticket under your ownership, assuming you have priviledges to complete this action.
+
+#nnnn: add - This will add the email address that the ticket was recieved from to the notify list.  Alternately you may supply a list of addresses to add as follows:
+  @recipients: email@one.com, email@two.com, etc...
+
+#nnnn: approve - This will provide a final ok, indicating that all actions for this ticket have been completed, and it is done.
+
+#nnnn: assign xxxx - This will assign the ticket to a new user.  The user must be registered in the ticket system, and you must have supervisor rights to assign tickets to a user.  xxxx is the user's id, or their email address
+
+#nnnn: close - This will mark the ticket as completed, and send appropriate notifications.  This will also  prepare the ticket for special conditions as approval and testing
+
+#nnnn: email xxxx - This will send a summary of the ticket to address xxxx.  Comments entered in the body of the email will be forwarded to the recipients. If several addresses are to be entered, this may be provided in the body instead of the subject by using:
+  @recipients: email@one.com, email@two.com, etc...
+
+#nnnn: estimate nnnn - This will enter an estimate for the length of time required to complete this ticket. nnnn is the number of hours.
+
+#nnnn: log - This will enter a message in the log file.  The following optional parameters can be provided in the body of the message:
+  @hours: nnnn
+     (where nnn is the number of hours worked)
+  @activity: xxxx
+     (where xxxx can be any valid 
+     activity type: action, labor, note, question, solution)
+
+#nnnn: move xxxx - this will move the ticket to the new bin xxxx.  xxxx can be the name of the bin or the bins id.  You may also provide the bin in the body using:
+  @bin: xxxx
+     (where xxxx is the bin id or name)
+
+#nnnn: remove - This will remove the address that the ticket was recieved from from the notify list.
+
+#nnnn: status - This is an alias for view (see below)
+
+#nnnn: test - Using this option will set the ticket as having been successfully tested.  The hours worked may be entered using the following format:
+  @hours: nnnn
+     (where nnn is the number of hours)
+
+#nnnn: view - Returns a summary of the ticket.
+
+Special options:
+
+help - Returns this page
+
+-----------------
+Templates
+-----------------
+
+Templates are forms which are emailed to you, that you may fill out and return to complete actions.  These allow for more complex actions to take place via email.
+
+A template is returned by placing "template xxxx" in the subject, where xxxx is the name of the template.  Alternately, you may place "template" in the subject, and "@template: xxxx" in the body, if this is more convenient.
+
+template create - Returns a form to create a new ticket, assuming this is allowed by your system settings.
+
+template help - Returns the help selection.  This may be done by just typing help in the subject as well.
+
+template log - Returns a form to enter a log entry.  This will include all of the possible properties that can be returned.
+
+template move - Returns a form to move a ticket to a new bin, and a list of possible bins.

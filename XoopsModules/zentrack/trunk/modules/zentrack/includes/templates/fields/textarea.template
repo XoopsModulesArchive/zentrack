@@ -1,0 +1,2 @@
+
+<textarea cols="{field_cols}" rows="{field_rows}" name="{field_name}" {field_events}>{field_value}</textarea>

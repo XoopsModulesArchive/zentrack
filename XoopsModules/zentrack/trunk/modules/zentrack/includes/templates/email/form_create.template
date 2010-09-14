@@ -1,0 +1,47 @@
+
+To create a new ticket, simply reply to this email, and fill in the following information:
+
+@Parent:
+(*optional: provide a parent ticket's id or title on the line above, partial titles will work as long as they are unique.*)
+
+@Title:
+(*your title may include anything except a colon (:) and brackets, enter it on the line above*)
+
+@Type:
+(*place an x in the appropriate box*)
+{foreach:types:"[] "+value+"\n"}
+
+@System:
+(*place an x in the appropriate box*)
+{foreach:systems:"[] "+value+"\n"}
+
+@Owner:
+(*optional: you may place a user id, full name, or me(meaning yourself) on the line above*)
+
+@Bin:
+(*place an x in the appropriate box*)
+{foreach:bins:"[] "+value+"\n"}
+
+@Priority:
+(*place an x in the appropriate box*)
+{foreach:priorities:"[] "+value+"\n"}
+
+@Start Date: {default_start_date}
+(*optional: the date can be any standard format, you may also use +1 week, +2 months, etc*)
+
+@Deadline: {default_deadline}
+(*optional: the date can be any standard format, you may also use +1 week, +2 months, etc*)
+
+@Testing Required: [{default_test}]
+(*place an x in the box if testing will be needed before closing*)
+
+@Approval Required: [{default_approve}]
+(*place an x in the box if approval will be required before closing*)
+
+@Details:
+(*enter a description of the ticket here*)
+
+
+
+
+@end details

@@ -1,0 +1,6 @@
+
+    <input type="text" name="{field_name}" size="{field_cols}" maxlength="{field_max}"
+    value="{field_value}" {field_events}>
+    &nbsp;<input type='button' class='searchbox' value=' ... ' 
+    onClick='popupWindowScrolls("{search_url}","popupHelper",375,500)'>
+  {search_text}

@@ -1,0 +1,101 @@
+*********************************************************
+** THESE INSTRUCTIONS ARE NOT FOR ZENTRACKXOOPS MODULE **
+** THEY ARE FOR THE ORIGINAL ZENTRACK SYSTEM FROM      **
+** http://www.zentrack.net                             **
+*********************************************************
+
+  Welcome to zenTrack!
+
+  The following document describes everything you need to know to get a basic
+  ZT install up and running.  Please read it line by line!  If you encounter
+  problems then try the HELP doc in this same directory.
+ 
+  --------------
+  REQUIREMENTS
+  --------------
+    Basic Install
+       PHP >= 4.3 or PHP >= 5.0
+       Mysql, Oracle, Postgres, or SqlServer
+       A Basic knowledge of PHP is helpful
+    Email Gateway (optional)
+       Some knowledge of SMTP and ability to set up email account
+       Basic PHP knowledge required
+       PHP 4.3 or greater
+       PEAR Library Mail_Mime  (possibly imap support installed)
+    Report Images (optional)
+       Intermediate PHP knowledge needed if GD is not compiled
+       PHP 4.3 or greater
+       GD >= 2.0
+       Freetype support enabled
+
+  --------------
+  PHP.INI CONFIGURATION NOTES (for newbies)
+  --------------
+    - Make sure you turn off notices in your php.ini file: 
+        error_reporting = E_ALL & ~E_NOTICE
+    - Insure that you have set session.save_path to a valid directory
+    - Ensure that short_open_tag = On
+
+  --------------
+  QUICK AND DIRTY INSTALL INSTRUCTIONS:
+  --------------
+     0. CVS Installs:
+        - If you did not check this out from CVS (or don't know what that means)
+          then skip this step!
+        - You should have checked out a release tag and not the HEAD code.  If
+          you don't know that that means, then download an install!
+        - run ./setup_from_cvs (or setup_from_cvs.cmd)
+          from the root directory
+
+     1. Place files where you want them:
+        - place www/ in the htdocs/wwwroot directory tree
+        - place includes/ in a non-httpd directory (for maximum security)
+     
+     2. Configure the header file:
+        - open www/header.php
+        - look through this file carefully
+        - you must configure $libDir, $rootWWW, and $rootUrl or nothing will work
+        - you must set the database settings correctly
+
+     3. Build the database:
+        - create a database instance and a user with access to this DB
+        - locate install/build_[yourdb].sql and run it in your SQL interface
+          this will create your db tables
+        - locate install/seed_[yourdb].sql and run it in your SQL interface
+          this will populate your db
+	
+     4. Check permissions:
+        - windows users can probably skip this step
+        - chmod 777 includes/attachments (if using attachments)
+        - chmod 777 includes/logs
+        - chmod 777 includes/cache
+        - chmod 777 includes/translations
+        - for maximum security, you can chown/chgrp the files to the web process
+          such as 'apache' and then chmod to 770 instead.
+     
+     5. Log in and configure:
+        - log in as Administrator/Administrator and configure the system to taste.
+        - a guest account exists as Guest/Guest, you may wish to delete/edit permissions
+        - a user account exists as User/User, you may wish to delete/edit permissions
+
+     6. If you intend to use the email gateway, please read the online docs
+        which give a thorough overview of how to set this up:
+        you must have some admin and smtp knowledge to do this (it is not trivial!)
+        (you can find the docs through the home page:  http://www.zentrack.net)
+ 
+     7. Speak Up!
+        Let us know you are using zentrack, meet other users, 
+        and send us feedback on your install: http://www.zentrack.net
+
+     8. Consider a donation to the Open Source Community:
+        The developers spend a lot of their lives developing this product.  If you like it,
+        give something back to the open source community!  I would recomment starting here:
+        http://sourceforge.net/project/project_donations.php?group_id=22724
+
+  --------------
+  TROUBLESHOOTING
+  --------------
+
+    Check the HELP file in this directory for more info about common errors
+    and for obtaining support.
+

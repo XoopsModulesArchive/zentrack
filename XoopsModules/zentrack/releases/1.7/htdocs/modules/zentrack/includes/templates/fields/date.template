@@ -1,0 +1,18 @@
+<input type="text" id="{field_name}" name="{field_name}" maxlength="{field_max}" value="{field_value}">
+<!--button id="{field_name}_trigger">...</button-->
+<img src="{rooturl}/jscalendar/img.gif" id="{field_name}_trigger"
+     style="cursor: pointer; border: 1px solid red;"
+     title="Date selector"
+     onmouseover="this.style.background='red';"
+     onmouseout="this.style.background=''" />
+  {field_events}
+    
+<script type="text/javascript">
+    Calendar.setup(
+      {
+        inputField  : "{field_name}",         // ID of the input field
+        ifFormat    : "%d/%m/%Y",    // the date format
+        button      : "{field_name}_trigger"       // ID of the button
+      }
+    );
+</script>

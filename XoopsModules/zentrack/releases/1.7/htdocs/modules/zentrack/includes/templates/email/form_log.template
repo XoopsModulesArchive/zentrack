@@ -1,0 +1,17 @@
+
+Select reply, and fill out the form below to create a log entry for the ticket.  Make sure that "#nnnn: log" appears in the subject, where nnnn is the id of the ticket.
+
+@Activity:
+(*required: check the appropriate box*)
+{foreach:activities:"[] "+value+"\n"}
+
+@Hours:
+(*optional: enter the number of hours on the line above*)
+
+@Details:
+(*enter the log notes here*)
+
+
+
+
+@end details
