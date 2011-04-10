@@ -1,2 +1,0 @@
-
-{list:field_choices:"<input type='radio' name='"+field_name+"' value='"+index+"' "+checked+">&nbsp;"+value+"&nbsp;"}

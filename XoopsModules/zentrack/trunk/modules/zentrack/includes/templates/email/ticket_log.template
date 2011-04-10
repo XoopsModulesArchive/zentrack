@@ -1,2 +1,0 @@
-{date}--{action}--{user_initials}{if:hours:"--"+hours}
-{log}

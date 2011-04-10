@@ -1,4 +1,0 @@
-
-<select name='{field_name}' size='{field_rows}' {field_multiple} {field_events}>
-{list:field_choices:"<option value='"+index+"'"+selected+">"+value+"</option>"}
-</select>

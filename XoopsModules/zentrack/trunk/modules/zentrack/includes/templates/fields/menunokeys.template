@@ -1,3 +1,0 @@
-<select name='{field_name}' size='{field_rows}' {field_multiple} {field_events}>
-{foreach:field_choices:"<option "+selected+">"+value+"</option>"}
-</select>
