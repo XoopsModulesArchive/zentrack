@@ -144,7 +144,7 @@ create table zentrack_access (
   lvl int(2) default null,
   notes varchar(25) default null,
   primary key (access_id)
-) type=myisam;
+) ENGINE=MyISAM;
 
 #
 # table structure for table 'zentrack_attachments'
@@ -159,7 +159,7 @@ create table zentrack_attachments (
   filetype varchar(250) default null,
   description varchar(100) default null,
   primary key (attachment_id)
-) type=myisam;
+) ENGINE=MyISAM;
 
 #
 # table structure for table 'zentrack_bins'
@@ -171,7 +171,7 @@ create table zentrack_bins (
   priority int(4) default null,
   active int(1) default '1',
   primary key (bid)
-) type=myisam;
+) ENGINE=MyISAM;
 
 #
 # table structure for table 'zentrack_logs'
@@ -187,7 +187,7 @@ create table zentrack_logs (
   hours decimal(10,2) default null,
   entry text,
   primary key (lid)
-) type=myisam;
+) ENGINE=MyISAM;
 
 #
 # table structure for table 'zentrack_preferences'
@@ -198,7 +198,7 @@ create table zentrack_preferences (
   prefname varchar(25),
   prefval  varchar(50),
   index (user_id)
-) type=myisam;
+) ENGINE=MyISAM;
 
 #
 # table structure for table 'zentrack_priorities'
@@ -210,7 +210,7 @@ create table zentrack_priorities (
   priority int(4) default null,
   active int(1) default null,
   primary key (pid)
-) type=myisam;
+) ENGINE=MyISAM;
 
 #
 # table structure for table 'zentrack_settings'
@@ -222,7 +222,7 @@ create table zentrack_settings (
   value varchar(100) default null,
   description varchar(200) default null,
   primary key (setting_id)
-) type=myisam;
+) ENGINE=MyISAM;
 
 #
 # table structure for table 'zentrack_systems'
@@ -234,7 +234,7 @@ create table zentrack_systems (
   priority int(4) default null,
   active int(1) default null,
   primary key (sid)
-) type=myisam;
+) ENGINE=MyISAM;
 
 #
 # table structure for table 'zentrack_tasks'
@@ -246,7 +246,7 @@ create table zentrack_tasks (
   priority int(4) default null,
   active int(1) default null,
   primary key (task_id)
-) type=myisam;
+) ENGINE=MyISAM;
 
 #
 # table structure for table 'zentrack_tickets'
@@ -274,7 +274,7 @@ create table zentrack_tickets (
   start_date int(12) default null,
   wkd_hours decimal(10,2) default '0.00',
   primary key (id)
-) type=myisam;
+) ENGINE=MyISAM;
 
 #
 # table structure for table 'zentrack_types'
@@ -286,7 +286,7 @@ create table zentrack_types (
   priority int(4) default null,
   active int(1) default null,
   primary key (type_id)
-) type=myisam;
+) ENGINE=MyISAM;
 
 #
 # table structure for table 'zentrack_users'
@@ -305,7 +305,7 @@ create table zentrack_users (
   homebin int(12) default null,
   active int(1) default '1',
   primary key (user_id)
-) type=myisam;
+) ENGINE=MyISAM;
 
 # 
 # table structure for table 'zentrack_reports' 
