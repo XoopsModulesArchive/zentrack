@@ -22,56 +22,56 @@
 * Debug on or off
 */
 if( !defined( 'XMLS_DEBUG' ) ) {
-	define( 'XMLS_DEBUG', FALSE );
+	define('XMLS_DEBUG', FALSE );
 }
 
 /**
 * Default prefix key
 */
 if( !defined( 'XMLS_PREFIX' ) ) {
-	define( 'XMLS_PREFIX', '%%P' );
+	define('XMLS_PREFIX', '%%P' );
 }
 
 /**
 * Maximum length allowed for object prefix
 */
 if( !defined( 'XMLS_PREFIX_MAXLEN' ) ) {
-	define( 'XMLS_PREFIX_MAXLEN', 10 );
+	define('XMLS_PREFIX_MAXLEN', 10 );
 }
 
 /**
 * Execute SQL inline as it is generated
 */
 if( !defined( 'XMLS_EXECUTE_INLINE' ) ) {
-	define( 'XMLS_EXECUTE_INLINE', FALSE );
+	define('XMLS_EXECUTE_INLINE', FALSE );
 }
 
 /**
 * Continue SQL Execution if an error occurs?
 */
 if( !defined( 'XMLS_CONTINUE_ON_ERROR' ) ) {
-	define( 'XMLS_CONTINUE_ON_ERROR', FALSE );
+	define('XMLS_CONTINUE_ON_ERROR', FALSE );
 }
 
 /**
 * Current Schema Version
 */
 if( !defined( 'XMLS_SCHEMA_VERSION' ) ) {
-	define( 'XMLS_SCHEMA_VERSION', '0.2' );
+	define('XMLS_SCHEMA_VERSION', '0.2' );
 }
 
 /**
 * Default Schema Version.  Used for Schemas without an explicit version set.
 */
 if( !defined( 'XMLS_DEFAULT_SCHEMA_VERSION' ) ) {
-	define( 'XMLS_DEFAULT_SCHEMA_VERSION', '0.1' );
+	define('XMLS_DEFAULT_SCHEMA_VERSION', '0.1' );
 }
 
 /**
 * Default Schema Version.  Used for Schemas without an explicit version set.
 */
 if( !defined( 'XMLS_DEFAULT_UPGRADE_METHOD' ) ) {
-	define( 'XMLS_DEFAULT_UPGRADE_METHOD', 'ALTER' );
+	define('XMLS_DEFAULT_UPGRADE_METHOD', 'ALTER' );
 }
 
 /**

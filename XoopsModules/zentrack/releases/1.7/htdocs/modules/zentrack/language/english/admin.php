@@ -1,4 +1,4 @@
 <?php
 
-//define("_ZT_VAR", "VAR");
+//define("_ZT_VAR","VAR");
 ?>
