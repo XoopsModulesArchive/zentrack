@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 
 <table width="600" align="center" cellpadding="2" cellspacing="2">
    <tr>  
@@ -8,7 +8,7 @@
    </tr>  
    <tr>
      <td valign="top">
-<?
+         <?php
 //echo $ie;
 if ($overview=="company") {
   $parms = array(array($title, ">", "t"),array($title, "<", "u"));
@@ -45,7 +45,7 @@ $sort = $title." asc";
    </tr>  
    <tr>
      <td valign="top">
-<?
+         <?php
 if ($overview=="company") {
   $parms = array(array($title, ">", "u"),array($title, "<", "v"));
 } else {
@@ -80,7 +80,7 @@ $sort = $title." asc";
    </tr>  
    <tr>
      <td valign="top">
-<?
+         <?php
 if ($overview=="company") {
   $parms = array(array($title, ">", "v"),array($title, "<", "w"));
 } else {

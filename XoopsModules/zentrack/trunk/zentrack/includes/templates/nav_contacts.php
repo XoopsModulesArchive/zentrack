@@ -1,4 +1,4 @@
-<?  if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php  if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 <tr>
   <td class='leftNavTitle' height='25' valign='middle'><?=tr("Contacts")?></td>
 </tr>
@@ -20,7 +20,7 @@
 <tr>
   <td class='leftNavCell' height='25%' valign='top'>
     <div class='recentHistory'><?=tr("Recent Companies")?></div>
-    <?
+      <?php
       $history =& $zen->getHistoryManager();
       $list = $history->getList('company');
       if( count($list) ) {
@@ -34,7 +34,7 @@
     ?>
     <P>
     <div class='recentHistory'><?=tr("Recent Employees")?></div>
-    <?
+      <?php
       $history =& $zen->getHistoryManager();
       $list = $history->getList('employee');
       if( count($list) ) {
@@ -65,7 +65,7 @@
 <tr>
   <td class='leftNavCell' height='100%' valign='top'>
     <div class='recentHistory'><?=tr("Recent Agreements")?></div>
-    <?
+      <?php
       $history =& $zen->getHistoryManager();
       $list = $history->getList('agreement');
       if( count($list) ) {

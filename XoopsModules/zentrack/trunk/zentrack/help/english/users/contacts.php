@@ -1,4 +1,4 @@
-<?
+<?php
   $b = dirname(__FILE__);
   include("$b/user_header.php");
 ?>
@@ -32,7 +32,7 @@
 </tr>
 </table>
 
-<? 
+<?php
   renderNavbar('users', $usersTOC);
   include("$libDir/footer.php"); 
 ?>

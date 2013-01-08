@@ -1,7 +1,7 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 
 <table width="100%" cellspacing='1' class='formtable'>
-<?
+    <?php
 if( $overview == 'company' ) {
   include("$templateDir/listContactsHeading.php");
 }
@@ -37,7 +37,7 @@ else {
          <?=$letter?>
        </td>
       </tr>
-    <?
+      <?php
     if( is_array($tickets) ) {
       $link  = "$rootUrl/contact.php";
       $td_ttl = "title='".tr("Click here to view the Contact")."'";

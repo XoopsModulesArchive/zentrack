@@ -1,4 +1,4 @@
-<?
+<?php
 if( !ZT_DEFINED ) { die("Illegal Access"); }
 
   // generate some text to display based on whether this
@@ -11,7 +11,7 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
 <script>
 function updateFlds() {
    user_array = new Array();
-<?
+    <?php
            foreach($zen->getXoopsUsers(1) as $v) {
            $k = $v["uid"];
            print "user_array['$k'] = [\"$v[uname]\", \"$v[email]\"];\n";
@@ -47,7 +47,7 @@ function updateFlds() {
 </script>
 
 <form name="useraddform" method="post" action="<?=$rootUrl?>/admin/<?=$url?>UserSubmit.php">
-<? if( $td ) { print "<input type='hidden' name='user_id' value='".strip_tags($user_id)."'>\n"; } ?>
+<?php if( $td ) { print "<input type='hidden' name='user_id' value='".strip_tags($user_id)."'>\n"; } ?>
   
 <table width="640" align="left" cellpadding="2" cellspacing="2" bgcolor="<?=$zen->getSetting("color_background")?>">
 <tr>
@@ -55,7 +55,7 @@ function updateFlds() {
   <?=$blurb?>
   </td>
 </tr>
-<?
+    <?php
 if ($TODO <> 'EDIT') {
 ?>
 
@@ -70,7 +70,7 @@ if ($TODO <> 'EDIT') {
   </td>
   <td class="bars">
     <select name="xuid" onchange="updateFlds()">
-      <?
+        <?php
          print "<option $check value='0'>-Select-</option>\n";
          foreach($zen->getXoopsUsers(1) as $v) {
            $k = $v["uid"];
@@ -81,7 +81,7 @@ if ($TODO <> 'EDIT') {
     </select>
   </td>
 </tr>
-<?
+<?php
 }
 ?>
 
@@ -169,7 +169,7 @@ if ($TODO <> 'EDIT') {
   </td>
   <td class="bars">
     <select name="homebin">
-      <?
+        <?php
        if( is_array($zen->bins) ) {
          print "<option $check value='all'>-All-</option>\n";
          foreach($zen->getBins(1) as $v) {

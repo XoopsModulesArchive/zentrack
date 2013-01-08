@@ -1,4 +1,4 @@
-<?
+<?php
   
   $action = "print";
   include("action_header.php");
@@ -36,7 +36,7 @@
     <b><?=$id?> - <?=$ticket["title"]?>
   </td>
 </tr>
-<? if( is_array($parent) ) { ?>
+<?php if( is_array($parent) ) { ?>
 <tr>
   <td colspan=4 height=10>&nbsp;</td>
 </tr>
@@ -48,19 +48,19 @@
     <b><?=$parent["id"]?> - <?=$parent["title"]?>
   </td>
 </tr>	  
-<? } ?>
+<?php } ?>
   
 <tr>
   <td colspan=4 height=10>&nbsp;</td>
 </tr>
 <hr>  
-<? if( $ticketroj ) { ?>
+<?php if( $ticketroj ) { ?>
 
 <tr>
   <td colspan=4>
 	  <b><?php echo tr("TASKS FOR COMPLETION"); ?>:</b>
      <ul>
-<? if( is_array($ticket["children"]) ) { ?>     
+<?php if( is_array($ticket["children"]) ) { ?>
      <table width=400 cellpadding=2 cellspacing=0 border=1>
      <tr>
      <td>
@@ -79,7 +79,7 @@
      <b><?php echo tr("ATC"); ?></b>
      </td>
      </tr>
-     <?
+         <?php
        $total_etc = $total_wkd = 0;
        foreach($ticket["children"] as $a) {
 	  if( $zen->types["$a[type_id]"] == "Project" ) {
@@ -106,7 +106,7 @@
      <td ><b><?=$total_wkd?></b></td>
      </tr>
      </table>
-     <?
+     <?php
      
   } else {
 	 print tr("No Tasks Assigned to this Project");  
@@ -115,7 +115,7 @@
      </ul>
      </td>
      </tr>	  
-<? } ?>
+<?php } ?>
 <tr>
   <td  width=50>
     <b><?=tr("Status")?>:</b>
@@ -195,7 +195,7 @@
     <hr>
     <b><?php echo tr("DESCRIPTION"); ?></b>
     <ul>
-      <?
+        <?php
         $d = $ticket["description"];
         if (get_magic_quotes_runtime()) {
            $d = stripslashes($d);
@@ -213,7 +213,7 @@
 	<hr>
 	  <b><?php echo tr("RELATED TICKETS"); ?>:</b>
      <ul>
-<?
+         <?php
   if( $ticket["related"] ) {
      $rel = explode(",",$ticket["related"]);
      foreach($rel as $r) {
@@ -233,7 +233,7 @@
     <b><?php echo tr("Testing"); ?>:</b>
   </td>
   <td  colspan=3>
-    <?
+      <?php
       if( !$ticket["tested"] ) {
 	 print tr("Not Required");
       } else {
@@ -248,7 +248,7 @@
     <b><?php echo tr("Approval"); ?>:</b>
   </td>
   <td  colspan=3>
-  <?
+      <?php
     if( !$ticket["approved"] ) {
        print tr("Not Required");
     } else {
@@ -266,7 +266,7 @@
   <td colspan=4>
     <b><?php echo tr("LOG"); ?></b>
     <ul>
-<?
+        <?php
   $logs = $zen->get_logs($id);
   if( !is_array($logs) ) {
      print tr("No Log Entries");	  

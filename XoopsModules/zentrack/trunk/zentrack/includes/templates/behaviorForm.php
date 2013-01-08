@@ -1,4 +1,4 @@
-<?
+<?php
 if( !ZT_DEFINED ) { die("Illegal Access"); }
 
   // generate some text to display based on whether this
@@ -9,7 +9,7 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
   $url = ($td)? "edit" : "add";
 ?>
 <form method="post" action="<?=$rootUrl?>/admin/<?=$url?>BehaviorSubmit.php">
-<? if( $td ) { print "<input type='hidden' name='behavior_id' value='".strip_tags($behavior_id)."'>\n"; } ?>
+<?php if( $td ) { print "<input type='hidden' name='behavior_id' value='".strip_tags($behavior_id)."'>\n"; } ?>
   
 <table width="640" align="left" cellpadding="2" cellspacing="2" bgcolor="<?=$zen->getSetting("color_background")?>">
 <tr>
@@ -34,7 +34,7 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
   <td class="bars">
     <?=tr("Active")?>
   </td>
-    <?
+    <?php
          $t = "\t<td class='bars'>";
          $te = "</td>\n";
          $sel = !$td || $behavior['is_enabled']? ' checked' : '';
@@ -47,7 +47,7 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
   <td class="bars">
     <?=tr("Data Group")?>*
   </td>
-    <?
+    <?php
        $t = "\t<td class='bars'>";
        $te = "</td>\n";
        $groups=$zen->getDataGroups(0);
@@ -73,7 +73,7 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
   <td class="bars">
     <?=tr("Field to change")?>*
   </td>
-    <?
+    <?php
          $t = "\t<td class='bars'>";
          $te = "</td>\n";
          print "$t<select name='NewFieldName'>\n";
@@ -90,7 +90,7 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
     <?=tr("Field is enabled")?>
   </td>
   <td class='bars'>
-  <?
+      <?php
          $sel = !$td || $behavior['field_enabled']? ' checked' : '';
          print "<input type='checkbox' value='1' name='NewFieldEnabled'$sel>\n";
     ?>
@@ -102,7 +102,7 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
   <td class="bars">
     <?=tr("Match Type")?>*
   </td>
-    <?
+    <?php
          $t = "\t<td class='bars'>";
          $te = "</td>\n";
          print "$t<select name='NewMatchAll'>\n";

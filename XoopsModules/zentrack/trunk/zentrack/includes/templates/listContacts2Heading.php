@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); }
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); }
   if(!isset($cssStyle) ) { $cssStyle = 'subTitle'; }
 ?>
  <tr>
@@ -19,9 +19,9 @@
 		<td valign="middle" title="<?=tr("The telephone of the contact")?>" class="<?=$cssStyle?>">
 		  <?=tr("Telephone Nr.")?>
 		</td>
-    <? if( isset($show_list_options) && $show_list_options ) { ?>
+    <?php if( isset($show_list_options) && $show_list_options ) { ?>
 		<td valign="middle" class="<?=$cssStyle?>" width='50'>
 		  <?=tr("Options")?>
 		</td>
-    <? } ?>
+    <?php } ?>
  </tr>

@@ -1,8 +1,9 @@
-<? /* -*- Mode: C; c-basic-indent: 3; indent-tabs-mode: nil -*- ex: set tabstop=3 expandtab: */ 
+<?php
+/* -*- Mode: C; c-basic-indent: 3; indent-tabs-mode: nil -*- ex: set tabstop=3 expandtab: */
 if( !ZT_DEFINED ) { die("Illegal Access"); }
 
 
-include_once("$libDir/zenDate.class");  
+include_once("$libDir/zenDate.class.php");
   
 class zen extends zenDate {
  

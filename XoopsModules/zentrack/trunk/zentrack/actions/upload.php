@@ -1,5 +1,4 @@
-<?{
-  
+<?php {
   /*
   **  UPLOAD ATTACHMENT
   **  

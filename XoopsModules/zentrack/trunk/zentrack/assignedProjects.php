@@ -1,4 +1,4 @@
-<?
+<?php
   /*
   **  PROJECTS LIST PAGE
   **  

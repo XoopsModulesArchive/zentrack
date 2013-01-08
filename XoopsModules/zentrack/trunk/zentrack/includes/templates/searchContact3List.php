@@ -1,4 +1,4 @@
-<?  
+<?php
 if( !ZT_DEFINED ) { die("Illegal Access"); }
 
 if( is_array($tickets) && count($tickets) ) {
@@ -33,7 +33,7 @@ if( is_array($tickets) && count($tickets) ) {
 </td>
 
 </tr>
-<?      
+<?php
 $link  = "$rootUrl/agreement.php";
    	$td_ttl = "title='".tr("Click here to view the Contact")."'";
    
@@ -70,7 +70,7 @@ $link  = "$rootUrl/agreement.php";
    <?=$zen->showDate($contact["dtime"])?>
    </td>
    </tr>       
-   <?
+   <?php
    } 
    unset($contact);  
 ?>
@@ -79,7 +79,7 @@ $link  = "$rootUrl/agreement.php";
        <td colspan="9" class="titleCell">
           <input type="submit" class="smallSubmit" value="<?=tr("Modify Search")?>">
           <input type="hidden" name="search_text" value="<?=strip_tags($search_text)?>">
-          <?
+           <?php
            foreach($search_fields as $k=>$v) {
                print "<input type='hidden' name='search_params[$k]' value='".strip_tags($v)."'>\n";
            }
@@ -88,7 +88,7 @@ $link  = "$rootUrl/agreement.php";
      </form>
    </tr>
   </table>
-<?  
+<?php
   
 }
 ?>

@@ -1,4 +1,4 @@
-<?
+<?php
   if( !ZT_DEFINED ) { die("Illegal access"); }
 
   /**
@@ -98,12 +98,12 @@ if( is_array($tickets) && count($tickets) ) {
 ?>
 <script type='text/javascript'>
 function resortListPage( sortName ) {
-<? if( strpos($view, 'search')===0 ) { ?>
+<?php if( strpos($view, 'search')===0 ) { ?>
   document.searchModifyForm.newsort.value = sortName;
   document.searchModifyForm.TODO.value = 'SEARCH';
   document.searchModifyForm.submit();
   return false;
-<? } else { ?>
+<?php } else { ?>
   var s = window.location.href;
   if( s.indexOf('newsort=') > 0 ) {
     s = s.replace(/newsort=[^&]+/, "newsort="+sortName);
@@ -112,11 +112,11 @@ function resortListPage( sortName ) {
     s += s.indexOf('?') > 0? '&newsort='+sortName : '?newsort='+sortName;
   }
   window.location = s;
-<? } ?>
+<?php } ?>
 }
 </script>
 <table width="100%" class='formTable' cellspacing='1' cellpadding='2'>
-<?
+<?php
 $atc_text = $atc > 1? tr("Tickets ?-? of ?",array($t_from,$t_to,$atc)) : "";  
 if( $view == 'search_list' ) {
   print "<tr><td colspan='$cols' class='subTitle' align='center'>".tr("Search Results");
@@ -136,7 +136,7 @@ else {
 }
 ?>
    <tr>
-<?
+       <?php
   // print some table headings
   $custom_field_list = array(); //store these for later
   foreach($fields as $f=>$field) {
@@ -162,7 +162,7 @@ else {
       <td width="40" height="25" valign="middle" title="<?=tr("Percent completed")?>" class='headerCell'>
         <?=tr("%")?>
       </td>
-    <?    
+    <?php
   }
   
   // close the row
@@ -304,7 +304,7 @@ else {
 <!--- BEGIN Paging --->
 <tr>
    <td  align="right" valign='bottom' colspan='<?=$cols?>' class='subTitle'>
-     <?
+       <?php
        $links = $zen->get_links("all", "off", $atc);
        for ($y = 0; $y < count($links); $y++) {
           echo $links[$y] . "&nbsp;&nbsp;";
@@ -314,7 +314,7 @@ else {
 </tr>
 <!--- END Paging --->
 
-<?
+<?php
    }
 
 
@@ -328,7 +328,7 @@ else {
           <input type='hidden' name='TODO' value=''>
           <input type='hidden' name='newsort' value=''>
           <input type="hidden" name="search_text" value="<?=$zen->ffv($search_text)?>">
-          <?
+           <?php
           if( is_array($search_params) ) {
            foreach($search_params as $k=>$v) {
              if( is_array($v) ) {
@@ -355,7 +355,7 @@ else {
      <form method="post" action="exportSearch.php" style="display: inline; margin: 0px;">
           <input type="submit" class="smallSubmit" value="<?=tr("Export Results")?>">
           <input type="hidden" name="search_text" value="<?=$zen->ffv($search_text)?>">
-          <?
+         <?php
           if( is_array($search_params) ) {
            foreach($search_params as $k=>$v) {
              if( is_array($v) ) {
@@ -386,7 +386,7 @@ else {
        </form>
      </td>
    </tr>
-<?
+   <?php
    }
 
    print "</table>\n";

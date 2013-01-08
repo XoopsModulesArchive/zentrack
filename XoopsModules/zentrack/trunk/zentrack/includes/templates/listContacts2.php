@@ -1,4 +1,4 @@
-<?
+<?php
 ///////////////////////////////////////////
 // RENDER A PERSON CONTACT
 ///////////////////////////////////////////
@@ -34,7 +34,7 @@
   <td width="20%" valign="middle" <?=$td_ttl?>>
     <?=$t['telephone']? $zen->ffv($t["telephone"]) : '&nbsp;'?>
   </td>
-  <? if( $show_list_options ) { ?>
+  <?php if( $show_list_options ) { ?>
       <td class='bars small' width='50'>
        <a class='pinIcon' href='<?=$rootUrl?>/actions/contact_edit.php?pid=<?=$pid?>'
           title='<?=tr("Edit Employee")?>'><img src='<?=$imageUrl?>/16x16/pin_green.png'
@@ -44,5 +44,5 @@
           title='<?=tr("Delete Contact")?>'><img src='<?=$imageUrl?>/16x16/pin_red.png'
           width='16' height='16' border='0' alt='<?=tr("Delete Contact")?>'></a>
       </td>    
-  <? } ?>
+  <?php } ?>
 </tr>

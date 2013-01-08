@@ -1,4 +1,4 @@
-<?
+<?php
   /**
    ** APPLY FILTERS TO TICKET LISTS
    **

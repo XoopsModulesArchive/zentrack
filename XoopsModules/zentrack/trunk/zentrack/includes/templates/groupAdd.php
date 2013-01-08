@@ -1,4 +1,4 @@
-<?
+<?php
 if( !ZT_DEFINED ) { die("Illegal Access"); }
 
   // generate some text to display based on whether this
@@ -9,7 +9,7 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
   $url = ($td)? "edit" : "add";
 ?>
 <form method="post" action="<?=$rootUrl?>/admin/<?=$url?>GroupSubmit.php" name='groupAddForm'>
-<? if( $td ) { print "<input type='hidden' name='group_id' value='".$zen->ffv($group_id)."'>\n"; } ?>
+<?php if( $td ) { print "<input type='hidden' name='group_id' value='".$zen->ffv($group_id)."'>\n"; } ?>
   
 <table width="640" align="left" cellpadding="2" cellspacing="2" bgcolor="<?=$zen->getSetting("color_background")?>">
 <tr>
@@ -26,7 +26,7 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
   <td class="bars">
     <?=tr("Table Name")?>*
   </td>
-    <?
+    <?php
     $t = "\t<td class='bars'>";
     $te = "</td>\n";
     $tables=$zen->getDataGroupTablesArray();
@@ -73,7 +73,7 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
   </td>
   <td class='bars'>
     <input
-       <? 
+       <?php
        if( $group && $group['eval_type'] == 'File' ) { print "class='input'"; }
        else { print "class='inputDisabled' disabled='disabled'"; }
        ?>
@@ -92,7 +92,7 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
   </td>
   <td class="bars">
     <textarea name='NewEvalText' cols='50' rows='4'
-      <? 
+      <?php
        if( $group && $group['eval_type'] == 'Javascript' ) { print "class='input'"; }
        else { print "class='inputDisabled' disabled='disabled'"; }
       ?>><?=$zen->ffv($group['eval_text'])?></textarea>

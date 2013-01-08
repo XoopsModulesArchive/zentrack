@@ -1,10 +1,9 @@
-<?{
-  
+<?php {
   // zenTrack configuration settings
   // it's a good idea to keep a backup
   // of this file somewhere safe when upgrading!
 
-  /* DO NOT PUT ANYTHING, INCLUDING SPACES, OUTSIDE OF THE <? ?> marks */
+  /* DO NOT PUT ANYTHING, INCLUDING SPACES, OUTSIDE OF THE <?php ?> marks */
 
   
   /////////////////////////////////////////////////////////////////////////
@@ -95,7 +94,13 @@ $login_id = $_SESSION['xoopsUserId'];
   */
 
   //set this from 0=off, 1=errors, 2=warnings, 3=notices(all)
-  $Debug_Mode = 0;  
+  //$Debug_Mode = 0;
+
+//if ($xoopsUser->isAdmin()) {
+//    $Debug_Mode = 3;
+//} else {
+//    $Debug_Mode = 0;
+//}
 
   //set this to "on" prevents users from doing anything you don't
   //want them doing on a demo site

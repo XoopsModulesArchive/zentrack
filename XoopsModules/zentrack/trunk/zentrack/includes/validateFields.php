@@ -1,5 +1,4 @@
-<?{
-  
+<?php {
   /*
   ** Validates input fields for add/edit operations
   **

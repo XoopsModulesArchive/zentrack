@@ -1,4 +1,4 @@
-<?
+<?php
   include("../header.php");
   $table_width = '350';
   if( $set_types ) {
@@ -17,19 +17,19 @@
   $return_field = $zen->ffv($return_field);
 ?><html>
 <head>
-  <title><? echo tr("Search Projects"); ?></title>
+  <title><?php echo tr("Search Projects"); ?></title>
   <LINK HREF="<?=$rootUrl?>/styles.php" REL="STYLESHEET" TYPE="text/css">
   <script language="javascript" src="<?=$rootUrl?>/javascript.js"></script>
 </head>
 <body>
 
-<? if( !isset($dosearch) || !is_array($search_param) ) { ?>
+<?php if( !isset($dosearch) || !is_array($search_param) ) { ?>
 <form method='post' action='<?=$rootUrl?>/helpers/projectSearchbox.php'>
 <input type='hidden' name='return_form' value='<?=$zen->ffv($return_form)?>'>
 <input type='hidden' name='return_field' value='<?=$zen->ffv($return_field)?>'>
-<? if( $onechoice ) { ?>
+<?php if( $onechoice ) { ?>
   <input type='hidden' name='onechoice' value='1'>
-<? } ?>
+<?php } ?>
 <table width='<?=$table_width?>' align='center'>
 <tr><td class='titleCell' align='center' colspan='2'><?php echo tr("Search Tickets"); ?></td></tr>
 <tr>
@@ -51,7 +51,7 @@
   <td class='bars'><?php echo tr("System"); ?></td>
   <td class='bars'>
     <select name="set_systems[]" size='5' multiple>
-<?
+        <?php
   if( is_array($zen->getSystems()) ) {
     foreach($zen->getSystems() as $k=>$v) {
       $check = (is_array($set_systems)&&in_array($k,$set_systems))? 
@@ -70,7 +70,7 @@
   <td class='bars'><?php echo tr("Bin"); ?></td>
   <td class='bars'>
     <select name="set_bins[]" size='5' multiple>
-<?
+        <?php
    if( is_array($userBins) ) {
      foreach($userBins as $v) {
        if( $v ) {
@@ -92,7 +92,7 @@
   <td class='bars'><?php echo tr("Priority"); ?></td>
   <td class='bars'>
     <select name="set_priorities[]" size='5' multiple>
-<?
+        <?php
     if( is_array($zen->getPriorities()) ) {
       foreach($zen->getPriorities(1) as $v) {
 	$k = $v["pid"];
@@ -117,7 +117,7 @@
   </td>
 </table>
 
-<? 
+<?php
   } else { 
     
   $params = array();
@@ -180,7 +180,7 @@
            val += ","+element.value;
        } 
      }
-     <? $field = "opener.document.forms['$return_form'].elements['$return_field']"; ?>
+     <?php $field = "opener.document.forms['$return_form'].elements['$return_field']"; ?>
      <?=$field?>.value = val;
      if( <?=$field?>.select ) {
        <?=$field?>.select();
@@ -198,7 +198,7 @@
 </script>
 
 <form action='<?=$rootUrl?>/helpers/projectSearchbox.php' method='post' name='helperForm'>
-<?
+    <?php
   $zen->hiddenField("return_form",$return_form);
   $zen->hiddenField("return_field",$return_field);
 
@@ -235,14 +235,14 @@
     <input type='submit' class='submit' value='<?php echo tr("Modify Search"); ?>'>
   </td>
 </tr>
-<?
+    <?php
  if( is_array($results) && count($results) ) {
 ?>
 <tr>
   <td class='subTitle'>
-  <? if( $onechoice ) { print "&nbsp;"; } else { ?>
+  <?php if( $onechoice ) { print "&nbsp;"; } else { ?>
     <input type='checkbox' name='allcheck' value='skip' onClick='checkAll()' class='searchbox'>
-  <? } ?>
+  <?php } ?>
   </td>
   <td class='subTitle'>
     <?php echo tr("ID"); ?>
@@ -253,7 +253,7 @@
   <td class='subTitle'>
     <?php echo tr("Bin"); ?>
   </td>
-<?
+     <?php
    $i=0;
    foreach($results as $r) {
      $row = ($row == "cell")? "bars" : "cell";
@@ -277,7 +277,7 @@
 <tr>
 <td colspan='4' class='bars'><?php echo tr("There were no results for your search"); ?></td>
 </tr>
-<?
+ <?php
  }
 ?>
 <tr>
@@ -286,4 +286,4 @@
 </table>
 </form>
 
-<? } ?>
+<?php } ?>

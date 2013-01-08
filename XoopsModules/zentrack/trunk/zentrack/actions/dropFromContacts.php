@@ -1,5 +1,4 @@
-<?{
-
+<?php {
 
   // get action properties
   $action = "contacts";  

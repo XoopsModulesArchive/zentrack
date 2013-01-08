@@ -1,4 +1,4 @@
-<?
+<?php
   /*
   **  contact DISPLAY PAGE
   **  

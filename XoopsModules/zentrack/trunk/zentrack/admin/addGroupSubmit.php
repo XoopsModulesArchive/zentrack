@@ -1,5 +1,4 @@
-<?{
-   
+<?php {
   /*
   **  ADD GROUP SUBMIT
   **  

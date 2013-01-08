@@ -1,4 +1,4 @@
-<?
+<?php
   /*
   **  NEW CONTACT
   **  
@@ -42,7 +42,7 @@ if ($mode2==1){
   
 </ul>
 
-<?
+<?php
 } 
 
   include("$libDir/footer.php");

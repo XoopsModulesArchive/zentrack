@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 
   <tr>
   <td class="altCell" align=center>
@@ -16,7 +16,7 @@
   <td>
     <select name="newbin" onChange="document.newbin.submit()">
       <option <?=($login_bin == -1)?"selected ":"" ?>value='all'>-<?=tr("All")?>-</option>
-  <?
+        <?php
   $bins = $zen->getBins(1);
   for($i=0; $i<count($bins); $i++) {
     $v = $bins[$i];

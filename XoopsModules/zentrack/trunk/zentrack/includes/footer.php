@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 
 
    <!-- BEGIN FOOTER -->
@@ -13,7 +13,7 @@
 </table>
 
 <br clear="all"></br>
-<? $hotkeys->renderAccessKeys(); ?>
+<?php $hotkeys->renderAccessKeys(); ?>
 <script type='text/javascript'>
 <?=$hotkeys->renderFunctions()?>
 function loadRenderKeys() {
@@ -33,7 +33,7 @@ function loadRenderKeys() {
 </p>
 -->
 
-<?
+<?php
 
   include_once("$libDir/session_save.php");
 
@@ -151,7 +151,7 @@ function loadRenderKeys() {
     <p><a href='<?=$rootUrl?>/phpinfo.php'>click here to view phpinfo</a></p>
     <p><a href='<?=$SCRIPT_NAME?>?clear_session_cache=1'>click here to clear session cache</a></p>
     </td></tr>
-    <?
+        <?php
     // for extra security, make sure we don't pass anything sensitive out to
     // the public
     $debug_text = preg_replace('/password=[^"\' ]+/', 'password=xxxx', $debug_text);
@@ -168,7 +168,7 @@ function loadRenderKeys() {
       <tr><td class='mainContent'>
       <div id='behaviorDebugDiv'></div>
       </td></tr></table>
-    <?
+  <?php
   }
 
 ?>

@@ -1,4 +1,4 @@
-<?
+<?php
 if( !ZT_DEFINED ) { die("Illegal Access"); }
 
 
@@ -125,4 +125,3 @@ header("Cache-Control: no-store, no-cache, must-revalidate");  // HTTP/1.1
 header("Pragma: no-cache");                          // HTTP/1.0
   
 // you can't have any spaces after this closing tag!
-?>

@@ -1,4 +1,4 @@
-<?
+<?php
 
   $id = NULL;
   include_once("../contact_header.php");

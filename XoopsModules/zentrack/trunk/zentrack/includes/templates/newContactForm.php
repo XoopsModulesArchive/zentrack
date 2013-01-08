@@ -1,15 +1,15 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 
 <form method="post" name="contactForm" action="<?=($skip)? "editContactSubmit.php" : "$rootUrl/addContactSubmit.php"?>">
 <input type="hidden" name="id" value="<?=strip_tags($id)?>">
-<?
+    <?php
 if(isset($creator_id)) { ?>
 <input type="hidden" name="creator_id" value="<?=strip_tags($creator_id)?>">	
-<?
+<?php
 }
 if(isset($create_time)) { ?>
 <input type="hidden" name="create_time" value="<?=strip_tags($create_time)?>">	
-<?
+<?php
 }
 ?>
   

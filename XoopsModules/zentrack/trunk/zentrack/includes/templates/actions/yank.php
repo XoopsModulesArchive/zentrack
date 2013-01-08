@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 
 <form name='pullForm' method="post" action="<?=$SCRIPT_NAME?>">
 <input type="hidden" name="id" value="<?=$id?>">
@@ -22,7 +22,7 @@
 </tr>
 <tr>
   <td class="subTitle" colspan='2'>
-   <? renderDivButton($hotkeys->find('Pull'),'window.document.pullForm.submit()'); ?>
+   <?php renderDivButton($hotkeys->find('Pull'),'window.document.pullForm.submit()'); ?>
   </td>
 </tr>
 <tr>

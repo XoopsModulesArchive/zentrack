@@ -1,4 +1,4 @@
-<?
+<?php
   $b = dirname(__FILE__);
   include("$b/user_header.php");
 ?>
@@ -15,7 +15,7 @@
 
 <div class='menuBox'>
   <div><?=tr("Contents of User's Manual")?></div>
-<?
+    <?php
   renderTOC('users', false);
 ?>
 </div>
@@ -32,7 +32,7 @@
   current projects.</p>
 </div>
 
-<? 
+<?php
   renderNavbar('users', $usersTOC);
   include("$libDir/footer.php"); 
 ?>

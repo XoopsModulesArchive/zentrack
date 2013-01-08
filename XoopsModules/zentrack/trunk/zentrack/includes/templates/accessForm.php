@@ -1,4 +1,4 @@
-<?
+<?php
 if( !ZT_DEFINED ) { die("Illegal Access"); }
 
   // fetch a list of bins for new bins
@@ -106,7 +106,7 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
   <td class='subTitle'><?=tr("Role")?></td>
 </tr>
 
-<?
+    <?php
   if( is_array($bins) && count($bins) ) {
     foreach($bins as $k=>$v) {
       print "<tr><td><b>".$zen->bins["$k"]."</b></td>";
@@ -142,10 +142,10 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
 ?>
 <tr>
   <td class="titleCell" colspan="3">
-<? if( is_array($userBins) && count($userBins) ) { ?>
+<?php if( is_array($userBins) && count($userBins) ) { ?>
    <?=tr("Press MORE to add more custom fields")?>
     <br>
-<? } ?>
+<?php } ?>
     <?=tr("Press LESS to remove blank fields")?>
     <br>
     <?=tr("Press Update to save changes")?>

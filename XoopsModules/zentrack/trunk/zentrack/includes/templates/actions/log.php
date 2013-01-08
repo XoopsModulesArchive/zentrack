@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 
 <form name='logForm' method="post" action="<?=$SCRIPT_NAME?>">
 <input type="hidden" name="id" value="<?=$id?>">
@@ -19,7 +19,7 @@
 <tr>
  <td class='bars'>
 <select name="log_action" title="<?=$hotkeys->tt("Select an Activity")?>">
-  <?
+    <?php
     foreach( $log_actions as $a ) {
        print ($a == $log_action || (!$log_action && $a == 'LOG') )?
 	 "<option selected>$a</option>\n" :
@@ -54,7 +54,7 @@
 </tr>
 <tr>
   <td class="subTitle">
-  <? renderDivButtonFind("Save Log"); ?>
+  <?php renderDivButtonFind("Save Log"); ?>
   </td>
 </tr>
 <tr>

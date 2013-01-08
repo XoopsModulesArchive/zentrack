@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); }
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); }
 
 /**
   PREREQUISITES:
@@ -61,7 +61,7 @@
 <input type='hidden' name='view' value='<?=$zen->ffv($view)?>'>
 <table class='microTable'><tr><td width='150' valign='top'>
 <p class='heading'><?=tr("Edit Field Map")?></p>
-<p class='note'><?
+<p class='note'><?php
    $str = "<a href='$rootUrl/help/find.php?s=admin&p=fieldmap'>".tr('Documentation')."</a>";
    print tr("Please refer to the ? before using this feature", array($str));
  ?></p>
@@ -69,7 +69,7 @@
 <div class='bold'>Screen to Edit:</div>
 <select name='view' size=20
   onchange="window.document.forms['viewPickForm'].submit()">
-<?
+    <?php
 $vp = $map->getViewProps();
 foreach( $vp as $k=>$v ) {
   $sel = $view == $k? " selected" : "";
@@ -84,7 +84,7 @@ foreach( $vp as $k=>$v ) {
 
 </form>
 <form method='post' action='<?=$SCRIPT_NAME?>' name='fieldMapForm'>
-<?
+<?php
 $fcount = 0;
 foreach($fields as $f=>$field) {
   print "<input type='hidden' name='orderset[$f]' value='$fcount'>\n";
@@ -94,17 +94,17 @@ foreach($fields as $f=>$field) {
 <input type='hidden' name='TODO' value='save'>
 <input type='hidden' name='view' value='<?=$zen->ffv($view)?>'>
 
-<? if( $view ) { ?>
+<?php if( $view ) { ?>
 <input type='submit' value='<?=uptr('save')?>' onClick="return setTodo('save');">
 &nbsp;
 <input type='submit' class='submitPlain' value='<?=tr('Reset')?>' onClick="return setTodo('reset');">
-<? } ?>
+<?php } ?>
 
 </td><td>&nbsp;</td><td valign='top'>
 &nbsp;
 
 
-<?
+<?php
 if( !$view ) {
   print "<div class='heading'>Please choose a view to edit</div>";
   if( $page_browser == 'mz' ) {
@@ -117,7 +117,7 @@ else {
 ?>
 <table cellpadding='4' cellspacing='1' class='cell' border='0'>
   <tr toofar="toofar"><td colspan='10' align='center' class='subTitle'><?=tr("Properties for ?", $view)?></td></tr>
-<?
+  <?php
 foreach($map->getViewProps($view) as $v) {
   if( $v['vm_type'] == 'hidden' ) { continue; }
   print "<tr class='bars'><td colspan='2'>".$zen->ffv($v['vm_name'])."</td><td colspan='8'>";
@@ -130,7 +130,7 @@ foreach($map->getViewProps($view) as $v) {
     <b><?=tr("Fields for ?", $view)?></b>
   </td>
 </tr>
-<?
+  <?php
 if( !is_array($fields) || !count($fields) || !$map || !$view ){
   print "<tr><td colspan='10' class='bars'>".
      tr("This view has no fields")."</td></tr>\n";
@@ -148,7 +148,7 @@ else {
   <td class='headerCell' align='center'><b><?=tr("Columns")?></b></td>
   <td class='headerCell' align='center'><b><?=tr("Rows")?></b></td>
 </tr>
-<?
+    <?php
 function fmfRow( $text, $class ) {
   print "<td class='$class'>{$text}</td>";
 }
@@ -362,10 +362,10 @@ foreach($fields as $f=>$field) {
   </td>
 </tr>
 
-<? } ?>
+<?php } ?>
 
 </table>
-<? 
+<?php
   } //end if( !$view ) { ... } else { ...
 ?>
 </form>

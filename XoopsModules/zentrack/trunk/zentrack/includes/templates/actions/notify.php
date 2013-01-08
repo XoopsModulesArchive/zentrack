@@ -1,5 +1,4 @@
-<?{
-if( !ZT_DEFINED ) { die("Illegal Access"); }
+<?php {if( !ZT_DEFINED ) { die("Illegal Access"); }
 
   /**
    * creates a form for adding entries to the
@@ -31,7 +30,7 @@ function printpopup(variable)
 </tr>
 <tr>
   <td class='bars'>
-<?
+      <?php
   // make a user textarea and search button
   print "<textarea cols='40' rows='1' name='user_accts'>\n";
   print (isset($user_accts))? $zen->ffv($user_accts) : "";
@@ -74,7 +73,7 @@ function printpopup(variable)
     </table>
   </td>
 </tr>
-  <? if( $zen->settingOn('allow_contacts') ) { ?>
+  <?php if( $zen->settingOn('allow_contacts') ) { ?>
 <tr>
   <td class="bars bold">
      <?=$hotkeys->ll("Add a Contact")?>
@@ -83,7 +82,7 @@ function printpopup(variable)
 <tr>
 <td class='bars'>
 <br>
-<?
+    <?php
   print tr("Company:");
   $company = $zen->get_contact_all();
   if (is_array($company)||count($company)) {
@@ -91,7 +90,7 @@ function printpopup(variable)
 
   <select name="company_id" onChange="printpopup(document.forms['notifyAddForm'].company_id.value)">
     <option value=''>--<?=tr("none")?>--</option>
-<?
+      <?php
    foreach($company as $p) {
       $sel = ($p["company_id"] == $company_id)? " selected" : "";
       $val =($p['office'])? strtoupper($p['title']) . " ," 
@@ -100,7 +99,7 @@ function printpopup(variable)
     }
 ?>
   </select>
-<?
+  <?php
   }
   if (empty($company_id)) {
     $parms = array(array("company_id", "=", "0"));
@@ -116,7 +115,7 @@ function printpopup(variable)
 ?>
     <select name="person_id">
       <option value=''>--<?=tr("none")?>--</option>
-	<?
+        <?php
 	  foreach($company as $p) {
             $val =($p['fname'])?ucfirst($p[lname])." ,".ucfirst($p[fname]):ucfirst($p[lname]);
 	    print "<option value='$p[person_id]' >".$zen->ffv($val)."</option>\n";
@@ -124,7 +123,7 @@ function printpopup(variable)
 	?>
     </select>
     <br><br>
-<?
+  <?php
   } //if( is_array($company).. )
   } //if( $zen->getSetting('allow_contacts')... )
 ?>
@@ -133,7 +132,7 @@ function printpopup(variable)
 </tr>
 <tr>
   <td class="subTitle">
-  <? renderDivButtonFind('Add Recipients'); ?>
+  <?php renderDivButtonFind('Add Recipients'); ?>
   </td>
 </tr>
 <tr>

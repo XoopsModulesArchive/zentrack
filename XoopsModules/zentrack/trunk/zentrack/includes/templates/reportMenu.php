@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 <table width='300'>
 <tr>
   <td class='titleCell' align='center'><?=tr("View Reports")?></td>
@@ -7,7 +7,7 @@
   <td class='bars' height='40' valign='top'>
    <form action='<?=$rootUrl?>/reports/show.php' method='get'>
    <select name='repid'>
-<?
+       <?php
 $usersBins = $zen->getUsersBins($login_id,'level_reports');
    $reps = $zen->getReportTemplates($usersBins,$login_id);
    if( is_array($reps) && count($reps) ) {
@@ -51,7 +51,7 @@ $usersBins = $zen->getUsersBins($login_id,'level_reports');
   <td class='bars'>
     <form method='get' action='drop.php'>
       <select name='repid'>
-<?
+          <?php
    if( is_array($reps) && count($reps) ) {
      foreach($reps as $r) {
        print "<option value='{$r['report_id']}'>{$r['report_name']}</option>\n";

@@ -1,4 +1,4 @@
-<?
+<?php
 if( !ZT_DEFINED ) { die("Illegal Access"); }
 
   // create a default date
@@ -64,7 +64,7 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
   <td class="bars">
     <select name="search_params[action]">
        <option value="">----</option>
-<?
+        <?php
     foreach( $actions as $a ) {
        print ($a == $search_params["action"])?
 	 "<option selected value='$a'>".ucwords(strtolower($a))."</option>\n" :
@@ -82,7 +82,7 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
   <td class="bars">
      <select name="search_params[user_id]">
        <option value="">----</option>
-<?
+         <?php
   $userBins = $zen->getUsersBins($login_id);
   if( is_array($userBins) && $zen->settingOn("allow_assign") ) {
     $users = $zen->get_users($userBins);
@@ -107,7 +107,7 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
   <td class="bars">
     <select name="search_params[bin_id]">
        <option value="">----</option>
-<?
+        <?php
   if( is_array($userBins) ) {
     foreach($userBins as $v) {
       if( $v ) {

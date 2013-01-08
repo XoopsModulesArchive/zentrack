@@ -1,6 +1,5 @@
 #!/usr/bin/php -q
-<?{
-  /*
+<?php {  /*
   **  EGATE: Email gateway: collects email input from stdin and modifies tickets
   */
 

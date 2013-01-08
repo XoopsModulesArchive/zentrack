@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } 
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); }
    $hotkeys->loadSection('contacts_view');
    $GLOBALS['zt_hotkeys'] = $hotkeys;
 ?>
@@ -11,7 +11,7 @@
           width='100%' class='formtable' cellpadding="0" cellspacing="1">
           
     <tr>
-	   <td class="subTitle" colspan="3"><p align="center"><? echo $zen->ffv($title)." "; if(!empty($office)){ echo "[".$zen->ffv($office)."]";}?> </p></td>  
+	   <td class="subTitle" colspan="3"><p align="center"><?php echo $zen->ffv($title)." "; if(!empty($office)){ echo "[".$zen->ffv($office)."]";}?> </p></td>
 	  </tr>
 	  <tr>
 	   <td class="headerCell" colspan="2" width="50%"><?=uptr("Info")?></td>
@@ -19,7 +19,7 @@
 	  </tr>
 	  <tr>
 	   <td class="bars indent boxpad" colspan="2">
-	   <? 
+	   <?php
 	   if(!empty($office)){ echo $zen->ffv($office)."<br>";}
 	   if(!empty($email)){?><A HREF="mailto:<?=$zen->ffv($email)?>"><?=$zen->ffv($email)?></A><br><?}
 	   if ($website == "http://" or $website == "") {
@@ -28,7 +28,7 @@
 	   if(!empty($website)){?><A TARGET="_blank" HREF="<?=$zen->ffv($website)?>"><?=$zen->ffv($website)?></A><?}}?>
 	   </td>
 	   <td class="bars small" rowspan="4">
-	   <?
+           <?php
 	   if(!empty($address1)){ echo $zen->ffv($address1)."<br>";}
 	   if(!empty($address2)){ echo $zen->ffv($address2)."<br>";}
 	   if(!empty($address3)){ echo $zen->ffv($address3)."<br>";}
@@ -51,7 +51,7 @@
 	   <td class="bars small"><?=tr("Fax no")?>:</td> 
 	   <td class="bars small"><?=$fax? $zen->ffv($fax) : '&nbsp;'?></td> 
 	  </tr>
-	  <?
+               <?php
  if(!empty($description)) {
 ?>	  
 	  <tr>
@@ -60,14 +60,14 @@
 	  <tr>
 	   <td class="bars small" colspan="3"><?= $zen->ffvText($description) ?></td>
 	  </tr>
-<?
+ <?php
 }
 ?>
 	 </table></td>
        <td valign="top" width='75'>
        
 <table width="120" cellpadding="0" cellspacing="3" border="0">
-<?
+    <?php
 			
 	//1=show ADD 0=don't show ADD
       

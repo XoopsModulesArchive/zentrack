@@ -1,10 +1,10 @@
-<? if ($block) {?>
+<?php if ($block) {?>
 
 <ul>
 <{foreach item=item from=$block.items}>
 	<li>(<{$item.ticket_id}>) <{$item.link}> (<{$item.login}>, <{$item.opened}>) </li>
 <{/foreach}>
 </ul>
-<?
+<?php
 } 
 ?>

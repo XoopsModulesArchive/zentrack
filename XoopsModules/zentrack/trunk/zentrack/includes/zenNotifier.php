@@ -1,4 +1,4 @@
-<?
+<?php
 //For these settings use 1 (yes) or 0 (no)
   $mailOwner=1;
   $mailManager=1;
@@ -30,9 +30,9 @@
   setlocale(LC_TIME, "es_AR.iso88591");
 //You shouldn't touch anything after here
 //==============================================================
-  include_once("$libDir/translator.class");
-  include_once("$libDir/zenTrack.class");
-  include_once("$libDir/zenTemplate.class");
+  include_once("$libDir/translator.class.php");
+  include_once("$libDir/zenTrack.class.php");
+  include_once("$libDir/zenTemplate.class.php");
   $zen = new zenTrack( $configFile );
   $managers=array();
   $testers=array();

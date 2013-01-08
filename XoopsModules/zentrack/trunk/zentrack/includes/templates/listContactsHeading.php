@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); }
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); }
   if(!isset($cssStyle) ) { $cssStyle = 'subTitle'; }
 ?><tr>
     <td valign="middle" title="<?=tr("ID of the contact")?>" class="<?=$cssStyle?>" >

@@ -1,5 +1,4 @@
-<?{
-  
+<?php {
   /*
   **  STORE PASSWORD IN COOKIE
   */

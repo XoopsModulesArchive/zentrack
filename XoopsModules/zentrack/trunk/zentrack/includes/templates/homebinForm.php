@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 
 <form method="post" action="<?=$rootUrl?>/misc/homebin.php">
 
@@ -14,7 +14,7 @@
   </td>
   <td class="bars">
     <select name="homebin">
-<?
+        <?php
   $userBins = $zen->getUsersBins($login_id);
   $user = $zen->getUser($login_id);
   $homebin= $user["homebin"];

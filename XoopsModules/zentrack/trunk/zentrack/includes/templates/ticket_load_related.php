@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 
   <table width="600" cellpadding="2" cellspacing="2">
    <tr>  
@@ -8,7 +8,7 @@
    </tr>  
    <tr>
      <td valign="top">
-<?
+         <?php
   $tickets = false;
   if( $page_type == "ticket" ) {
     $view='ticket_list';

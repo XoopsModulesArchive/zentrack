@@ -1,11 +1,11 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
       <br>
-      <p class='error'><?
+      <p class='error'><?php
          $str = "<a href='$rootUrl/help/find.php?s=admin&p=data_types'>".tr('Documentation')."</a>";
          print tr("Please refer to the ? before using this feature", array($str));
        ?></p>
 
-<? if( $type == "type" ) { ?>
+<?php if( $type == "type" ) { ?>
       <p><?=tr('There are two special types, which can be set by including either the word <span class="error">project</span> or <span class="error">note</span> in the bin name.')?></p>
 
      <p><?=tr('Projects act as containers, which can hold multiple tickets as "tasks" which are part of the projects completion requirements.')?></p>
@@ -31,13 +31,13 @@
       return true;
     }
   </script>
-<? } ?>
+<?php } ?>
       <ul>
       <form name='configForm' action='<?=$SCRIPT_NAME?>' <?=$type=='type'? " onsubmit='return checkPriType(this)'":""?> method='post'>
       <table cellpadding="2" cellspacing="1" class='plainCell'>
 	 <tr toofar="toofar">
 	 <td class='titleCell' align='center' colspan='5'>
-     <?
+         <?php
        $plural_type = tr($type == 'priority'? 'Priorities' : ucfirst($type)."s");
      ?>
 	   <b><?=tr("Edit the Active ?",array($plural_type))?></b>
@@ -49,7 +49,7 @@
 	 <td width="30" class='cell' align='center'><b><?=tr("Active")?></b></td>
 	 <td width="30" class='cell' align='center'><b>&nbsp;</b></td>
 	 </tr>
-    <? 
+    <?php
    $j = count($vars)-1;
 	 if( is_array($vars) ) {
 	   $newtext = "-".tr("new")."-";

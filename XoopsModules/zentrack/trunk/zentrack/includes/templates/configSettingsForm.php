@@ -1,7 +1,7 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
       <br>
       <p><b><?=tr("Changing these settings can have a severe impact on the system.  Please consider this before making modifications.")?></b></p>
-      <p class='error'><?
+      <p class='error'><?php
          $str = "<a href='$rootUrl/help/find.php?s=admin&p=settings'>".tr('Documentation')."</a>";
          print tr("Please refer to the ? before using this feature", array($str));
        ?></p>
@@ -20,7 +20,7 @@
 	 <td class='cell' align='center'><b><?=tr("Value")?></b></td>
 	 <td class='cell' align='center'><b><?=tr("Description")?></b></td>
 	 </tr>
-    <? 
+    <?php
 
     $on = tr("On");
     $off = tr("Off");

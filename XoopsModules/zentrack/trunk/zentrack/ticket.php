@@ -1,5 +1,4 @@
-<?{
-  /*
+<?php {  /*
   **  TICKET DISPLAY PAGE
   **  
   **  Displays a ticket to the screen

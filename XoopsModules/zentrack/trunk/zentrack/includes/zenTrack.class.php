@@ -1,4 +1,4 @@
-<? /* -*- Mode: C; c-basic-indent: 3; indent-tabs-mode: nil -*- ex: set tabstop=3 expandtab: */ 
+<?php /* -*- Mode: C; c-basic-indent: 3; indent-tabs-mode: nil -*- ex: set tabstop=3 expandtab: */
 if( !ZT_DEFINED ) { die("Illegal Access"); }
 
 /* 
@@ -17,10 +17,10 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
 **  db.class (database access and retrieval)
 */
 
-include_once("$libDir/zen.class");
-include_once("$libDir/ZenSessionManager.class");
-include_once("$libDir/ZenHistoryManager.class");
-include_once("$libDir/ZenFieldMap.class");
+include_once("$libDir/zen.class.php");
+include_once("$libDir/ZenSessionManager.class.php");
+include_once("$libDir/ZenHistoryManager.class.php");
+include_once("$libDir/ZenFieldMap.class.php");
 
 class zenTrack extends zen {
 
@@ -1107,7 +1107,7 @@ class zenTrack extends zen {
     $ticket_id = $this->checkNum($ticket_id);
     $query = "SELECT * FROM ".$this->table_varfield." WHERE ticket_id = $ticket_id";
     $res =  $this->db_quickIndexed($query);
-    $fm =& new ZenFieldMap($this);
+    $fm = new ZenFieldMap($this);
     
     // we initialize all of the multifields, even if they do not contain a value
     $multi_fields = $fm->listMultiFields();
@@ -1148,7 +1148,7 @@ class zenTrack extends zen {
      if( $columns ) {
        $cols = !$skip_id? '' : 'ticket_id';
        $mcols = array();
-       $fm =& new ZenFieldMap($this);
+       $fm = new ZenFieldMap($this);
        $multi_fields = $fm->listMultiFields();
        foreach($columns as $c) {
          if ( strpos($c,'custom_multi')===false ) {
@@ -1202,7 +1202,7 @@ class zenTrack extends zen {
     foreach($field_values as $key=>$val) {
       $v1=$oldVals["$key"];
       $v2=$val;
-      $fm =& new ZenFieldMap($this);
+      $fm = new ZenFieldMap($this);
       $label = $fm->getLabel("ticket_edit",$key);
       if( strpos($key, 'date') > 0 ) {
         if ( is_null($oldVals["$key"]) || $oldVals["$key"] == 0 ) {
@@ -3192,7 +3192,7 @@ class zenTrack extends zen {
           }
           if (strlen($d1)>0) $d1=": ".$d1;
           if (strlen($d2)>0) $d2=": ".$d2;
-          $fm =& new ZenFieldMap($this);
+          $fm = new ZenFieldMap($this);
           $label = $fm->getLabel("ticket_edit",$key);
           $log_entry .= " - {$label} changed from [$v1$d1] to [$v2$d2]\n";
         }
@@ -5919,7 +5919,7 @@ class zenTrack extends zen {
     include("$file");
 
     $this->zen();
-    $this->_session =& new ZenSessionManager($this);
+    $this->_session = new ZenSessionManager($this);
     $this->DB( $this->database_host, $this->database_login, 
                $this->database_password, $this->database_instance);
 

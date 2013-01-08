@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 
   <tr>
   <td<?=(isset($expand_search)&&$expand_search)? " class='titleCell'" : " ".$nav_rollover_text?>>
@@ -6,7 +6,7 @@
   </td>
   </tr>
   
-  <? if( isset($expand_search)&&$expand_search ) { ?>
+  <?php if( isset($expand_search)&&$expand_search ) { ?>
   <tr>
   <td <?=$nav_rollover_text?>>
   <a class='subMenuLink' href="<?=$rootUrl?>/search.php">&nbsp;&nbsp;<?=tr("New Search")?>
@@ -18,4 +18,4 @@
   </td>
   </tr>  
        
-  <? } ?>
+  <?php } ?>

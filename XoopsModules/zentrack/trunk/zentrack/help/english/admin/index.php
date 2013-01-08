@@ -1,4 +1,4 @@
-<?
+<?php
   $b = dirname(__FILE__);
   include("$b/admin_header.php");
 ?>
@@ -13,12 +13,12 @@
 
 <div class='menuBox'>
   <div><?=tr("Contents of Administrator's Manual")?></div>
-<?
+    <?php
   renderTOC('admin', false);
 ?>
 </div>
 
-<? 
+<?php
   renderNavbar('admin');
   include("$libDir/footer.php"); 
 ?>

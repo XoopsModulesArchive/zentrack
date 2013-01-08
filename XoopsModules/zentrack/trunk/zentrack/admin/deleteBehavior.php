@@ -1,4 +1,4 @@
-<?
+<?php
   /*
   **  DELETE BEHAVIOR
   **  

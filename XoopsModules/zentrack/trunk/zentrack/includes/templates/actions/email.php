@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 
 
 <script language="javascript">
@@ -34,7 +34,7 @@
   title="<?=$hotkeys->tt("Select a User")?>"
   onFocus="checkAbox(document.emailForm.emethod[0])"
   >
-<?
+    <?php
   $bins = array_keys($zen->getAccess($login_id));
   foreach($zen->get_users($bins) as $v) {
     if( $v["user_id"] != $login_id ) {
@@ -92,7 +92,7 @@
 </tr>
 <tr>
   <td class="subTitle">
-  <? renderDivButton($hotkeys->find('Send Email'), "window.document.forms['emailForm'].submit()"); ?>
+  <?php renderDivButton($hotkeys->find('Send Email'), "window.document.forms['emailForm'].submit()"); ?>
   </td>
 </tr>
 <tr>

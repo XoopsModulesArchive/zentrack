@@ -1,4 +1,4 @@
-<?
+<?php
 if( !ZT_DEFINED ) { die("Illegal Access"); }
 
          $elnk="$rootUrl/admin/editBehavior.php";
@@ -10,7 +10,7 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
       <p>Note that behaviors are meant to provide suggested values to
          the user.  They are not meant to be used as a security mechanism
          and could be circumvented by creative users.</p>
-      <p class='error'><?
+      <p class='error'><?php
          $str = "<a href='$rootUrl/help/find.php?s=admin&p=behaviors'>".tr('Documentation')."</a>";
          print tr("Please refer to the ? before using this feature", array($str));
        ?></p>
@@ -35,7 +35,7 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
   <td class='subTitle' align='center'><b><?=tr("Actions")?></b></td>
 </tr>
 
-<? 
+<?php
    $behaviors = $zen->getBehaviorList(0);
    $groups=$zen->getDataGroups(0);
    $num = count($behaviors);

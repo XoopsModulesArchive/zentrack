@@ -1,6 +1,5 @@
 #!/usr/bin/php -q
-<?{
-  /*
+<?php {  /*
   **  EGATE: Email gateway: collects email input from stdin and creates a new ticket
   **  
   **  The subject becomes the title, the body becomes the details.  The rest of the 

@@ -1,4 +1,4 @@
-<?
+<?php
 
   /*
   **  HELP SECTION - FEATURES
@@ -33,7 +33,7 @@
 
 
   </blockquote>
-<?
+<?php
   include("$libDir/footer.php");
 ?>
 

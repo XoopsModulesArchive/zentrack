@@ -1,5 +1,4 @@
-<?{
-  if( !ZT_DEFINED ) { die("Illegal Access"); }
+<?php {  if( !ZT_DEFINED ) { die("Illegal Access"); }
   
   /**
   * Parses form input and creates an array called $varfield_params which contains the values needed

@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 
 <form name='addAttachmentForm' enctype="multipart/form-data" action="<?=$SCRIPT_NAME?>" method="post">
   <input type="hidden" name="MAX_FILE_SIZE" value="<?=$zen->getSetting("attachment_max_size")?>">
@@ -38,7 +38,7 @@
 </tr>
 <tr>
   <td class="subTitle">
-    <? renderDivButtonFind('Add Attachment'); ?>
+    <?php renderDivButtonFind('Add Attachment'); ?>
   </td>
 </tr>
 <tr>

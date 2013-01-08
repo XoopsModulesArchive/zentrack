@@ -1,4 +1,4 @@
-<?  
+<?php
 if( !ZT_DEFINED ) { die("Illegal Access"); }
 
   /**
@@ -38,7 +38,7 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
 
  function validateTicketForm(formObj) {
    var errs = new Array();
-<?
+     <?php
 foreach($fields as $f=>$field) {
   // we don't want to validate any hidden fields using javascript, this is
   // a potential problem.

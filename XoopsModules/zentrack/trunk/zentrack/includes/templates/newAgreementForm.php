@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } 
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); }
   $hotkeys->loadSection('agreement_form');
   $GLOBALS['zt_hotkeys'] = $hotkeys;
 ?>
@@ -22,14 +22,14 @@
 <form method="post" name="agreementForm" action="<?=($skip)? "editAgreementSubmit.php" : "$rootUrl/addAgreementSubmit.php"?>">
 <input type="hidden" name="id" value="<?=$zen->ffv($id)?>">
 <input type='hidden' name='TODO' value='submit_form'>
-<?
+    <?php
 if(isset($creator_id)) { ?>
 <input type="hidden" name="creator_id" value="<?=$zen->ffv($creator_id)?>">
-<?
+<?php
 }
 if(isset($create_time)) { ?>
 <input type="hidden" name="create_time" value="<?=$zen->ffv($create_time)?>">
-<?
+<?php
 }
 ?>
 
@@ -50,7 +50,7 @@ if(isset($create_time)) { ?>
       value="<?=$zen->ffv($contractnr)?>">
   </td>
 </tr>
-<?
+    <?php
 $company = $zen->get_contact_all();
 	if (is_array($company)) {
 	?>
@@ -61,7 +61,7 @@ $company = $zen->get_contact_all();
   	<td class="bars">
 		<select name="company_id">
   	<option value=''>--<?=tr("none")?>--</option>
-		<?
+            <?php
 		foreach($company as $p) {
 			$sel = ($p["company_id"] == $company_id)? " selected" : "";
 			$val =($p['office'])?strtoupper($p[title])." ,".$p[office]:strtoupper($p[title]);
@@ -71,7 +71,7 @@ $company = $zen->get_contact_all();
 	</select>
 	</td>
 	</tr>
-	<?
+    <?php
 	}
  ?>
 <tr>
@@ -126,7 +126,7 @@ value="<?=($dtime)?$zen->showDate($dtime):""?>">
 </tr>
 <tr>
   <td colspan="2" valign='middle' class="headerCell padded" style='text-align:left'>
-   <? renderDivButtonFind("Create", null, ($skip? "Save":null) ); ?>
+   <?php renderDivButtonFind("Create", null, ($skip? "Save":null) ); ?>
   </td>
 </tr>
 <tr><td class='bars' colspan='2'>&nbsp;</td></tr>
@@ -138,7 +138,7 @@ value="<?=($dtime)?$zen->showDate($dtime):""?>">
 <tr>
   <td colspan="2" class="bars">
   <table cellspacing='1' class='formtable'>
-  <?
+      <?php
   if (!$id){
 	  $parms = array(array("agree_id", "=", "0"));
   } else {
@@ -166,7 +166,7 @@ value="<?=($dtime)?$zen->showDate($dtime):""?>">
           type='checkbox' name='drops[]'
           value='<?=$zen->ffv($t['item_id'])?>'></td>
    </tr>
-   <?
+     <?php
    } ?>
    <tr>
 	<td class='headerCell' style='text-align:right' colspan='4'>
@@ -177,7 +177,7 @@ value="<?=($dtime)?$zen->showDate($dtime):""?>">
          >
 	</td>
 	</tr>
-	<?
+  <?php
   } else {
 	 echo "No items are set" ;
   }
@@ -205,7 +205,7 @@ value="<?=($dtime)?$zen->showDate($dtime):""?>">
 </tr>
 <tr>
 <td class='subTitle' colspan='2'>
-<? renderDivButtonFind('Add Item'); ?>
+<?php renderDivButtonFind('Add Item'); ?>
 </td>
 </tr>
 </form>

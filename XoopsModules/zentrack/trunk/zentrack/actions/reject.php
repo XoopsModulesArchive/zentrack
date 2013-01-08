@@ -1,5 +1,4 @@
-<?{
-   
+<?php {
   /*
   **  REJECT TICKET
   **  

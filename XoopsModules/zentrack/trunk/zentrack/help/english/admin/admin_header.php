@@ -1,4 +1,4 @@
-<?
+<?php
   $b = dirname(dirname(dirname(__FILE__)));
   include_once("$b/help_header.php");
   

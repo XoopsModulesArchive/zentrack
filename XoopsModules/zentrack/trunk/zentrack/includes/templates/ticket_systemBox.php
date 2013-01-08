@@ -1,4 +1,4 @@
-<?
+<?php
 if( !ZT_DEFINED ) { die("Illegal Access"); }
 
   
@@ -29,9 +29,9 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
    </tr>
    <tr>  
     <td height="250" valign="top">
-      <? print_system_messages(); ?>
+      <?php print_system_messages(); ?>
     </td>
    </tr>  
    </table>
 
-<? } ?>
+<?php } ?>

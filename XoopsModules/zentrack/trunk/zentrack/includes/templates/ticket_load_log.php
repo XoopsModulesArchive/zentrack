@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } 
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); }
 
 $hotkeys->loadSection('log');
 $GLOBALS['zt_hotkeys'] = $hotkeys;
@@ -77,7 +77,7 @@ if( is_array($logs) && count($logs) > 0) {
   <div id='logSet' class='borderContent'><?=$log_text?></div>
 </div>
 <br>
-<? if( is_array($logs) && count($logs) > 0) { ?>
+<?php if( is_array($logs) && count($logs) > 0) { ?>
 <script type='text/javascript'>
 var sysLogIds = [<?
 
@@ -105,4 +105,4 @@ function toggleLogNode( node, s ) {
 }
 
 </script>
-<? } ?>
+<?php } ?>

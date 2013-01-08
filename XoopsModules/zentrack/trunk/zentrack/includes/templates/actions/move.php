@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } 
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); }
   $hotkeys->loadSection('move');
   $GLOBALS['zt_hotkeys'] = $hotkeys;
 ?>
@@ -19,7 +19,7 @@
   </td>
   <td class='bars'>
     <select name='newBin' title='<?=$hotkeys->tt("New Bin")?>'>
-     <?
+        <?php
       $userBins = $zen->getUsersBins($login_id,"level_move");
       if( is_array($userBins) ) {
         foreach($userBins as $v) {
@@ -44,7 +44,7 @@
 </tr>
 <tr>
   <td class="subTitle" colspan='2'>
-    <? renderDivButtonFind('Move'); ?>
+    <?php renderDivButtonFind('Move'); ?>
   </td>
 </tr>
 <tr>

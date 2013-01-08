@@ -1,5 +1,4 @@
-<?{
-  
+<?php {
   /**
   **  ADD ENTRIES TO NOTIFY LIST
   **  

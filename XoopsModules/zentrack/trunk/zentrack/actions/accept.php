@@ -1,5 +1,4 @@
-<?{
-   
+<?php {
   /*
   **  ACCEPT TICKET
   **  

@@ -1,4 +1,5 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); }
+<?php
+if( !ZT_DEFINED ) { die("Illegal Access"); }
 xoops_cp_header();
 
   function renderNavTab( $name, $page ) {
@@ -107,7 +108,7 @@ xoops_cp_header();
 
 </script>  
   
-  <?
+<?php
   for($i=0; $i<count($onLoad); $i++) {
     $s = $onLoad[$i];
     print "<script language='javascript' src='$rootUrl/$s'></script>\n";

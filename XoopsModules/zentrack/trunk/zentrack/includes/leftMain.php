@@ -1,7 +1,7 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 <div class="small" align="center"><b><?=$zen->showLongDate()?></b></div>
 <div class="small" align='center'><?=tr("version")?> <?=$zen->getSetting("version_xx")?></div>
-<?
+<?php
   if( $zen->demo_mode == 'on' ) { print "<div class='small' align='center'>(demo mode)</div>"; }
 
   $num = 0;
@@ -26,15 +26,15 @@
   
   
 <table width="100%" border=1 cellspacing=0 cellpadding=2 bgcolor='<?=$zen->getSetting("color_title_background")?>'>
-  <? if( $login_id ) { include("$libDir/leftBins.php"); } ?>
+  <?php if( $login_id ) { include("$libDir/leftBins.php"); } ?>
   <tr>
   <td class="altCell" align=center>
   <b><?=tr("Tracker")?></b>
   </td>
   </tr>
-  <? include("$libDir/leftTickets.php"); ?>
-  <? include("$libDir/leftSearch.php"); ?>
-  <?
+  <?php include("$libDir/leftTickets.php"); ?>
+  <?php include("$libDir/leftSearch.php"); ?>
+    <?php
 
   if ($login_level=="first_login" ) $err = 1;
 	  
@@ -47,7 +47,7 @@
         <b><?=tr("Contacts")?></b>
       </td>
     </tr>
-  <? 
+  <?php
     include("$libDir/leftContacts.php"); 
   }
   ?>
@@ -56,7 +56,7 @@
   <b><?=tr("System")?></b>
   </td>
   </tr>  
-<? if( $login_id ) { ?>
+<?php if( $login_id ) { ?>
   <tr>
   <td <?=$nav_rollover_text?>>
   <a class='menuLink' 
@@ -64,26 +64,26 @@
      onClick='return confirm("<?=tr("Really log out of zenTrack?")?>")'><?=tr("Log Off")?></a>
   </td>
   </tr>       
-<? } else { ?>
+<?php } else { ?>
   <tr>
   <td <?=$nav_rollover_text?>>
   <a class='menuLink' href="<?=$rootUrl?>/index.php"><?=tr("Log On")?></a>
   </td>
   </tr>                
-<? } ?>
-<? include("$libDir/leftHelp.php"); ?>
+<?php } ?>
+<?php include("$libDir/leftHelp.php"); ?>
   <tr>
   <td <?=$nav_rollover_text?>>
   <a class='menuLink' href="<?=$rootUrl?>/options.php"><?=tr("Options")?></a>
   </td>
   </tr>  
-  <? 
+  <?php
 //we check also if login_level is a number because in first login it will be 'first_login' what would give access to all.
      if( $zen->checkNum($login_level) >= $zen->getSetting("level_reports") ) {
    include("$libDir/leftReports.php");
       } 
   ?>
-  <? 
+  <?php
      if( $zen->checkNum($login_level) >= $zen->getSetting("level_settings") ) {
    include("$libDir/leftAdmin.php");
       } 

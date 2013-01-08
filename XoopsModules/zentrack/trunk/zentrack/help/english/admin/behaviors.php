@@ -1,4 +1,4 @@
-<?
+<?php
   $b = dirname(__FILE__);
   include("$b/admin_header.php");
 ?>
@@ -413,7 +413,7 @@ behavior and how to use them together.
 </tr>
 </table>
 
-<? 
+<?php
   renderNavbar('admin', true);
   include("$libDir/footer.php"); 
 ?>

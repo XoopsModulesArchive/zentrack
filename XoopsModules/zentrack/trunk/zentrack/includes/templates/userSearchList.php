@@ -1,4 +1,4 @@
-<?
+<?php
 if( !ZT_DEFINED ) { die("Illegal Access"); }
 
   
@@ -40,7 +40,7 @@ if( is_array($users) && count($users) ) {
              <b><span class="small"><?=tr("Options")?></span></b></span></div>
      </td>
    </tr>
-      <?      
+      <?php
 
    $text = $zen->getSetting("color_bar_text");
    $elnk = "$rootUrl/admin/editUser.php";
@@ -98,7 +98,7 @@ if( is_array($users) && count($users) ) {
            ><span class='error'><?=uptr("delete")?></span></a>]
         </td>
         </tr>
-   <? 
+   <?php
    if( $u["notes"] ) {
    ?>
    <tr style="background:<?=$row?>;color:<?=$text?>">
@@ -106,7 +106,7 @@ if( is_array($users) && count($users) ) {
       <?=$u["notes"]?>
    </td>
         </tr>
-        <?
+   <?php
       }
    }
   
@@ -127,7 +127,7 @@ if( is_array($users) && count($users) ) {
            value="<?=strip_tags($search_fields["notes"])?>">
    <input type="hidden" name="search_access_method" 
            value="<?=strip_tags($search_access_method)?>">      
-        <?
+         <?php
      foreach($search_params as $k=>$v) {
        print "<input type='hidden' name='search_params[$k]' value='".strip_tags($v)."'>\n";
           }
@@ -135,8 +135,8 @@ if( is_array($users) && count($users) ) {
      </td>
      </form>
     </tr>
-  <? } ?>
+  <?php } ?>
     </table>
-   <?   
+   <?php
 }
 ?>

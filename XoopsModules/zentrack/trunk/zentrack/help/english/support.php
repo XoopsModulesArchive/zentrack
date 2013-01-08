@@ -1,4 +1,4 @@
-<?  /* -*- Mode: C; c-basic-indent: 3; indent-tabs-mode: nil -*- ex: set tabstop=3 expandtab: */
+<?php  /* -*- Mode: C; c-basic-indent: 3; indent-tabs-mode: nil -*- ex: set tabstop=3 expandtab: */
 
   /*
   **  HELP SECTION - SUPPORT
@@ -40,6 +40,6 @@
   reporting bugs!</p>
 
   </blockquote>
-<?
+<?php
   include("$libDir/footer.php");
 ?>

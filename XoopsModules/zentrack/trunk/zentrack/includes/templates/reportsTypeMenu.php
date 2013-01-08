@@ -1,4 +1,4 @@
-<?
+<?php
 if( !ZT_DEFINED ) { die("Illegal Access"); }
 
   // set a toggle
@@ -34,11 +34,11 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
   </td>
   <td class='bars' width='100'>
     <input type='hidden' name='action' value='set_report'>
-   <? if( $tf_type ) { ?>
+   <?php if( $tf_type ) { ?>
     <input type='submit' value=' <?=tr("Change")?> '>
-   <? } else { ?>
+   <?php } else { ?>
     <input type='submit' class='submit' value=' <?=tr("Set")?> '>
-   <? } ?>
+   <?php } ?>
   </td>
 </tr>
 </form>

@@ -1,4 +1,4 @@
-<?
+<?php
   include_once(dirname(__FILE__)."/header.php");  
   header("Content-Type: text/css");
 ?>
@@ -162,7 +162,7 @@
   }
 
   /*** PRIORITY PROPERTIES ***/
-<?
+<?php
   include("$libDir/priorityColors.php");
 ?>
 
@@ -239,7 +239,7 @@
   .titleCell {
      color:          <?=$zen->getSetting("color_title_txt")?>;
      background:     <?=$zen->getSetting("color_title_background")?>;
-     <?
+     <?php
        if( $page_browser != "ns" ) {
      print "padding-top: 2px;";
      print "padding-bottom: 2px;";
@@ -305,7 +305,7 @@
   .ticketCell {
      color:          <?=$zen->getSetting("color_alt_text")?>;
      background:     <?=$zen->getSetting("color_alt_background")?>;
-     <?
+     <?php
        if( $page_browser != "ns" ) {
      print "padding-top: 2px;";
      print "padding-bottom: 2px;";
@@ -318,7 +318,7 @@
   .smallTitleCell {
      color:          <?=$zen->getSetting("color_title_txt")?>;
      background:     <?=$zen->getSetting("color_title_background")?>;
-     <?
+     <?php
        if( $page_browser != "ns" ) {
      print "padding-top: 2px;";
      print "padding-bottom: 2px;";

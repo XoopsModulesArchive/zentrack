@@ -1,4 +1,4 @@
-<?
+<?php
   $b = dirname(__FILE__);
   include("$b/admin_header.php");
 ?>
@@ -56,7 +56,7 @@
 </tr>
 </table>
 
-<? 
+<?php
   renderNavbar('admin', true);
   include("$libDir/footer.php"); 
 ?>

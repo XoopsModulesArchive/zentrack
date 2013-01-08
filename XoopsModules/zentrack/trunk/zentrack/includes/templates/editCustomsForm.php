@@ -1,9 +1,9 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 
 
       <p class='bigBold'><?=tr('Edit Variable Fields')?></p>
       
-      <p class='error'><?
+      <p class='error'><?php
          $str = "<a href='$rootUrl/help/find.php?s=admin&p=varfields'>".tr('Documentation')."</a>";
          print tr("Please refer to the ? before using this feature", array($str));
        ?></p>
@@ -47,7 +47,7 @@
 	   <b><?=tr("New")?></b>
          </td>
        </tr>
-    <?
+          <?php
          $num = count($vars);
 	 if( is_array($vars) ) {
 	   $j = 0;
