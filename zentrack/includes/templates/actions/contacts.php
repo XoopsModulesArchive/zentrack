@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); }
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); }
   /**
    * creates a form for adding entries to the contact list
    */
@@ -39,7 +39,7 @@ location.href ="<?=$_SERVER['SCRIPT_NAME']?>?id=<?=$id?>&company_id="+varialbe+"
  <td class='subTitle' colspan='<?=$colspan?>'><?=tr("Add a Contact")?></td>
 </tr>
  
-  <?
+    <?php
 	if (is_array($companies)||count($companies)) {
 	?>
 <tr>
@@ -50,7 +50,7 @@ location.href ="<?=$_SERVER['SCRIPT_NAME']?>?id=<?=$id?>&company_id="+varialbe+"
       title="<?=$hotkeys->tt("Field: company_id")?>"
       onChange="printpopup(document.forms['ContactsAddForm'].company_id.value)">
   	<option value=''>--<?=tr("none")?>--</option>
-		<?
+            <?php
 		foreach($companies as $p) {
       if( $p['company_id'] == $company_id ) {
         $sel = " selected";
@@ -67,7 +67,7 @@ location.href ="<?=$_SERVER['SCRIPT_NAME']?>?id=<?=$id?>&company_id="+varialbe+"
   
     </td>
 </tr>
-	<?
+    <?php
 	}
 	
 	if (is_array($people)||count($people)) {
@@ -77,19 +77,19 @@ location.href ="<?=$_SERVER['SCRIPT_NAME']?>?id=<?=$id?>&company_id="+varialbe+"
     <td class='bars'>
 		<select name="person_id" title="<?=$hotkeys->tt("Field: person_id")?>">
   	<option value=''>--<?=tr("none")?>--</option>
-		<?
+            <?php
 		foreach($people as $p) {
 			$val =($p['fname'])?ucfirst($p[lname])." ,".ucfirst($p[fname]):ucfirst($p[lname]);
 	  	print "<option value='$p[person_id]' >".$val."</option>\n";
 		}
 	?>
 	  </select>
-  <?
+        <?php
     if( $company_id ) { print '<br>'.tr("(Employees of '?' only)", $company_title); } 
   ?>
     </td>
   </tr>
-	<?
+    <?php
 	}
   else if( $company_id ) {
   ?>
@@ -102,7 +102,7 @@ location.href ="<?=$_SERVER['SCRIPT_NAME']?>?id=<?=$id?>&company_id="+varialbe+"
       <?=tr('to add one')?>.
     </td>
   </tr>
-  <?
+  <?php
   }
   
   if( !$people && !$companies ) {
@@ -112,15 +112,15 @@ location.href ="<?=$_SERVER['SCRIPT_NAME']?>?id=<?=$id?>&company_id="+varialbe+"
 	?>
 <tr>
   <td class="subTitle" colspan='<?=$colspan?>'>
-    <? renderDivButton($hotkeys->find('Add Contact'), "window.document.forms['ContactsAddForm'].submit()"); ?>
+    <?php renderDivButton($hotkeys->find('Add Contact'), "window.document.forms['ContactsAddForm'].submit()"); ?>
   </td>
 </tr>
-<? } ?>
+<?php } ?>
 <tr>
 </table>
 </form>
 
 <p>&nbsp;
 <form action='<?=$rootUrl?>/newContact.php' target="_BLANK" name='newContactForm'>
-  <? renderDivButton($hotkeys->find('Create New Contact'), "window.document.forms['newContactForm'].submit()", 150); ?>
+  <?php renderDivButton($hotkeys->find('Create New Contact'), "window.document.forms['newContactForm'].submit()", 150); ?>
 </form>

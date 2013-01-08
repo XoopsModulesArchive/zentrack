@@ -1,4 +1,4 @@
-<?
+<?php
 if( !ZT_DEFINED ) { die("Illegal Access"); }
 
 /* 
@@ -34,11 +34,11 @@ $GLOBALS['zt_hotkeys'] = $hotkeys;
 	   <td class="bars small"><?=tr("E-mail")?>:</td> 
 	   <td class="bars small" width="30%"><?if($email){?>
       <A HREF="mailto:<?=$zen->ffv($email)?>"><?=$zen->ffv($email)?></A>
-      <? } else { print '&nbsp;'; } ?>
+      <?php } else { print '&nbsp;'; } ?>
      </td> 
 	   <td class="bars small" colspan='2'>&nbsp;</td> 
 	  </tr>
-<?
+       <?php
  if(!empty($description)) {
 	 
 ?>	  
@@ -48,7 +48,7 @@ $GLOBALS['zt_hotkeys'] = $hotkeys;
 	  <tr>
 	   <td class="bars small" colspan="4"><?= $zen->ffvText($description) ?></td>
 	  </tr>
-<?
+ <?php
 }
 ?>
 </table>
@@ -56,7 +56,7 @@ $GLOBALS['zt_hotkeys'] = $hotkeys;
 </td><td align='left' valign='top'>
        
 <table width="120" cellpadding="0" cellspacing="3" border="0">
-<?
+    <?php
     //1=show ADD 0=don't show ADD
     $idi = $person_id ;
     
@@ -82,7 +82,7 @@ $GLOBALS['zt_hotkeys'] = $hotkeys;
 </table>
 </td></tr></table>
 <br>
-<?
+<?php
 if($company_id) {
   print "<table width='620' class='formtable'>";
   print "<tr><td class='subTitle' colspan='6'>Company</td></tr>";

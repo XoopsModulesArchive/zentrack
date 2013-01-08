@@ -1,4 +1,4 @@
-<? 
+<?php
   if( !ZT_DEFINED ) { die("Illegal Access"); } 
   if( is_array($relations) ) {
     $relations = join(',',$relations);
@@ -44,7 +44,7 @@
 </tr>
 <tr>
   <td class="subTitle">
-  <? renderDivButtonFind('Relate'); ?>
+  <?php renderDivButtonFind('Relate'); ?>
   </td>
 </tr>
 <tr>

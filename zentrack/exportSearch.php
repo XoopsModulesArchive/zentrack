@@ -1,4 +1,4 @@
-<?
+<?php
   include("header.php");
   
   //print "<pre>\n";  //debug

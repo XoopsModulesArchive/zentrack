@@ -1,4 +1,4 @@
-<?
+<?php
 if( !ZT_DEFINED ) { die("Illegal Access"); }
 
 
@@ -24,26 +24,26 @@ if( is_array($logs) && count($logs) ) {
   <b><span class="small"><?=tr("Date")?></span></b></span>
   </div>
   </td>
-  <? if( !$search_params["action"] || is_array($search_params["action"]) ) { ?>
+  <?php if( !$search_params["action"] || is_array($search_params["action"]) ) { ?>
     <td width="32" height="25" valign="middle" title="<?=tr("Action Taken")?>">
     <div align="center"><span style="color:<?=$zen->getSetting("color_title_txt")?>">
     <b><span class="small"><?=tr("Action")?></span></b></span></div>
     </td>
-  <? } ?>
-  <? if( !$search_params["user_id"] || is_array($search_params["user_id"]) ) { ?>
+  <?php } ?>
+  <?php if( !$search_params["user_id"] || is_array($search_params["user_id"]) ) { ?>
     <td width="32" height="25" valign="middle" title="<?=tr("Person ticket is assigned to")?>">
     <div align="center"><span style="color:<?=$zen->getSetting("color_title_txt")?>">
     <b><span class="small"><?=tr("User")?></span></b></span></div>
     </td>
-  <? } ?>
-  <? if( !$search_params["bin_id"] || is_array($search_params["bin_id"]) ) { ?>
+  <?php } ?>
+  <?php if( !$search_params["bin_id"] || is_array($search_params["bin_id"]) ) { ?>
     <td width="32" height="25" valign="middle" title="<?=tr("Bin ticket is located in")?>">
     <div align="center"><span style="color:<?=$zen->getSetting("color_title_txt")?>">
     <b><span class="small"><?=tr("Bin")?></span></b></span></div>
     </td>
-  <? } ?>
+  <?php } ?>
   </tr>
-  <?      
+  <?php
   
   $td_ttl = "title='".tr("Click here to view this ticket.")."'";
   foreach($logs as $t) {
@@ -71,27 +71,27 @@ if( is_array($logs) && count($logs) ) {
     <a class="rowLink" style="color:<?=$text?>" 
     href="<?=$link?>?id=<?=$t["ticket_id"]?>"><?=$zen->showDate($t["created"])?></a>
     </td>
-    <? if( !$search_params["action"] || is_array($search_params["action"]) ) { ?>
+    <?php if( !$search_params["action"] || is_array($search_params["action"]) ) { ?>
       <td height="25" valign="middle">
       <?=$t["action"]?>
       </td>
-    <? } ?>
-    <? if( !$search_params["user_id"] || is_array($search_params["user_id"]) ) { ?>
+    <?php } ?>
+    <?php if( !$search_params["user_id"] || is_array($search_params["user_id"]) ) { ?>
       <td height="25" valign="middle">
       <?=$zen->formatName($t["user_id"])?>
       </td>
-    <? } ?>
-    <? if( !$search_params["bin_id"] || is_array($search_params["bin_id"]) ) { ?>
+    <?php } ?>
+    <?php if( !$search_params["bin_id"] || is_array($search_params["bin_id"]) ) { ?>
       <td height="25"  valign="middle">
       <?=$zen->bins["$t[bin_id]"]?>
       </td>
-    <? } ?>
+    <?php } ?>
     </tr>       
-    <? if( trim($t["entry"]) ) { ?>
+    <?php if( trim($t["entry"]) ) { ?>
       <tr style="background:<?=$row?>;color:<?=$text?>">
       <td height="25" colspan="8" <?=$td_ttl?> <?=$txt?>>
       <a class="rowLink" href='<?=$link?>?id=<?=$t["ticket_id"]?>'>
-      <?
+          <?php
       $t["entry"] = $zen->ffv($t["entry"]);
       $parts = explode("\n",$t["entry"]);
       if( $search_text ) {
@@ -111,7 +111,7 @@ if( is_array($logs) && count($logs) ) {
       </a>
       </td>
       </tr>
-      <? 
+      <?php
     }
   }
   ?>
@@ -122,7 +122,7 @@ if( is_array($logs) && count($logs) ) {
   <input type="hidden" name="search_text" value="<?=strip_tags($search_text)?>">
   <input type="hidden" name="search_fields[title]" value="<?=strip_tags($search_fields["title"])?>">
   <input type="hidden" name="search_fields[entry]" value="<?=strip_tags($search_fields["entry"])?>">
-  <?
+      <?php
   foreach($search_params as $k=>$v) {
     print "<input type='hidden' name='search_params[$k]' value='".strip_tags($v)."'>\n";
   }
@@ -131,7 +131,7 @@ if( is_array($logs) && count($logs) ) {
   </form>
   </tr>
   </table>
-  <?   
+  <?php
 }
 
 ?>

@@ -1,4 +1,4 @@
-<?
+<?php
   /*
   **  Action: add an employee to a contact
   */

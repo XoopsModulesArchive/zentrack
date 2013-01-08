@@ -1,7 +1,7 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 <!-- DATA MENU -->
 
-<?
+<?php
   if( isset($data_set) && strlen($data_set) && !is_array($data_set) ) {
     $data_set = split("[,]+",preg_replace("@[^0-9]+@",",",$data_set));
   }
@@ -20,7 +20,7 @@
     <?=tr("Data Selection")?>
   </td>
 </tr>
-<?
+<?php
   if( $tf_type ) {     
     switch($report_type) {
     case "Bin":
@@ -54,7 +54,7 @@
     <?=tr("Select ?s",array($zen->ffv($report_type)))?>
   </td>
   <td class="bars">
-<?
+      <?php
    if( $searchbox ) {
      print "<textarea cols='20' rows='4' name='data_set'>";
      print (is_array($data_set))? join(",",$data_set) : "";
@@ -82,22 +82,22 @@
   </td>
   <td class='bars'>
     <input type='hidden' name='action' value='set_report'>
-   <? if( $tf_data ) { ?>
+   <?php if( $tf_data ) { ?>
     <input type='submit' value=' <?=tr("Change")?> '>
-   <? } else { ?>
+   <?php } else { ?>
     <input type='submit' class='submit' value=' <?=tr("Set")?> '>
-   <? } ?>
+   <?php } ?>
   </td>
 </tr>
 </form>
 
-<? 
+<?php
   } else { // show the empty set
 ?>
 <tr>
   <td class='bars' colspan='3'>&nbsp;</td>
 </tr> 
 
-<? } ?>
+<?php } ?>
 
 

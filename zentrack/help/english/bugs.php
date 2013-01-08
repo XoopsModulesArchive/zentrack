@@ -1,4 +1,4 @@
-<?  /* -*- Mode: C; c-basic-indent: 3; indent-tabs-mode: nil -*- ex: set tabstop=3 expandtab: */
+<?php /* -*- Mode: C; c-basic-indent: 3; indent-tabs-mode: nil -*- ex: set tabstop=3 expandtab: */
 
   /*
   **  HELP SECTION - SUPPORT
@@ -39,6 +39,6 @@
     <p>If Source Forge is not running, then you can report them via our user forum:
     <a href='http://www.zentrack.net/modules/newbb/' target='_blank'>forum link</a>.</p>  
   </blockquote>
-<?
+<?php
   include("$libDir/footer.php");
 ?>

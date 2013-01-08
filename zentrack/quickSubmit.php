@@ -1,4 +1,4 @@
-<?
+<?php
   /*
   **  NEW QUICK TICKET (quick submit)
   **  

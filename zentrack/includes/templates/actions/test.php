@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 
 <form name='testForm' method="post" action="<?=$SCRIPT_NAME?>">
 <input type="hidden" name="id" value="<?=$id?>">
@@ -8,7 +8,7 @@
 <tr>
  <td colspan='2' class='subTitle'><?=tr("Test Ticket")?>
    &nbsp;&nbsp;
-   <?
+     <?php
    print "<span class='note'>";
    if( $ticket['approved'] == 1 ) {
      print tr("Ticket will be sent for approval");
@@ -41,7 +41,7 @@
 </tr>
 <tr>
   <td class="subTitle" colspan='2'>
-  <? renderDivButton($hotkeys->find('Testing Complete'), "window.document.testForm.submit()", 150); ?>
+  <?php renderDivButton($hotkeys->find('Testing Complete'), "window.document.testForm.submit()", 150); ?>
   </td>
 </tr>
 <tr>

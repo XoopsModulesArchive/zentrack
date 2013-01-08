@@ -1,7 +1,7 @@
 <?php
 $modversion['name'] = "zenTrackXoops";
-$modversion['version'] = "2.604";
-$modversion['description'] = "zenTrackXoops 2.6.0.4 HelpDesk";
+$modversion['version'] = "2.605";
+$modversion['description'] = "zenTrackXoops 2.6.0.5 HelpDesk";
 $modversion['author'] = "http://zentrack.sourceforge.net/";
 $modversion['credits'] = "Sqeezed into XOOPS and enhanced by Duncan Keir based in original 2.3.2 version by Wang Jue (aka wjue) (http://www.guanxiCRM.com, http://www.wjue.org) ";
 $modversion['help'] = "";
@@ -56,6 +56,7 @@ $modversion['tables'][31] = "zentrack_view_map";
 
 // Admin things
 $modversion['hasAdmin'] = 1;
+//$modversion['system_menu'] = 1;
 $modversion['adminindex'] = "admin/admin_index.php";
 $modversion['adminmenu'] = "admin/menu.php";
 

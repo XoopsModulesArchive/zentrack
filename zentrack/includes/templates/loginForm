@@ -1,4 +1,4 @@
-<? 
+<?php
   if( !ZT_DEFINED ) { die("Illegal Access"); }
   $hotkeys->loadSection('login');
   $GLOBALS['zt_hotkeys'] = $hotkeys;
@@ -24,13 +24,13 @@
 
   <p>
   
-  <? if( $zen && $zen->settingOn('allow_pwd_save') ) { ?>
+  <?php if( $zen && $zen->settingOn('allow_pwd_save') ) { ?>
   <p>
   <input type='checkbox' name='save_my_password' value='1'> <?=$hotkeys->ll("In the future, log me in automatically (using a cookie)")?>
   </p>
-  <?  }  ?>
+  <?php  }  ?>
 
-  <? renderDivButton( $hotkeys->find('Log On'), 'window.document.loginForm.submit()' ); ?>
+  <?php renderDivButton( $hotkeys->find('Log On'), 'window.document.loginForm.submit()' ); ?>
 
   </form>
 

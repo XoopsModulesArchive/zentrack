@@ -1,7 +1,7 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 <table cellpadding="0" cellspacing="0" border="0">
 <tr>
-<?
+    <?php
   $hotkeys->loadSection('contacts_list');
   $GLOBALS['zt_hotkeys'] = $hotkeys;
       

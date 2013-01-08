@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); }
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); }
 
   /**
    * TICKET TAB FORM
@@ -29,7 +29,7 @@
 ?>
 
 <form method="post" name="ticketTabForm" action="<?=$actionName?>" onSubmit='return validateTicketForm(this)'>
-<?
+    <?php
 $context = new ZenFieldMapRenderContext(
   array("view" => $formview, "form" => 'ticketForm')
 );
@@ -47,10 +47,10 @@ foreach($hidden_fields as $f=>$field) {
 <table class='formtable' cellpadding="4" cellspacing="1" border="0">
 <tr>
  <td colspan='2' class='subTitle'><?=tr($formTitle)?>
- <? if( isset($formDesc) ) { print "&nbsp;&nbsp;<span class='note'>".tr($formDesc)."</span>"; } ?>
+ <?php if( isset($formDesc) ) { print "&nbsp;&nbsp;<span class='note'>".tr($formDesc)."</span>"; } ?>
  </td>
 </tr>
-<?
+    <?php
 
 foreach($visible_fields as $f=>$field) {
   $context->set('field', $f);
@@ -83,13 +83,13 @@ foreach($visible_fields as $f=>$field) {
 
 <tr>
   <td class="subTitle" colspan='2'>
-  <? renderDivButton($hotkeys->find($submitName), "if( validateTicketForm(window.document.forms['ticketTabForm']) ) { window.document.forms['ticketTabForm'].submit(); }"); ?>
+  <?php renderDivButton($hotkeys->find($submitName), "if( validateTicketForm(window.document.forms['ticketTabForm']) ) { window.document.forms['ticketTabForm'].submit(); }"); ?>
   </td>
 </tr>
 <tr>
 </table>
 <div class='error'><?=tr("Fields marked with ? are required", "<span class='bigBold'>*</span>")?></div>
 </form>			     
-<?
+<?php
   include_once("$libDir/templates/validateTicketForm.php");
 ?>

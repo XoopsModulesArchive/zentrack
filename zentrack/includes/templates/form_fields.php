@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); }
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); }
 
   /**
    * Process fields which will appear in an editable ticket form.

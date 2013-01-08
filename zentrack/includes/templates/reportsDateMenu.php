@@ -1,6 +1,6 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 <!-- DATE MENU -->
-<?
+<?php
   // validate data
   if( $date_value ) {
     $date_value = $zen->checkNum($date_value);
@@ -28,17 +28,17 @@
   </td>
 </tr>
 
-<? if( !$tf_data ) { ?>
+<?php if( !$tf_data ) { ?>
 
 <tr>
   <td class='bars' colspan='3'>&nbsp;</td>
 </tr>
 
-<? } else { ?>
+<?php } else { ?>
  
 <form method='post' action='<?=$rootUrl?>/reports/custom.php' name='reportDateForm'>
 <input type='hidden' name='report_type' value='<?=$zen->ffv($report_type)?>'>
-<? 
+<?php
   for($i=0; $i<count($data_set); $i++) {
      print "<input type='hidden' name='data_set[$i]' value='".$zen->ffv($data_set[$i])."'>\n";
   } 
@@ -49,7 +49,7 @@
   </td>
   <td class="bars">
     <select name='date_value'>
-    <?
+        <?php
       for($i=1; $i<21; $i++) {
 	$sel = ($date_value == $i)? " selected" : "";
 	print "\t<option$sel>$i</option>\n";
@@ -71,23 +71,23 @@
     </select>
   </td>
   <td rowspan='3' class='bars'>
-   <? if( $tf_date ) { ?>
+   <?php if( $tf_date ) { ?>
     <input type='submit' value=' <?=tr("Change")?> '>
-   <? } else { ?>
+   <?php } else { ?>
     <input type='submit' class='submit' value=' <?=tr("Set")?> '>
-   <? } ?>
+   <?php } ?>
   </td>
 </tr>
 <tr>
   <td class="bars" colspan='2'>
-    <? $chkd = (!strlen($date_selector)||$date_selector == "range")? " checked" : ""; ?>
+    <?php $chkd = (!strlen($date_selector)||$date_selector == "range")? " checked" : ""; ?>
     <input type='radio' name='date_selector' value='range'<?=$chkd?>>
 	&nbsp; <?=tr("Most Current")?>
   </td>
 </tr>
 <tr>
   <td class="bars">
-    <? $chkd = ($date_selector == "value")? " checked" : ""; ?>
+    <?php $chkd = ($date_selector == "value")? " checked" : ""; ?>
     <input type='radio' name='date_selector' value='value'<?=$chkd?>>
 	&nbsp;<?=tr("Start From Date")?>
   </td>
@@ -104,7 +104,7 @@
   }
 </script>
 
-<? } ?>
+<?php } ?>
 
 
 

@@ -1,11 +1,11 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 <!-- SUBMIT MENU -->
 <tr>
   <td class='<?=($tf_options)? "titleCell" : "subTitle" ?>' colspan='3'>
     <?=tr("Submit Results")?>
   </td>
 </tr>
-<?
+<?php
   if( $tf_type && $tf_data && $tf_date && $tf_options ) {
     // show the submit form
     print "<form method='post' action='$rootUrl/reports/view.php' name='reportSubmitForm'>\n";
@@ -46,14 +46,14 @@
   <td class='bars' colspan='3'><input type='submit' class='submit' value=' <?=tr("View Chart")?> '></td>
 </tr>  
 </form>
-<?
+  <?php
   } else {
     // show the default text
 ?>
 <tr>
   <td class='bars' colspan='3'>&nbsp;</td>
 </tr>
-<?					 
+  <?php
   }
 ?>
 

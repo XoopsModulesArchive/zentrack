@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * This file depends on the $_GET['formset'] value to provide a list
  * of forms that will be managed.  If that list is not
@@ -145,7 +145,7 @@ function GroupMapField(value, label) {
   this.label = label;
 }
 
-<?
+<?php
   // Generate an array of possible values that can be accessed from Javascript
   $possible_variables=array('login_id',
                             'login_name',
@@ -162,7 +162,7 @@ function GroupMapField(value, label) {
 ?>
 var groupMap = new Array();
 var behaviorMap = new Array();
-<?
+<?php
 $fieldMap = array();
 $groupsLoadedMap = array();
 if( is_array($behaviors) ) {
@@ -227,7 +227,7 @@ if( is_array($behaviors) ) {
  * and trigger behavior events accordingly.
  */
 var fieldMap = new Array();
-<?
+<?php
 foreach($fieldMap as $k=>$v) {
   print "fieldMap['{$k}'] = [".join(",",$v)."];\n";
 }
@@ -829,7 +829,7 @@ function pageLoadedBehavior() {
   clearBehaviorFlags();
 
 
-  var behaviorFormSet = new Array(<?
+  var behaviorFormSet = new Array(<?php
     if( $_GET['formset'] ) {
       $sep = false;
       foreach(explode(',',$_GET['formset']) as $b) {
@@ -963,7 +963,7 @@ function evalJsString( s ) {
 
 window.onload = mergeFunctions( window.onload, pageLoadedBehavior );
 
-<?
+<?php
   // print out debugging info if specified as such
   if( array_key_exists('behavior_debug', $_GET) ) {
     print "//  ------ DEBUG OUTPUT FOR BEHAVIOR_JS ------- \n";

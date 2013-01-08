@@ -1,17 +1,17 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 
-<? if( $page_title == tr("Change Password") ) { ?>
+<?php if( $page_title == tr("Change Password") ) { ?>
   <div class='menuBox'>
     <div><?=tr("Welcome!")?></div>
     <p onclick='mClk(this)'>
     &nbsp;&nbsp;<span class='error'>
-    <?
+            <?php
      $link = "<a href='$helpUrl/tutorial.php'>".tr('Tutorial')."</a>";
      print tr("If this is your first time logging in, please read the ?!", array($link));
     ?>
     </span></p>
   </div>
-<? } ?>
+<?php } ?>
 
 
   <div class='menuBox'>

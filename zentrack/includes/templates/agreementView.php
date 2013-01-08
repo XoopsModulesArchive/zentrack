@@ -1,5 +1,5 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
-	<?
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php
 	$sort = "dtime asc";
 	$parms = array(array("status", "=", "1"));
 	$tickets = $zen->get_contacts($parms,$zen->table_agreement,$sort);
@@ -33,7 +33,7 @@ if( is_array($tickets) && count($tickets) ) {
 </td>
 
 </tr>
-<?      
+<?php
 $link  = "$rootUrl/agreement.php";
 $td_ttl = "title='".tr("Click here to view the Agreement")."'";
    	
@@ -67,12 +67,12 @@ $td_ttl = "title='".tr("Click here to view the Agreement")."'";
    <?=($t["dtime"])?$zen->showDate($t["dtime"]):"n/a";?>
    </td>
    </tr>       
-   <?
+   <?php
    } 
   
 ?>
 </table>
-<?
+<?php
 }
 else {
   print "&nbsp;<blockquote>There are no agreements to view.</blockquote>\n";

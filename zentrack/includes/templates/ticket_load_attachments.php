@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); }
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); }
 
 $access = $zen->actionApplicable($id, "upload", $login_id);
 $colspan = $access? 5 : 4;
@@ -9,7 +9,7 @@ if( $access ) {
   <form method='post' action='<?=$rootUrl?>/actions/dropAttachments.php' name='deleteAttachmentForm'>
   <input type="hidden" name="id" value="<?=$id?>">
   <input type='hidden' name='setmode' value="<?=$zen->ffv($page_mode)?>">
-  <?
+      <?php
 }
 ?>
   <table width="600" class='formtable' cellpadding="2" cellspacing="1">
@@ -18,7 +18,7 @@ if( $access ) {
         <?=tr("Attachments")?>
      </td>
   </tr>
-<?
+      <?php
   // get attachments and display a list
   // of them
   $attachments = $zen->get_attachments($id);
@@ -29,11 +29,11 @@ if( $access ) {
          <td class='headerCell'><?=tr("Attachment")?></td>
          <td class='headerCell'><?=tr("Type")?></td>
          <td class='headerCell'><?=tr("Description")?></td>
-         <? if( $access ) { ?>
+         <?php if( $access ) { ?>
          <td class='headerCell'><?=tr("Delete")?></td>
-         <? } ?>
+         <?php } ?>
        </tr>
-  <?
+      <?php
      foreach($attachments as $a) {
        $aid = $a['attachment_id'];
        $clk = "onclick=\"ticketClk('".$zen->getSetting("url_view_attachment")."?aid=$aid');return false;\"";
@@ -58,35 +58,35 @@ if( $access ) {
 	  <td <?=$clk?>>
 	    <?=$zen->ffv($a["description"])?>
 	  </td>
-    <? if( $access ) { ?>
+    <?php if( $access ) { ?>
     <td class='bars' onclick='checkMyBox("drops_<?=$aid?>", event)'>
       <input id='drops_<?=$aid?>' type='checkbox' name='drops[]' value='<?=$aid?>'>
     </td>
-    <? } ?>
+    <?php } ?>
 	  </tr>
-    <?
+     <?php
      }    
   } else {
      print "<tr><td class='bars' colspan='4'>".tr("No attachments exist for this ?", array($page_type))."</td></tr>";
   }
 ?>
-  <? if( $access ) { ?>
+  <?php if( $access ) { ?>
   <tr> 
      <td class='subTitle' colspan='<?=$colspan?>'>
-     <? if( is_array($attachments) && count($attachments) ) { ?>
+     <?php if( is_array($attachments) && count($attachments) ) { ?>
        <div style='float:right'>
-       <? renderDivButtonFind('Delete Attachments', 150); ?>
+       <?php renderDivButtonFind('Delete Attachments', 150); ?>
        </div>
-     <? } ?>
+     <?php } ?>
        </form>
        <div style='float:left'>
        <form name='addAttachmentForm' action='<?=$rootUrl?>/actions/upload.php'>
        <input type="hidden" name="id" value="<?=$id?>">
        <input type='hidden' name='setmode' value="<?=$zen->ffv($page_mode)?>">
-       <? renderDivButtonFind('Add Attachment', 150); ?>
+       <?php renderDivButtonFind('Add Attachment', 150); ?>
        </form>
        </div>
      </td>
    </tr>  
-   <? } ?>
+   <?php } ?>
 </table>

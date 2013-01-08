@@ -1,4 +1,4 @@
-<?
+<?php
 if( !ZT_DEFINED ) { die("Illegal Access"); }
 
   /**
@@ -31,7 +31,7 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
 ?>
 <form action="<?=$SCRIPT_NAME?>" name="searchForm" method='POST'>
 <input type="hidden" name="TODO" value="SEARCH">
-<?
+    <?php
 $context = new ZenFieldMapRenderContext(
   array('view' => $view, 'form' => 'searchForm')
 );
@@ -54,7 +54,7 @@ foreach($hidden_fields as $f=>$field) {
   </td>
 </tr>
 
-<?
+    <?php
 if( count($text_fields) ) {
 ?>
 <tr>
@@ -77,7 +77,7 @@ if( count($text_fields) ) {
   </td>
   <td class="bars">
     <table><tr><td valign='top'>
-<?
+                <?php
   $c = 0;
   if( !is_array($search_fields) ) 
       { $search_fields = array('title'=>1,'description'=>1); }
@@ -98,7 +98,7 @@ if( count($text_fields) ) {
     </td></tr></table>
   </td>
 </tr>
-<?
+    <?php
 
 if( count($date_fields) ) {
 ?>
@@ -107,7 +107,7 @@ if( count($date_fields) ) {
     <?=tr("Date Matches")?>
   </td>
 </tr>
-<?
+    <?php
   $context = new ZenFieldMapRenderContext(
     array('view' => $view, 'form' => 'searchForm')
   );
@@ -140,7 +140,7 @@ if( count($other_fields) ) {
     <?=tr("Other Fields")?>
   </td>
 </tr>
-<?
+    <?php
   $context = new ZenFieldMapRenderContext(
     array('view' => $view, 'form' => 'searchForm')
   );

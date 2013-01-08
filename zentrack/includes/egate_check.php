@@ -1,5 +1,5 @@
 #!/usr/bin/php -q
-<?
+<?php
 /**
  ** EGATE CHECK - checks a pop3 account for emails, and 
  ** injects them via the egate utils

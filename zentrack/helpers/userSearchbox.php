@@ -1,4 +1,4 @@
-<?
+<?php
   include("../header.php");
   $table_width = '350';
   if( is_array($search_bins) && count($search_bins)==1 && $search_bins[0] == "" )
@@ -17,11 +17,11 @@
 </head>
 <body>
 
-<? if( !isset($dosearch) || !is_array($search_param) ) { ?>
+<?php if( !isset($dosearch) || !is_array($search_param) ) { ?>
 <form method='post' action='<?=$rootUrl?>/helpers/userSearchbox.php'>
-<? if( $onechoice ) { ?>
+<?php if( $onechoice ) { ?>
 <input type='hidden' name='onechoice' value='1'>
-<? } ?>
+<?php } ?>
 <input type='hidden' name='return_form' value='<?=$zen->ffv($return_form)?>'>
 <input type='hidden' name='return_field' value='<?=$zen->ffv($return_field)?>'>
 <table width='<?=$table_width?>' align='center'>
@@ -45,7 +45,7 @@
   <td class='bars'><?php echo tr("Home Bin"); ?></td>
   <td class='bars'>
     <select name="search_bins[]" size='5' multiple>
-<?
+        <?php
    $userBins = $zen->getUsersBins($login_id);
    if( is_array($userBins) ) {
      foreach($userBins as $v) {
@@ -72,7 +72,7 @@
   </td>
 </table>
 
-<? 
+<?php
   } else { 
     
   $params = array();
@@ -137,7 +137,7 @@
        //else { s += "skipped "+element.name+": "+element.type+"\n"; }//debug
      }
      //alert(s);//debug
-     <? $field = "opener.document.forms['$return_form'].elements['$return_field']"; ?>
+     <?php $field = "opener.document.forms['$return_form'].elements['$return_field']"; ?>
      <?=$field?>.value = val;
      if( <?=$field?>.select ) {
        <?=$field?>.select();
@@ -156,7 +156,7 @@
 
 <form action='<?=$rootUrl?>/helpers/userSearchbox.php' method='post' 
     name='helperForm'>
-<?
+    <?php
   $zen->hiddenField("return_form",$return_form);
   $zen->hiddenField("return_field",$return_field);
 
@@ -181,14 +181,14 @@
     <input type='submit' class='submit' value='<?php echo tr("Modify Search"); ?>'>
   </td>
 </tr>
-<?
+    <?php
  if( is_array($results) && count($results) ) {
 ?>
 <tr>
   <td class='subTitle'>
-  <? if( !$onechoice ) { ?>
+  <?php if( !$onechoice ) { ?>
     <input type='checkbox' name='allcheck' value='skip' onClick='checkAll()' class='searchbox'>
-  <? } else { print "&nbsp;"; } ?>
+  <?php } else { print "&nbsp;"; } ?>
   </td>
   <td class='subTitle'>
     <?php echo tr("ID"); ?>
@@ -199,7 +199,7 @@
   <td class='subTitle'>
     <?php echo tr("Bin"); ?>
   </td>
-<?
+     <?php
    $i=0;
    foreach($results as $r) {
      $row = ($row == "cell")? "bars" : "cell";
@@ -223,7 +223,7 @@
 <tr>
 <td colspan='4' class='bars'><?php echo tr("There were no results for your search"); ?></td>
 </tr>
-<?
+ <?php
  }
 ?>
 <tr>
@@ -232,5 +232,5 @@
 </table>
 </form>
 
-<? } ?>
+<?php } ?>
 

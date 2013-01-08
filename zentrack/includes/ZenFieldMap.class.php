@@ -1,4 +1,4 @@
-<?
+<?php
 if( !ZT_DEFINED ) { die("Illegal Access"); }
 
 
@@ -181,7 +181,7 @@ $ztf = array(
 );
 $GLOBALS['zt_field_dependencies'] = $ztf;
 
-include_once("$libDir/ZenContext.class");
+include_once("$libDir/ZenContext.class.php");
 
 /**
  * Stores information about the fields and how they are rendered on different

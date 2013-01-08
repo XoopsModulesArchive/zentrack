@@ -1,4 +1,4 @@
-<?
+<?php
   if( !ZT_DEFINED ) { die("Illegal Access"); }
   //shortcut
   $hk = $hotkeys 

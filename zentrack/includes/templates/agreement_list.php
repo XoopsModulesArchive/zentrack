@@ -1,4 +1,4 @@
-<?
+<?php
 if( !ZT_DEFINED ) { die("Illegal Access"); }
 
 /* 
@@ -9,7 +9,7 @@ $agree_id = $zen->ffv($agree_id);
 ?>
   <table width='600' cellpadding="0" cellspacing="1" border="0" class='formtable'>
   <tr><td class='subTitle' colspan='6'><?=tr("Agreements")?></td></tr>
-<?
+      <?php
 if( is_array($contacts) ) {
 ?>
 <tr>
@@ -30,7 +30,7 @@ if( is_array($contacts) ) {
 </td>
 <td class='headerCell'><?=tr("Options")?></td>
 </tr>
-<?      
+<?php
   $link  = "$rootUrl/agreement.php";
    	
   foreach($contacts as $t) {
@@ -77,7 +77,7 @@ if( is_array($contacts) ) {
           width='16' height='16' border='0' alt='<?=tr("Delete Agreement")?>'></a>
       </td>
     </tr>       
-    <?
+  <?php
   }
 } else {
     print "<tr><td class='bars' colspan='6'>".tr('No agreements found')."</td></tr>";

@@ -1,4 +1,4 @@
-<?
+<?php
 if( !ZT_DEFINED ) { die("Illegal Access"); }
 
          $elnk="$rootUrl/admin/editGroup.php";
@@ -7,7 +7,7 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
 ?>
       <br>
       <p><b><?=tr("Edit existing groups or create a new group.")?></b></p>
-      <p class='error'><?
+      <p class='error'><?php
          $str = "<a href='$rootUrl/help/find.php?s=admin&p=data_groups'>".tr('Documentation')."</a>";
          print tr("Please refer to the ? before using this feature", array($str));
        ?></p>      
@@ -29,7 +29,7 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
            <td class='cell' align='center'><b><?=tr("Description")?></b></td>
            <td class='cell' align='center'><b><?=tr("Actions")?></b></td>
 	 </tr>
-    <? 
+    <?php
          $tables=$zen->getDataGroupTablesArray();
          $vars = $_SESSION['data_groups'];
          $num = count($vars);

@@ -1,4 +1,4 @@
-<?
+<?php
 if( !ZT_DEFINED ) { die("Illegal Access"); }
 
 /*
@@ -36,7 +36,7 @@ if (is_array($company)) {
    <td class="bars small" width="20%"><?=tr("Expiration Date")?>:</td>
    <td class="bars small" width="30%"><?if($dtime){echo $zen->showDate($dtime);}?></td>
   </tr>
-<?
+    <?php
  if(!empty($description)) {
 ?>
 	  <tr>
@@ -45,7 +45,7 @@ if (is_array($company)) {
 	  <tr>
 	   <td class="bars small" colspan="4"><?=$zen->ffvText($description)?></td>
 	  </tr>
-<?
+ <?php
 }
 
   print "<tr><td class='subTitle' colspan='4'><table width='100%' cellpadding='0' cellspacing='0'><tr>";
@@ -83,7 +83,7 @@ if (is_array($company)) {
   print "</tr></table></td></tr>";
 ?>
 </table>
-<?
+<?php
 //show items
 $parms = array(array("agree_id", "=", $agree_id));
 $sort = "item_id asc";
@@ -101,7 +101,7 @@ if (is_array($items) && count($items)) {
   <td class='headerCell'><?=tr("Name")?></td>
   <td class='headerCell'><?=tr("Description")?></td>
 </tr>
-<?
+    <?php
   foreach($items as $t) {
     ?>
     <tr class='bars'>
@@ -109,7 +109,7 @@ if (is_array($items) && count($items)) {
     <td><?=$zen->ffv($t["name1"])?></td>
     <td><?=$zen->ffv($t["description1"])?></td>
     </tr>
-    <?
+  <?php
   }
 }
 

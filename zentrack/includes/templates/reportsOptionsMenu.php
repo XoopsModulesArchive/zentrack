@@ -1,6 +1,6 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 <!-- OPTIONS MENU -->
-<?
+<?php
   // validation
   if( $chart_options && !is_array($chart_options) ) {
     $chart_options = explode(",",$chart_options);
@@ -36,7 +36,7 @@
      <?=tr("Chart Options")?>
   </td>
 </tr>
-<?
+<?php
   // set hidden fields
   if( $tf_date ) {
     print "<form method='post' action='$rootUrl/reports/custom.php' name='reportOptionForm'>\n";
@@ -87,11 +87,11 @@
 	&nbsp;<?=tr("Show Both")?>
   </td>
   <td class="bars" rowspan='6'>
-   <? if( $tf_options ) { ?>
+   <?php if( $tf_options ) { ?>
     <input type='submit' name='buttonPressed' value=' <?=tr("Change")?> '>
-   <? } else { ?>
+   <?php } else { ?>
     <input type='submit' name='buttonPressed' class='submit' value=' <?=tr("Set")?> '>
-   <? } ?>
+   <?php } ?>
   </td>
 </tr> 
 <tr>
@@ -131,14 +131,14 @@
    <input type='text' name='chart_subtitle' value='<?=$zen->ffv($chart_subtitle)?>' size='30' maxlength='255'>
   </td>
 </tr>
-<? if( $chart_type != "Pie Chart" ) { ?>
+<?php if( $chart_type != "Pie Chart" ) { ?>
 <tr>
   <td class="bars">
     <?=tr("Data Options")?>
   </td>
   <td class="bars">
-<? if(count($data_set)>1) { ?>
-<? /*** not yet
+<?php if(count($data_set)>1) { ?>
+<?php /*** not yet
     <input type='checkbox' name='chart_add_ttl' 
 	value='1'<?=($chart_add_ttl)?" CHECKED":""?>>
      &nbsp;<?=tr("Add a total figure")?>
@@ -153,7 +153,7 @@
 	value='1'<?=($chart_combine>0)?" CHECKED":""?>>
 	&nbsp;<?=tr("Combine selected ?s",array(strip_tags($report_type)))?>
     <br><span class='note'><?=tr("Try using Combine Selected with a very large number of elements, if you intend to view a graphical image.")?></span>
-<? } else { 
+<?php } else {
   $zen->hiddenField("chart_add_ttl",0); 
   $zen->hiddenField("chart_add_avg",0); 
   $zen->hiddenField("chart_combine",0); 
@@ -162,7 +162,7 @@
 } ?>
   </td>
 </tr>
-<? } ?>
+<?php } ?>
 <tr>
   <td class="bars">
     <?=tr("What to Graph")?>
@@ -178,7 +178,7 @@
 </td>
 </tr>
 </form>
-<?   
+<?php
   } else {
     // show the default screen
 ?>
@@ -186,7 +186,7 @@
   <td class='bars' colspan='3'>&nbsp;</td>
 </tr>
 
-<? } ?>
+<?php } ?>
 
 
 

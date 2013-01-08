@@ -1,14 +1,14 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 
 <form method="post" name="contactForm" action="<?=($skip)? "editContacteSubmit.php" : "$rootUrl/addContacteSubmit.php"?>">
-<?
+    <?php
 if(isset($creator_id)) { ?>
 <input type="hidden" name="creator_id" value="<?=strip_tags($creator_id)?>">	
-<?
+<?php
 }
 if(isset($create_time)) { ?>
 <input type="hidden" name="create_time" value="<?=strip_tags($create_time)?>">	
-<?
+<?php
 }
 ?>
 
@@ -27,7 +27,7 @@ if(isset($create_time)) { ?>
   </td>
 </tr>
 
-<?
+    <?php
 
 	$company = $zen->get_contact_all();
   if( isset($cid) ) {
@@ -50,7 +50,7 @@ if(isset($create_time)) { ?>
   </td>
   <td class='bars'><?=$cn?></td>
   </tr>
-<?
+  <?php
 	} else {
 	if (is_array($company)) {
 	?>
@@ -61,7 +61,7 @@ if(isset($create_time)) { ?>
   	<td class="bars">
 		<select name="company_id">
   	<option value=''>--<?=tr("none")?>--</option>
-		<?
+            <?php
 		foreach($company as $p) {
 			$sel = ($p["company_id"] == $company_id)? " selected" : "";
 			$val =($p['office'])?strtoupper($p[title])." ,".$p[office]:strtoupper($p[title]);
@@ -71,7 +71,7 @@ if(isset($create_time)) { ?>
 	</select>
 	</td>
 	</tr>
-	<?
+    <?php
 	}
 }
 

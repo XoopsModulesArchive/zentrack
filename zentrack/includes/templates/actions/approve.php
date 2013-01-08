@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 
 <form name='approveForm' method="post" action="<?=$SCRIPT_NAME?>">
 <input type="hidden" name="id" value="<?=$id?>">
@@ -23,7 +23,7 @@
 </tr>
 <tr>
   <td class="subTitle" colspan='2'>
-  <? renderDivButton($hotkeys->find('Approve'), "window.document.approveForm.submit()", 150); ?>
+  <?php renderDivButton($hotkeys->find('Approve'), "window.document.approveForm.submit()", 150); ?>
   </td>
 </tr>
 <tr>

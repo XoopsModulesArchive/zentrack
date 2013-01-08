@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 
 <table width="640" align="left" cellpadding="2" cellspacing="2" bgcolor="<?=$zen->getSetting("color_background")?>">
 <tr>
@@ -45,7 +45,7 @@
      <?=("In any of these")?>
   </td>
   <td class="bars">
-  <?
+      <?php
    $sfl = ((is_array($search_fields) && in_array("lname",$search_fields)) 
 	     || 
            !is_array($search_fields));
@@ -88,7 +88,7 @@
   <td class="bars">
     <select name="search_params[homebin]">
        <option value="">----</option>
-<?
+        <?php
    $userBins = $zen->getUsersBins($login_id);
    if( is_array($userBins) ) {
      print "<option $check value='all'>-All-</option>\n";

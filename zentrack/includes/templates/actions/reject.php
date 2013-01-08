@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 
 <form method="post" name='rejectForm' action="<?=$SCRIPT_NAME?>">
 <input type="hidden" name="id" value="<?=$id?>">
@@ -22,7 +22,7 @@
 </tr>
 <tr>
   <td class="subTitle" colspan='2'>
-    <? renderDivButton($hotkeys->find("Reject"),"window.document.forms['rejectForm'].submit()"); ?>
+    <?php renderDivButton($hotkeys->find("Reject"),"window.document.forms['rejectForm'].submit()"); ?>
   </td>
 </tr>
 <tr>

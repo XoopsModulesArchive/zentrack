@@ -1,4 +1,4 @@
-<?
+<?php
   /*
   **  ADMIN INDEX PAGE
   **  

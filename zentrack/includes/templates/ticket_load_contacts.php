@@ -1,4 +1,4 @@
-<?
+<?php
 if( !ZT_DEFINED ) { die("Illegal Access"); }
 
 $hotkeys->loadSection('tab_contacts');
@@ -19,7 +19,7 @@ $colspan = $editable? 5 : 4;
        <?=tr("Related Contacts", array($page_type))?>    
      </td>
    </tr>
-<?
+    <?php
 
 if ($tickets){
 ?>
@@ -31,11 +31,11 @@ if ($tickets){
   <td class='headerCell' width='50%'><?=tr("Name")?></td>
   <td class='headerCell'><?=tr("Telephone")?></td>
   <td class='headerCell'><?=tr("E-mail")?></td>
-  <? if( $editable ) { ?>
+  <?php if( $editable ) { ?>
   <td class='headerCell'><?=tr("Delete")?></td>
-  <? } ?>
+  <?php } ?>
  </tr>
-<?  
+<?php
 //print_r($tickets);
     foreach($tickets as $n) {
 	    
@@ -67,55 +67,55 @@ if ($tickets){
     <td <?=$tc?>><?
       if( $u['email'] ) {
       ?><A id='link_<?=$cpid?>' HREF="mailto:<?=$zen->ffv($u['email'])?>"><?=$zen->ffv($u["email"])?></A>
-      <? } else { ?>&nbsp;<? } ?></td>
-    <? if( $editable ) { ?>
+      <?php } else { ?>&nbsp;<?php } ?></td>
+    <?php if( $editable ) { ?>
     <td <?=$tc?>><input 
         id='drops_<?=$zen->ffv($n['clist_id'])?>' type='checkbox' name='drops[]' 
         value='<?=$zen->ffv($n['clist_id'])?>'></td>
     </tr>
-    <? } ?>
-<?
+    <?php } ?>
+    <?php
     }
 ?>
 <tr>
 <td class='subTitle' colspan='<?=$colspan?>'>
   </div>
   <div style='float:right'>
-  <? renderDivButton($hotkeys->find('Drop Contacts'), "window.document.forms['dropContactsForm'].submit()"); ?>
+  <?php renderDivButton($hotkeys->find('Drop Contacts'), "window.document.forms['dropContactsForm'].submit()"); ?>
   </div>
 </form>
-  <? if( $editable ) { ?>
+  <?php if( $editable ) { ?>
   <div style='float:left'>
   <form action="<?=$rootUrl?>/actions/addToContacts.php" name='ContactsAddForm'>
   <input type="hidden" name="id" value="<?=$zen->checkNum($id)?>">
-  <? renderDivButton($hotkeys->find('Add Contact'), "window.document.forms['ContactsAddForm'].submit()"); ?>
+  <?php renderDivButton($hotkeys->find('Add Contact'), "window.document.forms['ContactsAddForm'].submit()"); ?>
   <input type='hidden' name='setmode' value='<?=$zen->ffv($page_mode)?>'>
   </form>
   </div>
-  <? } ?>
+  <?php } ?>
 </td>
 </tr>
-<? } else { ?>
+<?php } else { ?>
 <tr><td valign='top' colspan='<?=$colspan?>' class='bars'>
 <b><?=tr("No contacts found")?></b>
 </td></tr>
-  <? if( $editable ) { ?>
+  <?php if( $editable ) { ?>
   <tr>
   <td colspan='<?=$colspan?>' class='subTitle'>
     <form action="<?=$rootUrl?>/actions/addToContacts.php" name='ContactsAddForm'>
     <input type="hidden" name="id" value="<?=$zen->checkNum($id)?>">
-    <? renderDivButton($hotkeys->find('Add Contact'), "window.document.forms['ContactsAddForm'].submit()"); ?>
+    <?php renderDivButton($hotkeys->find('Add Contact'), "window.document.forms['ContactsAddForm'].submit()"); ?>
     <input type='hidden' name='setmode' value='<?=$zen->ffv($page_mode)?>'>
     </form>
   </td>
   </tr>
-  <? } ?>
-<? } ?>     
+  <?php } ?>
+<?php } ?>
 </table>
-<? if( $editabe ) { ?>
+<?php if( $editabe ) { ?>
 <p>&nbsp;
 <form action='<?=$rootUrl?>/newContact.php' target="_BLANK" name='newContactForm'>
   <input type='hidden' name='setmode' value='<?=$zen->ffv($page_mode)?>'>
-  <? renderDivButton($hotkeys->find('Create New Contact'), "window.document.forms['newContactForm'].submit()", 150); ?>
+  <?php renderDivButton($hotkeys->find('Create New Contact'), "window.document.forms['newContactForm'].submit()", 150); ?>
 </form>
-<? } ?>
+<?php } ?>

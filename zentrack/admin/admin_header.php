@@ -1,11 +1,8 @@
-<?
+<?php
 
-  define('ZT_SECTION', 'admin');
+define('ZT_SECTION', 'admin');
 //  include_once("../header.php");
 //  include_once("xoops_admin_header.php");
-
-
-
 
 
 include_once "../../../mainfile.php";
@@ -14,7 +11,7 @@ include_once "../../../include/cp_header.php";
 include_once XOOPS_ROOT_PATH.'/modules/zentrack/includes/functions.php';
 
 
-$myts = &MyTextSanitizer::getInstance();
+$myts = & MyTextSanitizer::getInstance();
 
 
 // 

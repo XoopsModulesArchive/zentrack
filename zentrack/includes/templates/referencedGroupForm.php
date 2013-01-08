@@ -1,11 +1,11 @@
-<?
+<?php
 if( !ZT_DEFINED ) { die("Illegal Access"); }
 
          $elnk="$rootUrl/admin/deleteGroup.php";
 ?>
       <br>
       <p><b><?=tr("The data group ? is currently being used.",array($group_id))?></b></p>
-      <p class='error'><?
+      <p class='error'><?php
          $str = "<a href='$rootUrl/help/find.php?s=admin&p=data_groups'>".tr('Documentation')."</a>";
          print tr("Please refer to the ? before using this feature", array($str));
        ?></p>      
@@ -28,14 +28,14 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
              <input type='submit' class='submit' value='<?=tr('Disable')?>' onClick="return setTodo('DISABLE')">
            </td>
 	 </tr>
-<?
+          <?php
   if( isset($_SESSION['data_groups']) && count($_SESSION['data_groups']) > 1 )  {
 ?>
 	 <tr>
            <td class='bars' align='left'>
              <b><?=tr("Move all of it's references to")?></b>
              <select name='new_data_group'>
-<?
+                 <?php
            $sel_item=" selected";
            foreach( $_SESSION['data_groups'] as $g ) {
              if ( $g['group_id'] != $group_id ) { 
@@ -51,7 +51,7 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
              <input type='submit' class='submit' value='<?=tr('Move')?>' onClick="return setTodo('MOVE')">
            </td>
 	 </tr>
-<?
+  <?php
   }
 ?>    
 

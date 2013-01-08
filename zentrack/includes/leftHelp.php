@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 
   <tr>
   <td <?=((isset($expand_help)&&$expand_help))? " class='titleCell'" : $nav_rollover_text?>>

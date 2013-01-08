@@ -1,4 +1,4 @@
-<?  if( !ZT_DEFINED ) { die("Illegal Access"); } ?><table><tr><?
+<?php  if( !ZT_DEFINED ) { die("Illegal Access"); } ?><table><tr><?
 
 $hotkeys->loadSection('actionbar');
 $GLOBALS['zt_hotkeys'] = $hotkeys;

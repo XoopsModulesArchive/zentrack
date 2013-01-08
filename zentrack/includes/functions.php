@@ -25,7 +25,7 @@
   $Db_Pass      = XOOPS_DB_PASS;       //password
   $Db_Host      = XOOPS_DB_HOST;  //host of database
 
-  	include_once("$libDir/zenTrack.class");
+  	include_once("$libDir/zenTrack.class.php");
 	$zen = new zenTrack( "$libDir/configVars.php" );
 	
 

@@ -1,4 +1,4 @@
-<?
+<?php
   /*
   **  SEARCH LOGS
   **  

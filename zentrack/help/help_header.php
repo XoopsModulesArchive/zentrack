@@ -1,4 +1,4 @@
-<?
+<?php
   
   $b = dirname(__FILE__);
   define('ZT_SECTION', 'help');

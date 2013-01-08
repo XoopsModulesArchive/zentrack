@@ -1,5 +1,4 @@
-<?{
-  
+<?php {
   /*
   **  REOPEN TICKET
   **  

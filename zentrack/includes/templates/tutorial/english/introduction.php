@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 <p align='center' class='bigbold'>Introduction</p>
 
 <p>This tutorial explains the basic flowpath and actions you will need to 

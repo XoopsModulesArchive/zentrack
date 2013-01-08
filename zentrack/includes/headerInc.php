@@ -1,4 +1,5 @@
-<?{
+<?php
+{
 if( !ZT_DEFINED ) { die("Illegal Access"); }
 
   /*
@@ -47,11 +48,11 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
   */
 
   $page_browser = 'unkown';
-  if( eregi("msie", $HTTP_USER_AGENT) ) {
+  if( preg_match("/msie/i", $HTTP_USER_AGENT) ) {
     $page_browser = "ie";
-  } else if( eregi("(\[en\]|netscape)", $HTTP_USER_AGENT) ) {
+  } else if( preg_match("/(\[en\]|netscape)/i", $HTTP_USER_AGENT) ) {
     $page_browser = "ns";
-  } else if( eregi("Mozilla", $HTTP_USER_AGENT) ) {
+  } else if( preg_match("/Mozilla/i", $HTTP_USER_AGENT) ) {
     $page_browser = "mz";
   }
 
@@ -62,13 +63,13 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
 
   // if these change, they will need to be changed
   // in egate_utils.php as well!
-  include_once("$libDir/translator.class");
-  include_once("$libDir/zenTrack.class");
-  include_once("$libDir/ZenFieldMap.class");
-  include_once("$libDir/zenTemplate.class");
+  include_once("$libDir/translator.class.php");
+  include_once("$libDir/zenTrack.class.php");
+  include_once("$libDir/ZenFieldMap.class.php");
+  include_once("$libDir/zenTemplate.class.php");
   
   $zen = new zenTrack( $configFile );
-  $map =& new ZenFieldMap($zen);
+  $map = new ZenFieldMap($zen);
   
   $GLOBALS['zt_zen'] = $zen;
   $GLOBALS['zt_map'] = $map;
@@ -94,8 +95,8 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
   unset($translator_init);
   
   // this must be initialized after the translator is started
-  include_once("$libDir/ZenHotKeys.class");
-  $hotkeys =& new ZenHotKeys($zen);
+  include_once("$libDir/ZenHotKeys.class.php");
+  $hotkeys = new ZenHotKeys($zen);
   $GLOBALS['zt_hotkeys'] = $hotkeys;
 
   function uptr($string, $vals = '') {

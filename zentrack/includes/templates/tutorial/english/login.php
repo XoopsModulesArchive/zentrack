@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 <p align='center' class='bigbold'>Logging In</p>
 
 <p><b>Getting Login and Password</b></p>

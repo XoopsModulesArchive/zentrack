@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); }
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); }
 
   /*
   **  CONTACT VIEW
@@ -12,11 +12,11 @@
 <table width="100%" class='barborder' cellspacing="0" cellpadding='0'>
  <tr><td class='subTitle' align='center'>Contacts<?=$overview? " (".$zen->ffv(tr($overview)).")" : ''?></td></tr>
   <tr>
-    <td class='indent padded' valign="top" align='center'><? include("$templateDir/contact_buttonBox.php"); ?></td>
+    <td class='indent padded' valign="top" align='center'><?php include("$templateDir/contact_buttonBox.php"); ?></td>
   </tr>
 <tr>
 <td class='tbar indent tabpad lip'>
-<?
+    <?php
   /*
   ** SHOW THE NAVIGATION TABS
   */
@@ -74,7 +74,7 @@
 </tr>
   <tr>
     <td valign="top" class='indent boxpad bottom'>
-     <?
+        <?php
   		if ($setmode==all) {
 	  		include("$templateDir/contact_allBox.php");
   		} else {

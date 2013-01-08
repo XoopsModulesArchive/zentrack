@@ -1,4 +1,4 @@
-<?
+<?php
   /*
   **  PROJECT REDIRECT
   **  

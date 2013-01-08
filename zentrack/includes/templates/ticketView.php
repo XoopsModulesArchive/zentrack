@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); }
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); }
   /*
   **  TICKET VIEW
   **
@@ -24,7 +24,7 @@
   $pageUrl = $page_type == 'project'? $projectUrl : $ticketUrl;
 ?><table class='barborder' width='100%' cellpadding="0" cellspacing="0">
 <tr>
-  <td class='subTitle padded' valign='bottom'><? //tbar padded indent ridge
+  <td class='subTitle padded' valign='bottom'><?php //tbar padded indent ridge
   if( $map->getViewProp('ticket_view_top','move_actions_up') ) {
   ?><table width='100%' cellpadding='0' cellspacing='0'><tr><td class='tbar' valign='bottom'>
     <?=$zen->ffv(tr($zen->getTypeName($type_id)))?> #<?=$id?><?
@@ -50,7 +50,7 @@
   ?></td>
 </tr>
 <tr>
-  <td class='tbar indent tabpad lip'><? include("$templateDir/ticket_tabs.php") ?></td>
+  <td class='tbar indent tabpad lip'><?php include("$templateDir/ticket_tabs.php") ?></td>
 </tr>
 <tr>
   <td class='indent boxpad' valign='top' height='225'><?
@@ -75,11 +75,11 @@
     }
   ?></td>
 </tr>
-<?
+    <?php
  if( !$map->getViewProp('ticket_view_top','move_actions_up') ) {
 ?>
 <tr>
-  <td class='tbar padded ridge'><? include("$templateDir/ticket_actions.php")?></td>
+  <td class='tbar padded ridge'><?php include("$templateDir/ticket_actions.php")?></td>
 </tr>
- <? } ?>
+ <?php } ?>
 </table>

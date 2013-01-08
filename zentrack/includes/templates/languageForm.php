@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 
 <form method="post" action="<?=$rootUrl?>/misc/language.php">
 
@@ -14,7 +14,7 @@
   </td>
   <td class="bars">
     <select name="newlang">
-<?
+        <?php
    $languages = get_languages_available();
    foreach($languages as $l) {
      $txt = ucwords($l);

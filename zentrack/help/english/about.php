@@ -1,4 +1,4 @@
-<?
+<?php
 
   /*
   **  HELP SECTION - ABOUT
@@ -26,7 +26,7 @@
   <p>Much more information about zenTrack can be found at the home page: <a href='http://www.zentrack.net'>http://www.zentrack.net</a>.</p>
 
   </blockquote>
-<?
+<?php
   include("$libDir/footer.php");
 ?>
 

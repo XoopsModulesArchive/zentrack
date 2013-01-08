@@ -1,5 +1,4 @@
-<?{
-   
+<?php {
   /*
   **  EDIT BEHAVIOR SUBMIT
   **  

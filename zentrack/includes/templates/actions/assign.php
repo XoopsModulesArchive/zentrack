@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 
 <form name='assignForm' method="post" action="<?=$SCRIPT_NAME?>">
 <input type="hidden" name="id" value="<?=$id?>">
@@ -16,7 +16,7 @@
  </td>
  <td class='bars'>
 <select name="user_id" title="<?=$hotkeys->tt("Recipient")?>">
-<?
+    <?php
   //$bins = $zen->getUsersBins($login_id,"level_assign");
   // ticket can only be assigned to users who may access
   // the ticket's current bin
@@ -48,7 +48,7 @@
 </tr>
 <tr>
   <td class="subTitle" colspan='2'>
-  <? renderDivButton($hotkeys->find('Assign'), "window.document.forms['assignForm'].submit()"); ?>
+  <?php renderDivButton($hotkeys->find('Assign'), "window.document.forms['assignForm'].submit()"); ?>
   </td>
 </tr>
 <tr>

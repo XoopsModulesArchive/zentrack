@@ -1,4 +1,4 @@
-<?  
+<?php
 if( !ZT_DEFINED ) { die("Illegal Access"); }
 
   /**
@@ -85,7 +85,7 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
      <?=tr("$ucfirst Information")?>
   </td>
 </tr>
-<?
+    <?php
   ///////////////////////////////////////
   // print the ticket fields
   ///////////////////////////////////////
@@ -103,7 +103,7 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
     <span class='note'>(<?=tr("Required")?>)</note>
   </td>
   <td class="bars">
-<?
+      <?php
     $er_vals=array('field_cols'   => '60',
                    'field_rows'   => '5',
                    'field_name'   => 'edit_reason',
@@ -115,7 +115,7 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
 ?>
   </td>
 </tr>
-<?
+  <?php
   }
 ?>
 <tr>
@@ -125,7 +125,7 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
 </tr>
 </table>
 </form>
-<?
+<?php
   $formview = $view;
   include_once("$libDir/templates/validateTicketForm.php");
 ?>

@@ -1,4 +1,4 @@
-<?
+<?php
 if( !ZT_DEFINED ) { die("Illegal Access"); }
 
   
@@ -35,7 +35,7 @@ if( is_array($tickets) ) {
           <div align="center"><span style="color:<?=$zen->getSetting("color_title_txt")?>"><b><span class="small"><?=tr("%")?></span></b></span></div>     
         </td>
    </tr>
-      <?      
+      <?php
 
    $td_ttl = "title='".tr("Click here to view the ?.",array($page_type))."'";
    $ttl_est = 0;
@@ -111,7 +111,7 @@ if( is_array($tickets) ) {
       <?=($per)? $per : tr("n/a"); ?>
     </td>
     </tr>
-       <?
+   <?php
    }     
    if( $ttl_est ) {
      $ttl_per = $zen->percentWorked($ttl_est,$ttl_wkd);

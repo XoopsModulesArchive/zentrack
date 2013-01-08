@@ -1,4 +1,4 @@
-<?
+<?php
   if( !ZT_DEFINED ) { die("Illegal Access"); }
   
   if( !$zen->checkAccess($login_id,$ticket["bin_id"],"edit") ) {

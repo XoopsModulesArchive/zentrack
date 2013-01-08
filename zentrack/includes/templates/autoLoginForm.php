@@ -1,4 +1,4 @@
-<?
+<?php
   $hotkeys->loadSection('auto_login');
   print "<p>";
   if( $zen->get_prefs($login_id,'autologin') ) {
@@ -28,7 +28,7 @@
   </tr>
   <tr>
     <td class="bars" colspan="2">
-      <? renderDivButton('ALT+O', false, 100, $txt); ?>
+      <?php renderDivButton('ALT+O', false, 100, $txt); ?>
     </td>
   </tr>
   </table>

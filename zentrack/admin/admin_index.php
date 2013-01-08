@@ -9,7 +9,7 @@
 
 include_once("admin_header.php");
 
-$myts = &MyTextSanitizer::getInstance();
+$myts = & MyTextSanitizer::getInstance();
 
 
 
@@ -29,5 +29,3 @@ include("$templateDir/adminMenu.php");
 include("$libDir/footer.php");
 
 //xoops_cp_footer();
-
-?>

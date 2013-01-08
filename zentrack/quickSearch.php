@@ -1,4 +1,4 @@
-<?
+<?php
 
   /*
   **  QUICK SEARCH PAGE

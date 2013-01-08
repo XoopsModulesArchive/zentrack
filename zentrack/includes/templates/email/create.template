@@ -9,7 +9,7 @@ To create a new ticket, simply reply to this email, and fill in the following in
 
 @Type:
 {*place an x in the appropriate box*}
-<?
+<?php
   foreach($zen->getTypes() as $k=>$v) {
     print "[ ] $v\n";
   }
@@ -17,7 +17,7 @@ To create a new ticket, simply reply to this email, and fill in the following in
 
 @System:
 {*place an x in the appropriate box*}
-<?
+<?php
   foreach($zen->getTypes() as $k=>$v) {
     print "[ ] $v\n";
   }
@@ -28,7 +28,7 @@ To create a new ticket, simply reply to this email, and fill in the following in
 
 @Bin:
 {*place an x in the appropriate box*}
-<?
+<?php
   foreach($zen->getTypes() as $k=>$v) {
     print "[ ] $k-$v\n";
   }
@@ -36,7 +36,7 @@ To create a new ticket, simply reply to this email, and fill in the following in
 
 @Priority:
 {*place an x in the appropriate box*}
-<?
+<?php
   foreach($zen->getTypes() as $k=>$v) {
     print "[ ] $k-$v\n";
   }

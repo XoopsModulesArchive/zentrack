@@ -1,4 +1,4 @@
-<?
+<?php
 
   /*
   **  HELP SECTION - FUTURE
@@ -14,11 +14,11 @@
   <blockquote>
 
 <pre>
-<? print join("",file("$libDir/misc/TODO")); ?>
+<?php print join("",file("$libDir/misc/TODO")); ?>
 </pre>
 
   </blockquote>
-<?
+<?php
   include("$libDir/footer.php");
 ?>
 

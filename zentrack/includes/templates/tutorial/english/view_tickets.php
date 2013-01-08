@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 <p align='center' class='bigbold'>Viewing Tickets</p>
 
 <img src="<?=$tutImageUrl?>/nav_tickets.gif" 

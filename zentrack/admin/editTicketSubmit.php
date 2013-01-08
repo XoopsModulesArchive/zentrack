@@ -1,4 +1,4 @@
-<?
+<?php
   /*
   **  EDIT TICKET (edit submit)
   **  

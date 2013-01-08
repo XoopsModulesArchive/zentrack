@@ -1,7 +1,7 @@
 
 <div class='heading'><?=tr("Hot Key Settings")?></div>
 
-<?
+<?php
 foreach($hotkeys->listSections() as $sect) {
   print "<div class='menuBox'>\n";
   print "  <div>".ucwords(str_replace('_', ' ',$sect))."</div>\n";

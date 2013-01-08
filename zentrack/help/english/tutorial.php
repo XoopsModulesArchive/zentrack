@@ -1,4 +1,4 @@
-<?
+<?php
   $b = dirname(dirname(__FILE__));
   include("$b/help_header.php");
 
@@ -31,7 +31,7 @@
 <tr>
   <td width='125' valign='top'>
     <a href='<?=$helpUrl?>/index.php'>Back to Help</a><br>
-    <?
+      <?php
     $linktext = '';
     $title = 'Introduction';
     $s = array_key_exists('s',$_GET)? $_GET['s'] : 'introduction';
@@ -58,7 +58,7 @@
     ?>
   </td>
   <td class='content' valign='top'>
-    <?
+      <?php
       include("$tutDir/$s.php");
       if( $save ) {
         print "<p align='right'><b><a href='$tutUrl?s=$save'>Next: ";
@@ -70,6 +70,6 @@
 </tr>
 </table>
 
-<? 
+<?php
   include("$libDir/footer.php"); 
 ?>

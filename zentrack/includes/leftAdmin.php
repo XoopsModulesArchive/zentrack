@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 
   <tr>
   <td <?=($expand_admin)? " class='titleCell'" : $nav_rollover_text?>>
@@ -6,7 +6,7 @@
   </td>
   </tr>
   
-  <? if( $expand_admin ) { ?>
+  <?php if( $expand_admin ) { ?>
   
   <tr>
   <td <?=$nav_rollover_text?>>
@@ -51,4 +51,4 @@
   </td>
   </tr>  
 
-  <? } ?>
+  <?php } ?>

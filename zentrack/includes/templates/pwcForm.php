@@ -1,4 +1,4 @@
-<?
+<?php
 if( !ZT_DEFINED ) { die("Illegal Access"); }
 
   $user = $zen->getUser($login_id);
@@ -14,7 +14,7 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
     <b><?=tr("Change User Password")?></b>
   </td>
 </tr>
-<?
+    <?php
   if( $zen->settingOn("check_pwd_simple") ) {
 ?>
 <tr>
@@ -22,7 +22,7 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
     <?=tr("Your passphrase must be at least 6 characters long and contain at least 1 non-letter character.")?>
   </td>
 <tr>
-<?
+        <?php
   }
 ?>
 <tr>

@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 <p align='center' class='bigbold'>Contacts</p>
 
 <b>Important Note:</b> If contacts are not useful to your organization, they

@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * ZenContext: a generic container for properties to be passed between objects
  *

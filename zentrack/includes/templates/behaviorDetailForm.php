@@ -1,4 +1,4 @@
-<?
+<?php
 if( !ZT_DEFINED ) { die("Illegal Access"); }
 
    // some elements of page are presented slightly different, although
@@ -8,7 +8,7 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
    $colspan = $groupIsFile? 2:4;
 ?>
       <br>
-      <?
+<?php
         print "<p class='bold'>";
         if( $groupIsFile ) {
           print tr("Enter the names of fields and the corresponding column"
@@ -39,19 +39,19 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
 	 <tr>
 	 <td class='cell' align='center'><b><?=tr("Compare Field")?></b></td>
 
-   <? if( !$groupIsFile ) { ?>
+   <?php if( !$groupIsFile ) { ?>
 	 <td class='cell' align='center'><b><?=tr("Operator")?></b></td>
-   <? } ?>
+   <?php } ?>
 	 
    <td class='cell' align='center'><b><?=
       $groupIsFile? tr('Column Number') : tr("Compare Value")?></b></td>
 
-   <? if( !$groupIsFile ) { ?>
+   <?php if( !$groupIsFile ) { ?>
 	 <td class='cell' align='center'><b><?=tr("Sort Order")?></b></td>
-   <? } ?>
+   <?php } ?>
 
 	 </tr>
-    <? 
+    <?php
     $num = count($elements) + $more;
     if( is_array($elements) ) {
       $j = 0;

@@ -1,4 +1,4 @@
-<?
+<?php
 if( !ZT_DEFINED ) { die("Illegal Access"); }
 
 
@@ -11,7 +11,7 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
 **
 */
 
-include_once("$libDir/db.class");
+include_once("$libDir/db.class.php");
 
 class zenDate extends DB {
   
@@ -518,5 +518,3 @@ class zenDate extends DB {
     }
   }
 }
-
-?>

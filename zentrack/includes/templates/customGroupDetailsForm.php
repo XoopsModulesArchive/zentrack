@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
       <br>
       <p class='error'><?=tr("Select the items that will appear in this group and their order.")?></p>
       <ul>
@@ -17,7 +17,7 @@
            <td class='cell' align='center'><b><?=tr("Value")?></b></td>
            <td class='cell' align='center'><b><?=tr("Order")?></b></td>
 	 </tr>
-    <? 
+    <?php
       for($i=0; $i<count($elements); $i++) {
 	$e = $elements[$i];
 	$val = $zen->ffv($e['field_value']);
@@ -35,7 +35,7 @@
 	  <input type='textbox' name='NewSortOrder[<?=$i?>]' value='<?=$sort?>'> 
         </td>
       </tr>
-    <?
+      <?php
        }
     ?>
 

@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); }
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); }
   $zen->addDebug('ticket_box.php', "Rendering ".$boxview, 3);
 
  /**

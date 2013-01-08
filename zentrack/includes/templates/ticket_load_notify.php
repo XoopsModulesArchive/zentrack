@@ -1,4 +1,4 @@
-<? if( !ZT_DEFINED ) { die("Illegal Access"); } 
+<?php if( !ZT_DEFINED ) { die("Illegal Access"); }
 
   $on = $zen->actionApplicable($ticket['id'],'notify',$login_id);
   $drop = $on && $zen->checkAccess($login_id,$ticket['bin_id'],'notify_drop');
@@ -15,7 +15,7 @@
   <?=tr("Notify Recipients")?>
   </td>
   </tr>  
-  <?
+      <?php
   $notify_list = $zen->get_notify_list($id);
   if( is_array($notify_list) ) {
     ?>
@@ -25,9 +25,9 @@
     <tr>
     <td class='headerCell'><?=tr("Name")?></td>
     <td class='headerCell'><?=tr("Email")?></td>
-    <? if($drop) {?> <td class='headerCell'><?=tr("Delete")?></td> <? } ?>
+    <?php if($drop) {?> <td class='headerCell'><?=tr("Delete")?></td> <?php } ?>
     </tr>
-    <?  
+    <?php
     foreach($notify_list as $n) {
       if( $n["user_id"] ) {
         $u = $zen->get_user($n["user_id"]);
@@ -54,24 +54,24 @@
     ?>
     <tr> 
     <td class='subTitle' colspan='<?=$colspan?>'>
-    <? if( $drop ) { ?>
+    <?php if( $drop ) { ?>
     <div style='float:right'>
-    <? renderDivButtonFind('Drop Recipients'); ?>
+    <?php renderDivButtonFind('Drop Recipients'); ?>
     </div>
-    <? } ?>
+    <?php } ?>
     </form>
-    <? if( $add ) { ?>
+    <?php if( $add ) { ?>
       <div style='float:left'>
       <form name='notifyAddForm' action="<?=$rootUrl?>/actions/addToNotify.php">
       <input type="hidden" name="id" value="<?=$zen->checkNum($id)?>">
       <input type="hidden" name="setmode" value="<?=$zen->ffv($page_mode)?>">
-      <? renderDivButtonFind('Add Recipients'); ?>
+      <?php renderDivButtonFind('Add Recipients'); ?>
       </form>
       </div>
-    <? } ?>
+    <?php } ?>
     </td>
     </tr>
-    <?
+  <?php
   }
   else {
     print "<tr><td class='bars bold'>".tr("No recipients on notify list")."</td></tr>";
@@ -81,10 +81,10 @@
       <form name='notifyAddForm' action="<?=$rootUrl?>/actions/addToNotify.php">
       <input type="hidden" name="id" value="<?=$zen->checkNum($id)?>">
       <input type="hidden" name="setmode" value="<?=$zen->ffv($page_mode)?>">
-      <? renderDivButtonFind('Add Recipients'); ?>
+      <?php renderDivButtonFind('Add Recipients'); ?>
       </form>
       </td></tr>
-    <? }
+    <?php }
   }
   ?>
   </table>

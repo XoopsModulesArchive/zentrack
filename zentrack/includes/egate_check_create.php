@@ -1,5 +1,5 @@
 #!/usr/bin/php -q
-<?
+<?php
 /**
  ** EGATE CHECK CREATE - checks a pop3 account for emails, and 
  ** creates tickets from them via the egate_utils.  This script

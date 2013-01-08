@@ -1,4 +1,4 @@
-<?
+<?php
 if( !ZT_DEFINED ) { die("Illegal Access"); }
 
   // if there is an ID, open it up
@@ -37,7 +37,7 @@ if( !ZT_DEFINED ) { die("Illegal Access"); }
    <form action='<?=$SCRIPT_NAME?>'>
     <input type="text" name="id" size="8" maxlength="12">
    </form> 
-   <?
+    <?php
   }
 ?>
 

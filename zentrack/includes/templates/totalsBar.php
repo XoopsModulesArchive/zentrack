@@ -1,4 +1,4 @@
-<?
+<?php
  /**
   * GENERATE A TOTALS PRINTOUT
   *

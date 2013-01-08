@@ -1,4 +1,4 @@
-<?  if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
+<?php  if( !ZT_DEFINED ) { die("Illegal Access"); } ?>
 <tr>
   <td class='leftNavTitle' height='25' valign='middle'><?=tr("Tickets")?></td>
 </tr>
@@ -25,7 +25,7 @@
 <tr>
   <td class='leftNavCell' height='100%' valign='top'>
     <div class='recentHistory'><?=tr("Recent Tickets")?></div>
-    <?
+      <?php
       $history =& $zen->getHistoryManager();
       $list = $history->getList('ticket');
       if( count($list) ) {

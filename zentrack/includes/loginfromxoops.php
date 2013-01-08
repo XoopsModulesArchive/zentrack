@@ -1,4 +1,4 @@
-<?  
+<?php
   
   /*
   **  Retrieve USER info (uid)

@@ -1,4 +1,4 @@
-<?
+<?php
 
   /*
   **  HELP SECTION
@@ -24,7 +24,7 @@
     
   <div class='menuBox'>
     <div><?=tr("User's Manual");?></div>
-    <?
+      <?php
       // prints out an index of the user's manual
       // do not try to manually replace the values here, just
       // edit the labels in the appropriate language file!    
@@ -35,7 +35,7 @@
 
   <div class='menuBox'>
     <div><?=tr("Administrator's Manual")?></div>
-    <?
+      <?php
       // prints out an index of the administrator's manual
       // do not try to manually replace the values here, just
       // edit the labels in the appropriate language file!    
@@ -65,7 +65,7 @@
   </div>
   
   <p>&nbsp;</p>
-  
-<?
+
+<?php
   include("$libDir/footer.php");
 ?>

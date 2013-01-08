@@ -1,5 +1,4 @@
-<?{
-  define("ZT_DEFINED",true);
+<?php {  define("ZT_DEFINED",true);
   
   /*
   **  EGATE UTILS
@@ -180,12 +179,12 @@
   }
 
   //initialize zen base object
-  include_once("$libDir/zenTrack.class");
+  include_once("$libDir/zenTrack.class.php");
   $zen = new zenTrack( $configFile );
 
   // include the zen objects
-  include_once("$libDir/zenTemplate.class");
-  include_once("$libDir/translator.class");
+  include_once("$libDir/zenTemplate.class.php");
+  include_once("$libDir/translator.class.php");
 
   //Create the initialization array for the translator object
   $translator_init = array(
