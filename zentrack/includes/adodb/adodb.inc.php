@@ -2553,15 +2553,12 @@
 		
 		$results = array();
 		$cnt = 0;
-        if (($this->EOF && $nRows = 1)){
-            $results[] = $this->fields;
-        } else {
+        $this->MoveFirst();
 		while (!$this->EOF && $nRows != $cnt) {
 			$results[] = $this->fields;
 			$this->MoveNext();
 			$cnt++;
 		}
-        }
 		return $results;
 	}
 	
