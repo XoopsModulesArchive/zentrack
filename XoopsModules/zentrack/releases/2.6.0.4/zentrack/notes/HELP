@@ -1,0 +1,124 @@
+
+  Welcome to zenTrack!
+
+  See INSTALL.README for install instructions.
+
+  --------------------------------------------
+  DOCUMENTATION
+  --------------------------------------------
+    Documentation is available on the website:
+    http://www.zentrack.net/modules/documentation
+    http://docs.zentrack.net
+	
+  --------------------------------------------
+  TROUBLESHOOTING
+  --------------------------------------------
+    Insure that you use / and not the \ character for directories!  The \
+    character has special meaning in php.
+     
+    Open www/header.php and set $Debug_Mode = 3...
+    This will produce highly useful output for debugging.
+    
+    If you have trouble, send a support request (see below) with 
+    that debug output pasted at the bottom of your message.
+
+  --------------------------------------------
+  SUPPORT
+  --------------------------------------------
+
+    CRITICAL!!  When submitting a support request, always begin by setting 
+                $Debug_Mode = 3; in the www/header.php file and then pasting the
+                results in the request.  If you can't get zenTrack to run this
+                far, THEN YOU MUST SUBMIT YOUR VERSION INFO for zenTrack, your OS,
+                your Browser, and your Server, so that we can re-create the error.
+
+    website - The zentrack website is a feature-rich place to seek help.  Check out
+             the community forums!  http://www.zentrack.net
+
+    mailing list - zentrack-users is a great place to get help.  Answers usually
+             within hours.  http://sourceforge.net/mail/?group_id=22724.
+
+  --------------------------------------------
+  COMMON ERRORS
+  --------------------------------------------
+
+  HEADER.PHP MISSING
+    -This is probably a cvs checkout.  Just go to the directory where
+     you unzipped zentrack and run setup_from_cvs (.cmd on windows) to
+     build directories, permissions, and the header.php file.
+
+  BLANK SCREEN
+    - Turn on Debug_Mode = 3 in your www/header.php file.  Error messages are
+      supressed unless this is on.
+      
+    - Check your system/apache/php logs!
+    
+    - Insure that you have not made a syntax error in the www/header.php file
+      (you can try restoring the default)
+      
+    - If you have upgraded, insure that you copied all of the files correctly.
+      If some files are missing, this can cause unpredictable errors.
+  
+  PAGE COLORS ARE BROKEN AND I CAN'T LOGIN 
+    - This is a classic sign of data trouble.  Either your login information
+      is not correct in www/header.php or there is no data in your database
+      (because you have not correctly run the build/seed files yet).
+  
+  LOGIN PROBLEMS
+    -The Administrator password is Administrator, User password is User, Guest
+     password is Guest.
+
+    -Logins are case sensitive
+    
+    -Check your database and insure there are entries in the ZENTRACK_USERS
+     table.  If there is an error running the seed_yourdb.sql file (or you
+     forgot to run it) then that would certainly prevent a login.
+
+    -If you use .htaccess authentication or run your server on a windows
+     machine with a login account, then ZT may attempt to log you in with
+     these account settings.  Find the setting in ZENTRACK_SETTINGS called
+     allow_htaccess and insure this is set to 0.
+
+  MUST LOG IN TWICE
+    - This is almost guaranteed to be the $rootUrl variable.  You can validate
+      this by turning on debugging and then looking for the big red note at
+      the bottom of the page next to $HTTP_HOST.  When you get it right, it
+      will say (matches rootUrl).
+      
+  SEARCH DOESN'T WORK
+    - Check your settings in the field map.  Users mess this up all the time.
+      If some field is set to "No" or some other default value which doesn't
+      match any records, there will naturally be no results!
+      
+    - Try turning on debugging and looking for search_tickets... examine the query...
+      try it against your database manually... see if something seems out of place.
+
+  REPORT IMAGE PROBLEMS
+    -Broken images
+      You must have GD 2.0 and freetype installed
+      You can view error messages by right clicking on the broken image, and getting the direct url
+      When you browse to this url, you will see the error output (possibly the image binary too)
+
+    -To view debugging output for an image, open www/view_image.php and setting $graph->debug to 1-3.
+      You will probably want to use 1 or 2, 3 is mostly for developers
+      Note that you have to view the image directly to see this (in the page, it just shows a broken image)
+
+    -Problems viewing png images
+
+    You can manually set the image type to "jpeg" if you have
+    trouble with pngs by opening includes/reportConfig.php
+    and finding the line called image_type.
+
+  EMAIL GATEWAY PROBLEMS
+    -Check includes/logs/egate_log for clues
+    
+    -Make sure you have the egate user account set up with proper permissions 
+       (this account doesn't have to be active)
+       
+    -Make sure you turn on email_gateway in the configuration panel.
+
+    -Make sure that you have your egate scripts chmod to 755 (executable)
+
+  OTHER DATABASE USERS
+    -We can support, upon request, DB2, Sybase, or other
+     install scripts, with some assistance from you.

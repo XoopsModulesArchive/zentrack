@@ -1,0 +1,3 @@
+<select name='{field_name}' size='1' class='permhide' {field_multiple} >
+{foreach:field_choices:"<option "+selected+">"+value+"</option>"}
+</select>
