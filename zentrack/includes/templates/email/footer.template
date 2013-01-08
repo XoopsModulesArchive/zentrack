@@ -1,0 +1,7 @@
+
+
+---------------------------
+This email was produced by the {zen:bot_name}, on behalf of the {zen:system_name} system.
+
+To be removed from further notifications concerning this ticket, simply reply to this email, with the text "#{id}: remove" in the subject.{if:id=nnnn:"  Where nnnn is the id of the ticket"}
+--------------------------

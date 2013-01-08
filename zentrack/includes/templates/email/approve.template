@@ -1,0 +1,10 @@
+This ticket has been marked as pending.{if:messages:"  Please see the comments below for details."}
+
+If this meets your satisfaction, please reply to this email with "#{id}: approve" in the subject line, so that this ticket may be closed.
+
+If there are problems, or this ticket is not ready to close, please reply with "#{id}: reject" in the subject.
+
+You may enter any comments or useful information in the body of the reply email.
+
+{if:messages:"Comments:\n\n"}
+{foreach:messages:value+"\n"}

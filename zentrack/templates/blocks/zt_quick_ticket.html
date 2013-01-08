@@ -1,0 +1,20 @@
+
+<table>
+<form method="post" name="quickTicketForm" action="./modules/zentrack/quickSubmit.php" >
+<{foreach item=item from=$block.items}>
+	<{$item.input}>
+<{/foreach}>
+<tr><td colspan="2"><{$block.bin}></td></tr>
+
+<tr><td>Title</td>
+<td>
+<input type="text" name="title" value="" size="30" maxlength="200" ></td></tr>
+<tr><td>Description</td>
+<td><textarea cols="20" rows="5" name="description" ></textarea></td></tr>
+<tr>
+  <td>
+   <input type="submit" value=" Create ">
+  </td>
+</tr>
+</form>
+</table>

@@ -1,0 +1,4 @@
+
+This message is in response to your email for ticket #{id}, action ({action})
+
+{foreach:messages:value+"\n"}

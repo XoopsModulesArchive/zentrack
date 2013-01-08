@@ -1,0 +1,4073 @@
+
+-------------------
+Project Description
+-------------------
+zenTrack is a highly configurable tracking system based 
+on a flexible and high quality code base designed for small 
+to medium-large businesses.
+ 
+It features a simple interface, fully adaptable administration
+and user experience, internationalization, platform and database 
+abstraction, and endless possibilities for project expansion. 
+--------------------
+
+----- VERSION 2.6 Final (2005-11-05) -----
+
+2005-11-03, kato
+  Fixed search bug when searching by bin
+   - zentrack_2/includes/templates/listTickets.php 1.35
+   - zentrack_2/includes/templates/searchResults.php 1.19
+   - zentrack_2/includes/zenTrack.class 1.200
+  
+  Fixed display of internal/external contacts (works on all tabs now)
+   - zentrack_2/www/contacts.php 1.5
+  
+  Corrected obscure js error in field map form
+  Corrected highlighting problems caused by clicking very fast on up/down arrows
+   - zentrack_2/includes/templates/fieldMapForm.php 1.20
+   
+  Search by project_id corrected
+  Corrected obscure bug causing undesirable limit in lists of tickets (menu pulldowns)
+   - zentrack_2/includes/ZenFieldMap.class
+   - zentrack_2/includes/zenTrack.class 1.200
+  
+  'Modify Search' bug fixed so that fields are preserved
+  Search text highlighted in results
+   - zentrack_2/includes/templates/searchResults.php
+   - zentrack_2/includes/templates/listTickets.php
+   - zentrack_2/includes/templates/searchForm.php
+   
+  Project now selected automagically when clicking 'Add Ticket to Project' in tasks view
+   - zentrack_2/includes/templates/ticket_load_attachments.php 1.4
+   - zentrack_2/includes/headerInc.php 1.68
+   - zentrack_2/includes/nav.php 1.28
+   - zentrack_2/includes/templates/ticket_load_tasks.php 1.4
+  
+2005-11-01, alberts
+  Fixed Navtab mouseout color, per tt#219
+   - zentrack_2/includes/headerInc.php 1.67
+
+2005-11-01, kato
+  Prepared release files and upgrade notes
+   - zentrack_2/UPGRADE.readme 1.30
+   - zentrack_2/install/UPGRADE_mssqlserver.sql 1.41
+   - zentrack_2/install/UPGRADE_mysql.sql 1.52
+   - zentrack_2/install/UPGRADE_oracle.sql 1.49
+   - zentrack_2/install/UPGRADE_postgres.sql 1.41
+   - zentrack_2/install/seed_mssqlserver.sql 1.45
+   - zentrack_2/install/seed_mysql.sql 1.62
+   - zentrack_2/install/seed_oracle.sql 1.51
+   - zentrack_2/install/seed_postgres.sql 1.47
+  
+  Made 'close' messages more descriptive
+   - zentrack_2/www/actions/close.php
+   
+  Fixed warnings concerning foreach on field maps (due to multifields)
+  Extracted mutlifield seperator to a variable
+  Improved efficiency of multifield lookups (uses a single bulk query)
+  Fixed ZenTrack::getVarfieldVals to always return an array for multifields
+     (even if they are not found)
+   - zentrack_2/includes/parseVarfields.php 1.7
+   - zentrack_2/includes/zenTemplate.class 1.13
+   - zentrack_2/includes/zenTrack.class 1.199
+   - zentrack_2/includes/templates/fieldMapForm.php 1.19
+   - zentrack_2/includes/templates/ticket_tab_form.php 1.3
+   - zentrack_2/includes/templates/validateTicketForm.php 1.6
+   - zentrack_2/includes/templates/fields/multihidden.template 1.3
+   - zentrack_2/includes/templates/fields/radio.template 1.3
+   - zentrack_2/install/configVars.php.default 1.14
+  
+  Improved renderDivButton to survive errors and to print a default if the
+  key is not valid
+   - zentrack_2/includes/headerInc.php
+   - zentrack_2/www/styles.php 1.34
+  
+  Fixed editing of field from ticket tabs (several minor bugs)
+  Cleaned up field validation to work better with hidden and multi-select
+   - zentrack_2/includes/ZenFieldMap.class 1.40
+   - zentrack_2/includes/ZenHotKeys.class 1.11
+   - zentrack_2/includes/ZenSessionManager.class 1.7
+   - zentrack_2/includes/db.class 1.43
+    - zentrack_2/includes/zenTemplate.class
+    - zentrack_2/includes/templates/fieldMapForm.php
+    - zentrack_2/includes/templates/menunokeys.template 1.0
+    - zentrack_2/includes/templates/radio.template
+    - zentrack_2/includes/templates/validateTicketForm.php
+   - zentrack_2/www/ticket.php 1.33
+    
+  Audited $msg output for formatting and security hardening
+   - zentrack_2/includes/editTicketSubmit.php 1.20
+   - zentrack_2/includes/footer.php 1.43
+   - zentrack_2/includes/headerInc.php 1.66
+   - zentrack_2/includes/login.php 1.33
+   - zentrack_2/includes/nav.php 1.27
+   - zentrack_2/includes/zen.class 1.42
+   - zentrack_2/includes/templates/actions/move.php 1.8
+   - zentrack_2/includes/templates/nav_projects.php 1.7
+   - zentrack_2/includes/templates/nav_tickets.php 1.6
+   - zentrack_2/www/actions/accept.php 1.8
+   - zentrack_2/www/actions/agreement_archive.php 1.4
+   - zentrack_2/www/actions/approve.php 1.7
+   - zentrack_2/www/actions/assign.php 1.9
+   - zentrack_2/www/actions/close.php 1.16
+   - zentrack_2/www/actions/contact_delete.php 1.4
+   - zentrack_2/www/actions/dropFromContacts.php 1.4
+   - zentrack_2/www/actions/dropFromNotify.php 1.4
+   - zentrack_2/www/actions/email.php 1.18
+   - zentrack_2/www/actions/log.php 1.11
+   - zentrack_2/www/actions/move.php 1.7
+   - zentrack_2/www/actions/reject.php 1.8
+   - zentrack_2/www/actions/relate.php 1.9
+   - zentrack_2/www/actions/reopen.php 1.8
+   - zentrack_2/www/actions/test.php 1.7
+   - zentrack_2/www/actions/upload.php 1.14
+   - zentrack_2/www/actions/yank.php 1.6
+   - zentrack_2/www/addProjectSubmit.php 1.25
+   - zentrack_2/www/addSubmit.php 1.32
+   - zentrack_2/www/javascript.js 1.22
+   - zentrack_2/www/search.php 1.16
+   - zentrack_2/www/admin/access.php 1.9
+   - zentrack_2/www/admin/addBehaviorSubmit.php 1.7
+   - zentrack_2/www/admin/addGroupSubmit.php 1.13
+   - zentrack_2/www/admin/addUserSubmit.php 1.14
+   - zentrack_2/www/admin/admin_header.php 1.18
+   - zentrack_2/www/admin/bins.php 1.9
+   - zentrack_2/www/admin/config.php 1.13
+   - zentrack_2/www/admin/deleteBehavior.php 1.2
+   - zentrack_2/www/admin/deleteGroup.php 1.4
+   - zentrack_2/www/admin/deleteUser.php 1.6
+   - zentrack_2/www/admin/editBehavior.php 1.5
+   - zentrack_2/www/admin/editBehaviorDetails.php 1.6
+   - zentrack_2/www/admin/editBehaviorSubmit.php 1.6
+   - zentrack_2/www/admin/editCustom.php 1.9
+   - zentrack_2/www/admin/editGroupDetails.php 1.8
+   - zentrack_2/www/admin/editGroupSubmit.php 1.11
+   - zentrack_2/www/admin/editUserSubmit.php 1.15
+   - zentrack_2/www/admin/priorities.php 1.7
+   - zentrack_2/www/admin/resetPassword.php 1.8
+   - zentrack_2/www/admin/systems.php 1.10
+   - zentrack_2/www/admin/tasks.php 1.8
+   - zentrack_2/www/admin/types.php 1.8
+   - zentrack_2/www/help/bugs.php 1.5
+   - zentrack_2/www/misc/homebin.php 1.8
+   - zentrack_2/www/misc/language.php 1.6
+   - zentrack_2/www/misc/pwc.php 1.14
+
+2005-10-30, kato
+  Added missing menubox.htc file
+   - zentrack_2/www/menubox.htc 1.1
+   
+  Data types can now take quotes in name (admin section)
+  Corrected quote problems from data types in create/edit forms
+   - zentrack_2/includes/ZenFieldMap.class 1.39
+   - zentrack_2/includes/templates/configForm.php 1.14
+  
+  Fixed access for ticket view using guest login account
+   - zentrack_2/includes/templates/ticketView.php 1.13
+   - zentrack_2/includes/templates/ticket_box.php 1.22
+   
+  Fixes for caching problems
+   - zentrack_2/includes/headerInc.php 1.65
+   - zentrack_2/includes/session_start.php 1.31
+   
+  Fix postgres syntax errors
+   - zentrack_2/install/build_postgres.sql 1.22
+   
+  UI Cleanup
+   - zentrack_2/includes/nav.php 1.26
+   - zentrack_2/includes/templates/nav_projects.php 1.6
+
+----- VERSION 2.6.PRE3 (2005-10-24)--
+
+2005-10-23, kato
+  Removed erroneous "Errors Detected" output
+    - zentrack_2/includes/Zen.class 1.41
+    
+  Fixed bug in retrieving project children (causing stall in mysql db)
+  Added check for project self-references which cause an infinite loop
+  Fixed bug in project create that causes "Invalid page mode requested: 'details'" error
+   - zentrack_2/includes/zenTrack.class 1.198
+   - zentrack_2/includes/ZenFieldMap.class 1.38
+   - zentrack_2/includes/nav.php 1.24
+   - zentrack_2/includes/templates/fieldMapForm.php 1.18
+   - zentrack_2/includes/templates/listTickets.php 1.34
+   - zentrack_2/includes/templates/newTicketForm.php 1.53
+   - zentrack_2/includes/templates/ticketView.php 1.12
+   - zentrack_2/includes/templates/fields/multihidden.template 1.2
+   - zentrack_2/www/addProjectSubmit.php 1.24
+   - zentrack_2/www/addSubmit.php 1.31
+   - zentrack_2/www/styles.php 1.33
+   - zentrack_2/www/admin/editUserSubmit.php 1.14
+  
+  Added missing field map entries for project_view_top and for project_close
+  Added missing multifields for ticket_view_top
+  Prepared upgrade/sql files for new release
+   - zentrack_2/UPGRADE.readme 1.29
+   - zentrack_2/install/UPGRADE_mssqlserver.sql 1.40
+   - zentrack_2/install/UPGRADE_mysql.sql 1.51
+   - zentrack_2/install/UPGRADE_oracle.sql 1.48
+   - zentrack_2/install/UPGRADE_postgres.sql 1.40
+   - zentrack_2/install/seed_mssqlserver.sql 1.44
+   - zentrack_2/install/seed_mysql.sql 1.61
+   - zentrack_2/install/seed_oracle.sql 1.50
+   - zentrack_2/install/seed_postgres.sql 1.46
+
+----- VERSION 2.6.PRE2 (2005-10-22)--
+
+2005-10-21, kato
+  Fixed permissions on contact panel
+    - zentrack_2/includes/templates/ticket_load_contacts 1.6
+  
+  Fixed error when a ticket tab is not visible
+    - zentrack_2/includes/templates/ticket_tabs.php 1.7
+
+2005-10-21, cfalonso
+  Fixed an exception thrown when no tickets were found in the search
+   - zentrack_2/www/search.php 1.15
+
+  Fixed the problem of the text not being displayed in the buttons.
+  This fix also solves the problem of single hot keys not working.
+    - zentrack_2/includes/nav.php 1.22
+    - zentrack_2/includes/paging.php 1.7
+    - zentrack_2/includes/templates/contact_buttonBox.php 1.5
+    - zentrack_2/includes/templates/contact_personBox.php 1.4
+    - zentrack_2/includes/templates/contact_titleBox.php 1.5
+    - zentrack_2/includes/templates/listTickets.php 1.33
+    - zentrack_2/includes/templates/loginForm 1.19
+    - zentrack_2/includes/templates/newAgreementForm.php 1.9
+    - zentrack_2/includes/templates/searchForm.php 1.20
+    - zentrack_2/includes/templates/ticket_actions.php 1.5
+    - zentrack_2/includes/templates/ticket_fields_editable.php 1.3
+    - zentrack_2/includes/templates/ticket_load_attachments.php 1.3
+    - zentrack_2/includes/templates/ticket_load_contacts.php 1.5
+    - zentrack_2/includes/templates/ticket_load_log.php 1.4
+    - zentrack_2/includes/templates/ticket_load_notify.php 1.4
+    - zentrack_2/includes/templates/ticket_load_tasks.php 1.3
+    - zentrack_2/includes/templates/actions/move.php 1.7
+    - zentrack_2/www/agreement.php 1.5
+    - zentrack_2/www/newContact.php 1.5
+    - zentrack_2/www/ticket.php 1.32
+    - zentrack_2/www/actions/action_header.php 1.21
+
+
+2005-10-21, kato
+  Fixed error in header file
+    - zentrack_2/install/header.php.default 1.20
+    
+  Fixed error in hotkeys file
+    - zentrack_2/includes/ZenHotKeys.php 1.10
+
+----- VERSION 2.6.PRE1 (2005-10-21)--
+
+2005-10-21, kato
+  Created patch files
+    - zentrack_2/install/patches/upgrade_2-5-5-1_to_2-6-pre1.patch 1.1
+    - zentrack_2/install/patches/upgrade_2-5-5-2_to_2-6-pre1.patch 1.1
+
+2005-10-21, kato
+  Prepared install/upgrade docs and scripts
+    - zentrack_2/install/UPGRADE.readme
+    - zentrack_2/install/build_mssqlserver.sql
+    - zentrack_2/install/build_mysql.sql
+    - zentrack_2/install/build_oracle.sql
+    - zentrack_2/install/build_postgres.sql
+    - zentrack_2/install/seed_mssqlserver.sql
+    - zentrack_2/install/seed_mysql.sql
+    - zentrack_2/install/seed_oracle.sql
+    - zentrack_2/install/seed_postgres.sql
+    - zentrack_2/install/seed_random_report_data.sql
+    - zentrack_2/install/UPGRADE_mssqlserver.sql
+    - zentrack_2/install/UPGRADE_mysql.sql
+    - zentrack_2/install/UPGRADE_oracle.sql
+    - zentrack_2/install/UPGRADE_postgres.sql
+    - zentrack_2/install/previous/2.5.5.2.UPGRADE_mssqlserver.sql 1.1
+    - zentrack_2/install/previous/2.5.5.2.UPGRADE_mysql.sql 1.1
+    - zentrack_2/install/previous/2.5.5.2.UPGRADE_oracle.sql 1.1
+    - zentrack_2/install/previous/2.5.5.2.UPGRADE_postgres.sql 1.1
+    
+2005-10-20, kato
+  Added filters to listTickets.php
+  Finished contacts loader
+  Finished notify loader
+   - zentrack_2/includes/templates/listTickets.php 1.32
+   - zentrack_2/includes/listFilters.php 1.0
+   - zentrack_2/includes/templates/ticket_load_contacts 1.1
+   
+  Added bin_id/type_id checks and filtering for project vs. tickets
+   - zentrack_2/includes/ZenFieldMap.class 1.37
+   - zentrack_2/includes/templates/listTickets.php 1.32
+  
+  Added filter to debug output in footer
+   - zentrack_2/includes/footer.php 1.40
+  
+  Fixed caching of getUsersBins
+   - zentrack_2/includes/zenTrack.class 1.196
+   
+  Fixed/cleaned/prettied/secured the contacts section
+  Prettied/fixed admin and help sections
+  General GUI and code cleanup
+   - zentrack_2/includes/ZenFieldMap.class 1.37
+   - zentrack_2/includes/ZenHotKeys.class 1.7
+   - zentrack_2/includes/ZenSessionManager.class 1.6
+   - zentrack_2/includes/editTicketSubmit.php 1.19
+   - zentrack_2/includes/egate_utils.php 1.46
+   - zentrack_2/includes/footer.php 1.40
+   - zentrack_2/includes/headerInc.php 1.63
+   - zentrack_2/includes/login.php 1.31
+   - zentrack_2/includes/nav.php 1.21
+   - zentrack_2/includes/paging.php 1.6
+   - zentrack_2/includes/session_save.php 1.10
+   - zentrack_2/includes/sorting.php 1.6
+   - zentrack_2/includes/zen.class 1.40
+   - zentrack_2/includes/zenTrack.class 1.196
+   - zentrack_2/includes/ZenContext.class 1.1
+   - zentrack_2/includes/listFilters.php 1.1
+   - zentrack_2/includes/templates/actions/contacts.php 1.8
+   - zentrack_2/includes/templates/actions/email.php 1.8
+   - zentrack_2/includes/templates/actions/estimate.php 1.4
+   - zentrack_2/includes/templates/actions/log.php 1.8
+   - zentrack_2/includes/templates/actions/move.php 1.6
+   - zentrack_2/includes/templates/actions/notify.php 1.6
+   - zentrack_2/includes/templates/actions/reject.php 1.5
+   - zentrack_2/includes/templates/actions/relate.php 1.7
+   - zentrack_2/includes/templates/actions/reopen.php 1.5
+   - zentrack_2/includes/templates/actions/upload.php 1.7
+   - zentrack_2/includes/templates/actions/template 1.15
+   - zentrack_2/includes/templates/agreementView.php 1.5
+   - zentrack_2/includes/templates/agreement_box.php 1.7
+   - zentrack_2/includes/templates/agreement_list.php 1.3
+   - zentrack_2/includes/templates/contactView.php 1.3
+   - zentrack_2/includes/templates/contact_!19Box.php 1.3
+   - zentrack_2/includes/templates/contact_allBox.php 1.4
+   - zentrack_2/includes/templates/contact_box.php 1.4
+   - zentrack_2/includes/templates/contact_buttonBox.php 1.4
+   - zentrack_2/includes/templates/contact_list.php 1.3
+   - zentrack_2/includes/templates/contact_personBox.php 1.3
+   - zentrack_2/includes/templates/contact_titleBox.php 1.4
+   - zentrack_2/includes/templates/contact_tuvBox.php 1.3
+   - zentrack_2/includes/templates/contact_wxyzBox.php 1.3
+   - zentrack_2/includes/templates/fieldMapForm.php 1.16
+   - zentrack_2/includes/templates/form_fields.php 1.2
+   - zentrack_2/includes/templates/listContacts.php 1.5
+   - zentrack_2/includes/templates/listContacts2.php 1.4
+   - zentrack_2/includes/templates/listTickets.php 1.32
+   - zentrack_2/includes/templates/listTickets_workFormat.php 1.18
+   - zentrack_2/includes/templates/nav_admin.php 1.5
+   - zentrack_2/includes/templates/nav_contacts.php 1.5
+   - zentrack_2/includes/templates/nav_help.php 1.5
+   - zentrack_2/includes/templates/nav_options.php 1.5
+   - zentrack_2/includes/templates/nav_projects.php 1.5
+   - zentrack_2/includes/templates/nav_tickets.php 1.5
+   - zentrack_2/includes/templates/newAgreementForm.php 1.8
+   - zentrack_2/includes/templates/newContactForm.php 1.6
+   - zentrack_2/includes/templates/newContacteForm.php 1.7
+   - zentrack_2/includes/templates/newTicketForm.php 1.52
+   - zentrack_2/includes/templates/searchContact2List.php 1.4
+   - zentrack_2/includes/templates/searchContact3List.php 1.4
+   - zentrack_2/includes/templates/searchContact4List.php 1.4
+   - zentrack_2/includes/templates/searchContactList.php 1.4
+   - zentrack_2/includes/templates/searchForm.php 1.19
+   - zentrack_2/includes/templates/searchResults.php 1.18
+   - zentrack_2/includes/templates/ticketView.php 1.10
+   - zentrack_2/includes/templates/ticket_actions.php 1.4
+   - zentrack_2/includes/templates/ticket_fields_viewable.php 1.2
+   - zentrack_2/includes/templates/ticket_load_attachments.php 1.2
+   - zentrack_2/includes/templates/ticket_load_contacts.php 1.4
+   - zentrack_2/includes/templates/ticket_load_notify.php 1.2
+   - zentrack_2/includes/templates/ticket_load_related.php 1.2
+   - zentrack_2/includes/templates/ticket_load_tasks.php 1.2
+   - zentrack_2/includes/templates/ticket_tab_form.php 1.2
+   - zentrack_2/includes/templates/ticket_tabs.php 1.6
+   - zentrack_2/includes/templates/listContacts2Heading.php 1.1
+   - zentrack_2/includes/templates/listContactsHeading.php 1.1
+   - zentrack_2/includes/templates/listFiltersForm.php 1.1
+   - zentrack_2/includes/templates/totalsBar.php 1.1
+   - zentrack_2/includes/templates/fields/searchbox.template 1.2
+   - zentrack_2/install/build_postgres.sql 1.20
+   - zentrack_2/install/header.php.default 1.19
+   - zentrack_2/install/upgrade_base.sql 1.8
+   - zentrack_2/install/patches/upgrade_2-5-0-1_to_2-5-5-1.patch 1.4
+   - zentrack_2/install/utils/upgrade_prep.php 1.5
+   - zentrack_2/install/utils/zenNotifier.php 1.2
+   - zentrack_2/www/actions/action_header.php 1.19
+   - zentrack_2/www/actions/addToContacts.php 1.4
+   - zentrack_2/www/actions/addToNotify.php 1.9
+   - zentrack_2/www/actions/agreement_archive.php 1.3
+   - zentrack_2/www/actions/close.php 1.15
+   - zentrack_2/www/actions/contact_delete.php 1.3
+   - zentrack_2/www/actions/dropFromContacts.php 1.3
+   - zentrack_2/www/actions/dropFromNotify.php 1.3
+   - zentrack_2/www/actions/log.php 1.10
+   - zentrack_2/www/actions/print.php 1.13
+   - zentrack_2/www/actions/relate.php 1.8
+   - zentrack_2/www/actions/upload.php 1.13
+   - zentrack_2/www/actions/dropAttachments.php 1.1
+   - zentrack_2/www/addAgreementSubmit.php 1.6
+   - zentrack_2/www/addContactSubmit.php 1.5
+   - zentrack_2/www/addContacteSubmit.php 1.5
+   - zentrack_2/www/addSubmit.php 1.30
+   - zentrack_2/www/agreement.php 1.4
+   - zentrack_2/www/agreements.php 1.4
+   - zentrack_2/www/contact.php 1.5
+   - zentrack_2/www/contact_header.php 1.2
+   - zentrack_2/www/contacts.php 1.4
+   - zentrack_2/www/index.php 1.16
+   - zentrack_2/www/javascript.js 1.20
+   - zentrack_2/www/keyevent.js 1.6
+   - zentrack_2/www/newAgreement.php 1.5
+   - zentrack_2/www/newContact.php 1.5
+   - zentrack_2/www/projects.php 1.14
+   - zentrack_2/www/quickSearch.php 1.2
+   - zentrack_2/www/search.php 1.14
+   - zentrack_2/www/searchContacts.php 1.4
+   - zentrack_2/www/styles.php 1.29
+   - zentrack_2/www/ticket.php 1.30
+   - zentrack_2/www/admin/admin_header.php 1.16
+   - zentrack_2/www/admin/config.php 1.12
+   - zentrack_2/www/admin/editUserSubmit.php 1.13
+   - zentrack_2/www/admin/fieldMap.php 1.11
+   - zentrack_2/www/help/bugs.php 1.4
+   - zentrack_2/www/help/help_header.php 1.10
+   - zentrack_2/www/help/english/about.php 1.2
+   - zentrack_2/www/help/english/features.php 1.2
+   - zentrack_2/www/help/english/index.php 1.6
+   - zentrack_2/www/help/english/support.php 1.4
+   - zentrack_2/www/help/english/admin/index.php 1.2
+   - zentrack_2/www/help/english/users/contacts.php 1.3
+   - zentrack_2/www/help/english/users/index.php 1.2
+   - zentrack_2/www/helpers/projectSearchbox.php 1.12
+   - zentrack_2/www/helpers/ticketSearchbox.php 1.10
+   - zentrack_2/www/helpers/userSearchbox.php 1.11
+   - zentrack_2/www/misc/autologin.php 1.2
+   - zentrack_2/www/reports/reports_header.php 1.8
+   - zentrack_2/www/reports/view_image.php 1.14
+   - zentrack_2/www/images/16x16/arrow_green_right.png 1.1
+   - zentrack_2/www/images/16x16/arrow_grey_right.png 1.1
+   - zentrack_2/www/images/16x16/pin_green.png 1.1
+   - zentrack_2/www/images/16x16/pin_red.png 1.1
+   - zentrack_2/www/images/16x16/pin_yellow.png 1.1  
+  
+2005-10-18, cfalonso
+  Minor translation issue
+   - zentrack_2/includes/translations/spanish.trans 1.13
+
+2005-10-17, cfalonso
+  Fixing logging issue for multi fields
+   - zentrack_2/includes/zenTrack.class 1.195
+   
+2005-10-14, cfalonso
+  Fixed errors for custom_multi fields
+   - zentrack_2/includes/parseVarfields.php 1.6
+   - zentrack_2/includes/zenTrack.class 1.194
+
+2005-10-11, cfalonso
+  Fixed a problem with the multi fields search
+   - zentrack_2/includes/templates/searchResults.php 1.17
+
+2005-10-10, kato
+  Finished/enhanced hot keys (added hints)
+   - zentrack_2/includes/ZenHotKeys.class 1.6
+   - zentrack_2/includes/nav.php 1.20
+   - zentrack_2/includes/templates/loginForm 1.18
+   - zentrack_2/includes/templates/nav_admin.php 1.4
+   - zentrack_2/includes/templates/nav_contacts.php 1.4
+   - zentrack_2/includes/templates/nav_help.php 1.4
+   - zentrack_2/includes/templates/nav_options.php 1.4
+   - zentrack_2/includes/templates/nav_projects.php 1.4
+   - zentrack_2/includes/templates/nav_tickets.php 1.4
+   - zentrack_2/includes/templates/ticket_actions.php 1.3
+   - zentrack_2/includes/templates/ticket_tabs.php 1.5
+   - zentrack_2/includes/footer.php 1.39
+   - zentrack_2/www/keyevent.js 1.5
+
+  Finished tab_edit mode
+  Worked on load screens(access bug to fix)
+  Completed ticket action buttons
+   - zentrack_2/includes/ZenFieldMap.class 1.36
+   - zentrack_2/includes/editTicketSubmit.php 1.18
+   - zentrack_2/includes/headerInc.php 1.62
+   - zentrack_2/includes/validateFields.php 1.5
+   - zentrack_2/includes/zenTrack.class 1.193
+   - zentrack_2/includes/templates/actions/assign.php 1.8
+   - zentrack_2/includes/templates/actions/close.php 1.7
+   - zentrack_2/includes/templates/actions/contacts.php 1.7
+   - zentrack_2/includes/templates/actions/email.php 1.7
+   - zentrack_2/includes/templates/actions/move.php 1.5
+   - zentrack_2/includes/templates/actions/reject.php 1.4
+   - zentrack_2/includes/templates/actions/reopen.php 1.4
+   - zentrack_2/includes/templates/actions/test.php 1.4
+   - zentrack_2/includes/templates/actions/yank.php 1.4
+   - zentrack_2/includes/templates/actions/approve.php 1.1
+   - zentrack_2/includes/templates/fields/date.template 1.6
+   - zentrack_2/includes/templates/newTicketForm.php 1.51
+   - zentrack_2/includes/templates/ticketView.php 1.9
+   - zentrack_2/includes/templates/ticket_fields_editable.php 1.2
+   - zentrack_2/includes/templates/ticket_load_contacts.php 1.3
+   - zentrack_2/includes/templates/validateTicketForm.php 1.5
+   - zentrack_2/includes/templates/ticket_action.php 1.1
+   - zentrack_2/includes/templates/ticket_tab_form.php 1.1
+   - zentrack_2/includes/templates/ticket_load_custom.php 1.18
+   - zentrack_2/install/seed_mysql.sql 1.59
+   - zentrack_2/install/upgrade_base.sql 1.7
+   - zentrack_2/www/actions/accept.php 1.7
+   - zentrack_2/www/actions/action_header.php 1.18
+   - zentrack_2/www/actions/addToContacts.php 1.3
+   - zentrack_2/www/actions/approve.php 1.6
+   - zentrack_2/www/actions/assign.php 1.8
+   - zentrack_2/www/actions/close.php 1.14
+   - zentrack_2/www/actions/email.php 1.17
+   - zentrack_2/www/actions/move.php 1.6
+   - zentrack_2/www/actions/reject.php 1.7
+   - zentrack_2/www/actions/reopen.php 1.7
+   - zentrack_2/www/actions/test.php 1.6
+   - zentrack_2/www/actions/yank.php 1.5
+   - zentrack_2/www/actions/editSubmit.php 1.19
+   - zentrack_2/www/newContact.php 1.4
+   - zentrack_2/www/pngbehavior.htc 1.2
+   - zentrack_2/www/styles.php 1.28
+   - zentrack_2/www/ticket.php 1.29
+  
+  Added some more icons
+   - zentrack_2/www/images/24x24/cone.png 1.1
+   - zentrack_2/www/images/24x24/printer.png 1.1
+   - zentrack_2/www/images/24x24/satellite.png 1.1
+   - zentrack_2/www/images/24x24/trash.png 1.1
+   - zentrack_2/www/images/24x24/trash_gold.png 1.1
+   - zentrack_2/www/images/48x48/cone.png 1.1
+   - zentrack_2/www/images/48x48/printer.png 1.1
+   - zentrack_2/www/images/48x48/satellite.png 1.1
+   - zentrack_2/www/images/48x48/trash.png 1.1
+   - zentrack_2/www/images/48x48/trash_gold.png 1.1
+   
+2005-10-08, cfalonso
+  Moved custom_multi fields from ZENTRACK_VARFIELD to ZENTRACK_VARFIELD_MULTI table:
+   - zentrack_2/includes/ZenFieldMap.class 1.35
+   - zentrack_2/includes/zenTrack.class 1.192
+   - zentrack_2/includes/templates/searchForm.php 1.18
+   - zentrack_2/includes/templates/searchResults.php 1.16
+   - zentrack_2/install/configVars.php.default 1.13
+   - zentrack_2/install/upgrade_base.sql 1.6
+
+2005-10-07, kato
+  Added fix for pngs in IE
+  Added action icons to tickets
+   - zentrack_2/www/empty.gif 1.1
+   - zentrack_2/www/pngbehavior.htc 1.1
+   - zentrack_2/www/actions/empty.gif 1.1
+   - zentrack_2/www/admin/empty.gif 1.1
+   - zentrack_2/www/javascript.js 1.18
+   - zentrack_2/www/styles.php 1.27
+   - zentrack_2/includes/templates/ticketView.php 1.8
+   - zentrack_2/includes/templates/ticket_actions.php 1.2
+  
+  Expanded search box and added advanced link
+   - zentrack_2/www/javascript.js 1.18
+   - zentrack_2/www/quickSearch.php 1.1
+   - zentrack_2/includes/nav.php 1.19
+   
+  Added log filter
+   - zentrack_2/includes/templates/ticket_load_contacts.php 1.2  
+  
+  Added missing load modules (attachments, notify, contacts)
+   - zentrack_2/includes/zenTrack.class 1.191
+   - zentrack_2/includes/templates/ticket_load_attachments.php 1.1
+   - zentrack_2/includes/templates/ticket_load_notify.php 1.1
+   - zentrack_2/includes/templates/ticket_load_related.php 1.1
+   - zentrack_2/includes/templates/ticket_load_tasks.php 1.1
+   - zentrack_2/includes/templates/ticket_tabs.php 1.4
+   - zentrack_2/includes/templates/form_fields.php 1.1
+  
+  Cleaned up navigation alignment/colors
+  Improved spacing/eye tracking for ticket view
+  Improved hot keys
+   - zentrack_2/includes/ZenHotKeys.class 1.5
+   - zentrack_2/includes/nav.php 1.19
+   - zentrack_2/includes/templates/listTickets.php 1.31
+   - zentrack_2/includes/templates/loginForm 1.17
+   - zentrack_2/includes/templates/nav_admin.php 1.3
+   - zentrack_2/includes/templates/nav_contacts.php 1.3
+   - zentrack_2/includes/templates/nav_help.php 1.3
+   - zentrack_2/includes/templates/nav_options.php 1.3
+   - zentrack_2/includes/templates/nav_projects.php 1.3
+   - zentrack_2/includes/templates/nav_tickets.php 1.3
+   - zentrack_2/includes/templates/newTicketForm.php 1.50
+   - zentrack_2/includes/templates/ticketView.php 1.8
+   - zentrack_2/includes/templates/ticket_actions.php 1.2
+   - zentrack_2/includes/templates/ticket_box.php 1.21
+   - zentrack_2/includes/templates/ticket_load_log.php 1.3
+   - zentrack_2/includes/templates/ticket_fields_editable.php 1.1
+   - zentrack_2/includes/templates/ticket_fields_viewable.php 1.1
+   - zentrack_2/includes/templates/ticket_actionBar.php 1.58 [deleted]
+   - zentrack_2/includes/templates/ticket_attachmentsBox.php 1.9 [deleted]
+   - zentrack_2/includes/templates/ticket_relatedBox.php 1.7 [deleted]
+   - zentrack_2/includes/templates/ticket_tasksBox.php 1.7 [deleted]
+   - zentrack_2/includes/templates/ticket_titleBox.php 1.15 [deleted]
+   - zentrack_2/www/javascript.js 1.18
+   - zentrack_2/www/styles.php 1.27
+   
+  Improved search_form values to avoid common search mistakes
+   - zentrack_2/install/upgrade_base.sql 1.5
+   - zentrack_2/install/seed_mysql.sql (still need to do others)
+
+  Added new icon set for ticket actions
+   - zentrack_2/www/images/24x24/arrow_blue_down.png 1.1
+   - zentrack_2/www/images/24x24/arrow_blue_left.png 1.1
+   - zentrack_2/www/images/24x24/arrow_blue_right.png 1.1
+   - zentrack_2/www/images/24x24/arrow_blue_up.png 1.1
+   - zentrack_2/www/images/24x24/arrow_green_down.png 1.1
+   - zentrack_2/www/images/24x24/arrow_green_left.png 1.1
+   - zentrack_2/www/images/24x24/arrow_green_right.png 1.1
+   - zentrack_2/www/images/24x24/arrow_green_up.png 1.1
+   - zentrack_2/www/images/24x24/arrow_grey_down.png 1.1
+   - zentrack_2/www/images/24x24/arrow_grey_left.png 1.1
+   - zentrack_2/www/images/24x24/arrow_grey_right.png 1.1
+   - zentrack_2/www/images/24x24/arrow_grey_up.png 1.1
+   - zentrack_2/www/images/24x24/book.png 1.1
+   - zentrack_2/www/images/24x24/book_blue.png 1.1
+   - zentrack_2/www/images/24x24/book_pile.png 1.1
+   - zentrack_2/www/images/24x24/box.png 1.1
+   - zentrack_2/www/images/24x24/box_gold.png 1.1
+   - zentrack_2/www/images/24x24/cd.png 1.1
+   - zentrack_2/www/images/24x24/cd_gold.png 1.1
+   - zentrack_2/www/images/24x24/clock.png 1.1
+   - zentrack_2/www/images/24x24/flag.png 1.1
+   - zentrack_2/www/images/24x24/flag_blue.png 1.1
+   - zentrack_2/www/images/24x24/flag_green.png 1.1
+   - zentrack_2/www/images/24x24/flag_orange.png 1.1
+   - zentrack_2/www/images/24x24/flag_red.png 1.1
+   - zentrack_2/www/images/24x24/flag_yellow.png 1.1
+   - zentrack_2/www/images/24x24/hierarchy.png 1.1
+   - zentrack_2/www/images/24x24/hierarchy_blue.png 1.1
+   - zentrack_2/www/images/24x24/key.png 1.1
+   - zentrack_2/www/images/24x24/key_gold.png 1.1
+   - zentrack_2/www/images/24x24/keychain.png 1.1
+   - zentrack_2/www/images/24x24/keychain_blue.png 1.1
+   - zentrack_2/www/images/24x24/keyhole.png 1.1
+   - zentrack_2/www/images/24x24/lock.png 1.1
+   - zentrack_2/www/images/24x24/magnify.png 1.1
+   - zentrack_2/www/images/24x24/mail.png 1.1
+   - zentrack_2/www/images/24x24/pawn.png 1.1
+   - zentrack_2/www/images/24x24/person.png 1.1
+   - zentrack_2/www/images/24x24/pin_blue.png 1.1
+   - zentrack_2/www/images/24x24/pin_green.png 1.1
+   - zentrack_2/www/images/24x24/pin_red.png 1.1
+   - zentrack_2/www/images/24x24/pin_yellow.png 1.1
+   - zentrack_2/www/images/24x24/tree.png 1.1
+   - zentrack_2/www/images/24x24/tree_blue.png 1.1
+   - zentrack_2/www/images/24x24/two_people.png 1.1
+   - zentrack_2/www/images/48x48/arrow_blue_down.png 1.1
+   - zentrack_2/www/images/48x48/arrow_blue_left.png 1.1
+   - zentrack_2/www/images/48x48/arrow_blue_right.png 1.1
+   - zentrack_2/www/images/48x48/arrow_blue_up.png 1.1
+   - zentrack_2/www/images/48x48/arrow_green_down.png 1.1
+   - zentrack_2/www/images/48x48/arrow_green_left.png 1.1
+   - zentrack_2/www/images/48x48/arrow_green_right.png 1.1
+   - zentrack_2/www/images/48x48/arrow_green_up.png 1.1
+   - zentrack_2/www/images/48x48/arrow_grey_down.png 1.1
+   - zentrack_2/www/images/48x48/arrow_grey_left.png 1.1
+   - zentrack_2/www/images/48x48/arrow_grey_right.png 1.1
+   - zentrack_2/www/images/48x48/arrow_grey_up.png 1.1
+   - zentrack_2/www/images/48x48/book.png 1.1
+   - zentrack_2/www/images/48x48/book_blue.png 1.1
+   - zentrack_2/www/images/48x48/book_pile.png 1.1
+   - zentrack_2/www/images/48x48/box.png 1.1
+   - zentrack_2/www/images/48x48/box_gold.png 1.1
+   - zentrack_2/www/images/48x48/cd.png 1.1
+   - zentrack_2/www/images/48x48/cd_gold.png 1.1
+   - zentrack_2/www/images/48x48/clock.png 1.1
+   - zentrack_2/www/images/48x48/flag_blue.png 1.1
+   - zentrack_2/www/images/48x48/flag_green.png 1.1
+   - zentrack_2/www/images/48x48/flag_orange.png 1.1
+   - zentrack_2/www/images/48x48/flag_purple.png 1.1
+   - zentrack_2/www/images/48x48/flag_red.png 1.1
+   - zentrack_2/www/images/48x48/flag_yellow.png 1.1
+   - zentrack_2/www/images/48x48/hierarchy.png 1.1
+   - zentrack_2/www/images/48x48/hierarchy_blue.png 1.1
+   - zentrack_2/www/images/48x48/key.png 1.1
+   - zentrack_2/www/images/48x48/key_gold.png 1.1
+   - zentrack_2/www/images/48x48/keychain.png 1.1
+   - zentrack_2/www/images/48x48/keychain_blue.png 1.1
+   - zentrack_2/www/images/48x48/keyhole.png 1.1
+   - zentrack_2/www/images/48x48/lock.png 1.1
+   - zentrack_2/www/images/48x48/magnify.png 1.1
+   - zentrack_2/www/images/48x48/mail.png 1.1
+   - zentrack_2/www/images/48x48/pawn.png 1.1
+   - zentrack_2/www/images/48x48/person.png 1.1
+   - zentrack_2/www/images/48x48/pin_blue.png 1.1
+   - zentrack_2/www/images/48x48/pin_green.png 1.1
+   - zentrack_2/www/images/48x48/pin_red.png 1.1
+   - zentrack_2/www/images/48x48/pin_yellow.png 1.1
+   - zentrack_2/www/images/48x48/tree.png 1.1
+   - zentrack_2/www/images/48x48/tree_blue.png 1.1
+   - zentrack_2/www/images/48x48/two_people.png 1.1  
+
+2005-10-05, cfalonso
+  Commiting CVS merges
+    - zentrack_2/includes/ZenFieldMap.class 1.34
+    - zentrack_2/includes/nav.php 1.18
+    - zentrack_2/includes/nav.php 1.17
+
+2005-10-05, kato
+  Fixed mOvr error message in mozilla
+
+2005-10-05, kato
+  Fixes for hot keys, field map, data type sorting, and ticket tabs.
+    - zentrack_2/includes/templates/binForm.php [deleted]
+    - zentrack_2/includes/templates/configForm.php 1.13
+    - zentrack_2/includes/templates/ticket_contactsBox.php [deleted]
+    - zentrack_2/includes/templates/ticket_customBox.php [deleted]
+    - zentrack_2/includes/templates/ticket_detailsBox.php [deleted]
+    - zentrack_2/includes/templates/ticket_logBox.php [deleted]
+    - zentrack_2/includes/templates/ticket_notifyBox.php [deleted]
+    - zentrack_2/includes/ZenFieldMap.class 1.33
+    - zentrack_2/includes/ZenHotKeys.class 1.4
+    - zentrack_2/www/keyevent.js 1.4
+    - zentrack_2/www/admin/admin_header.php 1.15
+    - zentrack_2/www/admin/bins.php 1.8
+    - zentrack_2/www/admin/priorities.php 1.6
+    - zentrack_2/www/admin/systems.php 1.9
+    - zentrack_2/www/admin/tasks.php 1.7
+    - zentrack_2/www/admin/types.php 1.7
+
+2005-10-04, kato
+  Ticket view tabs completed
+  Added properties to field map
+  Added view map table
+  Added sorting to data types
+   - zentrack_2/includes/ZenFieldMap.class 1.32
+   - zentrack_2/includes/ZenHotKeys.class 1.3
+   - zentrack_2/includes/footer.php 1.38
+   - zentrack_2/includes/nav.php 1.16
+   - zentrack_2/includes/zenGraph.class 1.10
+   - zentrack_2/includes/zenTrack.class 1.190
+   - zentrack_2/includes/templates/adminMenu.php 1.14
+   - zentrack_2/includes/templates/fieldMapForm.php 1.14
+   - zentrack_2/includes/templates/ticketView.php 1.6
+   - zentrack_2/includes/templates/ticket_load_log.php 1.2
+   - zentrack_2/includes/templates/ticket_tabs.php 1.2
+   - zentrack_2/install/upgrade_base.sql 1.3
+   - zentrack_2/www/admin/bins.php 1.7
+   - zentrack_2/www/admin/fieldMap.php 1.10
+   - zentrack_2/www/keyevent.js 1.3
+   - zentrack_2/www/reports/view_image.php 1.13
+
+2005-09-07, kato
+  Added new ticket view screens, cleaned up ticket views for new UI
+   - zentrack_2/includes/templates/ticket_actions.php 1.0
+   - zentrack_2/includes/templates/ticket_box.php 1.20
+   - zentrack_2/includes/templates/ticket_load_contacts.php 1.0
+   - zentrack_2/includes/templates/ticket_load_custom.php 1.0
+   - zentrack_2/includes/templates/ticket_load_details.php 1.0
+   - zentrack_2/includes/templates/ticket_load_log.php 1.0
+   - zentrack_2/includes/templates/ticket_load_summary.php 1.0
+   - zentrack_2/includes/templates/ticket_tabs.php 1.0
+   - zentrack_2/includes/templates/ticketView.php 1.5
+   - zentrack_2/www/ticket.php 1.28
+   - zentrack_2/www/project.php 1.6
+
+2005-09-05, kato
+  Reworked get_users, should work with all possible access configurations
+   - zentrack_2/includes/zenTrack.class 1.188
+
+2005-08-03, cfalonso
+  Prevent loosing current values in hidden fields
+   - zentrack_2/includes/ZenFieldMap.class 1.30
+
+  Fixed bug for multi fields when hidden and set as label
+   - zentrack_2/includes/ZenFieldMap.class 1.29
+  
+2005-08-02, cfalonso
+  Minor modification
+   - zentrack_2/includes/ZenFieldMap.class 1.28
+
+  Fixed a bug in dateParse function
+   - zentrack_2/includes/zenDate.class 1.15
+
+  Fixed problem when multi fields were hidden and were subject of a behavior change
+   - zentrack_2/includes/ZenFieldMap.class 1.27
+   - zentrack_2/includes/ZenFieldMap.class 1.26
+   - zentrack_2/includes/templates/fields/multihidden.template 1.1
+
+2005-08-01, kato
+  Moved "any_field" option to appropriate spot
+   - zentrack_2/includes/ZenFieldMap.class 1.25
+
+2005-08-01, cfalonso
+  In create page, list only the bins that the user can create tickets in
+   - zentrack_2/includes/ZenFieldMap.class 1.24
+
+2005-07-30, kato
+  New UI checked in (not complete, some bugs)
+  Keyboard shortcuts added
+  Minor bugs fixes to search and contacts sections
+  Added missing custom_date fields to field map
+   - zentrack_2/includes/ZenFieldMap.class 1.23
+   - zentrack_2/includes/egate_utils.php 1.44
+   - zentrack_2/includes/footer.php 1.36
+   - zentrack_2/includes/headerInc.php 1.59
+   - zentrack_2/includes/login.php 1.29
+   - zentrack_2/includes/nav.php 1.14
+   - zentrack_2/includes/session_start.php 1.26
+   - zentrack_2/includes/zenTrack.class 1.188
+   - zentrack_2/includes/ZenHistoryManager.class 1.1
+   - zentrack_2/includes/ZenHotKeys.class 1.1
+   - zentrack_2/includes/templates/adminMenu.php 1.13
+   - zentrack_2/includes/templates/agreementView.php 1.3
+   - zentrack_2/includes/templates/contact_allBox.php 1.3
+   - zentrack_2/includes/templates/contact_box.php 1.3
+   - zentrack_2/includes/templates/homebinForm.php 1.12
+   - zentrack_2/includes/templates/languageForm.php 1.4
+   - zentrack_2/includes/templates/listTickets.php 1.29
+   - zentrack_2/includes/templates/optionsMenu.php 1.8
+   - zentrack_2/includes/templates/pwcForm.php 1.8
+   - zentrack_2/includes/templates/ticket_box.php 1.19
+   - zentrack_2/includes/templates/nav_admin.php 1.1
+   - zentrack_2/includes/templates/nav_contacts.php 1.1
+   - zentrack_2/includes/templates/nav_help.php 1.1
+   - zentrack_2/includes/templates/nav_options.php 1.1
+   - zentrack_2/includes/templates/nav_projects.php 1.1
+   - zentrack_2/includes/templates/nav_tickets.php 1.1
+   - zentrack_2/includes/templates/fields/date.template 1.5
+   - zentrack_2/install/seed_mysql.sql 1.57
+   - zentrack_2/install/upgrade_base.sql 1.1
+   - zentrack_2/www/actions/accept.php 1.6
+   - zentrack_2/www/actions/addToContacts.php 1.2
+   - zentrack_2/www/actions/agreement_archive.php 1.2
+   - zentrack_2/www/actions/agreement_delete.php 1.2
+   - zentrack_2/www/actions/agreement_edit.php 1.5
+   - zentrack_2/www/actions/contact_agreement.php 1.2
+   - zentrack_2/www/actions/contact_delete.php 1.2
+   - zentrack_2/www/actions/contact_edit.php 1.3
+   - zentrack_2/www/actions/contact_employee.php 1.2
+   - zentrack_2/www/actions/dropFromContacts.php 1.2
+   - zentrack_2/www/actions/editAgreementSubmit.php 1.2
+   - zentrack_2/www/actions/editContactSubmit.php 1.2
+   - zentrack_2/www/actions/editContacteSubmit.php 1.2
+   - zentrack_2/www/addAgreementSubmit.php 1.5
+   - zentrack_2/www/addContactSubmit.php 1.4
+   - zentrack_2/www/addContacteSubmit.php 1.4
+   - zentrack_2/www/addProjectSubmit.php 1.23
+   - zentrack_2/www/agreement.php 1.3
+   - zentrack_2/www/agreements.php 1.3
+   - zentrack_2/www/assignedProjects.php 1.10
+   - zentrack_2/www/assignedTickets.php 1.13
+   - zentrack_2/www/behavior_js.php 1.35
+   - zentrack_2/www/contact.php 1.4
+   - zentrack_2/www/contacts.php 1.3
+   - zentrack_2/www/javascript.js 1.16
+   - zentrack_2/www/newAgreement.php 1.4
+   - zentrack_2/www/newContact.php 1.3
+   - zentrack_2/www/newProject.php 1.12
+   - zentrack_2/www/newTicket.php 1.10
+   - zentrack_2/www/search.php 1.13
+   - zentrack_2/www/searchContacts.php 1.3
+   - zentrack_2/www/styles.php 1.25
+   - zentrack_2/www/ticket.php 1.27
+   - zentrack_2/www/viewAttachment.php 1.6
+   - zentrack_2/www/contact_header.php 1.1
+   - zentrack_2/www/keyevent.js 1.1
+   - zentrack_2/www/admin/admin_header.php 1.14
+   - zentrack_2/www/admin/config.php 1.11
+   - zentrack_2/www/help/english/bugs.php 1.3
+   - zentrack_2/www/help/english/index.php 1.5
+   - zentrack_2/www/help/help_header.php 1.9
+   - zentrack_2/www/misc/homebin.php 1.7
+   - zentrack_2/www/misc/language.php 1.5
+   - zentrack_2/www/misc/pwc.php 1.12  
+
+2005-07-09, kato
+  Login now works correctly if ZT is installed under a subdirectory of /help/
+    - zentrack_2/includes/headerInc.php 1.59
+    - zentrack_2/www/help/help_header.php 1.9
+  
+2005-05-23, kato
+  Made option to use apache or windows authentication for auto-login a configurable
+  administration setting.
+    - zentrack_2/includes/zenTrack.class 1.185
+  
+  Corrected problem with user language preferences.
+    - zentrack_2/includes/login.php 1.29
+    
+  Fixed error with https builds not viewing attachments correctly in IE
+    - zentrack_2/includes/session_start.php 1.26
+    
+  Removed auto-login key from visible text in debug messages (for better security)
+    - zentrack_2/includes/footer.php 1.36
+    
+2005-05-21, kato
+  Corrected translation of page_type (Project/Ticket) in ticket lists
+    - zentrack_2/includes/templates/listTickets.php 1.28
+
+2005-07-20, cfalonso
+ Fixed minor bug
+    - zentrack_2/www/behavior_js.php 1.34
+ Included some system variables to be available in Javascript groups
+    - zentrack_2/includes/templates/ticket_customBox.php 1.12
+    - zentrack_2/www/behavior_js.php 1.33
+
+2005-07-19, cfalonso
+ Working on the custom_multi fields when shown as labels
+    - zentrack_2/includes/templates/fields/multilabel.template 1.1
+    - zentrack_2/includes/ZenFieldMap.class 1.22
+    - zentrack_2/includes/zenTrack.class 1.187
+    - zentrack_2/includes/templates/newTicketForm.php 1.48
+    - zentrack_2/www/behavior_js.php 1.32
+
+2005-07-13, cfalonso
+ More work on the custom page managed through the field map:
+    - zentrack_2/includes/ZenFieldMap.class 1.21
+    - zentrack_2/includes/editCustomSubmit.php 1.11
+    - zentrack_2/includes/templates/newTicketForm.php 1.47
+    - zentrack_2/includes/templates/newTicketForm.php 1.46
+    - zentrack_2/includes/templates/ticket_customBox.php 1.11
+
+2005-07-12, cfalonso
+ Added search functionality for custom_multi fields
+    - zentrack_2/includes/templates/searchForm.php 1.16
+    - zentrack_2/includes/templates/searchResults.php 1.15
+    - zentrack_2/includes/translations/spanish.trans 1.11
+
+ Fixed a bug left by my last modification
+    - zentrack_2/includes/templates/newTicketForm.php 1.45
+
+ Added field map functionality for the custom tab
+ (IMPORTANT: ticket_custom and project_custom views
+  must be loaded in fieldmap table, including id field)
+    - zentrack_2/includes/editCustomSubmit.php 1.10
+    - zentrack_2/includes/templates/newTicketForm.php 1.44
+    - zentrack_2/includes/templates/ticket_customBox.php 1.10
+    - zentrack_2/www/actions/editCustomSubmit.php 1.3
+
+ Minor change in spanish translation
+    - zentrack_2/includes/translations/spanish.trans 1.10
+
+2005-07-11, cfalonso
+ Minor changes
+    - zentrack_2/www/addSubmit.php 1.29
+    - zentrack_2/www/behavior_js.php 1.31
+
+2005-07-05, cfalonso
+ Added ticket totals and paging info in listings
+    - zentrack_2/includes/zenTrack.class 1.186
+    - zentrack_2/includes/templates/listTickets.php 1.28
+
+2005-07-04, cfalonso
+  Added support for custom_multi field types (multiselect)
+    - zentrack_2/includes/ZenFieldMap.class 1.20
+    - zentrack_2/includes/ZenSessionManager.class 1.5
+    - zentrack_2/includes/editCustomSubmit.php 1.9
+    - zentrack_2/includes/parseVarfields.php 1.5
+    - zentrack_2/includes/validateFields.php 1.4
+    - zentrack_2/includes/zenTemplate.class 1.11
+    - zentrack_2/includes/templates/editCustomsForm.php 1.10
+    - zentrack_2/includes/templates/fieldMapForm.php 1.12
+    - zentrack_2/www/addSubmit.php 1.28
+    - zentrack_2/www/behavior_js.php 1.30
+
+2005-05-24, cfalonso
+  Included some new translations
+    - zentrack_2/includes/ZenFieldMap.class 1.19
+    - zentrack_2/includes/templates/ticket_logBox.php 1.19
+    - zentrack_2/includes/templates/ticket_titleBox.php 1.14
+    - zentrack_2/includes/translations/spanish.trans 1.9
+    - zentrack_2/www/search.php 1.12
+
+2005-05-23, cfalonso
+  Include default_access of the user in evaluation for retaining the ticket's owner
+    - zentrack_2/includes/zenTrack.class 1.185
+  Fixed a bug that created a wrong page immediately after project creation
+    - zentrack_2/includes/templates/projectView.php 1.5
+    - zentrack_2/includes/templates/ticket_actionBar.php 1.13
+    - zentrack_2/www/addProjectSubmit.php 1.22
+    - zentrack_2/www/ticket.php 1.25 , 1.26
+
+2005-05-19, cfalonso
+  Added automatic email notifier for overdue tickets
+    - zentrack_2/includes/zenNotifier.php 1.1
+
+----- VERSION 2.5.5.2 (2005-05-15) -----
+
+2005-05-15, kato
+  Prepared install/upgrade docs and scripts
+    - zentrack_2/install/UPGRADE.readme
+    - zentrack_2/install/UPGRADE_mssqlserver.sql
+    - zentrack_2/install/UPGRADE_mysql.sql
+    - zentrack_2/install/UPGRADE_oracle.sql
+    - zentrack_2/install/UPGRADE_postgres.sql
+    - zentrack_2/install/seed_mssqlserver.sql
+    - zentrack_2/install/seed_mysql.sql
+    - zentrack_2/install/seed_oracle.sql
+    - zentrack_2/install/seed_postgres.sql
+    - zentrack_2/install/seed_random_report_data.sql
+    - zentrack_2/install/previous/2.5.5.1.UPGRADE_mssqlserver.sql 1.1
+    - zentrack_2/install/previous/2.5.5.1.UPGRADE_mysql.sql 1.1
+    - zentrack_2/install/previous/2.5.5.1.UPGRADE_oracle.sql 1.1
+    - zentrack_2/install/previous/2.5.5.1.UPGRADE_postgres.sql 1.1
+    - zentrack_2/install/patches/upgrade_2-5-0-3_to_2-5-5-2.patch 1.1
+    - zentrack_2/install/patches/upgrade_2-5-5_to_2-5-5-2.patch 1.1
+    - zentrack_2/install/patches/upgrade_2-5-5-1_to_2-5-5-2.patch 1.1
+    
+2005-05-14, kato
+  Corrected issue with project ids being entered into db as null (causing
+  projects not to appear in project list after creating)
+    - zentrack_2/www/addProjectSubmit.php 1.21
+    
+  Fixed search parameter issues: bins being lost during sorting, modify search,
+  etc
+    - zentrack_2/includes/zen.class 1.38
+    - zentrack_2/includes/ZenFieldMap.class 1.18
+    - zentrack_2/includes/templates/searchResults 1.14
+    - zentrack_2/includes/templates/listTickets 1.27
+
+2005-05-13, kato
+  Improved field map defaults (on admin screen) and search_form handling
+    - zentrack_2/includes/zen.class 1.38
+    - zentrack_2/includes/ZenFieldMap.class 1.18
+    - zentrack_2/includes/ZenSessionManager.class 1.4
+    - zentrack_2/includes/ZenTemplate.class 1.10
+    - zentrack_2/includes/zenTrack.class 1.184
+    - zentrack_2/includes/templates/fieldMapForm.php 1.11
+    - zentrack_2/includes/templates/searchForm.php 1.16
+    - zentrack_2/www/admin/fieldMap.php 1.8
+
+  Completed auto-login feature
+    - zentrack_2/includes/login.php 1.28
+    - zentrack_2/includes/zenTrack.class 1.184
+
+2005-05-12, kato
+  Tested SQL Server 2000 compatability
+  Tested PHP 5 compatability
+    - zentrack_2/includes/db.class 1.42
+    
+  Fixed "Unsupported operand types" error
+    - zentrack_2/includes/ZenFieldMap.class 1.18
+    
+  Improved escaping for text areas
+    - zentrack_2/includes/zen.class 1.38
+    - zentrack_2/includes/templates/ticket_logBox.php 1.18
+    - zentrack_2/www/actions/log.php 1.9
+    
+  Fixed problem with saving custom field tab
+    - zentrack_2/www/actions/action_header.php 1.15
+    - zentrack_2/www/actions/editCustomSubmit.php 1.8
+
+2005-05-11, kato
+  Fixed date formatting bug in project create page
+    - zentrack_2/www/addProjectSubmit.php 1.20
+
+  Fixed bug in hours field (for log) which causes decimals to be dropped.
+    - zentrack_2/includes/ZenFieldMap.class 1.18
+
+2005-05-10, kato
+  Fixed bug preventing behaviors from working in project create/edit screens
+    - zentrack_2/www/newProject.php 1.11
+  
+  Added ability to auto-login users through options menu
+    - zentrack_2/includes/login.php 1.28
+    - zentrack_2/includes/zenTrack.class 1.184
+    - zentrack_2/includes/templates/optionsMenu.php 1.7
+    - zentrack_2/www/misc/autologin.php 1.1
+
+2005-05-08, kato
+  Improved date processing for field map generated fields
+    - zentrack_2/includes/ZenFieldMap.class 1.17
+    - zentrack_2/includes/templates/newTicketForm.php 1.43
+    
+  Implemented default values for the search_form (via field map)
+    - zentrack_2/includes/ZenFieldMap.class 1.18
+    - zentrack_2/includes/templates/searchForm.php 1.16
+    - zentrack_2/www/search.php 1.12
+    
+  Implemented field map on ticket details screen (won't be enabled until 2.6 release)
+    - zentrack_2/includes/templates/ticket_detailsBox.php 1.18
+
+----- VERSION 2.5.5.1 (2005-05-08) -----
+
+2005-05-05, kato
+  Prepared install files for upgrade
+    - zentrack_2/install/UPGRADE.readme
+    - zentrack_2/install/UPGRADE_mssqlserver.sql
+    - zentrack_2/install/UPGRADE_mysql.sql
+    - zentrack_2/install/UPGRADE_oracle.sql
+    - zentrack_2/install/UPGRADE_postgres.sql
+    - zentrack_2/install/seed_mssqlserver.sql
+    - zentrack_2/install/seed_mysql.sql
+    - zentrack_2/install/seed_oracle.sql
+    - zentrack_2/install/seed_postgres.sql
+    - zentrack_2/install/seed_random_report_data.sql
+    - zentrack_2/install/previous/2.5.5.UPGRADE_mssqlserver.sql 1.1
+    - zentrack_2/install/previous/2.5.5.UPGRADE_mysql.sql 1.1
+    - zentrack_2/install/previous/2.5.5.UPGRADE_oracle.sql 1.1
+    - zentrack_2/install/previous/2.5.5.UPGRADE_postgres.sql 1.1
+    
+2005-05-05, kato
+  Fixed problems with sections and saving edited/added tickets
+  Improved escaping and rendering of text bodies.
+    - zentrack_2/includes/ZenFieldMap.class 1.17
+    - zentrack_2/includes/templates/ticket_logBox.php 1.17
+    - zentrack_2/includes/templates/ticket_titleBox.php 1.12
+    - zentrack_2/includes/zen.class 1.37
+    - zentrack_2/includes/validateFields.php 1.2
+    - zentrack_2/includes/editTicketSubmit.php 1.16
+    - zentrack_2/includes/db.class 1.41
+  
+2005-05-04, kato
+  Upgraded ADODB library to 4.6.2
+    - zentrack_2/includes/adodb/*
+
+  Removed unnecessary if condition in projects list
+    - zentrack_2/www/projects.php 1.13
+    
+  Fixed ZT_DEFINED for egate scripts (which are not included from www)
+    - zentrack_2/includes/egate.php 1.8
+    - zentrack_2/includes/egate_create.php 1.3
+    - zentrack_2/includes/egate_check.php 1.9
+    - zentrack_2/includes/egate_check_create.php 1.3
+    - zentrack_2/includes/egate_utils.php 1.43
+    - zentrack_2/install/egate_config.php.default 1.16
+    
+  Added missing security check to configVars template
+    - zentrack_2/install/configVars.php.default 1.12
+
+----- VERSION 2.5.5 (2005-05-02) -----
+
+2005-05-04, kato
+  Added patch files and simplified upgrade instructions
+    - zentrack_2/UPGRADE.readme 1.25
+    - zentrack_2/install/upgrade_2-5-0-1_to_2-5-5.patch 1.1
+    - zentrack_2/install/upgrade_2-5-0-2_to_2-5-5.patch 1.1
+    - zentrack_2/install/upgrade_2-5-5pre1_to_2-5-5.patch 1.1
+
+2005-04-27, kato
+  Added security to includes/ files to provide security for users who
+  do not correctly locate the includes/ files outside of the web tree.
+    - all include files
+  Added the ability to add non-standard fields such as wkd_hours to the create
+  and edit screens.
+    - zentrack_2/includes/zen.class 1.36
+    - zentrack_2/includes/parseVarfields.php 1.4
+    - zentrack_2/includes/validateFields.php 1.1
+    - zentrack_2/www/addProjectSubmit.php 1.19
+    - zentrack_2/www/addSubmit.php 1.25
+    - zentrack_2/www/admin/editTicketSubmit.php 1.5
+  Improved header/footer comments and messages
+    - zentrack_2/includes/footer.php 1.34
+    - zentrack_2/install/header.php.default 1.17
+
+2005-04-20, kato
+  Improved performance for ticket queries retrieved by contact
+  Fixed minor bugs in retrieving list of tickets by contact (person or company)
+  Added field map information to the contacts page (for listing tickets properly)
+    - zentrack_2/includes/zenTrack.class 1.182
+    - zentrack_2/www/contact.php 1.3
+    - zentrack_2/includes/db.class 1.39
+    - zentrack_2/www/contact.php 1.3
+  Improved sorting algorithm to insure that columns to sort doesn't exceed 2
+  (for efficieny)
+    - zentrack_2/includes/sorting.php 1.4
+  Added email test to install utils.
+    - zentrack_2/install/utils/send_email_test.php 1.0
+  Added improved array merge util
+    - zentrack_2/includes/zen.class 1.35
+
+2005-04-19, kato
+  Corrected build_postgres.sql syntax error (extra comma)
+  Corrected oracle insert problems with zentrack_group_detail (invalid field name)
+    - zentrack_2/install/build_postgres.sql 1.19
+    - zentrack_2/install/build_oracle.sql 1.19
+    - zentrack_2/install/UPGRADE_postgres.sql 1.35
+    - zentrack-2/install/UPGRADE_oracle.sql 1.43
+
+2005-04-12, kato
+  Added support for 'mysqli' driver and some bug fixes in db insert calls
+    - zentrack_2/includes/db.class 1.37
+    - zentrack_2/includes/zen.class 1.34
+  Cleaned up security restrictions
+    - zentrack_2/includes/session_start.php 1.24
+  Fixed arrow images in admin field map form, which were broken when rootUrl
+  is not /.
+    - zentrack_2/includes/templates/fieldMapForm.php 1.9
+  Added some useful security into the debug information (protect passwords,
+  emails, and urls).
+    - zentrack_2/includes/footer.php 1.32
+  Fixed project submit bug (type_id required, system_id required, etc..)
+    - zentrack_2/www/addProjectSubmit.php
+  Cleaned up behavior code for dealing with default values in hidden and text
+  fields
+    - zentrack_2/www/behavior_js.php 1.27
+    
+2005-03-17, kato
+  Added ability to change label text when a behavior is run, so that the label
+  field type can work with behaviors properly.
+    - zentrack_2/includes/templates/fields/label.template
+    - zentrack_2/www/behavior_js.php
+
+2005-04-06, cfalonso
+  Fixed problem in fieldmap admin page for ticket_close map
+    - zentrack_2/includes/templates/fieldMapForm.php 1.8
+  Fixed error raised in JS Console when accessing the ticket's close page
+    - zentrack_2/includes/ZenFieldMap.class 1.14
+  To be used for hidden, text, etc: set the oldPos value if the fieldObj.value is in the list
+  (unless we do it, the first element of the list will always be assigned to the field, no matter if the fieldObj.value is in the list)
+    - zentrack_2/www/behavior_js.php 1.25
+    - zentrack_2/www/behavior_js.php 1.24
+
+2005-03-31, cfalonso
+  Fixed security hole for first login
+    - zentrack_2/includes/leftMain.php 1.6
+    - zentrack_2/www/admin/admin_header.php 1.13
+  Some minor modifications
+    - zentrack_2/includes/ZenFieldMap.class 1.13
+    - zentrack_2/includes/zenTrack.class 1.180
+    - zentrack_2/includes/templates/accessForm.php 1.9
+    - zentrack_2/includes/templates/fields/label.template 1.3
+    - zentrack_2/www/behavior_js.php 1.23
+
+2005-03-22, cfalonso
+  Modified spanish translation
+    - zentrack_2/includes/translations/spanish.trans 1.8
+
+2005-03-21, cfalonso
+  For ticket's mails, included user's email in log
+    - zentrack_2/www/actions/email.php 1.15
+  Fixed a bug with retain_owner_move
+    - zentrack_2/includes/zenTrack.class 1.179
+
+2005-03-18, cfalonso
+  Related tickets weren't shown  -Fixed
+    - zentrack_2/includes/templates/ticket_relatedBox.php 1.6
+  Allow deadline to be a menu dropdown
+    - zentrack_2/includes/ZenFieldMap.class 1.12
+  Translation minor changes
+    - zentrack_2/includes/translations/spanish.trans 1.7
+    - zentrack_2/includes/translations/spanish.trans 1.6
+
+2005-03-15, cfalonso
+  Added the posibility to set ctime when ticket is set to Pending (settings["ctime_on_pending"])
+    - zentrack_2/includes/zenTrack.class 1.178
+    - zentrack_2/includes/templates/ticket_detailsBox.php 1.15
+    - zentrack_2/install/UPGRADE_mssqlserver.sql 1.35
+    - zentrack_2/install/UPGRADE_mysql.sql 1.45
+    - zentrack_2/install/UPGRADE_oracle.sql 1.41
+    - zentrack_2/install/UPGRADE_postgres.sql 1.33
+    - zentrack_2/install/seed_mssqlserver.sql 1.36
+    - zentrack_2/install/seed_mysql.sql 1.49
+    - zentrack_2/install/seed_oracle.sql 1.42
+    - zentrack_2/install/seed_postgres.sql 1.38
+
+  Standard fields don't respect ID in search page when used as menu fields  -Fixed
+    - zentrack_2/includes/ZenFieldMap.class 1.11
+  FieldMap didn't show the current default value as "selected"  -Fixed
+    - zentrack_2/includes/templates/fieldMapForm.php 1.7
+
+2005-03-14, cfalonso
+  Some bugfixes
+    - zentrack_2/includes/zenTemplate.class 1.8
+    - zentrack_2/includes/templates/listTickets.php 1.25
+    - zentrack_2/includes/templates/searchResults.php 1.12
+    - zentrack_2/install/UPGRADE_mssqlserver.sql 1.34
+    - zentrack_2/install/UPGRADE_mysql.sql 1.44
+    - zentrack_2/install/UPGRADE_oracle.sql 1.40
+    - zentrack_2/install/UPGRADE_postgres.sql 1.32
+    - zentrack_2/install/seed_mssqlserver.sql 1.35
+    - zentrack_2/install/seed_mysql.sql 1.48
+    - zentrack_2/install/seed_oracle.sql 1.41
+    - zentrack_2/install/seed_postgres.sql 1.37
+
+2005-03-11, kato
+  UI fixed to allow clicking anywhere in nav menus.
+    - zentrack_2/includes/headerInc.php 1.57
+    - zentrack_2/www/javascript.js 1.14
+  
+  Added sorting to ticket lists
+    - zentrack_2/includes/sorting.php 1.3
+    - zentrack_2/includes/templates/listTickets.php 1.24
+  
+  Completed implementation of search pages in fieldMap
+    - zentrack_2/includes/ZenFieldMap.class 1.10
+    - zentrack_2/includes/translator.class 1.9
+    - zentrack_2/includes/zenTemplate.class 1.7
+    - zentrack_2/includes/zenTrack.class 1.177
+    - zentrack_2/includes/templates/editTicketForm.php 1.8
+    - zentrack_2/includes/templates/fieldMapForm.php 1.6
+    - zentrack_2/includes/templates/loginForm 1.14
+    - zentrack_2/includes/templates/searchForm.php 1.14
+    - zentrack_2/includes/templates/searchResults.php 1.11
+    - zentrack_2/includes/templates/ticket_box.php 1.16
+    - zentrack_2/includes/templates/ticket_customBox.php 1.8
+    - zentrack_2/includes/templates/userSearchForm.php 1.10
+    - zentrack_2/includes/templates/actions/close.php 1.5
+    - zentrack_2/includes/templates/fields/date.template 1.4
+    - zentrack_2/includes/templates/fields/menu.template 1.3
+    - zentrack_2/includes/templates/fields/radio.template 1.2
+    - zentrack_2/www/index.php 1.15
+    - zentrack_2/www/newProject.php 1.10
+    - zentrack_2/www/projects.php 1.12
+    - zentrack_2/www/search.php 1.11
+    - zentrack_2/www/styles.php 1.24
+    - zentrack_2/www/actions/action_header.php 1.14
+    - zentrack_2/www/actions/edit.php 1.8
+    - zentrack_2/www/admin/fieldMap.php 1.6
+    - zentrack_2/www/helpers/projectSearchbox.php 1.11
+    - zentrack_2/www/helpers/ticketSearchbox.php 1.9
+    - zentrack_2/www/helpers/userSearchbox.php 1.10
+  
+  Added SQL code to upgrade and install scripts
+    - zentrack_2/install/UPGRADE_mssqlserver.sql 1.33
+    - zentrack_2/install/UPGRADE_mysql.sql 1.43
+    - zentrack_2/install/UPGRADE_oracle.sql 1.39
+    - zentrack_2/install/UPGRADE_postgres.sql 1.31
+    - zentrack_2/install/seed_mssqlserver.sql 1.34
+    - zentrack_2/install/seed_mysql.sql 1.47
+    - zentrack_2/install/seed_oracle.sql 1.40
+    - zentrack_2/install/seed_postgres.sql 1.36
+  
+  
+2005-03-10, cfalonso
+Included field_map for close page
+    - zentrack_2/includes/ZenFieldMap.class 1.9
+    - zentrack_2/includes/templates/validateTicketForm.php 1.1
+    - zentrack_2/includes/templates/newTicketForm.php 1.41
+    - zentrack_2/includes/templates/actions/close.php 1.4
+    - zentrack_2/install/UPGRADE_mssqlserver.sql 1.32
+    - zentrack_2/install/UPGRADE_mysql.sql 1.42
+    - zentrack_2/install/UPGRADE_oracle.sql 1.38
+    - zentrack_2/install/UPGRADE_postgres.sql 1.30
+    - zentrack_2/install/seed_mssqlserver.sql 1.33
+    - zentrack_2/install/seed_mysql.sql 1.46
+    - zentrack_2/install/seed_oracle.sql 1.39
+    - zentrack_2/install/seed_postgres.sql 1.35
+    - zentrack_2/www/actions/close.php 1.12
+
+2005-03-09, cfalonso
+  Improved log for edits
+    - zentrack_2/includes/zenTrack.class 1.176
+  Enabled menu.template to display the current value as "selected" (TK 103)
+    - zentrack_2/includes/zenTemplate.class 1.6
+    - zentrack_2/includes/zenTemplate.class 1.5
+    - zentrack_2/includes/templates/fields/menu.template 1.2
+    - zentrack_2/includes/templates/fields/checkbox.template 1.2 (No real change in this one)
+
+2005-03-08, Kato
+  Added {field} property to data group javascript evals.  This allows a direct
+  reference to the current field when used from behaviors.
+    - zentrack_2/www/behavior_js.php 1.22
+    - zentrack_2/www/help/english/admin/data_groups.php 1.3
+
+2005-03-08, cfalonso
+  No tickets were shown when Assigned to... was selected  -Fixed
+    - zentrack_2/www/assignedTickets.php 1.12
+
+2005-03-03, cfalonso
+  Modified the format of the users' names in data groups 
+  to lname,fname (to agree with the sort order)
+    - zentrack_2/includes/zenTrack.class 1.175
+
+2005-03-02, cfalonso
+  Fixed mistake in session cache usage:
+    - zentrack_2/includes/zenTrack.class 1.174
+
+  Found that if you are in custom tab, then go to the ticket list 
+  and select a list, you get the custom tab with no behaviors 
+  loaded. Now it's fixed.
+    - zentrack_2/www/ticket.php 1.24
+
+2005-03-01, cfalonso
+  Migrated default values from varfield_idx to field_map
+    - zentrack_2/includes/ZenFieldMap.class 1.8
+  Fixed a problem in saving created and edited tickets
+    - zentrack_2/includes/ZenFieldMap.class 1.7
+    - zentrack_2/includes/editTicketSubmit.php 1.14
+    - zentrack_2/www/addSubmit.php 1.24
+
+2005-02-28, Kato
+  Implemented fieldMap in project/ticket edit screens
+    - zentrack_2/includes/ZenFieldMap.class 1.6
+    - zentrack_2/includes/ZenSessionManager.class 1.2
+    - zentrack_2/includes/editTicketSubmit.php 1.13
+    - zentrack_2/includes/templates/editTicketForm.php 1.7
+    - zentrack_2/includes/templates/newProjectForm.php 1.30
+    - zentrack_2/includes/templates/newTicketForm.php 1.40
+    - zentrack_2/includes/templates/ticket_titleBox.php 1.10
+    - zentrack_2/www/addProjectSubmit.php 1.17
+    - zentrack_2/www/addSubmit.php 1.23
+    - zentrack_2/www/newProject.php 1.9
+    - zentrack_2/www/newTicket.php 1.9
+    - zentrack_2/www/actions/editProjectSubmit.php 1.2
+    - zentrack_2/www/actions/editSubmit.php 1.10
+    - zentrack_2/www/admin/editProjectSubmit.php 1.3
+
+  Implemented fieldMap in search_form and search_list (not completed yet)
+    - zentrack_2/includes/footer.php 1.31
+    - zentrack_2/includes/headerInc.php 1.56
+    - zentrack_2/includes/templates/searchForm.php 1.13
+    - zentrack_2/includes/templates/searchResults.php 1.10
+    - zentrack_2/www/search.php 1.10
+    - zentrack_2/www/styles.php 1.23
+    - zentrack_2/www/admin/fieldMap.php 1.4  
+  
+  Added sorting to the listTickets screen (untested)
+  Deprecated the searchList.php file (this uses listTickets instead now)
+    - zentrack_2/includes/sorting.php 1.2
+    - zentrack_2/includes/templates/listTickets.php 1.23
+    - zentrack_2/includes/templates/searchList.php 1.16
+
+  Removed hypot() dependency, since some impls of php seem
+  to be missing this function.
+    - zentrack_2/includes/zenGraph.class 1.8
+
+2005-02-25, cfalonso
+  Fixed typo in seed file for mysql
+    - zentrack_2/install/seed_mysql.sql 1.45
+
+2005-02-24, cfalonso
+  Enabled email_accept option
+    - zentrack_2/includes/zenTrack.class 1.173
+    - zentrack_2/install/UPGRADE_mssqlserver.sql 1.31
+    - zentrack_2/install/UPGRADE_mysql.sql 1.41
+    - zentrack_2/install/UPGRADE_oracle.sql 1.37
+    - zentrack_2/install/UPGRADE_postgres.sql 1.29
+    - zentrack_2/install/seed_mssqlserver.sql 1.32
+    - zentrack_2/install/seed_mysql.sql 1.44
+    - zentrack_2/install/seed_oracle.sql 1.38
+    - zentrack_2/install/seed_postgres.sql 1.34
+
+  When creating a new ticket, the cal.gif image didn't appear if your
+  images directory was not directly under website root (Fixed).
+    - zentrack_2/includes/ZenFieldMap.class 1.5
+    - zentrack_2/includes/templates/fields/date.template 1.3
+
+2005-02-23, cfalonso
+  Added a setting option to manage if a mandatory edit field to explain
+  why the ticket is being edited should be shown in edit page
+    - zentrack_2/www/help/english/admin/settings.php 1.2
+    - zentrack_2/includes/editTicketSubmit.php 1.12
+    - zentrack_2/includes/zenTrack.class 1.172
+    - zentrack_2/includes/zenTrack.class 1.171
+    - zentrack_2/includes/templates/newTicketForm.php 1.39
+    - zentrack_2/install/UPGRADE_mssqlserver.sql 1.30
+    - zentrack_2/install/UPGRADE_mysql.sql 1.40
+    - zentrack_2/install/UPGRADE_oracle.sql 1.36
+    - zentrack_2/install/UPGRADE_postgres.sql 1.28
+    - zentrack_2/install/seed_mssqlserver.sql 1.31
+    - zentrack_2/install/seed_mysql.sql 1.43
+    - zentrack_2/install/seed_oracle.sql 1.37
+    - zentrack_2/install/seed_postgres.sql 1.33
+
+2005-02-21, cfalonso
+  Now, when disabling/enabling a date field, also de associated
+  calendar icon is disabled/enabled
+    - zentrack_2/includes/headerInc.php 1.55
+    - zentrack_2/includes/templates/fields/date.template 1.2
+    - zentrack_2/www/behavior_js.php 1.20
+    - zentrack_2/www/behavior_js.php 1.19
+    - zentrack_2/www/images/disabled-cal.gif 1.1
+
+2005-02-21, kato
+  Fixed sql errors in seed_mysql.sql
+    - zentrack_2/install/seed_mysql.sql 1.46
+
+2005-02-19, kato
+  New SQL for create scripts
+    - install/build_mysql.sql 1.18
+    - install/build_oracle.sql 1.17
+    
+  Minor cleanup and bug fixes
+    - includes/zenTrack.class 1.170
+    
+2005-02-10, cfalonso
+  Fixed a bug on behaviors when using file groups evaluating on a
+  standard key-value field
+    - includes/zenTrack.class 1.169
+  Re-executed behaviors didn't run. Fixed
+    - www/behavior_js.php 1.18
+
+2005-02-09, cfalonso
+  Default groups in field_map page didn't show the selected field in the
+  pulldown, just added the $sel variable
+    - includes/templates/fieldMapForm.php (not sure about the version)
+  Fixed syntax error in table create script:
+    - zentrack_2/install/UPGRADE_mysql.sql 1.39
+
+2005-02-08, kato
+  Fixed section flags for various views (sections can be added/deleted)
+    - zentrack_2/includes/ZenFieldMap.class 1.4
+    
+2005-02-05, kato
+  Replaced mispelled page_tile variables with page_title
+    - zentrack_2/includes/editCustomSubmit.php 1.6
+    - zentrack_2/includes/editTicketSubmit.php 1.11
+    - zentrack_2/includes/templates/optionsMenu.php 1.5
+    - zentrack_2/includes/templates/searchResults.php 1.9
+    - zentrack_2/includes/templates/ticket_detailsBox.php 1.14
+    - zentrack_2/www/addAgreementSubmit.php 1.4
+    - zentrack_2/www/addContactSubmit.php 1.3
+    - zentrack_2/www/addContacteSubmit.php 1.3
+    - zentrack_2/www/assignedProjects.php 1.8
+    - zentrack_2/www/admin/addBehaviorSubmit.php 1.6
+    - zentrack_2/www/admin/addGroupSubmit.php 1.12
+    - zentrack_2/www/admin/addUser.php 1.5
+    - zentrack_2/www/admin/addUserSubmit.php 1.12
+    - zentrack_2/www/admin/admin_header.php 1.12
+    - zentrack_2/www/admin/config.php 1.10
+    - zentrack_2/www/admin/editBehaviorSubmit.php 1.5
+    - zentrack_2/www/admin/editGroupSubmit.php 1.10
+    - zentrack_2/www/admin/editTicket.php 1.7
+    - zentrack_2/www/admin/editUser.php 1.6
+    - zentrack_2/www/admin/editUserSubmit.php 1.12
+    - zentrack_2/www/reports/custom.php 1.5
+    - zentrack_2/www/reports/drop.php 1.6
+    - zentrack_2/www/reports/index.php 1.7
+    - zentrack_2/www/reports/reports_header.php 1.7
+    - zentrack_2/www/reports/save.php 1.12
+    - zentrack_2/www/reports/saveSubmit.php 1.9
+    - zentrack_2/www/reports/show.php 1.6
+    - zentrack_2/www/reports/view.php 1.7
+    - zentrack_2/www/admin/index.php 1.5
+    - zentrack_2/www/admin/listUsers.php 1.5
+    - zentrack_2/www/admin/resetPassword.php 1.7
+    - zentrack_2/www/misc/homebin.php 1.6
+    - zentrack_2/www/misc/language.php 1.4
+    - zentrack_2/www/misc/pwc.php 1.11
+  
+  Added pulldowns for default values and fixed several small
+  field_map bugs
+    - zentrack_2/includes/ZenFieldMap.class 1.3
+    - zentrack_2/includes/headerInc.php 1.53
+    - zentrack_2/includes/zen.class 1.33
+    - zentrack_2/includes/zenTrack.class 1.168
+    - zentrack_2/includes/templates/fieldMapForm.php 1.4
+    - zentrack_2/includes/templates/listTickets.php 1.22
+    - zentrack_2/includes/templates/newTicketForm.php 1.38
+    - zentrack_2/install/UPGRADE_mssqlserver.sql 1.29
+    - zentrack_2/install/UPGRADE_mysql.sql 1.38
+    - zentrack_2/install/UPGRADE_oracle.sql 1.35
+    - zentrack_2/install/UPGRADE_postgres.sql 1.27
+    - zentrack_2/install/build_mssqlserver.sql 1.14
+    - zentrack_2/install/build_mysql.sql 1.18
+    - zentrack_2/install/build_oracle.sql 1.17
+    - zentrack_2/install/build_postgres.sql 1.18
+    - zentrack_2/install/drop_tables.sql 1.7
+    - zentrack_2/install/seed_mssqlserver.sql 1.30
+    - zentrack_2/install/seed_mysql.sql 1.42
+    - zentrack_2/install/seed_oracle.sql 1.36
+    - zentrack_2/install/seed_postgres.sql 1.32
+    - zentrack_2/www/addProjectSubmit.php 1.16
+    - zentrack_2/www/addSubmit.php 1.22
+    - zentrack_2/www/behavior_js.php 1.17
+    - zentrack_2/www/exportSearch.php 1.2
+    - zentrack_2/www/index.php 1.14
+    - zentrack_2/www/newProject.php 1.8
+    - zentrack_2/www/newTicket.php 1.8
+    - zentrack_2/www/options.php 1.7
+    - zentrack_2/www/projects.php 1.11
+    - zentrack_2/www/styles.php 1.22
+    - zentrack_2/www/actions/edit.php 1.7
+    - zentrack_2/www/actions/editSubmit.php 1.9
+    - zentrack_2/www/admin/access.php 1.8
+    - zentrack_2/www/admin/fieldMap.php 1.3
+
+2005-02-02, cfalonso
+  The field_type value wasn't evaluated in the field map form. Fixed (TK 68)
+    - includes/templates/fieldMapForm.php 1.3
+
+  Fixed problem with long text fields (TK 67)
+    - includes/ZenFieldMap.class 1.2
+
+2005-02-01, cfalonso
+  Fixed problem displaying fields in proper order after adding a section or moving an element (TK 66)
+    - zentrack_2/includes/templates/fieldMapForm.php 1.2
+    - zentrack_2/www/admin/fieldMap.php 1.2
+
+2005-01-31, Kato
+  Added logic to determine owner by email or login
+  for egate scripts
+    - zentrack_2/includes/egate_utils.php 1.41
+    - zentrack_2/install/egate_config.php.default 1.15
+
+  Fixed SQL Server sequence id problem by adding an auto-increment feature
+  to catch up with the max id.
+    - zentrack_2/includes/db.class 1.35
+
+  Removed $Debug_Overview variable, this just seems to confuse people,
+  added overview capabilities as part of $Debug_Mode
+    - zentrack_2/install/header.php.default 1.15
+  
+  Created administrative screen for the field map policies
+    - zentrack_2/includes/zenTrack.class 1.167
+    - zentrack_2/includes/ZenSessionManager.class 1.1
+    - zentrack_2/install/UPGRADE_mssqlserver.sql 1.28
+    - zentrack_2/install/UPGRADE_mysql.sql 1.36
+    - zentrack_2/install/build_mysql.sql 1.17
+    - zentrack_2/install/seed_mysql.sql 1.41
+    - zentrack_2/install/UPGRADE_mysql.sql 1.37
+    - zentrack_2/install/configVars.php.default 1.10
+    - zentrack_2/www/admin/fieldMap.php 1.1
+    - zentrack_2/www/images/icon_trash.gif 1.1
+    - zentrack_2/www/images/icon_folder.gif 1.1
+    - zentrack_2/www/images/icon_arrow_up.gif 1.1
+    - zentrack_2/www/images/icon_arrow_down.gif 1.1
+    - zentrack_2/www/images/icon_add.gif 1.1
+
+  Minor updates to debugging panel
+    - zentrack_2/includes/footer.php 1.30
+    - zentrack_2/includes/templates/adminMenu.php 1.10
+  
+  Added field map implementation to the create screen
+    - zentrack_2/includes/zenTemplate.class 1.4
+    - zentrack_2/includes/headerInc.php 1.52
+    - zentrack_2/includes/zenTrack.class 1.167
+    - zentrack_2/includes/templates/fieldMapForm.php 1.1
+    - zentrack_2/includes/templates/fields/checkbox.template 1.1
+    - zentrack_2/includes/templates/fields/date.template 1.1
+    - zentrack_2/includes/templates/fields/hidden.template 1.1
+    - zentrack_2/includes/templates/fields/label.template 1.1
+    - zentrack_2/includes/templates/fields/menu.template 1.1
+    - zentrack_2/includes/templates/fields/radio.template 1.1
+    - zentrack_2/includes/templates/fields/searchbox.template 1.1
+    - zentrack_2/includes/templates/fields/section.template 1.1
+    - zentrack_2/includes/templates/fields/text.template 1.1
+    - zentrack_2/includes/templates/fields/textarea.template 1.1
+    - zentrack_2/includes/templates/behaviorMenu.php 1.6
+    - zentrack_2/includes/templates/newTicketForm.php 1.37
+    - zentrack_2/www/popcalendar.js 1.6
+    - zentrack_2/www/helpers/projectSearchbox.php 1.10
+    - zentrack_2/www/helpers/ticketSearchbox.php 1.8
+    - zentrack_2/www/helpers/userSearchbox.php 1.9
+
+2005-01-29, Kato
+  Added caching of system properties and data types to reduce
+  database lookups
+    - zentrack_2/includes/headerInc.php 1.52
+    - zentrack_2/includes/session_start.php 1.23
+    - zentrack_2/includes/zenTrack.class 1.167
+    - zentrack_2/includes/ZenSessionManager.class 1.1
+  
+  Installed methods for reading and updating the field map (for new
+  configurable fields in views)
+    - zentrack_2/includes/zenTrack.class 1.167
+    - zentrack_2/includes/ZenFieldMap.class 1.1
+
+2005-01-23, KATO
+  Added more configurability to the set properties
+  feature in egate_create (config file updated)
+    - zentrack_2/includes/egate_utils.php 1.39
+    - zentrack_2/install/egate_config.php.default 1.13
+  Updated install, help, and upgrade docs
+    - zentrack_2/HELP 1.10
+    - zentrack_2/INSTALL.README 1.26
+    - zentrack_2/UPGRADE.readme 1.21
+    - zentrack_2/install/UPGRADE_mssqlserver.sql 1.26
+    - zentrack_2/install/UPGRADE_mysql.sql 1.34
+    - zentrack_2/install/UPGRADE_oracle.sql 1.33
+    - zentrack_2/install/UPGRADE_postgres.sql 1.25
+    - zentrack_2/install/previous/2.5.0.2.UPGRADE_mssqlserver.sql 1.1
+    - zentrack_2/install/previous/2.5.0.2.UPGRADE_mysql.sql 1.1
+    - zentrack_2/install/previous/2.5.0.2.UPGRADE_oracle.sql 1.1
+    - zentrack_2/install/previous/2.5.0.2.UPGRADE_postgres.sql 1.1
+
+2005-01-22, kato
+  Added ability to set properties(such as bin) via
+  simple text in egate_create.php
+    - zentrack_2/includes/egate_utils.php 1.37
+  Fixed bcc address in egate_config and 
+  added blurb to the admin help email to explain
+  create vs admin interfaces
+    - zentrack_2/includes/egate_utils.php 1.38
+    - zentrack_2/includes/templates/email/form_help.template 1.5
+
+2005-01-18, kato
+  Added export to CVS feature to search page
+    - zentrack_2/includes/templates/searchList.php 1.15
+    - zentrack_2/www/exportSearch.php 1.1
+    - zentrack_2/www/search.php 1.9
+
+2004-11-26, cfalonso
+  Worked on translations
+    - zentrack_2/includes/editCustomSubmit.php 1.5
+    - zentrack_2/includes/editTicketSubmit.php 1.10
+    - zentrack_2/includes/headerInc.php 1.51
+    - zentrack_2/includes/templates/loginForm 1.13
+    - zentrack_2/includes/templates/newAgreementForm.php 1.4
+    - zentrack_2/includes/templates/ticket_attachmentsBox.php 1.7
+    - zentrack_2/includes/translations/spanish.trans 1.5
+    - zentrack_2/www/actions/agreement_edit.php 1.3
+    - zentrack_2/www/actions/contact_edit.php 1.2
+    - zentrack_2/www/addProjectSubmit.php 1.15
+    - zentrack_2/www/addSubmit.php 1.21
+    - zentrack_2/www/admin/addGroupSubmit.php 1.11
+    - zentrack_2/www/admin/deleteGroup.php 1.3
+    - zentrack_2/www/admin/editGroupSubmit.php 1.9
+    - zentrack_2/www/behavior_js.php 1.15
+    - zentrack_2/www/behavior_js.php 1.16
+    - zentrack_2/www/reports/saveSubmit.php 1.8
+    - zentrack_2/www/ticket.php 1.23
+
+2004-11-25, cfalonso
+  Fixed function uptr to properly display spanish characters converted to uppercase
+    - zentrack_2/includes/headerInc.php 1.51
+
+2004-11-19, cfalonso
+  Allow start_date and deadline to have date and time (TK 161)
+    - zentrack_2/includes/templates/newProjectForm.php 1.29
+    - zentrack_2/includes/templates/newTicketForm.php 1.36
+    - zentrack_2/install/UPGRADE_mssqlserver.sql 1.25
+    - zentrack_2/install/UPGRADE_mysql.sql 1.33
+    - zentrack_2/install/UPGRADE_oracle.sql 1.32
+    - zentrack_2/install/UPGRADE_postgres.sql 1.24
+    - zentrack_2/install/seed_mssqlserver.sql 1.29
+    - zentrack_2/install/seed_mysql.sql 1.40
+    - zentrack_2/install/seed_oracle.sql 1.35
+    - zentrack_2/install/seed_postgres.sql 1.31
+    - zentrack_2/includes/templates/ticket_detailsBox.php 1.13
+    - zentrack_2/includes/templates/ticket_titleBox.php 1.9
+
+
+2004-11-19, Kato
+  Added missing varfield index for custom_menu1
+    - zentrack_2/install/previous/2.5.0.1.UPGRADE_mysql.sql 1.2
+
+2004-11-16, cfalonso
+  Added ticket properties to custom screen (TK 150)
+    - zentrack_2/includes/zenTrack.class,v  1.164
+    - zentrack_2/includes/templates/ticket_customBox.php 1.7
+  Don't show "click here to edit rules" after editing details of a Javascript or File data group (Bug #140)
+    - zentrack_2/www/admin/addGroupSubmit.php 1.10
+  Fix to log properly ticket edit's changes
+    - zentrack_2/includes/zenTrack.class 1.163
+  Fix to properly display ticket_titleBox information when adding new recipients to notify list (Bug #157).
+    - zentrack_2/www/actions/addToNotify.php 1.8
+  Replaced occurrences of $_ENV with $_SERVER (Bug #154)
+    - zentrack_2/includes/zenTrack.class 1.162
+    - zentrack_2/includes/templates/actions/contacts.php 1.5
+    - zentrack_2/www/help/english/admin/admin_header.php 1.2
+    - zentrack_2/www/help/english/users/user_header.php 1.4
+    - zentrack_2/www/help/help_header.php 1.8
+
+----- VERSION 2.5.0.2 (2004-11-10) -----
+
+2004-11-07, Kato
+  Added missing bugTo and bugFrom constants to configVars.php
+    - zentrack_2/install/configVars.php.default 1.8  
+
+2004-11-02, Kato
+  Added ability to use label or id for standard fields in data group files
+  Added validation for standard ticket fields to data group file entries
+    - zentrack_2/includes/zenTrack.class 1.161
+    - zentrack_2/includes/templates/behaviorDetailForm.php 1.8
+    - zentrack_2/includes/templates/groupForm.php 1.13
+    - zentrack_2/www/behavior_js.php 1.14
+    - zentrack_2/www/projects.php 1.10
+    - zentrack_2/install/header.php.default 1.13
+    - zentrack_2/www/admin/deleteGroup.php 1.2
+    - zentrack_2/www/admin/editBehaviorSubmit.php 1.4  
+  Fixed "(invalid)" entry in custom_menu entries in project screen
+    - zentrack_2/www/newProject.php 1.7
+    - zentrack_2/www/newTicket.php 1.7
+    - zentrack_2/includes/db.class 1.33
+    - zentrack_2/includes/footer.php 1.29
+    - zentrack_2/includes/zen.class 1.32
+    - zentrack_2/includes/templates/listTickets.php 1.20
+    - zentrack_2/includes/templates/newProjectForm.php 1.28
+    - zentrack_2/includes/templates/newTicketForm.php 1.35
+    
+2004-11-01, cfalonso
+  Added character_set to ZENTRACK_SETTINGS. Used in function ffv. 
+  Modified files replacing htmlspecialchars and htmlentities with ffv.
+    - zentrack_2/includes/zen.class 1.31
+    - zentrack_2/includes/zenTrack.class 1.160
+    - zentrack_2/includes/templates/configSettingsForm.php 1.10
+    - zentrack_2/includes/templates/searchContactForm.php 1.2
+    - zentrack_2/includes/templates/searchForm.php 1.12
+    - zentrack_2/includes/templates/searchLogForm.php1.9
+    - zentrack_2/includes/templates/searchLogList.php 1.11
+    - zentrack_2/includes/templates/ticket_detailsBox.php 1.12
+    - zentrack_2/includes/templates/ticket_logBox.php 1.15
+    - zentrack_2/includes/templates/userSearchForm.php 1.9
+    - zentrack_2/includes/templates/actions/log.php 1.6
+    - zentrack_2/install/UPGRADE_mssqlserver.sql 1.23
+    - zentrack_2/install/UPGRADE_mysql.sql 1.31
+    - zentrack_2/install/UPGRADE_oracle.sql 1.30
+    - zentrack_2/install/UPGRADE_postgres.sql 1.22
+    - zentrack_2/install/seed_mssqlserver.sql 1.27
+    - zentrack_2/install/seed_mysql.sql 1.38
+    - zentrack_2/install/seed_oracle.sql 1.33
+    - zentrack_2/install/seed_postgres.sql 1.29
+    - zentrack_2/www/addProjectSubmit.php 1.14
+    - zentrack_2/www/addSubmit.php 1.20
+    - zentrack_2/www/actions/agreement_edit.php 1.2
+    - zentrack_2/www/actions/print.php 1.12
+
+2004-10-27, cfalonso
+  Email not right when creating contacts - Fixed
+    - zentrack_2/includes/templates/newContactForm.php 1.3
+    - zentrack_2/includes/templates/newContacteForm.php 1.4
+
+2004-10-26, cfalonso
+  If a MOVE is required and the current owner doesn't have access to the destination Bin, the owner is set to NULL
+    - zentrack_2/includes/zenTrack.class 1.159
+
+2004-10-22, cfalonso
+  Fixed a mistake I made in move_ticket function
+    - zentrack_2/includes/zenTrack.class 1.158
+
+2004-10-22, cfalonso
+  Add admin settings to keep owners when moving a ticket, closing it and setting it to pending
+    - zentrack_2/includes/zenTrack.class 1.157
+    - zentrack_2/install/UPGRADE_mssqlserver.sql 1.22
+    - zentrack_2/install/UPGRADE_mysql.sql 1.30
+    - zentrack_2/install/UPGRADE_oracle.sql 1.29
+    - zentrack_2/install/UPGRADE_postgres.sql 1.21
+    - zentrack_2/install/seed_mssqlserver.sql 1.26
+    - zentrack_2/install/seed_mysql.sql 1.37
+    - zentrack_2/install/seed_oracle.sql 1.32
+    - zentrack_2/install/seed_postgres.sql 1.28
+
+2004-10-20, Kato
+  Fixed db_listIndexed method
+    - zentrack_2/inclues/db.class 1.33
+  Fixed translation errors
+    - zentrack_2/includes/templates/listTickets.php 1.20
+    - zentrack_2/includes/templates/newTicketForm.php 1.35
+    - zentrack_2/www/projects.php 1.10
+    
+2004-10-19, cfalonso
+  Added an option to delete data groups
+    - zentrack_2/includes/zenTrack.class 1.156
+    - zentrack_2/includes/templates/groupForm.php 1.12
+    - zentrack_2/includes/templates/referencedGroupForm.php 1.1
+    - zentrack_2/www/admin/deleteGroup.php 1.1
+
+2004-10-14, Kato
+  Fixed missing -value_column- entry in behavior detail (only when using file groups)
+   - zentrack_2/includes/headerInc.php 1.50
+   - zentrack_2/includes/templates/behaviorDetailForm.php 1.7
+  Fixed problem with file based groups not showing more than one entry.
+   - zentrack_2/includes/zenTrack.class 1.155
+
+----- VERSION 2.5.0.1(2004-10-14) -----
+
+2004-10-14, Kato
+  Fixed problem on new ticket screen where "1(invalid)" [others similar] appears
+  in custom_menuX fields.
+    - zentrack_2/includes/templates/newTicketForm.php 1.34
+
+----- VERSION 2.5.0(2004-10-12) -----
+
+2004-10-12, Kato
+  Cleaned up add contact pages
+    - zentrack_2/includes/templates/actions/contacts.php 1.4
+    - zentrack_2/includes/templates/actions/contacts.php 1.4  
+  Updated version number in sql files
+    - zentrack_2/install/UPGRADE_mssqlserver.sql 1.21
+    - zentrack_2/install/UPGRADE_mysql.sql 1.29
+    - zentrack_2/install/UPGRADE_oracle.sql 1.28
+    - zentrack_2/install/UPGRADE_postgres.sql 1.20
+    - zentrack_2/install/seed_mssqlserver.sql 1.25
+    - zentrack_2/install/seed_mysql.sql 1.36
+    - zentrack_2/install/seed_oracle.sql 1.31
+    - zentrack_2/install/seed_postgres.sql 1.27
+  Fixed js bug with Javascript based behaviors
+    - zentrack_2/includes/templates/groupForm.php 1.11
+    - zentrack_2/includes/headerInc.php 1.49
+    - zentrack_2/www/behavior_js.php 1.13
+  Corrected syntax error in egate file
+    - zentrack_2/includes/egate_utils.php 1.36
+  Fixed problem with invalid ticket ids
+    - zentrack_2/www/ticket.php 1.22
+    
+2004-10-11, Kato
+  Cleaned up email templates and doc files
+    - zentrack_2/UPGRADE.readme 1.19
+    - zentrack_2/includes/templates/email/footer.template 1.4
+    - zentrack_2/includes/templates/email/heading.template 1.4
+    - zentrack_2/www/actions/email.php 1.14
+
+  Added documentation for file based groups
+    - zentrack_2/www/help/english/admin/behaviors.php 1.2
+    - zentrack_2/www/help/english/admin/data_groups.php 1.2  
+
+  Fixed get_table_id (missing function)
+    - zentrack_2/includes/reportDataParser.php
+    
+  Fixed searchList formatting to handle blank search strings
+    - zentrack_2/includes/templates/searchList.php 1.14
+    
+  Fixed empty behavior javascript error (103)
+    - zentrack_2/includes/db.class 1.32
+    - zentrack_2/includes/zen.class 1.30
+    - zentrack_2/includes/zenTrack.class 1.153
+    - zentrack_2/www/behavior_js.php 1.12
+
+2004-09-28, Kato
+  Fixed reject ticket bug
+    - zentrack_2/www/actions/reject.php 1.6
+    - zentrack_2/includes/zenTrack.class 1.152
+  
+2004-09-27, Kato
+  Added -none- option for data groups
+    - zentrack_2/includes/headerInc.php 1.47 
+    - zentrack_2/includes/zenTrack.class 1.152
+    - zentrack_2/includes/headerInc.php 1.48
+    - zentrack_2/includes/templates/behaviorForm.php 1.7
+    - zentrack_2/includes/templates/newProjectForm.php 1.27
+    - zentrack_2/includes/templates/newTicketForm.php 1.33
+  
+  Fixed mssql identity problem
+    - zentrack_2/install/UPGRADE_mssqlserver.sql 1.19
+    - zentrack_2/includes/zenTrack.class 1.152
+    - zentrack_2/includes/db.class 1.31
+    - zentrack_2/install/UPGRADE_mssqlserver.sql 1.20
+    - zentrack_2/install/UPGRADE_mysql.sql 1.28
+    - zentrack_2/install/UPGRADE_oracle.sql 1.27
+    - zentrack_2/install/UPGRADE_postgres.sql 1.19
+    - zentrack_2/install/build_mssqlserver.sql 1.13
+    - zentrack_2/install/build_mysql.sql 1.16
+    - zentrack_2/install/build_oracle.sql 1.16
+    - zentrack_2/install/build_postgres.sql 1.17
+    
+  Added ability to generate behaviors from file using File Groups
+    - zentrack_2/setup_from_cvs 1.12
+    - zentrack_2/setup_from_cvs.cmd 1.4
+    - zentrack_2/includes/footer.php 1.28
+    - zentrack_2/includes/headerInc.php 1.47
+    - zentrack_2/includes/leftAdmin.php 1.8
+    - zentrack_2/includes/leftBins.php 1.9
+    - zentrack_2/includes/leftHelp.php 1.8
+    - zentrack_2/includes/zen.class 1.29
+    - zentrack_2/includes/zenTrack.class 1.151
+    - zentrack_2/includes/templates/behaviorDetailForm.php 1.6
+    - zentrack_2/includes/templates/behaviorForm.php 1.6
+    - zentrack_2/includes/templates/behaviorMenu.php 1.5
+    - zentrack_2/includes/templates/editCustomsForm.php 1.8
+    - zentrack_2/includes/templates/groupAdd.php 1.4
+    - zentrack_2/includes/templates/groupDetailsForm.php 1.6
+    - zentrack_2/includes/templates/groupForm.php 1.10
+    - zentrack_2/includes/templates/optionsMenu.php 1.4
+    - zentrack_2/install/UPGRADE_mssqlserver.sql 1.19
+    - zentrack_2/install/UPGRADE_mysql.sql 1.27
+    - zentrack_2/install/UPGRADE_oracle.sql 1.26
+    - zentrack_2/install/UPGRADE_postgres.sql 1.18
+    - zentrack_2/install/build_mssqlserver.sql 1.12
+    - zentrack_2/install/build_mysql.sql 1.15
+    - zentrack_2/install/build_oracle.sql 1.15
+    - zentrack_2/install/build_postgres.sql 1.16
+    - zentrack_2/www/behavior_js.php 1.11
+    - zentrack_2/www/javascript.js 1.12
+    - zentrack_2/www/admin/addGroupSubmit.php 1.8
+    - zentrack_2/www/admin/editBehavior.php 1.4
+    - zentrack_2/www/admin/editBehaviorDetails.php 1.5
+    - zentrack_2/www/admin/editCustom.php 1.8
+    - zentrack_2/www/admin/editGroupSubmit.php 1.7
+    - zentrack_2/www/misc/pwc.php 1.10
+  
+2004-09-22, Kato
+  Corrected bug causing help language to default to english.
+    - zentrack_2/includes/headerInc.php 1.47
+
+----- V2.5 RC3 [Pre 3] (2004-09-10) -----
+
+2004-09-09, Kato
+  Repaired login problems caused by using the default bin -All-
+  Fixed minor paging issue (not showing numbers in some cases)
+    - zentrack_2/includes/login.php 1.26
+    - zentrack_2/includes/paging.php 1.3
+    - zentrack_2/includes/zenTrack.class 1.150
+    - zentrack_2/www/assignedTickets.php 1.11
+    - zentrack_2/www/index.php 1.13
+    - zentrack_2/www/phpinfo.php 1.4
+    - zentrack_2/www/projects.php 1.9
+  Fixed URL bugs in help section
+    - zentrack_2/includes/zenTrack.class 1.149
+    - zentrack_2/includes/headerInc.php 1.46
+    - zentrack_2/includes/leftHelp.php 1.7
+    - zentrack_2/www/help/find.php 1.1
+    - zentrack_2/www/help/help_header.php 1.7
+    - zentrack_2/UPGRADE.readme 1.18
+  Fixed url bug with the contact tab on ticket page
+  (selecting a group refreshed to broken url in some instanced)
+  Added link to create contact if none exist in the ticket tab
+    - zentrack_2/www/projects.php 1.8
+    - zentrack_2/includes/templates/bugForm.php 1.1
+    - zentrack_2/www/help/english/support.php 1.3
+    - zentrack_2/includes/templates/newContacteForm.php 1.3
+    - zentrack_2/includes/templates/actions/contacts.php 1.3  
+  Fixed up 'Report A Bug' - changed email addy to bugs@zentrack.net
+  and created an alternate method to send via email if needed.
+    - zentrack_2/www/styles.php 1.20
+    - zentrack_2/www/help/bugs.php 1.2
+    - zentrack_2/includes/footer.php 1.27
+
+----- V2.5 RC2 [Pre 2] (2004-09-08) -----
+
+2004-09-09, Kato
+  Final cleanup
+    - zentrack_2/INSTALL.README 1.25
+    - zentrack_2/setup_from_cvs.cmd 1.3
+  Completed tutorial and user's manual docs
+  Completed admin section of help docs
+  Updated admin pages to include links to docs
+    - zentrack_2/includes/zenTrack.class 1.148
+    - zentrack_2/includes/templates/behaviorMenu.php 1.4
+    - zentrack_2/includes/templates/binForm.php 1.9
+    - zentrack_2/includes/templates/configForm.php 1.9
+    - zentrack_2/includes/templates/configSettingsForm.php 1.9
+    - zentrack_2/includes/templates/editCustomsForm.php 1.7
+    - zentrack_2/includes/templates/groupForm.php 1.9
+    - zentrack_2/includes/templates/tutorial/english/closure.php 1.1
+    - zentrack_2/includes/templates/tutorial/english/contacts.php 1.1
+    - zentrack_2/includes/templates/tutorial/english/create_ticket.php 1.1
+    - zentrack_2/includes/templates/tutorial/english/relate_ticket.php 1.1
+    - zentrack_2/includes/templates/tutorial/english/use_project.php 1.1
+    - zentrack_2/www/styles.php 1.20
+    - zentrack_2/www/admin/addBehaviorSubmit.php 1.5
+    - zentrack_2/www/admin/editCustom.php 1.7
+    - zentrack_2/www/admin/systems.php 1.8
+    - zentrack_2/www/help/bugs.php 1.1
+    - zentrack_2/www/help/help_header.php 1.6
+    - zentrack_2/www/help/english/bugs.php 1.1
+    - zentrack_2/www/help/english/index.php 1.3
+    - zentrack_2/www/help/english/install.html 1.2
+    - zentrack_2/www/help/english/install.php 1.2
+    - zentrack_2/www/help/english/tutorial.php 1.1
+    - zentrack_2/www/help/english/admin/admin_header.php 1.1
+    - zentrack_2/www/help/english/admin/behaviors.php 1.1
+    - zentrack_2/www/help/english/admin/bins.php 1.1
+    - zentrack_2/www/help/english/admin/data_groups.php 1.1
+    - zentrack_2/www/help/english/admin/data_types.php 1.1
+    - zentrack_2/www/help/english/admin/index.php 1.1
+    - zentrack_2/www/help/english/admin/settings.php 1.1
+    - zentrack_2/www/help/english/admin/varfields.php 1.1
+    - zentrack_2/www/help/english/users/contacts.php 1.2
+    - zentrack_2/www/help/english/users/notify_lists.php 1.2
+    - zentrack_2/www/help/english/users/options.php 1.2
+    - zentrack_2/www/help/english/users/projects.php 1.2
+    - zentrack_2/www/help/english/users/reports.php 1.2
+    - zentrack_2/www/help/english/users/tickets.php 1.2
+    - zentrack_2/www/help/english/users/tutorial.php 1.3
+    - zentrack_2/www/help/english/users/user_header.php 1.3  
+  Changed the admin password to match last name
+  of administrator.  This will force users to change
+  it on the first login.
+
+2004-09-08, Kato
+  Added new documentation (still incomplete)
+    - zentrack_2/www/help/about.php 1.6
+    - zentrack_2/www/help/features.php 1.3
+    - zentrack_2/www/help/future.php 1.3
+    - zentrack_2/www/help/gpl.php 1.6
+    - zentrack_2/www/help/help_header.php 1.4
+    - zentrack_2/www/help/index.php 1.10
+    - zentrack_2/www/help/install.html 1.5
+    - zentrack_2/www/help/install.php 1.4
+    - zentrack_2/www/help/support.php 1.6
+    - zentrack_2/www/help/english/about.php 1.1
+    - zentrack_2/www/help/english/features.php 1.1
+    - zentrack_2/www/help/english/future.php 1.1
+    - zentrack_2/www/help/english/gpl.php 1.1
+    - zentrack_2/www/help/english/index.php 1.1
+    - zentrack_2/www/help/english/install.html 1.1
+    - zentrack_2/www/help/english/install.php 1.1
+    - zentrack_2/www/help/english/support.php 1.1
+    - zentrack_2/www/help/english/users/contacts.php 1.1
+    - zentrack_2/www/help/english/users/index.php 1.1
+    - zentrack_2/www/help/english/users/notify_lists.php 1.1
+    - zentrack_2/www/help/english/users/options.php 1.1
+    - zentrack_2/www/help/english/users/projects.php 1.1
+    - zentrack_2/www/help/english/users/reports.php 1.1
+    - zentrack_2/www/help/english/users/tickets.php 1.1
+    - zentrack_2/www/help/english/users/tutorial.php 1.1
+    - zentrack_2/www/help/english/users/user_header.php 1.1
+    - zentrack_2/www/help/english/users/tutorial/bins 1.1
+    - zentrack_2/www/help/english/users/tutorial/close_ticket 1.1
+    - zentrack_2/www/help/english/users/tutorial/introduction 1.1
+    - zentrack_2/www/help/english/users/tutorial/log_ticket 1.1
+    - zentrack_2/www/help/english/users/tutorial/login 1.1
+    - zentrack_2/www/help/english/users/tutorial/ownership 1.1
+    - zentrack_2/www/help/english/users/tutorial/view_tickets 1.1
+    - zentrack_2/www/images/help_screenshots/changepwd.gif 1.1
+    - zentrack_2/www/images/help_screenshots/current_bin.gif 1.1
+    - zentrack_2/www/images/help_screenshots/log_view.gif 1.1
+    - zentrack_2/www/images/help_screenshots/nav_tickets.gif 1.1
+    - zentrack_2/www/images/help_screenshots/ticket_list.gif 1.1
+    - zentrack_2/www/images/help_screenshots/ticket_view.gif 1.1
+  Updated ADODB library
+    - zentrack_2/includes/adodb/adodb-csvlib.inc.php 1.6
+    - zentrack_2/includes/adodb/adodb-datadict.inc.php 1.1
+    - zentrack_2/includes/adodb/adodb-error.inc.php 1.1
+    - zentrack_2/includes/adodb/adodb-errorhandler.inc.php 1.6
+    - zentrack_2/includes/adodb/adodb-errorpear.inc.php 1.6
+    - zentrack_2/includes/adodb/adodb-exceptions.inc.php 1.1
+    - zentrack_2/includes/adodb/adodb-iterator.inc.php 1.1
+    - zentrack_2/includes/adodb/adodb-lib.inc.php 1.6
+    - zentrack_2/includes/adodb/adodb-pager.inc.php 1.2
+    - zentrack_2/includes/adodb/adodb-pear.inc.php 1.6
+    - zentrack_2/includes/adodb/adodb-time.inc.php 1.1
+    - zentrack_2/includes/adodb/adodb-xmlschema.inc.php 1.1
+    - zentrack_2/includes/adodb/adodb.inc.php 1.6
+    - zentrack_2/includes/adodb/license.txt 1.6
+    - zentrack_2/includes/adodb/pivottable.inc.php 1.2
+    - zentrack_2/includes/adodb/readme.txt 1.5
+    - zentrack_2/includes/adodb/rsfilter.inc.php 1.2
+    - zentrack_2/includes/adodb/server.php 1.7
+    - zentrack_2/includes/adodb/toexport.inc.php 1.2
+    - zentrack_2/includes/adodb/tohtml.inc.php 1.6
+    - zentrack_2/includes/adodb/xmlschema.dtd 1.1
+    - zentrack_2/includes/adodb/datadict/datadict-access.inc.php 1.1
+    - zentrack_2/includes/adodb/datadict/datadict-db2.inc.php 1.1
+    - zentrack_2/includes/adodb/datadict/datadict-firebird.inc.php 1.1
+    - zentrack_2/includes/adodb/datadict/datadict-generic.inc.php 1.1
+    - zentrack_2/includes/adodb/datadict/datadict-ibase.inc.php 1.1
+    - zentrack_2/includes/adodb/datadict/datadict-informix.inc.php 1.1
+    - zentrack_2/includes/adodb/datadict/datadict-mssql.inc.php 1.1
+    - zentrack_2/includes/adodb/datadict/datadict-mysql.inc.php 1.1
+    - zentrack_2/includes/adodb/datadict/datadict-oci8.inc.php 1.1
+    - zentrack_2/includes/adodb/datadict/datadict-postgres.inc.php 1.1
+    - zentrack_2/includes/adodb/datadict/datadict-sybase.inc.php 1.1
+    - zentrack_2/includes/adodb/drivers/adodb-access.inc.php 1.6
+    - zentrack_2/includes/adodb/drivers/adodb-ado.inc.php 1.6
+    - zentrack_2/includes/adodb/drivers/adodb-ado_access.inc.php 1.6
+    - zentrack_2/includes/adodb/drivers/adodb-ado_mssql.inc.php 1.6
+    - zentrack_2/includes/adodb/drivers/adodb-borland_ibase.inc.php 1.6
+    - zentrack_2/includes/adodb/drivers/adodb-csv.inc.php 1.6
+    - zentrack_2/includes/adodb/drivers/adodb-db2.inc.php 1.6
+    - zentrack_2/includes/adodb/drivers/adodb-fbsql.inc.php 1.6
+    - zentrack_2/includes/adodb/drivers/adodb-firebird.inc.php 1.6
+    - zentrack_2/includes/adodb/drivers/adodb-ibase.inc.php 1.6
+    - zentrack_2/includes/adodb/drivers/adodb-informix.inc.php 1.6
+    - zentrack_2/includes/adodb/drivers/adodb-informix72.inc.php 1.2
+    - zentrack_2/includes/adodb/drivers/adodb-ldap.inc.php 1.1
+    - zentrack_2/includes/adodb/drivers/adodb-mssql.inc.php 1.6
+    - zentrack_2/includes/adodb/drivers/adodb-mssqlpo.inc.php 1.2
+    - zentrack_2/includes/adodb/drivers/adodb-mysql.inc.php 1.6
+    - zentrack_2/includes/adodb/drivers/adodb-mysqli.inc.php 1.1
+    - zentrack_2/includes/adodb/drivers/adodb-mysqlt.inc.php 1.6
+    - zentrack_2/includes/adodb/drivers/adodb-netezza.inc.php 1.1
+    - zentrack_2/includes/adodb/drivers/adodb-oci8.inc.php 1.7
+    - zentrack_2/includes/adodb/drivers/adodb-oci805.inc.php 1.2
+    - zentrack_2/includes/adodb/drivers/adodb-oci8po.inc.php 1.6
+    - zentrack_2/includes/adodb/drivers/adodb-odbc.inc.php 1.6
+    - zentrack_2/includes/adodb/drivers/adodb-odbc_mssql.inc.php 1.6
+    - zentrack_2/includes/adodb/drivers/adodb-odbc_oracle.inc.php 1.6
+    - zentrack_2/includes/adodb/drivers/adodb-odbtp.inc.php 1.1
+    - zentrack_2/includes/adodb/drivers/adodb-odbtp_unicode.inc.php 1.1
+    - zentrack_2/includes/adodb/drivers/adodb-oracle.inc.php 1.6
+    - zentrack_2/includes/adodb/drivers/adodb-pdo.inc.php 1.1
+    - zentrack_2/includes/adodb/drivers/adodb-postgres.inc.php 1.6
+    - zentrack_2/includes/adodb/drivers/adodb-postgres64.inc.php 1.2
+    - zentrack_2/includes/adodb/drivers/adodb-postgres7.inc.php 1.6
+    - zentrack_2/includes/adodb/drivers/adodb-proxy.inc.php 1.6
+    - zentrack_2/includes/adodb/drivers/adodb-sapdb.inc.php 1.1
+    - zentrack_2/includes/adodb/drivers/adodb-sqlanywhere.inc.php 1.6
+    - zentrack_2/includes/adodb/drivers/adodb-sqlite.inc.php 1.1
+    - zentrack_2/includes/adodb/drivers/adodb-sqlitepo.inc.php 1.1
+    - zentrack_2/includes/adodb/drivers/adodb-sybase.inc.php 1.6
+    - zentrack_2/includes/adodb/drivers/adodb-vfp.inc.php 1.6
+    - zentrack_2/includes/adodb/lang/adodb-bg.inc.php 1.1
+    - zentrack_2/includes/adodb/lang/adodb-bgutf8.inc.php 1.1
+    - zentrack_2/includes/adodb/lang/adodb-ca.inc.php 1.1
+    - zentrack_2/includes/adodb/lang/adodb-cn.inc.php 1.1
+    - zentrack_2/includes/adodb/lang/adodb-cz.inc.php 1.1
+    - zentrack_2/includes/adodb/lang/adodb-de.inc.php 1.1
+    - zentrack_2/includes/adodb/lang/adodb-en.inc.php 1.1
+    - zentrack_2/includes/adodb/lang/adodb-es.inc.php 1.1
+    - zentrack_2/includes/adodb/lang/adodb-fr.inc.php 1.1
+    - zentrack_2/includes/adodb/lang/adodb-it.inc.php 1.1
+    - zentrack_2/includes/adodb/lang/adodb-nl.inc.php 1.1
+    - zentrack_2/includes/adodb/lang/adodb-pl.inc.php 1.1
+    - zentrack_2/includes/adodb/lang/adodb-pt-br.inc.php 1.1
+    - zentrack_2/includes/adodb/lang/adodb-ro.inc.php 1.1
+    - zentrack_2/includes/adodb/lang/adodb-ru1251.inc.php 1.1
+    - zentrack_2/includes/adodb/lang/adodb-sv.inc.php 1.1
+    - zentrack_2/includes/adodb/session/adodb-compress-bzip2.php 1.1
+    - zentrack_2/includes/adodb/session/adodb-compress-gzip.php 1.1
+    - zentrack_2/includes/adodb/session/adodb-cryptsession.php 1.1
+    - zentrack_2/includes/adodb/session/adodb-encrypt-mcrypt.php 1.1
+    - zentrack_2/includes/adodb/session/adodb-encrypt-md5.php 1.1
+    - zentrack_2/includes/adodb/session/adodb-encrypt-secret.php 1.1
+    - zentrack_2/includes/adodb/session/adodb-sess.txt 1.1
+    - zentrack_2/includes/adodb/session/adodb-session-clob.php 1.1
+    - zentrack_2/includes/adodb/session/adodb-session.php 1.1
+    - zentrack_2/includes/adodb/session/adodb-sessions.mysql.sql 1.1
+    - zentrack_2/includes/adodb/session/adodb-sessions.oracle.clob.sql 1.1
+    - zentrack_2/includes/adodb/session/adodb-sessions.oracle.sql 1.1
+    - zentrack_2/includes/adodb/session/crypt.inc.php 1.1
+    - zentrack_2/includes/adodb/xsl/convert-0.1-0.2.xsl 1.1
+    - zentrack_2/includes/adodb/xsl/convert-0.2-0.1.xsl 1.1
+    - zentrack_2/includes/adodb/xsl/remove-0.2.xsl 1.1
+
+2004-09-08, Kato
+  Added documentation (still incomplete) for user's manual
+  
+2004-09-06, Kato
+  Repaired security issue with searching logs
+    - zentrack_2/www/search.php 1.8
+    - zentrack_2/www/searchLogs.php 1.6
+    - zentrack_2/includes/zenTrack.class 1.146
+    - zentrack_2/includes/templates/searchForm.php 1.11
+    - zentrack_2/includes/templates/searchLogForm.php 1.8
+    - zentrack_2/includes/templates/searchLogList.php 1.10
+    - zentrack_2/includes/templates/searchLogResults.php 1.3
+    - zentrack_2/includes/templates/searchResults.php 1.8  
+  Cleaned up GUI appearance/functional issues
+    - zentrack_2/includes/editContactSubmit.php 1.1
+    - zentrack_2/includes/editContacteSubmit.php 1.1
+    - zentrack_2/includes/editTicketSubmit.php 1.9
+    - zentrack_2/includes/footer.php 1.25
+    - zentrack_2/includes/headerInc.php 1.45
+    - zentrack_2/includes/nav.php 1.12
+    - zentrack_2/includes/templates/agreement_box.php 1.4
+    - zentrack_2/includes/templates/listContacts.php 1.2
+    - zentrack_2/includes/templates/newAgreementForm.php 1.3
+    - zentrack_2/includes/templates/projectView.php 1.3
+    - zentrack_2/includes/templates/ticket_actionBar.php 1.10
+    - zentrack_2/includes/templates/ticket_contactsBox.php 1.3
+    - zentrack_2/includes/templates/ticket_notifyBox.php 1.4
+    - zentrack_2/includes/templates/ticket_relatedBox.php 1.5
+    - zentrack_2/includes/templates/ticket_titleBox.php 1.8
+    - zentrack_2/includes/templates/actions/contacts.php 1.2
+    - zentrack_2/www/styles.php 1.18
+    - zentrack_2/www/ticket.php 1.21
+    - zentrack_2/www/actions/action_header.php 1.13
+    - zentrack_2/www/actions/addToNotify.php 1.7
+    - zentrack_2/www/actions/upload.php 1.12  
+  Fixed problems with next/last paging features
+    - zentrack_2/includes/db.class 1.30
+    - zentrack_2/includes/paging.php 1.2
+    - zentrack_2/includes/parseVarfields.php 1.3
+    - zentrack_2/includes/zen.class 1.27
+    - zentrack_2/includes/zenTrack.class 1.146  
+  Corrected bugs with: get_user method, adding contacts,
+  editing tickets, others.
+    - zentrack_2/includes/db.class 1.30
+    - zentrack_2/includes/paging.php 1.2
+    - zentrack_2/includes/parseVarfields.php 1.3
+    - zentrack_2/includes/zen.class 1.27
+    - zentrack_2/includes/zenTrack.class 1.146
+    - zentrack_2/includes/zenTrack.class 1.146  
+  
+2004-09-03, Kato
+  Prep for work on the paging features
+    - zentrack_2/includes/db.class 1.29
+    - zentrack_2/includes/zen.class 1.26
+    - zentrack_2/includes/zenTrack.class 1.144
+  Some minor cleanup
+    - zentrack_2/includes/templates/ticket_box.php 1.15
+    - zentrack_2/www/searchContacts.php 1.2
+    - zentrack_2/includes/editAgreementSubmit.php 1.1
+    - zentrack_2/includes/translator.class 1.8
+    - zentrack_2/includes/templates/agreement_box.php 1.3
+    - zentrack_2/includes/templates/listTickets.php 1.19
+    - zentrack_2/includes/templates/newAgreementForm.php 1.2
+    - zentrack_2/install/UPGRADE_mysql.sql 1.24
+    - zentrack_2/www/addAgreementSubmit.php 1.3
+    - zentrack_2/www/newAgreement.php 1.3
+	
+2004-09-02, Kato
+  Added contacts feature
+    - zentrack_2/includes/headerInc.php 1.43
+    - zentrack_2/includes/leftContacts.php 1.1
+    - zentrack_2/includes/leftMain.php 1.5
+    - zentrack_2/includes/zenTrack.class 1.143
+    - zentrack_2/includes/templates/agreementView.php 1.1
+    - zentrack_2/includes/templates/agreement_box.php 1.1
+    - zentrack_2/includes/templates/agreement_list.php 1.1
+    - zentrack_2/includes/templates/contactView.php 1.1
+    - zentrack_2/includes/templates/contact_!19Box.php 1.1
+    - zentrack_2/includes/templates/contact_abcBox.php 1.1
+    - zentrack_2/includes/templates/contact_allBox.php 1.1
+    - zentrack_2/includes/templates/contact_box.php 1.1
+    - zentrack_2/includes/templates/contact_buttonBox.php 1.1
+    - zentrack_2/includes/templates/contact_defBox.php 1.1
+    - zentrack_2/includes/templates/contact_ghiBox.php 1.1
+    - zentrack_2/includes/templates/contact_jklBox.php 1.1
+    - zentrack_2/includes/templates/contact_list.php 1.1
+    - zentrack_2/includes/templates/contact_mnoBox.php 1.1
+    - zentrack_2/includes/templates/contact_personBox.php 1.1
+    - zentrack_2/includes/templates/contact_pqrsBox.php 1.1
+    - zentrack_2/includes/templates/contact_titleBox.php 1.1
+    - zentrack_2/includes/templates/contact_tuvBox.php 1.1
+    - zentrack_2/includes/templates/contact_wxyzBox.php 1.1
+    - zentrack_2/includes/templates/editAgreementForm.php 1.1
+    - zentrack_2/includes/templates/editContactForm.php 1.1
+    - zentrack_2/includes/templates/listContacts.php 1.1
+    - zentrack_2/includes/templates/listContacts2.php 1.1
+    - zentrack_2/includes/templates/newAgreementForm.php 1.1
+    - zentrack_2/includes/templates/newContactForm.php 1.1
+    - zentrack_2/includes/templates/newContacteForm.php 1.1
+    - zentrack_2/includes/templates/searchContact2List.php 1.1
+    - zentrack_2/includes/templates/searchContact3List.php 1.1
+    - zentrack_2/includes/templates/searchContact4List.php 1.1
+    - zentrack_2/includes/templates/searchContactForm.php 1.1
+    - zentrack_2/includes/templates/searchContactList.php 1.1
+    - zentrack_2/includes/templates/searchContactResults.php 1.1
+    - zentrack_2/includes/templates/searchLogForm.php 1.7
+    - zentrack_2/includes/templates/ticket_box.php 1.14
+    - zentrack_2/includes/templates/ticket_contactsBox.php 1.1
+    - zentrack_2/includes/templates/actions/contacts.php 1.1
+    - zentrack_2/includes/templates/actions/notify.php 1.3
+    - zentrack_2/install/UPGRADE_mssqlserver.sql 1.14
+    - zentrack_2/install/UPGRADE_mysql.sql 1.21
+    - zentrack_2/install/UPGRADE_oracle.sql 1.21
+    - zentrack_2/install/UPGRADE_postgres.sql 1.13
+    - zentrack_2/install/build_mssqlserver.sql 1.8
+    - zentrack_2/install/build_mysql.sql 1.11
+    - zentrack_2/install/build_oracle.sql 1.12
+    - zentrack_2/install/build_postgres.sql 1.13
+    - zentrack_2/install/seed_mssqlserver.sql 1.22
+    - zentrack_2/install/seed_mysql.sql 1.33
+    - zentrack_2/install/seed_oracle.sql 1.28
+    - zentrack_2/install/seed_postgres.sql 1.24
+    - zentrack_2/www/addAgreementSubmit.php 1.1
+    - zentrack_2/www/addContactSubmit.php 1.1
+    - zentrack_2/www/addContacteSubmit.php 1.1
+    - zentrack_2/www/agreement.php 1.1
+    - zentrack_2/www/agreements.php 1.1
+    - zentrack_2/www/contact.php 1.1
+    - zentrack_2/www/contacts.php 1.1
+    - zentrack_2/www/newAgreement.php 1.1
+    - zentrack_2/www/newContact.php 1.1
+    - zentrack_2/www/searchContacts.php 1.1
+    - zentrack_2/www/styles.php 1.17
+    - zentrack_2/www/actions/addToContacts.php 1.1
+    - zentrack_2/www/actions/addToNotify.php 1.6
+    - zentrack_2/www/actions/agreement_archive.php 1.1
+    - zentrack_2/www/actions/agreement_delete.php 1.1
+    - zentrack_2/www/actions/agreement_edit.php 1.1
+    - zentrack_2/www/actions/contact_agreement.php 1.1
+    - zentrack_2/www/actions/contact_delete.php 1.1
+    - zentrack_2/www/actions/contact_edit.php 1.1
+    - zentrack_2/www/actions/contact_employee.php 1.1
+    - zentrack_2/www/actions/dropFromContacts.php 1.1
+    - zentrack_2/www/actions/editAgreementSubmit.php 1.1
+    - zentrack_2/www/actions/editContactSubmit.php 1.1
+    - zentrack_2/www/actions/editContacteSubmit.php 1.1
+	
+2004-08-29, Kato
+  Implemented the 'tasks' table to replace hard coded log choices
+    - zentrack_2/includes/zenTrack.class 1.142
+  Fixed behavior bugs, minor tweaks
+    - zentrack_2/www/behavior_js.php 1.8
+    - zentrack_2/includes/headerInc.php 1.42
+    - zentrack_2/includes/zenTrack.class 1.142
+    - zentrack_2/includes/templates/newProjectForm.php 1.26
+    - zentrack_2/www/admin/addGroupSubmit.php 1.7
+    - zentrack_2/www/admin/editGroupSubmit.php 1.6
+    - zentrack_2/www/help/help_header.php 1.3
+    - zentrack_2/www/help/index.php 1.9
+  Audited zenTrack.class for security flaws
+    - zentrack_2/includes/zenTrack.class 1.142
+  Added postgres install files
+  Upgraded version number to RC2
+    - zentrack_2/install/UPGRADE_mssqlserver.sql 1.13
+    - zentrack_2/install/UPGRADE_mysql.sql 1.20
+    - zentrack_2/install/UPGRADE_oracle.sql 1.20
+    - zentrack_2/install/UPGRADE_postgres.sql 1.12
+    - zentrack_2/install/build_postgres.sql 1.12
+    - zentrack_2/install/seed_mssqlserver.sql 1.21
+    - zentrack_2/install/seed_mysql.sql 1.32
+    - zentrack_2/install/seed_oracle.sql 1.27
+    - zentrack_2/install/seed_postgres.sql 1.23
+  Updated install/readme docs
+    - zentrack_2/CHANGELOG 1.188
+    - zentrack_2/INSTALL.README 1.24
+    - zentrack_2/README.txt 1.1
+    - zentrack_2/install/README.txt 1.1
+    - zentrack_2/UPGRADE.readme 1.17  
+	
+2004-08-25, Kato
+  Added htaccess authentication
+  Fixed typo in UPGRADE scripts
+    - zentrack_2/includes/login.php 1.25
+    - zentrack_2/install/UPGRADE_mssqlserver.sql 1.12
+    - zentrack_2/install/UPGRADE_mysql.sql 1.19
+    - zentrack_2/install/UPGRADE_oracle.sql 1.19
+    - zentrack_2/install/seed_mssqlserver.sql 1.20
+    - zentrack_2/install/seed_mysql.sql 1.31
+    - zentrack_2/install/seed_oracle.sql 1.26
+  Fixed foreach bug
+    - zentrack_2/includes/headerInc.php 1.41
+    - zentrack_2/includes/prepareSearchVarfields.php 1.2
+
+----- V2.5 RC1 [Pre 1] (2004-08-24) ----
+
+2004-08-23, Kato
+  Email error handling cleaned up
+    - zentrack_2/includes/egate_utils.php 1.35
+    - zentrack_2/includes/zenTrack.class 1.141
+    - zentrack_2/www/actions/email.php 1.13
+  Added variable fields to the search screen
+  Improved date search capabilities
+    - zentrack_2/includes/db.class 1.28
+    - zentrack_2/includes/login.php 1.24
+    - zentrack_2/includes/headerInc.php 1.40
+    - zentrack_2/includes/nav.php 1.10
+    - zentrack_2/includes/prepareSearchVarfields.php 1.1
+    - zentrack_2/includes/varfieldConfig.php 1.1
+    - zentrack_2/includes/zen.class 1.25
+    - zentrack_2/includes/zenTrack.class 1.141
+    - zentrack_2/includes/templates/searchForm.php 1.10
+    - zentrack_2/includes/templates/searchList.php 1.13
+    - zentrack_2/includes/templates/searchResults.php 1.7
+    - zentrack_2/includes/templates/ticket_box.php 1.13
+    - zentrack_2/includes/templates/ticket_customBox.php 1.6
+    - zentrack_2/install/UPGRADE_mssqlserver.sql 1.11
+    - zentrack_2/install/UPGRADE_mysql.sql 1.17
+    - zentrack_2/install/UPGRADE_oracle.sql 1.18
+    - zentrack_2/install/build_mssqlserver.sql 1.7
+    - zentrack_2/install/build_mysql.sql 1.10
+    - zentrack_2/install/build_oracle.sql 1.11
+    - zentrack_2/install/seed_mssqlserver.sql 1.19
+    - zentrack_2/install/seed_mysql.sql 1.30
+    - zentrack_2/install/seed_oracle.sql 1.25
+  Cleaned up behavior bugs and enhanced js eval capabilities
+    - zentrack_2/www/styles.php 1.16
+    - zentrack_2/www/ticket.php 1.20
+    - zentrack_2/includes/zenTrack.class 1.141
+    - zentrack_2/includes/templates/behaviorDetailForm.php 1.5
+    - zentrack_2/includes/templates/behaviorForm.php 1.5
+    - zentrack_2/includes/templates/behaviorMenu.php 1.3
+    - zentrack_2/includes/templates/groupAdd.php 1.3
+    - zentrack_2/includes/templates/groupForm.php 1.8
+    - zentrack_2/www/behavior_js.php 1.6
+    - zentrack_2/www/javascript.js 1.10
+    - zentrack_2/www/admin/addBehaviorSubmit.php 1.4
+    - zentrack_2/www/admin/addGroupSubmit.php 1.5
+    - zentrack_2/www/admin/editBehaviorDetails.php 1.4
+    - zentrack_2/www/admin/editCustom.php 1.6
+    - zentrack_2/www/admin/editGroupDetails.php 1.7
+    - zentrack_2/www/admin/editGroupSubmit.php 1.4
+  Fixed issue with edit screens and project identification when errors occur
+  Added editing of varfields to edit screens
+    - zentrack_2/www/addProjectSubmit.php 1.12
+    - zentrack_2/www/newTicket.php 1.6
+    - zentrack_2/www/addSubmit.php 1.18
+    - zentrack_2/includes/zenTrack.class 1.141
+    - zentrack_2/includes/editTicketSubmit.php 1.8
+    - zentrack_2/www/actions/edit.php 1.6
+    - zentrack_2/includes/templates/editTicketForm.php 1.5
+
+2004-08-13, cfalonso
+  Function $zen->getDataGroups raised an error when no data groups exists. Fixed.
+    - zentrack_2/includes/zenTrack.class 1.138
+  Added field_enabled in behavior forms and included an option to delete existing behaviors permanently.
+    - zentrack_2/includes/zenTrack.class 1.139
+    - zentrack_2/includes/templates/behaviorForm.php 1.4
+    - zentrack_2/includes/templates/behaviorMenu.php 1.2
+    - zentrack_2/www/admin/addBehaviorSubmit.php 1.3
+    - zentrack_2/www/admin/deleteBehavior.php 1.1
+    - zentrack_2/www/admin/editBehaviorSubmit.php 1.3
+  Modified function generateDataGroupInfo to include info about custom data groups
+    - zentrack_2/includes/zenTrack.class 1.140
+
+2004-08-12, Kato
+  Improved logging (egate and editing fxns)
+  Added eval methods to upgrade scripts and build scripts
+  Now possible to add js_validation to variable fields
+  field_enabled added/implemented for behaviors (to disable/enable fields)
+  eval_type & eval_text added to groups to support php/javascript formulas
+    - zentrack_2/includes/egate_utils.php 1.34
+    - zentrack_2/includes/editTicketSubmit.php 1.7
+    - zentrack_2/includes/headerInc.php 1.39
+    - zentrack_2/includes/parseVarfields.php 1.2
+    - zentrack_2/includes/zenTrack.class 1.137
+    - zentrack_2/includes/templates/newTicketForm.php 1.32
+    - zentrack_2/includes/templates/ticket_customBox.php 1.5
+    - zentrack_2/install/UPGRADE_mssqlserver.sql 1.10
+    - zentrack_2/install/UPGRADE_mysql.sql 1.16
+    - zentrack_2/install/UPGRADE_oracle.sql 1.17
+    - zentrack_2/install/build_mssqlserver.sql 1.6
+    - zentrack_2/install/build_mysql.sql 1.9
+    - zentrack_2/install/build_oracle.sql 1.10
+    - zentrack_2/www/behavior_js.php 1.5
+    - zentrack_2/www/actions/editSubmit.php 1.8
+    - zentrack_2/www/admin/editCustom.php 1.5
+
+2004-08-11, cfalonso
+  Stored value wasn't correctly selected in custom_menu fields. Fixed.
+    - zentrack_2/includes/headerInc.php 1.38
+
+2004-08-11, Kato
+  Testing and debugging for 2.5 release(Ticket #66 is dev tracker)
+    - zentrack_2/includes/templates/behaviorAdd.php 1.2
+    - zentrack_2/includes/templates/behaviorDetailForm.php 1.4
+    - zentrack_2/includes/templates/behaviorForm.php 1.3
+    - zentrack_2/includes/templates/behaviorMenu.php 1.1
+    - zentrack_2/includes/templates/binForm.php 1.8
+    - zentrack_2/includes/templates/configForm.php 1.8
+    - zentrack_2/includes/templates/editCustomsForm.php 1.6
+    - zentrack_2/includes/templates/groupForm.php 1.7
+    - zentrack_2/www/behavior_js.php 1.4
+    - zentrack_2/www/admin/behaviors.php 1.3
+    - zentrack_2/www/admin/editBehavior.php 1.3
+    - zentrack_2/www/admin/editBehaviorDetails.php 1.3
+    - zentrack_2/www/admin/editBehaviorSubmit.php 1.2
+
+2004-08-11, cfalonso
+  Updated database scripts for release 2.5
+    - zentrack_2/install/UPGRADE_mssqlserver.sql
+    - zentrack_2/install/UPGRADE_mysql.sql
+    - zentrack_2/install/UPGRADE_oracle.sql
+    - zentrack_2/install/build_mssqlserver.sql
+    - zentrack_2/install/build_mysql.sql
+    - zentrack_2/install/build_oracle.sql
+    - zentrack_2/install/seed_mssqlserver.sql
+    - zentrack_2/install/seed_mysql.sql
+    - zentrack_2/install/seed_oracle.sql
+
+2004-08-09, cfalonso
+  Default group for menu-type custom fields was not shown correctly. Fixed.
+    - zentrack_2/includes/templates/editCustomsForm.php 1.5
+  Fixed a problem that happened when pressing MORE in behaviorDetailForm.php
+    - zentrack_2/includes/templates/behaviorDetailForm.php 1.3
+
+2004-08-07, Kato
+  Fixed login bugs with Guest account
+    - zentrack_2/includes/login.php 1.23
+  Updated documentation
+    - zentrack_2/www/help/about.php 1.5
+    - zentrack_2/www/help/support.php 1.5
+  Tested/debugged custom fields, implemented in create screens
+    - zentrack_2/includes/editCustomSubmit.php 1.4
+    - zentrack_2/includes/headerInc.php 1.36
+    - zentrack_2/includes/zen.class 1.24
+    - zentrack_2/includes/zenTrack.class 1.135
+    - zentrack_2/includes/templates/newTicketForm.php 1.31
+    - zentrack_2/includes/templates/ticket_box.php 1.12
+    - zentrack_2/includes/templates/ticket_customBox.php 1.4
+    - zentrack_2/includes/templates/ticket_detailsBox.php 1.11
+    - zentrack_2/includes/templates/actions/relate.php 1.5
+    - zentrack_2/www/addSubmit.php 1.17
+    - zentrack_2/www/behavior_js.php 1.3
+    - zentrack_2/www/styles.php 1.15
+    - zentrack_2/www/ticket.php 1.19
+    - zentrack_2/www/actions/action_header.php 1.12
+    - zentrack_2/www/actions/editCustomSubmit.php 1.2
+    - zentrack_2/www/admin/editCustom.php 1.4
+    - zentrack_2/www/admin/systems.php 1.7
+  Updated upgrade scripts
+    - zentrack_2/install/UPGRADE_mssqlserver.sql 1.8
+    - zentrack_2/install/UPGRADE_mysql.sql 1.14
+    - zentrack_2/install/UPGRADE_oracle.sql 1.15
+    - zentrack_2/install/seed_mysql.sql 1.28
+  Added new directory in preparation for formula evaluation in groups
+    - zentrack_2/setup_from_cvs 1.11
+    - zentrack_2/setup_from_cvs.cmd 1.2
+
+2004-08-04, Kato
+  Completed behaviors, which now work on edit and new ticket/project screens
+  Added the custom_menu variable field type (including default values)
+  Added show_in_new to varfield_idx to control which fields appear on new ticket/project screens
+  Still needed: add custom fields to new ticket/project screens
+    - zentrack_2/includes/headerInc.php 1.35
+    - zentrack_2/includes/templates/configForm.php 1.7
+    - zentrack_2/includes/templates/editCustomsForm.php 1.4
+    - zentrack_2/includes/templates/newTicketForm.php 1.29
+    - zentrack_2/includes/templates/ticket_customBox.php 1.3
+    - zentrack_2/includes/templates/actions/log.php 1.5
+    - zentrack_2/install/UPGRADE_mssqlserver.sql 1.7
+    - zentrack_2/install/UPGRADE_mysql.sql 1.13
+    - zentrack_2/install/UPGRADE_oracle.sql 1.14
+    - zentrack_2/www/behavior_js.php 1.2
+    - zentrack_2/includes/templates/newTicketForm.php 1.30
+    - zentrack_2/www/newProject.php 1.6  
+
+2004-08-03, Kato
+  Implemented new behaviors (one method left to complete, but it's functional)
+  Updates to many files to fix bugs and prepare for behavior testing.
+    - zentrack_2/includes/db.class 1.27
+    - zentrack_2/includes/footer.php 1.24
+    - zentrack_2/includes/headerInc.php 1.34
+    - zentrack_2/includes/nav.php 1.9
+    - zentrack_2/includes/session_start.php 1.20
+    - zentrack_2/includes/zen.class 1.23
+    - zentrack_2/includes/zenTrack.class 1.134
+    - zentrack_2/includes/templates/behaviorDetailForm.php 1.2
+    - zentrack_2/includes/templates/behaviorForm.php 1.2
+    - zentrack_2/includes/templates/customGroupDetailsForm.php 1.2
+    - zentrack_2/includes/templates/groupDetailsForm.php 1.5
+    - zentrack_2/includes/templates/groupForm.php 1.6
+    - zentrack_2/includes/templates/newTicketForm.php 1.28
+    - zentrack_2/install/UPGRADE_mssqlserver.sql 1.6
+    - zentrack_2/install/UPGRADE_mysql.sql 1.12
+    - zentrack_2/install/UPGRADE_oracle.sql 1.13
+    - zentrack_2/install/seed_mssqlserver.sql 1.17
+    - zentrack_2/www/index.php 1.10
+    - zentrack_2/www/javascript.js 1.9
+    - zentrack_2/www/newProject.php 1.5
+    - zentrack_2/www/newTicket.php 1.5
+    - zentrack_2/www/popcalendar.js 1.5
+    - zentrack_2/www/styles.php 1.14
+    - zentrack_2/www/admin/behaviors.php 1.2
+    - zentrack_2/www/admin/editBehavior.php 1.2
+    - zentrack_2/www/admin/editBehaviorDetails.php 1.2
+    - zentrack_2/www/admin/editGroup.php 1.3
+    - zentrack_2/www/admin/editGroupDetails.php 1.5
+    - zentrack_2/www/admin/editGroupSubmit.php 1.3
+    - zentrack_2/www/admin/editTicket.php 1.6
+    - zentrack_2/www/admin/groups.php 1.2
+    - zentrack_2/www/behavior_js.php 1.1
+
+2004-08-03, cfalonso
+  Improved Ticket's Custom Tab
+    -zentrack_2/includes/editCustomSubmit.php 1.3
+    -zentrack_2/includes/templates/ticket_customBox.php 1.2
+
+2004-08-03, cfalonso
+  Fixed bad function call in editCustomSubmit.php
+    -zentrack_2/includes/editCustomSubmit.php 1.2
+
+2004-08-02, cfalonso
+  Added new tab in ticket's display page: "Custom" tab.
+  It allows user to edit custom fields for the current ticket.
+    -zentrack_2/includes/templates/ticket_customBox.php 1.1
+    -zentrack_2/includes/headerInc.php 1.33
+    -zentrack_2/includes/editCustomSubmit.php 1.1
+    -zentrack_2/www/actions/editCustomSubmit.php 1.1
+
+2004-08-02, cfalonso
+  Added missing file to CVS:
+    -zentrack_2/includes/templates/customGroupDetailsForm.php
+
+2004-07-30, cfalonso
+  Fixed an error in admin panel for custom fields definition and
+  added custom fields in detail page for tickets and for projects.
+    -zentrack_2/includes/templates/ticket_detailsBox.php
+    -zentrack_2/includes/templates/editCustomsForm.php
+    -zentrack_2/includes/zenTrack.class
+    -zentrack_2/www/ticket.php
+
+2004-07-29, cfalonso
+  Included detail rules for behaviors
+    -zentrack_2/includes/zenTrack.class 1.133
+    -zentrack_2/www/admin/addBehaviorSubmit.php 1.2
+    -zentrack_2/includes/templates/behaviorDetailForm.php 1.1
+    -zentrack_2/www/admin/editBehaviorDetails.php 1.1
+
+2004-07-28, cfalonso
+  Started work on behaviors admin panel
+    -zentrack_2/includes/zenTrack.class 1.132
+    -zentrack_2/www/admin/addBehaviorSubmit.php 1.1
+    -zentrack_2/includes/templates/behaviorAdd.php 1.1
+    -zentrack_2/includes/templates/behaviorForm.php 1.1
+    -zentrack_2/www/admin/behaviors.php 1.1
+    -zentrack_2/www/admin/editBehavior.php 1.1
+    -zentrack_2/www/admin/editBehaviorSubmit.php 1.1
+    -zentrack_2/includes/leftAdmin.php 1.7
+    -zentrack_2/includes/templates/adminMenu.php 1.9
+
+2004-07-27, Kato
+  Added fields to GROUP table
+    - zentrack_2/install/UPGRADE_mssqlserver.sql 1.5
+    - zentrack_2/install/UPGRADE_mysql.sql 1.11
+    - zentrack_2/install/UPGRADE_oracle.sql 1.12	
+  Fixed documentation error (in notes at top) for admin pages
+    - zentrack_2/includes/templates/binForm.php 1.7
+    - zentrack_2/includes/templates/configForm.php 1.6
+
+2004-07-27, cfalonso
+  More fixes on groups
+    -zentrack_2/includes/zenTrack.class 1.129
+    -zentrack_2/www/admin/editGroupDetails.php 1.4
+    -zentrack_2/www/admin/editCustom.php 1.3
+
+2004-07-26, cfalonso
+  Some fixes on groups
+    -zentrack_2/www/admin/editGroupSubmit.php 1.2
+    -zentrack_2/www/admin/editGroupDetails.php 1.3
+    -zentrack_2/www/admin/addGroupSubmit.php 1.4
+    -zentrack_2/includes/templates/groupDetailsForm.php 1.4
+    -zentrack_2/includes/zenTrack.class 1.128
+
+2004-07-24, Kato
+  Added new methods for groups and behaviors
+    - zentrack_2/includes/zenTrack.class 1.125	
+	
+2004-07-22, cfalonso
+  Working on the way to store data groups in the database
+    -zentrack_2/www/admin/addGroupSubmit.php 1.1
+    -zentrack_2/www/admin/editGroupSubmit.php 1.1
+    -zentrack_2/www/admin/editGroup.php 1.2
+    -zentrack_2/includes/templates/groupAdd.php 1.2
+    -zentrack_2/includes/templates/groupForm.php 1.4
+    -zentrack_2/includes/leftAdmin.php 1.6
+
+2004-07-21, cfalonso
+  Working on functionality to manage data groups
+    -zentrack_2/includes/zenTrack.class 1.125
+    -zentrack_2/www/admin/editGroupDetails.php 1.1
+    -zentrack_2/www/admin/editGroup.php 1.1
+    -zentrack_2/includes/templates/groupAdd.php 1.1
+    -zentrack_2/includes/templates/groupDetailsForm.php 1.1
+    -zentrack_2/includes/templates/groupForm.php 1.2
+    -zentrack_2/www/admin/editGroupDetails.php 1.2
+    -zentrack_2/includes/templates/groupDetailsForm.php 1.2
+    -zentrack_2/includes/templates/groupForm.php 1.3
+
+2004-07-20, cfalonso
+  Started work on data groups admin panel
+    -zentrack_2/includes/zenTrack.class 1.124
+    -zentrack_2/includes/templates/adminMenu.php 1.6
+    -zentrack_2/includes/templates/groupForm.php 1.1
+    -zentrack_2/www/admin/groups.php 1.1
+
+2004-07-19, cfalonso
+  Improved the custom fields admin panel
+    -zentrack_2/includes/zenTrack.class 1.123
+    -zentrack_2/www/admin/editCustom.php 1.2
+    -zentrack_2/install/configVars.php.default 1.7
+
+2004-07-18, Kato
+  Added new methods for groups, variable fields, and behaviors
+    - zentrack_2/includes/db.class 1.25
+    - zentrack_2/includes/zenTrack.class 1.122
+    - zentrack_2/install/configVars.php.default 1.6
+
+2004-07-13, cfalonso
+  Included the search fields in the search result list
+    -zentrack_2/includes/templates/searchList.php 1.12
+
+2004-07-12, cfalonso
+  Included the custom fields in the search form
+    -zentrack_2/install/configVars.php.default 1.4
+    -zentrack_2/includes/zenTrack.class 1.121
+    -zentrack_2/install/configVars.php.default 1.5
+    -zentrack_2/includes/templates/searchForm.php 1.9
+
+2004-07-08, cfalonso
+  Started work on Custom Fields Admin Panel.
+  Created inicial screen and included it in the administrator menu
+    -zentrack_2/includes/zenTrack.class 1.120
+    -zentrack_2/install/UPGRADE.sql 1.2
+    -zentrack_2/includes/templates/adminMenu.php 1.5
+    -zentrack_2/includes/leftAdmin.php 1.5
+    -zentrack_2/www/admin/editCustom.php 1.1
+    -zentrack_2/includes/templates/editCustomsForm.php 1.1
+
+2004-07-01, Kato
+  Added search sorting and search by date enhancements
+  Thanks to Johan Lammers for this contribution
+    - zentrack_2/includes/zenTrack.class 1.119
+    - zentrack_2/includes/templates/searchForm.php 1.8
+    - zentrack_2/includes/templates/searchList.php 1.11
+    - zentrack_2/includes/templates/searchResults.php 1.6
+    - zentrack_2/includes/templates/userAdd.php 1.12
+    - zentrack_2/www/images/asc_order.gif 1.1
+    - zentrack_2/www/images/desc_order.gif 1.1
+
+
+----- V2.4.4 (Released: 2004-03-02) ----
+
+2004-02-26, Kato
+  Updated error reporting (for security and more flexible configuration)
+    - zentrack_2/includes/headerInc.php 1.32
+  Fixed problems with bins not displaying correctly when some are disabled
+  (mentioned by several users)
+    - zentrack_2/www/helpers/userSearchbox.php 1.8
+    - zentrack_2/www/helpers/projectSearchbox.php 1.9
+    - zentrack_2/www/helpers/ticketSearchbox 1.7
+    - zentrack_2/includes/templates/searchLogForm 1.6
+  Removed random 'dd' text from project form.
+    - zentrack_2/includes/templates/newProjectForm.php 1.25
+  Fixed default date formatting on project pages
+    - zentrack_2/includes/templates/newProjectForm.php 1.25
+  Corrected attachment issue with postrges caused by integer defaulting(incorrectly) to string value.
+    - zentrack_2/www/actions/upload.php 1.11
+    - zentrack_2/includes/zenTrack.class 1.116
+    - zentrack_2/includes/db.class 1.24
+  Corrected problem with searches by priority (reported by C. Alonso and Djeryv Tar)
+    - zentrack_2/includes/templates/searchResults.php 1.5
+  Internationalization of several pages (now use translation strings, thanks to jasminl)
+    - zentrack_2/www/actions/print.php 1.11
+    - zentrack_2/includes/templates/reportMenu.php 1.6
+    - zentrack_2/includes/templates/searchForm.php 1.7
+  Translations updated
+    - zentrack_2/includes/translations/french.trans 1.5 (updated by jasminl)
+    - zentrack_2/includes/translations/german.trans 1.5 (updated by JonasMeier)
+    - zentrack_2/includes/translations/english.trans 1.5
+    
+
+----- V2.4.3 (Released: 2003-08-27) ----
+
+2003-11-10, Kato
+  Fixed bug caused by level_create > level_edit
+    - zentrack_2/includes/templates/newTicketForm.php 1.27
+
+2003-09-02, Kato
+  Enhanced debugging output (two settings now, some help messages)
+    - zentrack_2/includes/footer.php 1.21
+    - zentrack_2/includes/zen.class 1.20
+    - zentrack_2/includes/session_start.php 1.18
+  Fixed the click on title in project details to be sticky (rather
+  than automatically going to tasks)
+    - zentrack_2/includes/templates/ticket_detailsBox.php 1.9
+    - zentrack_2/www/ticket.php 1.17
+
+2003-08-28, Kato
+  Fixed access screen issues with blank bin fields, improper saving
+    - zentrack_2/includes/zenTrack.class 1.113
+    - zentrack_2/includes/templates/accessForm.php 1.8
+  Improved setup_from_cvs sh script
+    - zentrack_2/setup_from_cvs 1.10
+
+2003-08-27, Kato
+  Fixed parse error in zenDate class
+    - zentrack_2/includes/zenDate.class 1.11
+
+2003-08-26, Kato
+  RC1 Preparations
+    - zentrack_2/install/seed_mssqlserver.sql 1.15
+    - zentrack_2/install/seed_mysql.sql 1.26
+    - zentrack_2/install/seed_oracle.sql 1.22
+    - zentrack_2/install/seed_postgres.sql 1.21
+    - zentrack_2/install/upgrade_mssqlserver.sql 1.2
+    - zentrack_2/install/upgrade_mysql.sql 1.2
+    - zentrack_2/install/upgrade_oracle.sql 1.2
+    - zentrack_2/install/upgrade_postgres.sql 1.2
+    - zentrack_2/includes/translations/portuguese.trans 1.3
+    - zentrack_2/includes/translations/swedish.trans 1.4
+    - zentrack_2/UPGRADE.readme 1.14
+  European date support(new admin setting)
+    - zentrack_2/includes/headerInc.php 1.31
+    - zentrack_2/includes/zen.class 1.19
+    - zentrack_2/includes/zenDate.class 1.10
+    - zentrack_2/includes/zenTrack.class 1.112
+    - zentrack_2/includes/templates/newProjectForm.php 1.24
+    - zentrack_2/includes/templates/newTicketForm.php 1.26
+    - zentrack_2/install/seed_mssqlserver.sql 1.15
+    - zentrack_2/install/seed_mysql.sql 1.26
+    - zentrack_2/install/seed_oracle.sql 1.22
+    - zentrack_2/install/seed_postgres.sql 1.21
+    - zentrack_2/install/upgrade_mssqlserver.sql 1.2
+    - zentrack_2/install/upgrade_mysql.sql 1.2
+    - zentrack_2/install/upgrade_oracle.sql 1.2
+    - zentrack_2/install/upgrade_postgres.sql 1.2
+  Login form update
+    - zentrack_2/includes/templates/loginForm 1.11
+  Corrected search bug with open date
+  Thanks to B. Wilson for note
+    - zentrack_2/includes/zenTrack.class 1.112
+  Fixed bin display bug in report save screen
+  Fixed comparison bug in report saveSubmit
+  Thanks to K. Evans for fixes
+    - zentrack_2/www/reports/save.php 1.11
+    - zentrack_2/www/reports/saveSubmit.php 1.7
+
+2003-07-28, Kato
+  Created a seperate access level for creating projects,
+  this is no longer determined using the level_create prop
+    - zentrack_2/UPGRADE.readme 1.13
+    - zentrack_2/install/seed_mssqlserver.sql 1.14
+    - zentrack_2/install/seed_mysql.sql 1.25
+    - zentrack_2/install/seed_oracle.sql 1.21
+    - zentrack_2/install/seed_postgres.sql 1.20
+    - zentrack_2/install/upgrade_mssqlserver.sql 1.1
+    - zentrack_2/install/upgrade_mysql.sql 1.1
+    - zentrack_2/install/upgrade_oracle.sql 1.1
+    - zentrack_2/install/upgrade_postgres.sql 1.1
+    - zentrack_2/includes/templates/newProjectForm.php 1.23
+  Cleaned up internationalization issues and array initialization
+  Overall audit of admin section and efficiency improvements
+    - zentrack_2/includes/editTicketSubmit.php 1.6
+    - zentrack_2/includes/templates/accessForm.php 1.7
+    - zentrack_2/includes/templates/binForm.php 1.6
+    - zentrack_2/includes/templates/configForm.php 1.5
+    - zentrack_2/includes/templates/configSettingsForm.php 1.8
+    - zentrack_2/includes/templates/newProjectForm.php 1.23
+    - zentrack_2/includes/templates/searchResults.php 1.4
+    - zentrack_2/www/admin/access.php 1.7
+    - zentrack_2/www/admin/addUserSubmit.php 1.11
+    - zentrack_2/www/admin/bins.php 1.6
+    - zentrack_2/www/admin/editUserSubmit.php 1.11
+    - zentrack_2/www/admin/priorities.php 1.5
+    - zentrack_2/www/admin/systems.php 1.6
+    - zentrack_2/www/admin/tasks.php 1.6
+    - zentrack_2/www/admin/types.php 1.6
+
+2003-07-21, Kato
+  Closed ticket email now displays international chars correctly
+    - zentrack/includes/zenTrack.class 1.111
+
+2003-07-19, Rob Hillis
+  Fixed bug in email logging code - now logs user correctly
+    - zentrack/www/actions/email.php 1.12
+
+2003-06-11, Kato
+  Audited and updated security fix, added some additional items to the secure list
+    - zentrack/includes/session_start.php 1.17
+  Fixed some confusion in the egate script caused by magic_quotes_gpc = On
+  that caused ticket create to fail if quotes were present in body
+    - zentrack/includes/egate_utils.php 1.33
+
+2003-06-11, MLively
+  Retweaked fix for security update to include login_id
+  - zentrack/includes/session_start.php 1.16
+
+----- V2.4.2 (Development, See CVS) ----
+
+2003-05-28, Rob Hillis
+  Tweak fix for security update
+    - zentrack/includes/session_start.php 1.13
+  Fix minor syntax error
+    - zentrack/includes/templates/binForm.php 1.5
+  Correct ticket sort order when searching for tickets.
+    - zentrack/includes/zenTrack.class 1.10
+  Show correct details in notification email when a ticket is assigned
+    - zentrack/includes/zenTrack.class 1.109
+
+2003-05-27, Rob Hillis
+  Fixed potential security hole
+    - zentrack/includes/session_start.php 1.12
+
+2003-05-25, Rob Hillis
+  Removed apparent accidental commit to zenTrack.class
+  and commit diffed language files.
+    - zentrack/includes/zenTrack.class 1.108
+    - zentrack/includes/translations/english.trans 1.4
+    - zentrack/includes/translations/french.trans 1.4
+    - zentrack/includes/translations/german.trans 1.4
+    - zentrack/includes/translations/portuguese.trans 1.2
+    - zentrack/includes/translations/spanish.trans 1.4
+    - zentrack/includes/translations/swedish.trans 1.3
+
+2003-05-23, William L. Terry
+  Updated priority sort for project tasks
+    - zentrack/includes/zenTrack.class 1.107
+ 
+2003-05-22, Rob Hillis
+  Added Portuguese translation
+    - zentrack/includes/translations/portuguese.trans 1.1
+  Various translation fixes.
+    - zentrack/includes/leftBins.php 1.8
+    - zentrack/includes/templates/accessForm.php 1.6
+    - zentrack/includes/templates/adminMenu.php 1.4
+    - zentrack/includes/templates/binForm.php 1.4
+    - zentrack/includes/templates/homebinForm.php 1.10
+    - zentrack/includes/templates/listTickets.php 1.17
+    - zentrack/includes/templates/listTickets_workFormat.php 1.15
+    - zentrack/includes/templates/loginForm 1.9
+    - zentrack/includes/templates/newProjectForm.php 1.21
+    - zentrack/includes/templates/pwcForm.php 1.6
+    - zentrack/includes/templates/ticket_actionBar.php 1.9
+    - zentrack/includes/templates/ticket_box.php 1.11
+    - zentrack/includes/templates/userAdd.php 1.11
+    - zentrack/includes/translations/english.trans 1.3
+    - zentrack/www/helpers/ticketSearchbox.php 1.6
+    - zentrack/www/misc/language.php 1.3
+  Fix minor syntax error.
+    - zentrack/www/actions/estimate.php 1.6
+
+2003-05-18, William L. Terry
+  Priority color fix for results from searching
+    - zentrack/includes/templates/serachList.php 1.10
+
+2003-05-10, Rob Hillis
+  Add ability to log when a ticket is emailed.
+    - zentrack/install/UPGRADE_SEED_mssqlserver.sql 1.7
+    - zentrack/install/UPGRADE_SEED_mysql.sql 1.15
+    - zentrack/install/UPGRADE_SEED_oracle.sql 1.14
+    - zentrack/install/UPGRADE_SEED_postgres.sql 1.13
+    - zentrack/install/seed_mssqlserver.sql 1.12
+    - zentrack/install/seed_mysql.sql 1.22
+    - zentrack/install/seed_oracle.sql 1.19
+    - zentrack/install/seed_postgres.sql 1.18
+    - zentrack/www/actions/email.php 1.11
+
+  Remove non-functional default tester/manager code.
+    - zentrack/install/header.php.default 1.10
+    - zentrack/includes/zenTrack.class 1.105
+
+2003-05-09, Rob Hillis
+  Fix returning of default tester
+    - zentrack/includes/zenTrack.class 1.102-1.104
+  Added default tester and manager for bins without these roles set.
+    - zentrack/install/header.php.default 1.9
+    - zentrack/includes/zenTrack.class 1.101
+
+----- V2.4.1 (2003-05-08) ----
+
+2003-05-07, Kato
+  Added rollover effects to javascript/list pages
+    - zentrack/www/javascript.js 1.6
+    - zentrack/www/styles.php 1.13
+    - zentrack/www/javascript.js 1.8
+    - zentrack/includes/priorityColors.php 1.2
+    - zentrack/includes/headerInc.php 1.30
+    - zentrack/includes/templates/listTickets.php 1.16
+    - zentrack/includes/templates/listTickets_workFormat.php 1.14  
+  Ticket sorting enhancements
+    - zentrack/includes/zenTrack.class 1.99
+  Updates for release (seed files)
+    - zentrack/install/UPGRADE_SEED_mssqlserver.sql 1.5
+    - zentrack/install/UPGRADE_SEED_mysql.sql 1.13
+    - zentrack/install/UPGRADE_SEED_oracle.sql 1.12
+    - zentrack/install/UPGRADE_SEED_postgres.sql 1.12
+    - zentrack/install/seed_mssqlserver.sql 1.10
+    - zentrack/install/seed_mysql.sql 1.21
+    - zentrack/install/seed_oracle.sql 1.17
+    - zentrack/install/seed_postgres.sql 1.16
+    - zentrack/install/seed_random_report_data.sql 1.2
+
+2003-05-07, Rob Hillis
+  Template ticket summary and log entries in notification email.
+    - zentrack/includes/zenTrack.class 1.98
+    - zentrack/includes/templates/email/ticket_log.template <add> 1.1
+    - zentrack/includes/templates/email/ticket_log.template <add> 1.1
+
+2003-05-06, Rob Hillis
+  Correct "attachment_types_allowed" description to accurately reflect usage.
+    - zentrack/install/UPGRADE_SEED_mssqlserver.sql 1.3
+    - zentrack/install/UPGRADE_SEED_mysql.sql 1.11
+    - zentrack/install/UPGRADE_SEED_oracle.sql 1.10
+    - zentrack/install/UPGRADE_SEED_postgres.sql 1.10
+    - zentrack/install/seed_mssqlserver.sql 1.10
+    - zentrack/install/seed_mysql.sql 1.20
+    - zentrack/install/seed_oracle.sql 1.21
+    - zentrack/install/seed_postgres.sql 1.16
+
+2003-05-03, Rob Hillis
+  Clarified setting description in database and updated version number.
+    - zentrack/install/UPGRADE_SEED_mssqlserver.sql 1.2
+    - zentrack/install/UPGRADE_SEED_mysql.sql 1.10
+    - zentrack/install/UPGRADE_SEED_oracle.sql 1.9
+    - zentrack/install/UPGRADE_SEED_postgres.sql 1.9
+    - zentrack/install/seed_mssqlserver.sql 1.8, 1.9
+    - zentrack/install/seed_mysql.sql 1.18, 1.19
+    - zentrack/install/seed_oracle.sql 1.19, 1.20
+    - zentrack/install/seed_postgres.sql 1.14, 1.15
+
+2003-05-03, Kato
+  Enhanced error messages for email gateway
+  Fixed blank error reports for email gateway
+  Fixed (occasional) error reporting that actions are invalid when they should be valid
+    - zentrack/includes/egate_utils.php 1.31
+  Updated German translations
+    - zentrack/includes/translations/german.trans 1.3
+
+2003-05-02, Kato
+  Updated language files (minor cleanup)
+    - zentrack/includes/templates/languageForm.php 1.2
+    - zentrack/includes/translations/french.trans 1.3
+    - zentrack/includes/translations/spanish.trans 1.3
+
+2003-05-01, Kato
+  Fixed issues with creating tickets via email (loss of spaces and returns)
+  Enhanced the email template parsing functions
+  Improved email error messages, fixed 'egate user not found' bug
+    - zentrack/includes/egate_utils.php 1.30
+    - zentrack/includes/zenTrack.class 1.97
+  Added highlighting for various priorities
+    - zentrack/includes/templates/ticket_detailsBox.php 1.8
+  Added postgres fix for return codes
+    - zentrack/includes/db.class 1.23
+  Improved gd_info messages
+    - zentrack/includes/footer.php 1.20
+  Removed notices for english (strings should be blank)
+    - zentrack/includes/translator.class 1.6
+
+2003-04-30, Kato
+  Resolved issue with not being able to access tr() while
+  using the egate_utils, causing an error
+    - zentrack/includes/egate_utils.php 1.28
+    - zentrack/includes/headerInc.php 1.29
+    - zentrack/includes/zenTrack.class 1.96
+
+2003-04-27, Rob Hillis
+  Fix translation link to user permissions after adding a new user
+    - zentrack/www/admin/addUserSubmit.php 1.9
+  Fix minor spelling error in add/edit user form.
+    - zentrack/includes/templates/userAdd.php 1.10
+
+2003-04-23, Rob Hillis
+  Colour-code priorities for easy identification
+    - zentrack/includes/templates/listTickets.php 1.11
+    - zentrack/includes/templates/ticket_titleBox.php 1.7
+    - zentrack/www/styles.php 1.9
+  Allow admins to set a user's home bin to -All-
+    - zentrack/includes/templates/userAdd.php 1.9
+    - zentrack/includes/templates/userSearchForm.php 1.7
+  Fix bin order in "Options->Home Bin", User search form and user edit form
+    - zentrack/includes/templates/homebinForm.php 1.8
+    - zentrack/includes/templates/userAdd.php 1.8
+    - zentrack/includes/templates/userSearch.php 1.5
+  Reactivate "users can select -All- as their default bin" feature after 2.4.0.1 release
+    - zentrack/includes/templates/homebinForm.php 1.9
+  Fix omitted ticket number when emailling a ticket
+    - zentrack/www/actions/email.php 1.9
+
+2003-04-22, Rob Hillis
+  Allow users to select "-All-" as their default bin
+    - zentrack/www/misc/homebin.php 1.5
+    - zentrack/includes/templates/homebinForm.php 1.6
+    - zentrack/includes/leftBins.php 1.7
+
+----- V2.4.0.1 (2003-04-21) ----
+2003-04-22, Rob Hillis
+  Fix syntax error on ticket closing.
+    - zentrack/includes/zenTrack.class
+
+2003-04-21, Kato
+  Fixed save config error
+    - zentrack/includes/templates/configForm.php 1.4
+
+2003-04-21, Rob Hillis
+  Rename mis-spelled LISCENCE-GPL-2.0 in install/ directory
+    - zentrack/install/LISCENCE-GPL-2.0 (deleted)
+    - zentrack/install/LICENSE-GPL-2.0 1.1
+  Fix minor typos in INSTALL.README
+    - zentrack/INSTALL.README 1.23
+  Include missing instructions for upgrading database in UPGRADE.readme
+    - zentrack/UPGRADE.readme 1.10
+
+----- V2.4 (2003-04-19) ----
+
+2003-04-19, Rob Hillis
+  More work for sorting of bins: create and search menus
+    - zentrack/includes/templates/newTicketForm.php 1.24
+    - zentrack/includes/templates/newProjectForm.php 1.20
+    - zentrack/includes/templates/searchForm.php 1.6
+  Fix bins.php to remove syntax error
+    - zentrack/www/admin/bins.php 1.5
+
+2003-04-18, Kato
+  Revised issue with users moving tickets (header.php not found error)
+    - zentrack/www/ticket.php 1.15
+  Added swedish translation
+    - zentrack/includes/translations/swedish.trans 1.2
+  Updated "log" action in egate, and cleaned up a bit
+    - zentrack/includes/egate_utils.php 1.26
+  Updated email logic to email appropriate users, even if not on notify list
+    - zentrack/includes/zenTrack.class 1.90
+  Cache the priority pulldown in admin screens for speed
+  sped up systems screen for users with massive numbers of systems
+    - zentrack/includes/templates/configForm.php 1.3
+    - zentrack/www/admin/admin_header.php 1.10
+    - zentrack/www/admin/systems.php 1.5  
+  Fixed outdated access checking (displays bins according to proper permissions now)
+    - zentrack/includes/leftBins.php 1.6
+  
+2003-04-18, MLively
+  Added new diff utility for translations
+    - devtools/transdiff.php 1.1
+  Update the tr-parser to be a bit more inclusive
+    - devtools/tr-parser.php 1.2
+  Added new entries to the current translation files
+    - zentrack/includes/translations/french.trans 1.2
+    - zentrack/includes/translations/german.trans 1.2
+    - zentrack/includes/translations/spanish.trans 1.2
+
+2003-04-18, Rob Hillis
+  Work for sorting of bins: create and search menus
+    - zentrack/includes/templates/newTicketForm.php 1.23
+    - zentrack/includes/templates/newProjectForm.php 1.19
+    - zentrack/includes/templates/searchForm.php 1.5
+
+2003-04-17, Rob Hillis
+  Tweak fix for UNC path display
+    - zentrack/includes/templates/ticket_logBox.php 1.14
+  Fix display of UNC paths in printed tickets and ticket descriptions
+    - zentrack/www/actions/print.php 1.9
+    - zentrack/includes/templates/ticket_detailsBox.php 1.7
+
+2003-04-16, Rob Hillis
+  Modified regexp when displaying logs to properly link entire URL, including punctuation
+    - zentrack/includes/templates/ticket_logBox.php 1.11/1.12
+  Fix bug where UNC paths are not displayed properly in logs
+    - zentrack/includes/templates/ticket_logBox.php 1.13
+  Footer not included on Support page
+    - zentrack/zentrack/www/help/support.php 1.4
+	
+2003-04-15, Kato
+  Added two new egate utilities to allow for simpler email ingestion
+    - zentrack/includes/egate_check_create.php 1.1
+    - zentrack/includes/egate_create.php 1.1
+  Enhanced some egate features, corrected some inconsistencies
+    - zentrack/includes/egate_utils.php 1.23
+    - zentrack/includes/zenTrack.class 1.89
+    - zentrack/install/egate_config.php.default 1.10
+  Corrected an email address in seed files
+    - zentrack/install/seed_mssqlserver.sql 1.7
+    - zentrack/install/seed_mysql.sql 1.17
+    - zentrack/install/seed_oracle.sql 1.14
+    - zentrack/install/seed_postgres.sql 1.13  
+
+2003-04-15, Rob Hillis
+  Clean up Help subsystem, removed dead links and added link to forum on support page.
+   - zentrack/includes/leftHelp.php 1.6
+   - zentrack/www/help/index.php 1.8
+   - zentrack/www/help/support.php 1.2
+  Fix up incorrect debug information request in zentrack/HELP ($Debug_Mode instead of $this->debug)
+   - zentrack/HELP 1.6
+   - help/support.php 1.3
+  Add "Hours Worked" to printed ticket
+   - zentrack/www/actions/print.php 1.8
+   
+2003-04-14, Rob Hillis
+  Fixed broken link to GPL License in Help section
+   - zentrack/www/help/gpl.php 1.5
+   - zentrack/includes/misc/LICENSE-GPL-2.0 1.1
+  Added a support page.
+   - zentrack/www/help/support.php 1.1
+   - zentrack/includes/leftHelp.php 1.5
+  Cleaned up the about and help index pages.
+	- zentrack/www/help/about.php 1.4
+    - zentrack/www/help/index.php 1.7
+	
+2003-04-14, Kato
+  Fixed problem with emails sent to egate with ``,'' in reply address
+    - zentrack/includes/egate_utils.php 1.22
+
+2003-04-10, Kato
+  Removed extra shebang (causing stdout message) from included file
+    - zentrack/install/egate_config.php.default 1.9
+  Fixed problem with ticket reply addresses when using egate
+  The reply address will now always point to egate if enabled
+    - zentrack/includes/zenTrack.class 1.88
+  Reinstated the auto-close for "note" types
+    - zentrack/www/addSubmit.php 1.16
+
+2003-04-02, Kato
+  Fixed buttons and tabs to translate properly
+    - zentrack/includes/templates/ticket_actionBar.php 1.7
+    - zentrack/includes/templates/ticket_box.php 1.10
+  Enhanced Debugging Output
+    - zentrack/includes/footer.php 1.18
+    - zentrack/includes/zen.class 1.18
+    - zentrack/includes/translator.class 1.5
+  Added German translation
+    - zentrack/includes/translations/german.trans 1.1
+  Postgres Testing/Compatability
+    - zentrack/includes/db.class 1.22
+    - zentrack/includes/zenTrack.class 1.86
+    - zentrack/www/admin/bins.php 1.4
+    - zentrack/www/admin/editUserSubmit.php 1.8
+    - zentrack/www/admin/priorities.php 1.4
+    - zentrack/www/admin/systems.php 1.4
+    - zentrack/www/admin/tasks.php 1.5
+    - zentrack/www/admin/types.php 1.5
+
+2003-03-28, Kato
+  Updated SQL files for new version
+    - zentrack/install/UPGRADE_SEED_mysql.sql 1.9
+    - zentrack/install/UPGRADE_SEED_oracle.sql 1.8
+    - zentrack/install/UPGRADE_SEED_postgres.sql 1.8
+    - zentrack/install/UPGRADE_SEED_mssqlserver.sql 1.1
+    - zentrack/install/UPGRADE_mssqlserver.sql 1.1
+    - zentrack/install/UPGRADE_mysql.sql 1.7
+    - zentrack/install/UPGRADE_oracle.sql 1.8
+    - zentrack/install/UPGRADE_postgres.sql 1.9
+    - zentrack/install/build_mssqlserver.sql 1.3
+    - zentrack/install/build_mysql.sql 1.7
+    - zentrack/install/build_oracle.sql 1.8
+    - zentrack/install/build_postgres.sql 1.11
+    - zentrack/install/seed_mssqlserver.sql 1.6
+    - zentrack/install/seed_mysql.sql 1.16
+    - zentrack/install/seed_oracle.sql 1.13
+    - zentrack/install/seed_postgres.sql 1.12
+    - zentrack/install/previous/2.3.UPGRADE_SEED_mysql.sql 1.1
+    - zentrack/install/previous/2.3.UPGRADE_SEED_oracle.sql 1.1
+    - zentrack/install/previous/2.3.UPGRADE_SEED_postgres.sql 1.1
+    - zentrack/install/previous/2.3.UPGRADE_mysql.sql 1.1
+    - zentrack/install/previous/2.3.UPGRADE_oracle.sql 1.1
+    - zentrack/install/previous/2.3.UPGRADE_postgres.sql 1.1
+  Integrated the default language variable
+    - zentrack/includes/headerInc.php 1.27
+    - zentrack/includes/login.php 1.22
+    - zentrack/includes/session_start.php 1.11
+    - zentrack/includes/zenTrack.class 1.85
+  Created a user preference to select language
+    - zentrack/includes/templates/languageForm.php 1.1
+    - zentrack/includes/templates/optionsMenu.php 1.3
+    - zentrack/www/misc/language.php 1.1
+    
+2003-03-27, mlively
+  Integrating tr() translation function
+    - zentrack/www/actions/accept.php 1.5
+    - zentrack/www/actions/action_header.php 1.10
+    - zentrack/www/actions/addToNotify.php 1.5
+    - zentrack/www/actions/approve.php 1.5
+    - zentrack/www/actions/assign.php 1.7
+    - zentrack/www/actions/close.php 1.11
+    - zentrack/www/actions/dropFromNotify.php 1.2
+    - zentrack/www/actions/edit.php 1.5
+    - zentrack/www/actions/editSubmit.php 1.7
+    - zentrack/www/actions/email.php 1.7
+    - zentrack/www/actions/estimate.php 1.5
+    - zentrack/www/actions/log.php 1.7
+    - zentrack/www/actions/move.php 1.5
+    - zentrack/www/actions/print.php 1.7
+    - zentrack/www/actions/reject.php 1.5
+    - zentrack/www/actions/relate.php 1.7
+    - zentrack/www/actions/reopen.php 1.6
+    - zentrack/www/actions/test.php 1.5
+    - zentrack/www/actions/upload.php 1.9
+    - zentrack/www/actions/yank.php 1.4
+    - zentrack/www/admin/access.php 1.6
+    - zentrack/www/admin/addUser.php 1.4
+    - zentrack/www/admin/addUserSubmit.php 1.8
+    - zentrack/www/admin/admin_header.php 1.9
+    - zentrack/www/admin/bins.php 1.3
+    - zentrack/www/admin/config.php 1.9
+    - zentrack/www/admin/deleteUser.php 1.5
+    - zentrack/www/admin/editTicket.php 1.5
+    - zentrack/www/admin/editUser.php 1.5
+    - zentrack/www/admin/editUserSubmit.php 1.7
+    - zentrack/www/admin/index.php 1.4
+    - zentrack/www/admin/listUsers.php 1.4
+    - zentrack/www/admin/priorities.php 1.3
+    - zentrack/www/admin/resetPassword.php 1.6
+    - zentrack/www/admin/systems.php 1.3
+    - zentrack/www/admin/tasks.php 1.4
+    - zentrack/www/admin/types.php 1.4
+    - zentrack/includes/translations/english.trans 1.1
+    - zentrack/includes/templates/ticket_actionBar.php 1.6
+    - zentrack/includes/templates/ticket_box.php 1.9
+    - zentrack/includes/zenTrack.class 1.84
+    - zentrack/www/actions/log.php 1.8
+    - zentrack/www/actions/upload.php 1.10
+    - zentrack/www/help/install.php 1.3
+    - zentrack/www/helpers/projectSearchbox.php 1.8
+    - zentrack/www/helpers/userSearchbox.php 1.7
+    - zentrack/www/reports/drop.php 1.5
+    - zentrack/www/reports/projectSearchbox.php 1.3
+    - zentrack/www/reports/save.php 1.10
+  Set initialization variables for the translation engine
+    - zentrack/includes/headerInc.php 1.26
+  Created a parser to create translation files
+    - devtools/tr-parser.php 1.1
+
+2003-03-24, Kato
+  Updated docs
+    - zentrack/INSTALL.README 1.17
+    - zentrack/UPGRADE.readme 1.8
+  Added GD info and PHP version to debug
+    - zentrack/includes/footer.php 1.17
+  Fixed parse error
+    - zentrack/includes/templates/searchList.php 1.9
+  PostgresSQL Testing/Cleanup
+    - zentrack/includes/zenTrack.class 1.83
+    - zentrack/install/build_postgres.sql 1.10
+  Fixed misnamed directories
+    - zentrack/includes/zen.class 1.17
+
+2003-03-23, Kato
+  Text correction in UPGRADE instructions
+    - zentrack/UPGRADE.readme 1.7
+  Text corrections in email templates
+    - zentrack/includes/templates/email/form_help.template 1.4
+  Minor correction to ptrans() utility
+    - zentrack/includes/translator.class 1.4
+  Added a wrapper utility uptr() to create upper case
+  strings from translations
+    - zentrack/includes/headerInc.php 1.25
+  Integrated tr() function in templates/ directory
+    - zentrack/install/configVars.php.default 1.3
+    - zentrack/includes/leftAdmin.php 1.4
+    - zentrack/includes/templates/accessForm.php 1.5
+    - zentrack/includes/templates/adminMenu.php 1.3
+    - zentrack/includes/templates/configForm.php 1.2
+    - zentrack/includes/templates/configSettingsForm.php 1.7
+    - zentrack/includes/templates/editTicketForm.php 1.4
+    - zentrack/includes/templates/homebinForm.php 1.5
+    - zentrack/includes/templates/listTickets_workFormat.php 1.12
+    - zentrack/includes/templates/newProjectForm.php 1.18
+    - zentrack/includes/templates/newTicketForm.php 1.22
+    - zentrack/includes/templates/optionsMenu.php 1.2
+    - zentrack/includes/templates/pwcForm.php 1.5
+    - zentrack/includes/templates/reportMenu.php 1.4
+    - zentrack/includes/templates/reportsDataMenu.php 1.5
+    - zentrack/includes/templates/reportsDateMenu.php 1.5
+    - zentrack/includes/templates/reportsMenu.php 1.2
+    - zentrack/includes/templates/reportsOptionsMenu.php 1.7
+    - zentrack/includes/templates/reportsSubmit.php 1.6
+    - zentrack/includes/templates/reportsTypeMenu.php 1.3
+    - zentrack/includes/templates/searchList.php 1.8
+    - zentrack/includes/templates/searchLogForm.php 1.5
+    - zentrack/includes/templates/searchLogList.php 1.8
+    - zentrack/includes/templates/searchLogResults.php 1.2
+    - zentrack/includes/templates/searchResults.php 1.3
+    - zentrack/includes/templates/ticket_actionBar.php 1.5
+    - zentrack/includes/templates/ticket_attachmentsBox.php 1.6
+    - zentrack/includes/templates/ticket_box.php 1.8
+    - zentrack/includes/templates/ticket_detailsBox.php 1.6
+    - zentrack/includes/templates/ticket_logBox.php 1.10
+    - zentrack/includes/templates/ticket_notifyBox.php 1.3
+    - zentrack/includes/templates/ticket_relatedBox.php 1.4
+    - zentrack/includes/templates/ticket_systemBox.php 1.5
+    - zentrack/includes/templates/ticket_tasksBox.php 1.5
+    - zentrack/includes/templates/ticket_titleBox.php 1.6
+    - zentrack/includes/templates/userAdd.php 1.7
+    - zentrack/includes/templates/userSearchForm.php 1.5
+    - zentrack/includes/templates/userSearchList.php 1.6
+    - zentrack/includes/templates/actions/assign.php 1.6
+    - zentrack/includes/templates/actions/close.php 1.3
+    - zentrack/includes/templates/actions/email.php 1.5
+    - zentrack/includes/templates/actions/estimate.php 1.2
+    - zentrack/includes/templates/actions/log.php 1.4
+    - zentrack/includes/templates/actions/move.php 1.3
+    - zentrack/includes/templates/actions/notify.php 1.2
+    - zentrack/includes/templates/actions/reject.php 1.2
+    - zentrack/includes/templates/actions/relate.php 1.4
+    - zentrack/includes/templates/actions/reopen.php 1.2
+    - zentrack/includes/templates/actions/test.php 1.2
+    - zentrack/includes/templates/actions/upload.php 1.4
+    - zentrack/includes/templates/actions/yank.php 1.2
+    - zentrack/www/admin/config.php 1.8
+
+2003-03-21, MLively (with much help from Kato: he actually did most of the work :P)
+  Changed Translation engine interface [tr()] to work with the ptrans() function
+    - includes/headerInc.php 1.3
+    - includes/translator.class 1.24
+  Integrated tr() function to translate static text
+    - www/helpers/projectSearchbox.php 1.7
+    - www/helpers/ticketSearchbox.php 1.5
+    - www/helpers/userSearchbox.php 1.6
+    - www/misc/homebin.php 1.4
+    - www/misc/pwc.php 1.9
+    - www/reports/custom.php 1.4
+    - www/reports/drop.php 1.4
+    - www/reports/index.php 1.6
+    - www/reports/projectSearchbox.php 1.2
+    - www/reports/report.php 1.3
+    - www/reports/reports_header.php 1.6
+    - www/reports/save.php 1.9
+    - www/reports/saveSubmit.php 1.6
+    - www/reports/show.php 1.5
+    - www/reports/ticketSearchbox.php 1.2
+    - www/reports/view.php 1.6
+    - www/addProjectSubmit.php 1.11
+    - www/addSubmit.php 1.14
+    - www/assignedProjects.php 1.7
+    - www/assignedTickets.php 1.8
+    - www/index.php 1.9
+    - www/newProject.php 1.4
+    - www/newTicket.php 1.4
+    - www/options.php 1.6
+    - www/projects.php 1.7
+    - www/search.php 1.6
+    - www/searchLogs.php 1.4
+    - www/ticket.php 1.14
+
+2003-03-21, Kato
+  Added a new method ptrans() to translate strings with vars
+  Filtered all strings in the includes/ directory through trans()
+  Removed calls to prn() and old translation functions
+    - zentrack/includes/editTicketSubmit.php 1.5
+    - zentrack/includes/headerInc.php 1.21
+    - zentrack/includes/leftAdmin.php 1.3
+    - zentrack/includes/leftBins.php 1.5
+    - zentrack/includes/leftHelp.php 1.4
+    - zentrack/includes/leftMain.php 1.4
+    - zentrack/includes/leftReports.php 1.2
+    - zentrack/includes/leftSearch.php 1.4
+    - zentrack/includes/leftTickets.php 1.7
+    - zentrack/includes/login.php 1.21
+    - zentrack/includes/nav.php 1.8
+    - zentrack/includes/reportDataParser.php 1.9
+    - zentrack/includes/translator.class 1.2
+    - zentrack/includes/zen.class 1.14
+    - zentrack/includes/zenTrack.class 1.82
+    - zentrack/includes/lists/ucwords 1.2
+    - zentrack/includes/templates/listTickets.php 1.10
+    - zentrack/includes/templates/listTickets_workFormat.php 1.11
+    - zentrack/includes/templates/searchList.php 1.7
+    - zentrack/includes/templates/searchLogList.php 1.7
+    - zentrack/includes/templates/userSearchList.php 1.5
+    - zentrack/install/header.php.default 1.8
+    
+2003-03-12, MLively
+  Created Translation Engine 
+    - includes/tranlator.class 1.1
+    - includes/headerInc.php 1.20
+
+----- V2.3.2 (2003-03-26) ----
+
+2003-03-26, Kato
+  Addressed some of the common php config questions in INSTALL.README
+  Fixed a mistake in the UPGRADE.readme file (sql query wrong)
+  Fixed a problem with includes/configVars.php (causing error message for some)
+    - not available in cvs
+
+----- V2.3.1 (2003-03-19) ----
+
+2003-03-19, Kato
+  Enhanced egate system to always send a reply if possible
+  Some errors did not recieve a reply message.  Also corrected
+  some errors with emails send from web pages.
+    - includes/egate_utils.php 1.21
+    - includes/zenTrack.class 1.79
+    - includes/templates/email/form_log.template 1.3
+    - includes/templates/email/form_move.template 1.2
+  Fixed email notifications which were not working
+  (ticket create, assign, and close)
+    - zentrack/includes/zenTrack.class 1.79
+  Removed some extraneous queries by passing the ticket
+  array rather than the id
+    - zentrack/includes/zenTrack.class 1.79
+    - zentrack/includes/templates/ticket_actionBar.php 1.4
+  Fixed notify bug causing blank entries in notify list
+    - zentrack/includes/zenTrack.class 1.79
+  Fixed error with assigning tickets to users who don't
+  have access to bin ticket is in. (Tickets can now only be
+  assigned to users with access to the ticket's current bin)
+    - zentrack/includes/zenTrack.class 1.79
+    - zentrack/includes/templates/actions/assign.php 1.5
+    - zentrack/www/actions/assign.php 1.6
+  Fixed issue with tab counts: related always displaying 1, 
+  even if should be 0
+    - zentrack/includes/zenTrack.class 1.79
+  Fixed problem with logs showing action as LOG, even if a different
+  one is chosen.
+    - zentrack/includes/templates/actions/log.php 1.3
+    - zentrack/www/actions/log.php 1.6
+  Fixed log urls with caps and ? in them to format properly
+    - zentrack/includes/templates/ticket_logBox.php 1.9
+  Corrected date shown in search log results.
+    - zentrack/includes/templates/searchLogList.php 1.6
+  Correcting user names not showing correctly in generated reports
+    - zentrack/includes/reportDataParser.php 1.8
+  Filtered projects from the Assigned to ... list
+    - zentrack/www/assignedProjects.php 1.6
+    - zentrack/www/assignedTickets.php 1.7
+
+2003-03-13, Kato
+  Adding more template forms missing in cvs
+    - includes/templates/email/form_log.template
+    - includes/templates/email/form_move.template
+  Updated move form to only show valid choices
+    - includes/templates/action/move.php 1.2
+  Fixed default_test_checked not working properly
+    - includes/zenTrack.class v1.77
+    - includes/templates/newTicketForm.php 1.21
+    - includes/templates/newProjectForm.php 1.17
+  Fixed error in help message for email gateway
+  it said to enter users name, should be email address
+    - includes/tempalates/email/form_help.template 1.3
+  Enhanced the subject parsing logic to try and deduce improperly formatted
+  Subjects and get the right info out
+    - includes/egate_utils.php 1.19
+
+----- V2.3 (2003-03-12) ----
+
+2003-03-11, Kato
+  Fixed problem with user lists not having correct permissions
+    - includes/zenTrack.class 1.75
+  Email Gateway testing
+    - includes/egate_check 1.7
+    - includes/zenTrack.class 1.74
+    - includes/egate_utils 1.15
+    - includes/templates/email/footer.template 1.3
+    - includes/templates/email/form_help.template 1.2
+    - includes/templates/email/heading.template 1.3
+    - includes/templates/email/form_create.template 1.3
+    - includes/templates/email/form_help.template 1.1
+  Editing tickets now controlled on a "per bin" access level
+  based on the level_edit setting (instead of straight default access)
+    - includes/templates/newProjectForm.php 1.16
+    - includes/templates/newTicketForm.php 1.20
+    - includes/templates/editTicketForm.php 1.3
+    - www/actions/assign 1.5
+    - www/admin/admin_header 1.8
+    
+2003-03-09, Kato
+  Created new templating system for use with
+  zenTrack
+    - includes/zenTemplate.class 1.1
+
+2003-03-08, Kato
+  Filtered projects from ticket listing
+    - includes/zenTrack.class 1.67
+    - www/index.php 1.8
+    - www/projects.php 1.6
+
+2003-03-07, Kato
+  Improved logoff functions
+  Thanks to roland spahn (rosp) for feedback
+    - includes/login.php 1.19
+  Enabled editing of projects for users without
+  default_level >= 5 (if they have >= 5 for bin)
+    - includes/templates/newProjectForm.php 1.14
+    - www/actions/editProjectSubmit.php 1.1
+    - www/admin/editProjectSubmit.php 1.2
+  Removed ./ prefix for debian linux users
+  Users who encounter a problem without this
+  prefix may add . to the path to fix it.
+    - includes/egate.php               includes/egate_check.php
+    - includes/egate_utils.php         includes/adodb/server.php 
+    - includes/adodb/tests/test.php    www/addProjectSubmit.php
+    - www/addSubmit.php                www/viewAttachment.php
+    - www/actions/accept.php           www/actions/approve.php
+    - www/actions/assign.php           www/actions/close.php
+    - www/actions/edit.php             www/actions/editSubmit.php
+    - www/actions/editTicketSubmit.php www/actions/email.php
+    - www/actions/estimate.php         www/actions/log.php
+    - www/actions/move.php             www/actions/print.php
+    - www/actions/reject.php           www/actions/relate.php
+    - www/actions/reopen.php           www/actions/test.php
+    - www/actions/upload.php           www/admin/access.php
+    - www/admin/addUser.php            www/admin/addUserSubmit.php
+    - www/admin/bins.php               www/admin/config.php
+    - www/admin/deleteUser.php         www/admin/editTicket.php
+    - www/admin/editTicketSubmit.php   www/admin/editUser.php
+    - www/admin/editUserSubmit.php     www/admin/index.php
+    - www/admin/listUsers.php          www/admin/priorities.php
+    - www/admin/resetPassword.php      www/admin/systems.php
+    - www/admin/tasks.php              www/admin/types.php 
+    - www/help/about.php               www/help/gpl.php
+    - www/reports/custom.php           www/reports/view.php
+    - www/help/features.php            www/help/future.php 
+    - www/help/index.php               www/help/install.php 
+    - www/reports/drop.php             www/reports/index.php
+    - www/reports/report.php           www/reports/save.php
+    - www/reports/saveSubmit.php       www/reports/show.php
+
+2003-03-06, Kato
+  Session enhancments: support for older versions of php, and hopefully
+  will clear up problems for users experiencing multiple login requests
+  because of session issues.
+    - includes/headerInc.php 1.15
+    - includes/session_save.php 1.5
+    - includes/session_start.php 1.9
+  Close ticket, username retention
+    - includes/zenTrack.class 1.64
+  Fixes for popupcalendar feature
+    - www/popcalendar.js 1.4
+    - includes/nav.php 1.7    
+  Notify Lists
+    - includes/db.class 1.18
+    - includes/headerInc.php 1.15
+    - includes/zenTrack.class 1.64
+    - includes/templates/ticketView.php 1.2
+    - includes/templates/ticket_box.php 1.7
+    - includes/templates/ticket_notifyBox.php 1.2
+    - www/actions/action_header.php 1.9
+  Improved ticket creator viewing permissions
+    - www/actions/action_header.php 1.9	
+  Added new utility: checkEmail()
+    - includes/zen.class 1.11	
+  Debian Linux ./ problems
+    - www/project.php 1.5
+    - www/ticket.php 1.13	
+  Minor text change
+    - www/reports/save.php 1.7
+  Cleanup of comments and instructions
+    - install/header.php.default 1.6
+	
+2003-02-28, Kato, Darktroll
+  Added counts to ticket tabs
+    - includes/zenTrack.class 1.63
+    - includes/templates/ticket_box.php 1.5 & 1.6
+	
+2003-02-27, Kato
+  Notify List Implementations (not complete... more to come)
+    - includes/zenTrack.class 1.62
+    - includes/templates/ticket_notifyBox.php 1.1
+  Minor cleanup
+    - includes/zenTrack.class 1.62
+    - includes/egate_utils.php 1.6
+    - includes/templates/ticket_tasksBox.php 1.4
+    - install/egate_config.php.default 1.3	
+  Added mssqlserver build and seed files to install
+  Thanks to Jim Martin for this contribution!
+    - install/*_sqlserver.sql 1.1
+
+2003-02-26, Kato
+  Made date formats for report images
+  more compatible with windows setups
+    - includes/reportDataParser.php 1.7
+  Fixed actionApplicable() typo
+  Thanks to Jamin W. Collins (jamincollins)
+    - includes/templates/ticket_attachmentsBox.php 1.5
+  
+2003-02-24, Kato
+  Added some default settings for start_date and deadlines.
+    - installs/seed_*.sql
+    - installs/UPGRADE_*.sql
+    - includes/templates/newTicketForm.php 1.15, 1.16
+  Fixed some email problems with reopen and reject
+  Thanks to Claudio for his notes
+    - includes/zenTrack.class 1.58
+
+2003-02-23, Altman
+  Fixed bins issues in various SELECT boxes as reported in Bug #682075.  
+  Thanks to whoever this was (anonymous)!
+    - www/helpers/projectSearchbox.php 1.6
+    - includes/templates/searchForm.php 1.4
+    - includes/templates/searchLogsForm.php 1.4
+    - includes/templates/homebinForm.php 1.4
+
+2003-02-17, Darktroll, Kato
+  Fixed total hours issues
+    - includes/zenTrack.class 1.53
+    - includes/templates/listTickets_workFormat.php 1.9
+
+2003-02-17, Darktroll
+  Fixed sorting of systems by replacing $zen->systems with $zen->getSystems(1)
+  Thanks to efeldhaus ( Erwin Feldhaus ) for reporting this anomaly, and suggestions on the improvement
+    - includes/templates/newTicketForm.php 1.12
+    - includes/templates/newProjectForm.php 1.14
+
+2003-02-15, Altman
+  Completed the get_notify_recipients($ticket_id) method of the zenTrack
+  class.  It has been tested and fits the give requirements.
+    - includes/zenTrack.class 1.48
+  The rest of the functions have been filled out and put through some quick 
+  sanity testing.  Needs some more thourough testing probably.
+    - includes/zenTrack.class 1.49
+
+2003-02-14, Altman
+  Stubbed out functions in zenTrack.class and added entry for new table
+  in configVars.php.default.
+    - install/configVars.php.default 1.2
+    - includes/zenTrack.class 1.47
+  Added schema changes to support Notify List feature addition.
+    - install/UPGRADE_postgres.sql 1.5
+    - install/UPGRADE_mysql.sql 1.4
+    - install/UPGRADE_oracle.sql 1.4
+    - install/UPGRADE_SEED_postgres.sql 1.1
+    - install/UPGRADE_SEED_mysql.sql 1.2
+    - install/UPGRADE_SEED_oracle.sql 1.1
+    - install/build_postgres.sql 1.5
+    - install/build_mysql.sql 1.4
+    - install/build_oracle.sql 1.5
+    - install/seed_postgres.sql 1.5
+    - install/seed_mysql.sql 1.9
+    - install/seed_oracle.sql 1.6
+    - install/previous/2.2.2.1.UPGRADE_postgres.sql 1.1
+    - install/previous/2.2.2.1.UPGRADE_mysql.sql 1.1
+    - install/previous/2.2.2.1.UPGRADE_oracle.sql 1.1
+
+2003-02-15, Kato
+  Fixed problem displaying bins with quotes in name
+    - includes/templates/binForm.php 1.3
+
+2003-02-14, Kato
+  Abstracted actions from actionApplicable and checkAccess
+  This is in preparation for db/administrative tools for these
+  As well as upcoming functions/enhancements
+    - includes/zenTrack.class 1.45
+  Fixed problem with changing bins while viewing ticket
+  (fatal error: zenTrack.class cannot be redefined)
+    - www/index.php 1.7    
+
+----- V2.2.2.1 (2003-02-12) ----
+2003-02-12, Kato
+  Fixed bug with closing tickets caused by new
+  object method implementation
+    - includes/zenTrack.class 1.44
+  Fixed CVS images uploaded as ascii rather than binary
+    - www/images/cal.gif 1.3
+    - www/images/calendar/*
+	
+----- V2.2.2 (2003-02-10) -----
+2003-02-09, Kato
+  Ability to reopen tickets from pending status
+    - includes/zenTrack.class 1.42
+    - www/actions/reopen.php 1.4
+  Header Redirects (blank pages with IIS) removed
+    - includes/editTicketSubmit.php 1.3
+    - www/addProjectSubmit.php 1.8
+    - www/addSubmit.php 1.11
+    - www/ticket.php 1.12
+    - www/viewAttachment.php 1.4
+    - www/admin/admin_header.php 1.6
+    - www/admin/editTicketSubmit.php 1.4
+    - www/actions/*.php
+  Email notification enhancements
+    - includes/zenTrack.class 1.39 & 1.40
+    - www/actions/close.php 1.8
+  Enhanced popup calendar
+    - www/popcalendar.js 1.2
+    - www/images/cal.gif 1.1 [new]
+    - includes/templates/newTicketForm.php 1.13
+    - includes/templates/newProjectForm.php 1.11
+    - www/addProjectSubmit.php 1.9
+  Disallowed duplicate login names
+    - includes/zenTrack.class 1.43
+    - includes/templates/userAdd.php 1.6
+    - www/admin/addUserSubmit.php 1.6
+    - www/admin/addUserSubmit.php 1.6
+    - www/admin/editUserSubmit.php 1.5
+  Fixed some postgres sql bugs
+  Thanks to Marc Dyksterhouse (usimarit) for
+  Tons of work on this one
+    - install/build_postgres.sql 1.3
+    - includes/db.class 1.16
+  Fixed SCRIPT_NAME issues with php binary installs as CGI executable
+    - includes/session_start.php 1.5
+  Enhanced the access/roles functions
+  Thanks to David Reite(Darktroll) for pointing out my laziness here
+    - includes/templates/userAdd.php 1.5
+    - includes/zenTrack.class 1.38
+    - includes/templates/accessForm.php 1.4
+    - www/admin/access.php 1.4
+  minor cosmetic fixes to admin screens (titles)
+    - www/admin/admin_header.php 1.7
+    - www/admin/config.php 1.6
+
+2003-02-08, Altman
+  Fixed bug that caused logs on tickets to produce only a partial 
+  URL in a log entry should there have been a URL typed in.
+  - includes/templates/ticket_logBox.php 1.8
+
+2003-02-07, Altman
+  Fixed bug that caused Approval Required on new Tickets to 
+  not read default settings.
+  - includes/templates/newTicketForm.php 1.12
+  - includes/templates/newProjectForm.php 1.10
+
+2003-02-07, Altman
+  Fixed misspellings found by Jeremy Griffith (atlantisal)
+  - includes/leftTickets.php 1.6
+  - includes/templates/searchList.php 1.6
+  - includes/templates/searchLogList.php 1.5
+
+2003-02-06, Kato
+  Added error message enhancements
+  Thanks to Jeremy G for this tip
+    - www/actions/upload.php 1.6
+
+2003-02-05, Kato
+  Fixed reset password bug
+    - includes/zenTrack.class 1.37
+  Fixed upload issues due to yet another PHP major function change
+    - www/actions/upload.php 1.5
+  Fixed old redirect, username cookie, and some session issues
+    - includes/login.php 1.17
+    - includes/session_start.php 1.4
+	
+2003-02-01, Altman
+  Added a javascript calendar that was written by Tan 
+  Ling <fuushikanden@yahoo.com>.  This closes RFE #640016.
+  The date_fmt_short configuration variable needs to be changed
+  in the Administration's Configuration interface to be "%m/%d/%Y"
+  for those users that are using MySQL.
+    Added:
+    - www/popcalendar.js 1.1
+    - www/actions/images/calendar/*.gif 1.1
+    - www/images/calendar/*.gif 1.1
+    Modified:
+    - includes/nav.php 1.6
+    - includes/templates/newProjectForm.php 1.9
+    - includes/templates/newTicketForm.php 1.11
+    - install/seed_mysql.sql 1.6
+
+2003-01-31, Altman
+  Updated build_oracle.sql per comments from Maxim Maletsky
+  reported in bug #677582.  Thanks Maxim (s-maxim).
+    - install/build_oracle.sql 1.4
+
+2003-01-30, Kato
+  Fixed problem with display descriptions and newline chars
+  Thanks to Jamin W. Collins (jamincollins)
+    - includes/templates/listTickets.php 1.9
+
+2003-01-30, Kato
+  Fixed problem with display descriptions and newline chars
+  Thanks to Hitman for reporting this
+    - includes/templates/editTicketForm.php 1.2
+    - includes/templates/ticket_detailsBox.php 1.5
+    - www/addSubmit.php 1.10
+
+2003-01-28, Kato
+  Fixed directory names in setup_from_cvs shell script
+   - setup_from_cvs 1.2
+
+----- V2.2.1 (2003-01-27) ------
+
+2003-01-25, Altman
+ Fixed assignment problems on project create
+   - www/newProjectForm.php 1.8
+
+2003-01-2, Kato
+ Cleaned up some form input
+   - includes/leftMain.php 
+   - includes/templates/ticketForm.php
+
+2003-01-20, Kato
+ Corrected some blank page issues for IIS users
+   - www/action/action_header.php 1.6
+   - www/admin/admin_header.php 1.5
+
+----- v2.2.0 (2003-01-14) ------
+
+2003-01-17, Kato
+  Form input javascript errors
+    - www/javascript.js 1.5
+    - includes/templates/loginForm.php v
+
+2003-01-15, Kato
+  Changed homebin behavior, no longer able to select "All" for homebin.
+    - www/misc/homebin.php 1.3
+
+2003-01-13, Kato
+  php 4.2 compliant (register_globals fun)
+    - includes/session_start.php 1.0
+    - includes/session_save.php 1.0
+    - includes/headerInc.php 1.8
+
+2003-01-13, Kato
+  Fixed display issues between tickets and projects
+  also fixed sticky tabs (same code changes)
+    - includes/templates/ticket_*.php 1.?
+    - www/project.php 1.4
+    - www/ticket.php 1.4
+    - others?
+
+2003-01-13, Kato
+  Fixed reject ticket bug
+    - includes/zenTrack.class 1.33
+
+2003-01-12, Kato
+  Added usage reports, graphical and html
+    - www/reports/* 1.0
+    - includes/zenGraph.php 1.0
+    - includes/reportsConfig.php 1.0
+    - includes/reportDataParser.php 1.0
+    - includes/colors/* 1.0
+
+----- v2.1.0 (not released) ------
+
+2002-05-30, Kato
+  Minor bug fixes... some oracle enhancements
+
+2002-05-30, Kato
+  Added Postgres build/seed files.  Thanks to jofry@users.sourceforge.net!
+    - installs/build_postgres.sql
+    - installs/seed_postgres.sql
+
+----- v2.0.3 Live (2002-06-03) ------
+
+2002-06-03, Kato
+  Created a zenTrack project with useful tickets to begin 
+  new users, and explain to them how to configure their 
+  system accordingly.
+
+2002-06-03, Kato
+  Fixed several link bugs associated with ticketView.php 
+  and attachmentView.php
+
+2002-06-03, Kato
+  Fixed -DEBUG OVERVIEW- in footer to include some highly 
+  valuable info for troubleshooting support requests.
+
+----- v2.0.2 Beta (2002-05-06) -----
+
+2002-05-06, Kato
+  Changed "password" to "passphrase" for Sybase compatibility.
+
+2002-05-06, Kato
+  Fixed $rootUrl issues with url_ticket_view and url_attachment_view
+
+2002-05-06, Kato
+  Fixed some issues with the "view all users" function in user admin
+
+2002-05-06, Kato
+  Fixed issue with the "first login" so that it will make users
+  change their passphrase from the default before they can continue
+
+2002-05-06, Kato
+  Comments added to configVars.php section to indicate
+  better use of Oracle/adodb methods
+
+2002-05-06, Kato
+  setenv() functions added for locale related issues, and for oracle
+  fixes
+
+
+----- v2.0.1c beta (2002-05-01) ------
+
+2002-05-01, Kato
+  All upper case column names changed to lower case 
+  entries for oracle/adodb compatibility
+
+2002-05-01, Kato
+  Fixed bug in new project form concerning the start date.
+
+----- v2.0.1 Beta (2002-04-27) ------
+  
+2002-04-27, Kato
+  Oracle issue with uppercase column names (hopefully) overcome 
+  with use of the ADODB function "oci8po"
+
+2002-04-27, Kato
+  Fix for ONAMES and HOSTNAMES provided by Izzy (thanks Izzy!)
+  
+2002-04-27, Kato
+  Oracle build files tested and repaired.  Several bugs with
+  reserved words and escape characters removed.
+
+2002-04-27, Kato
+  configVars.php and header.php files cleaned up, and better
+  commented.
+
+2002-04-27, Kato
+  Sybase bug with reserved word "role" fixed.
+
+2002-04-27, Kato
+  INSTALL.README, and install.html files updated
+
+2002-04-27, Kato
+  CHANGELOG implemented (and needed)
+
+----- v2.0 Beta (2002-04-23) ------
+  
+2002-04-23, Kato
+  Added ADODB abstraction, making zenTrack fully 
+  Database Compatible.
+  
+2002-04-23, Kato
+  Completely rewrote the zenTrack.class, much cleaner, 
+  more efficient, faster
+
+2002-04-23, Kato
+  Added the zen.class for basic utilities
+  
+2002-04-23, Kato
+  Added attachments
+  
+2002-04-23, Kato
+  Rewrote the administrative tools, and completely 
+  re-dedesigned the database structure to support
+  a very dynamic base and adaptable design
+  
+2002-04-23, Kato
+  Began code changes to create a complete level based
+  debugging tool and for report generation (planned for
+  version 2.1)
+
+
+----- CHANGE LOG FORMAT ------
+The version should appear with dashes and indicated in the example, above all corresponding entries. 
+
+The username, and date should appear before any entry 
+
+The update comments should appear just after this. 
+
+A list of files changed, and the new version should be included with dashes under the comments. This can be used by other developers to quick-reference what has changed, and the versions to diff in CVS to find the changes.. for testing and bug tracking. 
+
+To obtain a quick list of files you changed, use this command: cvs history -D 03/12/2003 -c 
+
+There is also a perl script which you can obtain from one of the developers which will parse the output of that command into nicely formatted rows to cut and paste here.
+
+Example 
+
+----- Vx.x.y ------
+
+yyyy-mm-dd, YourName
+  Your comments about the update, indented 2 spaces, it can be
+  multiple lines and very long, and should be kept to about this
+  with, which is around 60-80 columns
+    - includes/subdir/filename2.php 2.21
+    - www/subdir/filename2.php 3.01
+
+yyyy-mm-dd, MyName
+  My comments about the update, indented 2 spaces, it can be
+  multiple lines and very long, and should be kept to about this
+  with, which is around 60-80 columns
+    - includes/subdir/filename.php 1.21
+    - www/subdir/filename.php 2.01 (tagged SPECIAL_TAG)
+
+----- Vx.x.x ------
+more......
+

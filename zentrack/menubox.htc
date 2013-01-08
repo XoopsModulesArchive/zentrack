@@ -1,0 +1,62 @@
+<public:component lightWeight="true">
+<PUBLIC:ATTACH EVENT="onmouseover" FOR="element" ONEVENT="Hilite()" />
+<PUBLIC:ATTACH EVENT="onmouseout" FOR="element" ONEVENT="UnHilite()" />
+<script>
+/*
+ * PNG Background Behavior
+	* derived from  PNG Behavior by Erik Arvidsson (erik(at)eae.net)
+		 * for WebFX (http://webfx.eae.net)
+		 * Copyright 2002
+		 * For usage see license at http://webfx.eae.net/license.html	
+
+	* intent: add in the filter property 
+	  to have IE5+ handle the PNG with the AlphaImageLoader, 
+	  preserving the transpareny (alpha channel)
+	
+	* inputs: should be as generic as possible, 
+	  looking for the background-image property that applies to the same selector, 
+	  and using that url as the src value for the filter
+		
+ */
+ 
+var supported = /MSIE ((5\.5)|[6789])/.test(navigator.userAgent) &&
+				navigator.platform == "Win32";
+				
+if (supported) fixBgPng();
+
+function fixBgPng() {
+	//alert(this.currentStyle.backgroundImage);
+	if(this.currentStyle.backgroundImage && /url\(['"]?([^"'\)]+)/.test(this.currentStyle.backgroundImage)) {
+		var bgSrc = RegExp.$1;
+		if(bgSrc.indexOf('.png') > -1) {
+      // create a 'layout' in accordance with M$ requirements: http://msdn.microsoft.com/workshop/author/filter/reference/filters/alphaimageloader.asp
+      element.contentEditable = true;
+      // remove backgroundImage property
+      element.runtimeStyle.backgroundImage = 'none';
+      element.runtimeStyle.filter = "progid:DXImageTransform.Microsoft." +
+            "AlphaImageLoader(src='" + bgSrc + "',sizingMethod='crop')";
+      // we don't want it editable, so get rid of it now
+      element.contentEditable = false;
+		}
+	} else {
+	}
+}
+
+function Hilite() {
+  element.contentEditable = true;
+  element.runtimeStyle.filter = "progid:DXImageTransform.Microsoft." +
+        "AlphaImageLoader(src='"+window.imageUrl+"/16x16/arrow_green_right.png',sizingMethod='crop')";
+  // we don't want it editable, so get rid of it now
+  element.contentEditable = false;
+}
+
+function UnHilite() {
+  element.contentEditable = true;
+  element.runtimeStyle.filter = "progid:DXImageTransform.Microsoft." +
+        "AlphaImageLoader(src='"+window.imageUrl+"/16x16/arrow_grey_right.png',sizingMethod='crop')";
+  // we don't want it editable, so get rid of it now
+  element.contentEditable = false;
+}
+
+</script>
+</public:component>
