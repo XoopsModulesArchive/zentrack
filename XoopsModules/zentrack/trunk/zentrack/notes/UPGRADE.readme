@@ -1,0 +1,278 @@
+*********************************************************
+** THESE INSTRUCTIONS ARE NOT FOR ZENTRACKXOOPS MODULE **
+** THEY ARE FOR THE ORIGINAL ZENTRACK SYSTEM FROM      **
+** http://www.zentrack.net                             **
+*********************************************************
+
+
+UPGRADE INSTRUCTIONS FOR VERSION 2.6 Final
+
+            !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            !!!! ALWAYS MAKE BACKUPS          !!!!
+            !!!!    www/header.php            !!!!
+            !!!!    includes/egate_config.php !!!!
+            !!!!    database data             !!!!
+            !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+--------------------
+REQUIREMENTS
+--------------------
+
+    PHP >= 4.3.10 or PHP >= 5.0
+
+    Supported Servers: Apache 1.3, 2.0, IIS
+    Supported OS: Windows 2000, Linux 
+       Other Tested OS: FreeBSD, NT, MacOS, Debian, Gentoo
+    Supported DBs: Mysql, Oracle 8i/9i, Postgres
+       Other Possible DBs: DB2, SQLServer
+    GD: [optional] 2.0 or higher needed to use reports
+    Freetype libraray required to view reports
+
+
+
+---------------------
+UPGRADE FROM 2.6 Pre3
+---------------------
+
+  0. For simplicity we will assume your newly downloaded ZT files are already 
+     unzipped and residing in a folder named "/downloads/zentrack_2-6-final/" 
+     and that your current install is in a folder called "/web/zentrack/".
+     
+  1. Make backups of the following files (you will want these settings later)
+     /web/zentrack/www/header.php 
+     /web/zentrack/includes/egate_congif.php
+
+  2. Copy new downloads over existing files:
+     /downloads/zentrack_2-6-final/includes/* -> /web/zentrack/includes/*
+     /donwloads/zentrack_2-6-final/www/* -> /web/zentrack/www/*
+     
+  3. Run the following command against your SQL database to update the version:
+     UPDATE ZENTRACK_SETTINGS SET value='2.6 Final' WHERE setting_id=74;
+     
+  4. Set directory permissions if you are running on unix:
+     chmod 777 includes/attachments
+     chmod 777 includes/logs
+     chmod 777 includes/cache
+     chmod 777 includes/translations
+     chmod 755 includes/egate.php
+     chmod 755 includes/egate_create.php  
+     
+  5. See AFTER UPGRADE below
+
+---------------------
+UPGRADE FROM 2.6 Pre2
+---------------------
+
+  1. Run the install/previous/2.6-pre.UPGRADE.sql script to bring your
+     db up to date with release data. (there is only one file for all db types)
+     
+  2. Follow instructions for UPGRADE FROM 2.6 Pre3
+
+---------------------
+UPGRADE FROM 2.6 Pre1
+---------------------
+
+  1. Follow instructions for UPGRADE FROM 2.6 Pre2
+
+--------------------
+UPGRADE FROM 2.5.5.2
+--------------------
+
+  0. For simplicity we will assume your newly downloaded ZT files are already 
+     unzipped and residing in a folder named "/downloads/zentrack_2-6-final/" 
+     and that your current install is in a folder called "/web/zentrack/".
+     
+  1. Make backups of the following files (you will want these settings later)
+     /web/zentrack/www/header.php 
+     /web/zentrack/includes/egate_congif.php
+
+  2. Copy new downloads over existing files:
+     /downloads/zentrack_2-6-final/includes/* -> /web/zentrack/includes/*
+     /donwloads/zentrack_2-6-final/www/* -> /web/zentrack/www/*
+     
+  3. Run the UPGRADE_yourdb.sql script which is appropriate for your database
+     You may do this from the command line with something like:
+       mysql -u username -p database < UPGRADE_mysql.sql
+     Or you may do this by copying and pasting the contents of this script
+     into your sql interface
+     
+  4. Set directory permissions if you are running on unix:
+     chmod 777 includes/attachments
+     chmod 777 includes/logs
+     chmod 777 includes/cache
+     chmod 777 includes/translations
+     chmod 755 includes/egate.php
+     chmod 755 includes/egate_create.php  
+     
+  5. See AFTER UPGRADE below
+
+--------------------
+UPGRADE FROM 2.5.5.1
+--------------------
+
+  1. Follow instructions for UPGRADE FROM 2.5.5.2
+
+--------------------
+UPGRADE FROM 2.5.5
+--------------------
+
+  1. Follow instructions for UPGRADE FROM 2.5.5.1
+
+--------------------
+UPGRADE FROM 2.5.5 PRE1
+--------------------
+  
+  1. Delete ZENTRACK_FIELD_MAP table from your database instance.
+  2. Run install/previous/2.5.5.1.UPGRADE_[yourdb].sql
+  3. Follow instructions for UPGRADE FROM 2.5.5.1
+  
+      Note that the UPGRADE_[yourdb].sql script may complain with an error similar
+      to the following:  ERROR 1062 (23000) at line 299: Duplicate entry '108' for key 1
+      
+      This error can be ignored.  It occurs because the lines it is trying to add
+      already exist in PRE1, which is fine.
+  
+--------------------
+UPGRADE FROM 2.5.0.2
+--------------------
+
+  -> Update includes/egate_config.php manually, it has changed, do not overwrite it with your old file!
+  -> Update www/header.php manually, it has changed, do not overwrite it with your old file!
+
+  1. Upgrade your database:
+     Run the sql file install/previous/2.5.5.1.UPGRADE_[yourdb].sql file using your favorite
+     sql interface (you may also open the file and run the statements directly if
+     this is easier for you).
+
+  2. Follow instructions for UPGRADE FROM 2.5.5.1
+
+--------------------
+UPGRADE FROM 2.5.0.1
+--------------------
+
+  You must update header.php manually, you may not copy over your old
+  header.php file!
+
+  Run the sql file install/previous/2.5.0.2.UPGRADE_[yourdb].sql file using your favorite
+  sql interface (you can open the file and run the statements directly if
+  this is easier for you).  This will upgrade you to 2.5.0.2 database.
+
+  Follow instructions for 2.5.0.2.
+ 
+--------------------
+UPGRADE FROM 2.5.0
+--------------------
+
+  Follow instructions for 2.5.0.1 
+
+  (2.5.0.1 contains only bug fixes from version 2.5.0, they are essentially the same)
+
+--------------------
+UPGRADE FROM 2.4.4
+--------------------
+
+  REPLACE Your entire zentrack directory structure with the
+  included files: includes/ should overwrite your existing includes,
+  www/ should overwrite your existing www/
+
+  Set directory permissions (probably only necessary on unix)
+     -chmod 777 includes/attachments (if using attachments)
+     -chmod 777 includes/logs
+     -chmod 777 includes/cache
+     -chmod 777 includes/translations
+     -chmod 755 includes/egate.php
+     -chmod 755 includes/egate_create.php  
+
+  Run the sql file install/previous/2.5.0.1.UPGRADE_[yourdb].sql file using your favorite
+  sql interface (you can open the file and run the statements directly if
+  this is easier for you).  This will upgrade you to the 2.5.0.1 database (the database
+  version between 2.5.0 and 2.5.0.1 are identical).
+
+  Follow install instructions for 2.5.0  
+  
+--------------------
+UPGRADE FROM 2.4.3
+--------------------
+  
+  Follow install instructions for 2.4.4
+
+  (Because there are no database changes between 2.4.3 and 2.4.4, the
+  install procedure for 2.4.3 is exactly the same as 2.4.4.)
+
+--------------------
+UPGRADE FROM 2.4.2
+--------------------
+
+  IMPORTANT USAGE NOTE:
+    The ability to create new projects is now controlled by a separate access level
+    than ticket creation, see level_create and level_create_proj in the admin->config menu
+    for more details
+
+  Run the sql file install/previous/2.4.3.UPGRADE_[yourdb].sql file using your favorite
+  sql interface (you can open the file and run the statements directly if
+  this is easier for you).  This will upgrade you to 2.4.3 database.
+
+  Follow upgrade instructions for version 2.4.3
+
+--------------------
+UPGRADE FROM EALIER THAN 2.4.2
+--------------------
+
+  Please contact the ZT Team so that they can assist you in importing
+  your existing data from past versions.
+  
+--------------------------------------------
+  AFTER UPGRADE
+--------------------------------------------
+
+  1. Speak Up!
+     Let us know you are using zentrack, meet other users, 
+     and send us feedback on your install: http://www.zentrack.net
+
+  2. Consider a donation to the Open Source Community:
+     The developers spend a lot of their lives developing this product.  If you like it,
+     give something back to the open source community!  Might I recomment this project?
+     
+     http://sourceforge.net/project/project_donations.php?group_id=22724
+
+--------------------------------------------
+  HOW TO APPLY PATCHES
+--------------------------------------------
+
+  IMPORTANT:  If you are not comfortable with patches, and you have any love for your current
+  installation, might I recommend the manual install?  Patches are not trivial if they do
+  not go as expected.
+  
+  Patches can be downloaded from http://www.zentrack.net/modules/mydownloads/.
+  
+  If you do not see a patch on the website that matches your desired versions, such as
+  upgrading from 2.5.0.1 to 2.5.6, you might need to apply a series of patches, such as
+  upgrade_2.5.0.1_to_2.5.5.patch and then upgrade_2.5.5_to_2.5.6.patch.
+  
+  -> Windows Users:  Unless you have and understand cygwin, use the manual upgrade.
+  -> '/web/zentrack' refers to your current ZT installation
+  -> '/tmp/zentrack_x.x.x' refers to your newly uncompressed install files. 
+  
+  1. Make backups of your files!!!!!!!!
+  
+  2. Apply the patch:
+     cd /web/zentrack
+     patch --dry-run -p2 < /tmp/zentrack_x.x.x/install/upgrade_y.y.y_to_x.x.x.patch (test it first)
+     patch -p2 < /tmp/zentrack_2.5.5/install/upgrade_y.y.y_to_x.x.x.patch
+
+  3? If you modified the directory structure during your installion (renamed or moved
+     your www/ or includes/ folders) you can make the patch work by simulating this structure:
+
+      For instance, if your directory structure looks like this:
+        /web/my_website/htdocs/zt (location of my www/ folder)
+        /usr/lib/zentrack/zt_includes (location of my includes/ folder)
+
+      Then you could use these links to make the patch work as expected:
+        mkdir /tmp/zentrack
+        ln -s /web/my_website/htdocs/zt /tmp/zentrack/www
+        ln -s /usr/lib/zentrack/zt_includes /tmp/zentrack/includes
+
+      Then run your patch as follows:
+        cd /tmp/zentrack
+        patch --dry-run -p2 < /tmp/zentrack_x.x.x/install/upgrade_y.y.y_to_x.x.x.patch (test it first)
+        patch -p2 < /tmp/zentrack_x.x.x/install/upgrade_y.y.y_to_x.x.x.patch

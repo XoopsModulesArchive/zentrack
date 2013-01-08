@@ -1,0 +1,628 @@
+
+----- 2.6 Major Release ----
+
+NEW FEATURES / ENHANCEMENTS
+  New UI look/feel
+  Added keyboard shortcuts
+  Added filters to list window
+  Updated contacts section
+  Added customizable multiple-select fields
+  Added automatic email notifier for overdue tickets
+
+BUG FIXES / MINOR CHANGES
+  Added bin_id/type_id checks and filtering for project vs. tickets
+  Added filter to debug output in footer
+  Fixed caching of getUsersBins
+  General GUI and code cleanup
+  Prettied admin and help sections
+  Minor translation issue
+  Added spiffy icons
+  Added log filter
+  Improved spacing/eye tracking for ticket view
+  Improved search_form values to avoid common search mistakes
+  Fixed mOvr error message in mozilla
+  Added view map table
+  Added dynamic sorting to data types admin menus
+  Reworked get_users, should work with all possible access configurations
+  Fixed a bug in dateParse function
+  Keyboard shortcuts added
+  Minor bugs fixes to search and contacts sections
+  Added missing custom_date fields to field map
+  Login now works correctly if ZT is installed under a subdirectory of /help/
+  Made htaccess/windows authentication for auto-login configurable
+  Fixed error with https builds not viewing attachments correctly in IE
+  Added javascript variables to data group feature
+  Minor change in spanish translation
+  Added ticket totals and paging info in listings
+  Included some new translations
+  Include default_access of the user in evaluation for retaining the ticket's owner
+  Fixed a bug that created a wrong page immediately after project creation
+
+
+----- 2.5.5.2 Minor Release -----
+
+NEW FEATURES / ENHANCEMENTS
+
+  Added auto-login feature (via cookie)
+  
+  Added PHP5 support
+  
+  Added SQL Server 2000 support (via odbc_mssql)
+  
+BUG FIXES / MINOR CHANGES
+  
+  Search screen improvements
+    - fixed default values
+    - fixed the -any- choice to default correctly
+    - fixed loss of bin names during search sorting/modification
+  
+  Fixed bug preventing save of the custom tab
+  
+  Fixed bugs in the create/edit process
+  
+  Improved text field formatting (problems with &#...; display and
+  formatting issues)
+  
+  Corrected problem with project ids entered as null (causing new projects
+  to not be displayed in project list)
+
+----- 2.5.5.1 Maintenance Release -----
+
+NEW FEATURES / MAJOR ENHANCEMENTS
+  
+  Upgraded ADODB library to 4.6.2
+
+BUG FIXES / MINOR ENHANCEMENTS
+
+  Fixed problems with sections and saving edited/added tickets
+  Improved escaping and rendering of text bodies.
+
+  Fixed ZT_DEFINED for egate scripts (which are not included from www)
+    
+  Added missing security check to configVars template
+
+----- 2.5.5 Major Release -----
+
+NEW FEATURES / MAJOR ENHANCEMENTS
+
+  Added ability to edit the fields which appear on create, edit, list, search,
+  and other screens.  (this is referred to as the Field Map Feature)
+
+  Added sorting to the listTickets screen (and also search screen)
+
+  Added ability to change label text when a behavior is run, so that the label
+  field type can work with behaviors properly.
+
+  Fixed SQL Server sequence id problem by adding an auto-increment feature
+  to catch up with the max id.
+
+  Added export to Excel (CSV file) feature to search page
+
+BUG FIXES / MINOR ENHANCEMENTS
+  Added security to includes/ files to provide security for users who
+  do not correctly locate the includes/ files outside of the web tree.
+
+  Improved header/footer comments and messages
+
+  Improved performance for ticket queries retrieved by contact
+  Fixed minor bugs in retrieving list of tickets by contact (person or company)
+  Added field map information to the contacts page (for listing tickets properly)
+
+  Improved sorting algorithm to insure that columns to sort doesn't exceed 2
+  (for efficieny)
+
+  Added email test to install utils.
+
+  Added improved array merge util
+
+  Added support for 'mysqli' driver and some bug fixes in db insert calls
+
+  Cleaned up security restrictions
+
+  Added some useful security into the debug information (protect passwords,
+  emails, and urls).
+
+  Fixed project submit bug (type_id required, system_id required, etc..)
+
+  Cleaned up behavior code for dealing with default values in hidden and text
+  fields
+
+  Fixed problem in fieldmap admin page for ticket_close map
+
+  Fixed error raised in JS Console when accessing the ticket's close page
+
+  To be used for hidden, text, etc: set the oldPos value if the fieldObj.value is in the list
+
+  Fixed bug which allowed user to bypass setting password on first login
+
+  Modified spanish translation
+
+  For ticket's mails, included user's email in log
+
+  Fixed a bug with retain_owner_move
+
+  Related tickets weren't shown  -Fixed
+
+  Added the posibility to set ctime when ticket is set to Pending (settings["ctime_on_pending"])
+
+  UI fixed to allow clicking anywhere in nav menus.
+
+  Added sorting to ticket lists
+
+  Completed implementation of search pages in fieldMap
+
+  Added SQL code to upgrade and install scripts
+
+  Included field_map for close page
+
+  Improved log for edits
+
+  Enabled menu.template to display the current value as "selected" (TK 103)
+
+  Added {field} property to data group javascript evals.  This allows a direct
+  reference to the current field when used from behaviors.
+
+  No tickets were shown when Assigned to... was selected  -Fixed
+
+  Modified the format of the users' names in data groups 
+  to lname,fname (to agree with the sort order)
+
+  Fixed mistake in session cache usage:
+
+  Found that if you are in custom tab, then go to the ticket list 
+  and select a list, you get the custom tab with no behaviors 
+  loaded. Now it's fixed.
+
+  Migrated default values from varfield_idx to field_map
+
+  Fixed a problem in saving created and edited tickets
+
+  Implemented fieldMap in project/ticket edit screens
+
+  Implemented fieldMap in search_form and search_list (not completed yet)
+
+  Deprecated the searchList.php file (this uses listTickets instead now)
+
+  Removed hypot() dependency, since some impls of php seem
+  to be missing this function.
+
+  Fixed typo in seed file for mysql
+
+  Enabled email_accept option
+
+  When creating a new ticket, the cal.gif image didn't appear if your
+  images directory was not directly under website root (Fixed).
+
+  Added a setting option to manage if a mandatory edit field to explain
+  why the ticket is being edited should be shown in edit page
+
+  Now, when disabling/enabling a date field, also de associated
+  calendar icon is disabled/enabled
+
+  Fixed a bug on behaviors when using file groups evaluating on a
+  standard key-value field
+
+  Re-executed behaviors didn't run. Fixed
+
+  Replaced mispelled page_tile variables with page_title
+
+  Added logic to determine owner by email or login
+  for egate scripts
+
+  Removed $Debug_Overview variable, this just seems to confuse people,
+  added overview capabilities as part of $Debug_Mode
+
+  Created administrative screen for the field map policies
+
+  Minor updates to debugging panel
+
+  Added field map implementation to the create screen
+
+  Added caching of system properties and data types to reduce
+  database lookups
+
+  Installed methods for reading and updating the field map (for new
+  configurable fields in views)
+
+  Added more configurability to the set properties
+  feature in egate_create (config file updated)
+
+  Updated install, help, and upgrade docs
+
+  Added ability to set properties(such as bin) via
+  simple text in egate_create.php
+
+  Fixed bcc address in egate_config and 
+  added blurb to the admin help email to explain
+  create vs admin interfaces
+
+  Worked on translations
+
+  Fixed function uptr to properly display spanish characters converted to uppercase
+
+  Allow start_date and deadline to have date and time (TK 161)
+
+  Added ticket properties to custom screen (TK 150)
+
+  Don't show "click here to edit rules" after editing details of a Javascript or File data group (Bug #140)
+
+  Fix to log properly ticket edit's changes
+
+  Fix to properly display ticket_titleBox information when adding new recipients to notify list (Bug #157).
+
+  Replaced occurrences of $_ENV with $_SERVER (Bug #154)
+
+FIXES SINCE BETA (2.5.5 PRE1)
+
+  Added missing varfield index for custom_menu1
+
+  Default groups in field_map page didn't show the selected field in the
+  pulldown, just added the $sel variable
+
+  Added pulldowns for default values and fixed several small
+  field_map bugs
+
+  The field_type value wasn't evaluated in the field map form. Fixed (TK 68)
+
+  Fixed problem with long text fields (TK 67)
+
+  Fixed problem displaying fields in proper order after adding a section or moving an element (TK 66)
+
+  Added the ability to add non-standard fields such as wkd_hours to the create
+  and edit screens.
+
+  Corrected build_postgres.sql syntax error (extra comma)
+  Corrected oracle insert problems with zentrack_group_detail (invalid field name)
+
+  Fixed arrow images in admin field map form, which were broken when rootUrl
+  is not /.
+
+  Allow deadline to be a menu dropdown
+
+  Standard fields don't respect ID in search page when used as menu fields  -Fixed
+
+  FieldMap didn't show the current default value as "selected"  -Fixed
+
+----- 2.5.0.2 Maintenance Release -----
+
+Added missing bugTo and bugFrom constants to configVars.php
+
+Added ability to use label or id for standard fields in data group files
+Added validation for standard ticket fields to data group file entries
+
+Fixed problems with character set (formatting not right in various languages)
+
+Email not right when creating contacts - Fixed
+
+If a MOVE is required and the current owner doesn't have access to the destination Bin, the owner is set to NULL
+
+Add admin settings to keep owners when moving a ticket, closing it and setting it to pending
+
+Fixed translation errors
+
+Added an option to delete data groups
+
+Added missing -value_column- entry in behavior detail (only when using file groups)
+
+Fixed problem with file based groups not showing more than one entry.
+
+----- 2.5.0.1 Bug Fix -----
+
+Fixed "1(invalid)" [others similar] values in custom_menu fields.
+
+----- 2.5 Major Release -----
+
+Documentation (user's manual and admin manual)
+
+Custom fields (user defined fields)
+
+Contact lists
+
+Field behaviors and groups (dynamically load choices to pulldown menus)
+
+Paging feature (results show with next/last page links)
+
+New 'Report Bug' link
+
+
+----- 2.4.4 Maintenance Release ------
+
+Addresses all current bugs and applies all current patches
+
+Search priority issues
+
+Error reporting improvements
+
+Fixed date formatting on ticket add/edit pages
+
+Fixed attachment issues
+
+Translation updates
+
+More internationalization
+
+----- 2.4.3 Maintenance Release ------
+
+Addressed all currently known issues and applied all current patches.
+
+----- v2.4.2 Security Patch -----
+
+Further auditing and tightening of the config params
+
+Addition of login params to the security list
+
+
+----- v2.4.2 Security Release -----
+
+Correct security issue with overriding config params
+
+Improved ticket sorting
+
+Improved priority coloring
+
+
+----- V2.4.1 (2003-05-08) ----
+
+Update translation files
+
+Optimize translation process
+
+Email gateway enhancements
+
+Priority coloring added
+
+
+----- V2.4.0.1 (2003-04-21) -----
+
+Fixed 2 errors in the 2.4 release.
+
+Updates for help section.
+
+----- V2.4 (2003-04-19) -----
+
+MAJOR 
+
+Translation Engine: translate to any language with simple translation file(several languages included) 
+
+Clean up Help subsystem, removed dead links and added link to forum on support page. 
+
+Postgres Testing/Compatability complete (no longer beta) 
+
+Added some simple utilities for creating tickets via email (to compliment email gateway system) 
+
+Updated email logic to email appropriate users, even if not on notify list 
+
+MINOR 
+
+Revised issue with users moving tickets (header.php not found error) 
+
+Updated "log" action in egate, and cleaned up a bit 
+
+Cache the priority pulldown in admin screens for speed 
+sped up systems screen for users with massive numbers of systems 
+
+Work for sorting of bins: create and search menus 
+
+Fixed URL and UNC paths displayed in tickets 
+
+Add "Hours Worked" to printed/emailed tickets 
+
+Added a support page. 
+Removed extra shebang (causing stdout message) from included file 
+
+Fixed problem with ticket reply addresses when using egate 
+The reply address will now always point to egate if enabled 
+
+Fixed problem with emails sent to egate with ``,'' in reply address 
+
+Reinstated the auto-close for "note" types 
+
+Enhanced Debugging Output
+
+----- V2.3.2 (2003-03-26) ----
+
+Fixed install and upgrade docs -- added notes and fixed typos
+
+Fixed configVars.php white space -- causing problems for some users.
+
+----- V2.3.1 (2003-03-19) ----
+
+Enhanced egate system to always send a reply if possible 
+
+Fixed email notifications which were not working
+
+Removed some extraneous queries by passing the ticket array rather than the id
+
+Fixed notify bug causing blank entries in notify list
+
+Fixed error with assigning tickets to users who don't have access to bin ticket is in. (Tickets can now only be assigned to users with access to the ticket's current bin)
+
+Fixed issue with tab counts: related always displaying 1, even if should be 0
+
+Fixed problem with logs showing action as LOG, even if a different one is chosen.
+
+Fixed log urls with caps and ? in them to format properly
+
+Corrected date shown in search log results.
+
+Correcting user names not showing correctly in generated reports
+
+Filtered projects from the Assigned to ... list
+
+Adding more template forms missing in cvs
+
+Updated move form to only show valid choices
+
+Fixed default_test_checked not working properly
+
+Fixed error in help message for email gateway which said to enter users name, should be email address
+
+Enhanced the subject parsing logic to try and deduce improperly formatted Subjects and get the right info out
+
+----- V2.3 (2003-03-12) ---- 
+
+NEW FEATURES 
+
+Email Gateway Interface 
+
+Notify Lists 
+
+Editing tickets now controlled on a "per bin" access level based on the level_edit setting (instead of straight default access) 
+
+Created new templating system for use with zenTrack 
+
+Filtered projects from ticket listing 
+
+Improved logoff functions 
+Thanks to roland spahn (rosp) for feedback 
+
+Enabled editing of projects for users without 
+default_level >= 5 (if they have >= 5 for bin) 
+
+Session enhancements: support for older versions of php, and hopefully 
+will clear up problems for users experiencing multiple login requests 
+because of session issues. 
+
+Close ticket, username retention 
+
+Added counts to ticket tabs 
+
+Added mssqlserver build and seed files to install 
+Thanks to Jim Martin for this contribution! 
+
+Added some default settings for start_date and deadlines. 
+
+FIXES 
+
+Fixed problem with user lists not having correct permissions 
+
+Fixes for popupcalendar feature 
+
+Improved ticket creator viewing permissions 
+
+Added new utility: checkEmail() 
+
+Cleanup of comments and instructions 
+
+Made date formats for report images 
+more compatible with windows setups 
+
+Fixed actionApplicable() typo 
+Thanks to Jamin W. Collins (jamincollins) 
+
+Fixed some email problems with reopen and reject 
+Thanks to Claudio for his notes 
+
+Fixed total hours issues 
+
+Fixed sorting of systems by replacing $zen->systems with $zen->getSystems(1) 
+Thanks to efeldhaus ( Erwin Feldhaus ) for reporting this anomaly, and 
+suggestions on the improvement 
+
+Fixed problem displaying bins with quotes in name 
+
+Fixed problem with changing bins while viewing ticket 
+(fatal error: zenTrack.class cannot be redefined)
+
+
+----- v2.2.1 (2003-01-27) ------
+
+Fixed assignment problems on project create
+
+Cleaned up some form input and syntax warnings
+
+Corrected some blank page issues for IIS users
+
+----- v2.2.0 (2003-01-14) ------
+
+php 4.2 compliant (register_globals fun)
+
+Added usage reports, graphical and html
+
+Fixed display issues between tickets and projects
+
+Added 'sticky tabs' for projects and tickets
+
+Fixed reject ticket bug
+
+----- v2.1.0 (not released) ------
+
+Minor bug fixes... some oracle problems corrected.
+
+Added Postgres build/seed files.  Thanks to jofry@users.sourceforge.net!
+
+----- v2.0.3 Live (2002-06-03) ------
+
+Created a zenTrack project with useful tickets to begin new users, and explain 
+to them how to configure their system accordingly.
+
+Fixed several link bugs associated with ticketView.php and attachmentView.php
+
+Fixed -DEBUG OVERVIEW- in footer to include some highly valuable info
+for troubleshooting support requests.
+
+----- v2.0.2 Beta (2002-05-06) -----
+
+Changed "password" to "passphrase" for Sybase compatibility.
+
+Fixed $rootUrl issues with url_ticket_view and url_attachment_view
+
+Fixed some issues with the "view all users" function in user admin
+
+Fixed issue with the "first login" so that it will make users
+change their passphrase from the default before they can continue
+
+Comments added to configVars.php section to indicate
+better use of Oracle/adodb methods
+
+setenv() functions added for locale related issues, and for oracle
+fixes
+
+
+----- v2.0.1c beta (2002-05-01) ------
+
+All upper case column names changed to lower case 
+entries for oracle/adodb compatibility
+
+Fixed bug in new project form concerning the start date.
+
+----- v2.0.1 Beta (2002-04-27) ------
+  
+Oracle issue with uppercase column names (hopefully) overcome 
+with use of the ADODB function "oci8po"
+
+Fix for ONAMES and HOSTNAMES provided by Izzy (thanks Izzy!)
+  
+Oracle build files tested and repaired.  Several bugs with
+reserved words and escape characters removed.
+
+configVars.php and header.php files cleaned up, and better
+commented.
+
+Sybase bug with reserved word "role" fixed.
+
+INSTALL.README, and install.html files updated
+
+CHANGELOG implemented (and needed)
+
+----- v2.0 Beta (2002-04-23) ------
+  
+Too many changes to list!
+  
+Added ADODB abstraction, making zenTrack fully 
+Database Compatible.
+  
+Completely rewrote the zenTrack.class, much cleaner, 
+  more efficient, faster
+
+Added the zen.class for basic utilities
+  
+Added attachments
+  
+Rewrote the administrative tools, and completely 
+  re-dedesigned the database structure to support
+  a very dynamic base and adaptable design
+  
+Began code changes to create a complete level based
+  debugging tool and for report generation (planned for
+  version 2.1)

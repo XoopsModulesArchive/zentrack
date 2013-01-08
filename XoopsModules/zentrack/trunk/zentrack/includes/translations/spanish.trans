@@ -1,0 +1,5960 @@
+# This is the translation template file. It is automatically generated from developers/tr-parser.php
+# If you have any questions on how to create a translation file please direct them to zentrack support
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_logBox.php"
+#args ""
+msgid "EDIT"
+msgstr "EDITADO"
+
+msgid "CREATED"
+msgstr "CREADO"
+
+msgid "PENDING"
+msgstr "PENDIENTE"
+
+msgid "TESTED"
+msgstr "TESTEADO"
+
+msgid "APPROVED"
+msgstr "APROBADO"
+
+msgid "CLOSED"
+msgstr "CERRADO"
+
+msgid "OPEN"
+msgstr "ABIERTO"
+
+msgid "MOVED"
+msgstr "MOVIDO"
+
+msgid "ACCEPTED"
+msgstr "ACEPTADO"
+
+msgid "ASSIGNED"
+msgstr "ASIGNADO"
+
+msgid "YANKED"
+msgstr "CAPTURADO"
+
+
+#file "/home/ired/zentrack_2/www/actions/assign.php"
+#args "array($r)"
+msgid " ? is required"
+msgstr " ? es obligatorio"
+
+
+#file "/home/ired/zentrack_2/includes/templates/listTickets_workFormat.php"
+#args ""
+msgid "%"
+msgstr "%"
+
+
+#file "/home/ired/zentrack_2/www/actions/upload.php"
+#args "array($file_type)"
+msgid "'?' is not an allowed file extension - See your systems administrator for more information"
+msgstr "'?' no es un tipo de archivo v&aacute;lido - Consulte a su administrador para m&aacute;s informaci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchForm.php"
+#args ""
+msgid "(or higher)"
+msgstr "(o superior)"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorForm.php"
+#args ""
+msgid "* = required"
+msgstr "* = obligatorio"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchContact2List.php"
+#args ""
+msgid "1 Match"
+msgstr "1 Coincidencia"
+
+
+#file "/home/ired/zentrack_2/www/actions/close.php"
+#args "array($zen->types[$c['type_id']], $c['id'])"
+msgid "? ? is not completed."
+msgstr "? ? no est&aacute; completo."
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchContact2List.php"
+#args "array($c)"
+msgid "? Matches"
+msgstr "? Coincidencias"
+
+
+#file "/home/ired/zentrack_2/www/admin/config.php"
+#args "array($zen->getSetting("system_name"))"
+msgid "? Settings"
+msgstr "Configuraciones de ?"
+
+
+#file "/home/ired/zentrack_2/www/admin/bins.php"
+#args "array($j)"
+msgid "? bins were saved to the database. Updates complete"
+msgstr "? 'bins' fueron salvados en la base de datos. Actualizaci&oacute;n completa"
+
+
+#file "/home/ired/zentrack_2/www/addProjectSubmit.php"
+#args "array(tr('Project'))"
+msgid "? created, but variable fields could not be saved"
+msgstr "? creado, pero los campos customizables no pudieron ser salvados"
+
+
+#file "/home/ired/zentrack_2/www/admin/editBehaviorDetails.php"
+#args "array($j)"
+msgid "? elements were saved in the selected behavior. Updates complete"
+msgstr "? elementos fueron salvados en el comportamiento seleccionado. Actualizaci&oacute;n completa"
+
+
+#file "/home/ired/zentrack_2/www/actions/editSubmit.php"
+#args "array(ucfirst($r))"
+msgid "? is a required field"
+msgstr "? es un campo obligatorio"
+
+
+#file "/home/ired/zentrack_2/includes/parseVarfields.php"
+#args "array(ucfirst(tr($v)))"
+msgid "? is required"
+msgstr "? es obligatorio"
+
+
+#file "/home/ired/zentrack_2/www/admin/config.php"
+#args "array($k)"
+msgid "? must be set to 'on' or 'off'"
+msgstr "Debe asignar 'on' u 'off' a ?"
+
+
+#file "/home/ired/zentrack_2/www/admin/config.php"
+#args "array($k)"
+msgid "? must have a value, use zero instead of a blank"
+msgstr "? debe tener un valor. Utilice cero en lugar de un blanco"
+
+
+#file "/home/ired/zentrack_2/www/admin/editGroupDetails.php"
+#args "array($num, count($elements))"
+msgid "? of ? elements were saved in the selected group. Updates complete"
+msgstr "? de ? elementos fueron salvados en el grupo seleccionado. Actualizaci&oacute;n completa"
+
+
+#file "/home/ired/zentrack_2/www/admin/config.php"
+#args "array($j, count($newparams))"
+msgid "? of ? settings changed were successfully updated"
+msgstr "? de ? configuraciones fueron actualizadas exitosamente"
+
+
+#file "/home/ired/zentrack_2/includes/leftMain.php"
+#args "array($num,count($zen->bins))"
+msgid "? open tickets in ? bins"
+msgstr "? tickets abiertos en ? comunidades"
+
+
+#file "/home/ired/zentrack_2/www/admin/priorities.php"
+#args "array($j)"
+msgid "? priorities were saved to the database. Updates complete"
+msgstr "? prioridades fueron salvadas en la base de datos. Actualizaci&oacute;n completa"
+
+
+#file "/home/ired/zentrack_2/www/admin/systems.php"
+#args "array($j)"
+msgid "? systems were saved to the database. Updates complete"
+msgstr "? sistemas fueron salvados en la base de datos. Actualizaci?oacute;n completa"
+
+
+#file "/home/ired/zentrack_2/www/admin/tasks.php"
+#args "array($j)"
+msgid "? tasks were saved to the database. Updates complete"
+msgstr "? tareas fueron salvadas en la base de datos. Actualizaci?oacute;n completa"
+
+
+#file "/home/ired/zentrack_2/www/admin/addGroupSubmit.php"
+#args "array("--link--")"
+msgid "? to customize this group's entries."
+msgstr "? para personalizar el contenido de este grupo"
+
+
+#file "/home/ired/zentrack_2/www/admin/types.php"
+#args "array($j)"
+msgid "? types were saved to the database. Updates complete"
+msgstr "? tipos fueron salvados en la base de datos. Actualizaci?oacute;n completa"
+
+
+#file "/home/ired/zentrack_2/includes/editTicketSubmit.php"
+#args "array(tr($x))"
+msgid "? updated, but variable fields could not be saved"
+msgstr "? actualizado, pero los campos customizables no pudieron ser salvados"
+
+
+#file "/home/ired/zentrack_2/www/admin/editCustom.php"
+#args "array($j)"
+msgid "? variable field definitions were saved to the database. Updates complete"
+msgstr "? definiciones de campos customizables fueron salvadas en la base de datos. Actualizaci?oacute;n completa"
+
+
+#file "/home/ired/zentrack_2/www/actions/addToNotify.php"
+#args "array($u)"
+msgid "? was not a valid user id"
+msgstr "? no era un ID de usuario v&aacute;lido"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsOptionsMenu.php"
+#args ""
+msgid "A large number of elements will appear better in a line chart, bar charts tend to be more pleasing with smaller numbers."
+msgstr "Una gran cantidad de elementos se ver&aacute; mejor en un gr&aacute;fico de l&iacute;nea. Los gr&aacute;ficos de barras suelen ser m&aacute;s vistosos con n&uacute;meros m&aacute;s peque&ntilde;os"
+
+
+#file "/home/ired/zentrack_2/www/actions/print.php"
+#args ""
+msgid "ATC"
+msgstr "ATC"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_actionBar.php"
+#args ""
+msgid "Accept"
+msgstr "Aceptar"
+
+
+#file "/home/ired/zentrack_2/www/addSubmit.php"
+#args ""
+msgid "Access Error"
+msgstr "Error de Acceso"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userSearchList.php"
+#args ""
+msgid "Access"
+msgstr "Acceso"
+
+
+#file "/home/ired/zentrack_2/includes/templates/optionsMenu.php"
+#args ""
+msgid "Account Options"
+msgstr "Opciones de cuenta"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userAdd.php"
+#args ""
+msgid "Account Settings"
+msgstr "Configuraci&oacuten de cuenta"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userSearchList.php"
+#args ""
+msgid "Account is Active"
+msgstr "La cuenta est&aacute; Activa"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchLogList.php"
+#args ""
+msgid "Action Taken"
+msgstr "Acci&oacute;n Tomada"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchLogForm.php"
+#args ""
+msgid "Action"
+msgstr "Acci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorMenu.php"
+#args ""
+msgid "Actions"
+msgstr "Acciones"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorForm.php"
+#args ""
+msgid "Active"
+msgstr "Activo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_attachmentsBox.php"
+#args ""
+msgid "Add Attachment"
+msgstr "Adjuntar archivo"
+
+
+#file "/home/ired/zentrack_2/www/admin/addBehaviorSubmit.php"
+#args ""
+msgid "Add Behavior Submit"
+msgstr "Generar nuevo comportamiento"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_contactsBox.php"
+#args ""
+msgid "Add Contacts"
+msgstr "Agregar Contactos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newAgreementForm.php"
+#args ""
+msgid "Add Item"
+msgstr "Agregar Item"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/notify.php"
+#args ""
+msgid "Add Notify Recipient"
+msgstr "Agregar Destinatario de Notificaci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_notifyBox.php"
+#args ""
+msgid "Add Recipient"
+msgstr "Agregar Destinatario"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/contacts.php"
+#args ""
+msgid "Add a Contact"
+msgstr "Agregar un Contacto"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsOptionsMenu.php"
+#args ""
+msgid "Add a total figure"
+msgstr "Agregar valor total"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsOptionsMenu.php"
+#args ""
+msgid "Add an average figure"
+msgstr "Agregar valor promedio"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/notify.php"
+#args ""
+msgid "Add recipients to the notify list for this ticket"
+msgstr "Agregar destinatarios a la lista de notificaci&oacute;n de este ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_tasksBox.php"
+#args ""
+msgid "Add ticket to project"
+msgstr "Agregar un ticket a este proyecto"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/contacts.php"
+#args ""
+msgid "Add"
+msgstr "Agregar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newContactForm.php"
+#args ""
+msgid "Address line "
+msgstr "L&iacute;nea de direcci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/includes/templates/contact_titleBox.php"
+#args ""
+msgid "Address"
+msgstr "Direcci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/admin/access.php"
+#args ""
+msgid "Admin Section"
+msgstr "Secci&oacute;n de Administraci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/includes/leftAdmin.php"
+#args ""
+msgid "Admin"
+msgstr "Administraci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/admin/admin_header.php"
+#args ""
+msgid "Administration"
+msgstr "Administraci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userSearchList.php"
+#args ""
+msgid "Administrative Options"
+msgstr "Opciones Administrativas"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/admin_header.php"
+#args ""
+msgid "Administrator's Manual"
+msgstr "Manual del Administrador"
+
+
+#file "/home/ired/zentrack_2/includes/templates/referencedGroupForm.php"
+#args ""
+msgid "After that, delete the data group."
+msgstr "Luego de eso, elimine el grupo de datos"
+
+
+#file "/home/ired/zentrack_2/www/actions/agreement_edit.php"
+#args ""
+msgid "Agreement #?"
+msgstr "Acuerdo #?"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newAgreementForm.php"
+#args ""
+msgid "Agreement Information"
+msgstr "Informaci&oacute;n de acuerdo"
+
+
+#file "/home/ired/zentrack_2/www/agreements.php"
+#args ""
+msgid "Agreement list"
+msgstr "Lista de acuerdos"
+
+
+#file "/home/ired/zentrack_2/www/agreement.php"
+#args ""
+msgid "Agreement"
+msgstr "Acuerdo"
+
+
+#file "/home/ired/zentrack_2/includes/leftContacts.php"
+#args ""
+msgid "Agreements"
+msgstr "Acuerdos"
+
+
+#file "/home/ired/zentrack_2/www/admin/access.php"
+#args "array($user_id)"
+msgid "All bins were removed from access for user ?"
+msgstr "El usuario ? ya no tiene acceso a ninguna comunidad"
+
+
+#file "/home/ired/zentrack_2/includes/templates/configSettingsForm.php"
+#args ""
+msgid "All entries must contain a value."
+msgstr "Todos los registros deben contener un valor."
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorMenu.php"
+#args ""
+msgid "All rules"
+msgstr "Todas las reglas (AND)"
+
+
+#file "/home/ired/zentrack_2/www/admin/addBehaviorSubmit.php"
+#args ""
+msgid "All the fields are required"
+msgstr "Todos los campos son obligatorios"
+
+
+#file "/home/ired/zentrack_2/includes/leftBins.php"
+#args ""
+msgid "All"
+msgstr "Todas"
+
+
+#file "/home/ired/zentrack_2/includes/templates/listTickets_workFormat.php"
+#args ""
+msgid "Amount of time worked"
+msgstr "Cantidad de tiempo trabajado"
+
+
+#file "/home/ired/zentrack_2/includes/templates/configForm.php"
+#args ""
+msgid "Any fields which are disabled should have the order set to 0"
+msgstr "Los campos deshabilitados deber&iacute;n tener el valor 0 en el campo de ordenamiento"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorMenu.php"
+#args ""
+msgid "Any rule"
+msgstr "Cualquier regla (OR)"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsDateMenu.php"
+#args ""
+msgid "Any valid date format"
+msgstr "Cualquier formato de fecha v&aacute;lido"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newProjectForm.php"
+#args ""
+msgid "Approval Required"
+msgstr "Aprobac. Requerida"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_detailsBox.php"
+#args ""
+msgid "Approval"
+msgstr "Aprobaci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_actionBar.php"
+#args ""
+msgid "Approve"
+msgstr "Aprobar"
+
+
+#file "/home/ired/zentrack_2/includes/leftAdmin.php"
+#args ""
+msgid "Archive Tickets"
+msgstr "Pasar Tickets a Hist&oacute;rico"
+
+
+#file "/home/ired/zentrack_2/includes/templates/agreement_box.php"
+#args ""
+msgid "Are you sure you want to archive this agreement?"
+msgstr "Est&aacute; seguro de que desea mover este acuerdo al archivo hist&oacute;rico?"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportMenu.php"
+#args ""
+msgid "Are you sure you want to permanently delete this template?"
+msgstr "Est&aacute; seguro de que desea eliminar permanentemente este modelo?"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/assign.php"
+#args ""
+msgid "Assign Ticket"
+msgstr "Asignar Ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/assign.php"
+#args ""
+msgid "Assign the ticket to a new user"
+msgstr "Asignar el ticket a un nuevo usuario"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_actionBar.php"
+#args ""
+msgid "Assign"
+msgstr "Asignar"
+
+
+#file "/home/ired/zentrack_2/includes/leftTickets.php"
+#args ""
+msgid "Assigned to"
+msgstr "Asignados a"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/relate.php"
+#args ""
+msgid "Associate this ticket with others"
+msgstr "Asociar este ticket a otros tickets"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/upload.php"
+#args ""
+msgid "Attach"
+msgstr "Adjuntar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_attachmentsBox.php"
+#args ""
+msgid "Attachment"
+msgstr "Archivo Adjunto"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_attachmentsBox.php"
+#args "array($page_type,$id)"
+msgid "Attachments on ? #?"
+msgstr "Archivos Adjuntos en ? #?"
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "Attachments"
+msgstr "Adjuntos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsOptionsMenu.php"
+#args ""
+msgid "Bar Chart"
+msgstr "Gr&aacute;fico de barras"
+
+
+#file "/home/ired/zentrack_2/www/admin/addBehaviorSubmit.php"
+#args "array($NewBehaviorName, 			"--link--", 			$NewBehaviorName)"
+msgid "Behavior ? was added successfully. ? to customize behavior ?'s rules."
+msgstr "El comportamiento ? fue agregado exitosamente. ? para personalizar las reglas del comportamiento ?."
+
+
+#file "/home/ired/zentrack_2/www/admin/editBehaviorSubmit.php"
+#args "array($NewBehaviorName,         "--link--",         $NewBehaviorName)"
+msgid "Behavior ? was updated successfully. ? to customize behavior ?'s details."
+msgstr "El comportamiento ? fue actualizado exitosamente. ? para personalizar los detalles del comportamiento ?."
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorForm.php"
+#args ""
+msgid "Behavior Information"
+msgstr "Informaci&oacute;n del Comportamiento"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorForm.php"
+#args ""
+msgid "Behavior Name"
+msgstr "Nombre del Comportamiento"
+
+
+#file "/home/ired/zentrack_2/includes/templates/adminMenu.php"
+#args ""
+msgid "Behaviors let you specify how a field modification would affect other field of the current ticket."
+msgstr "Los comportamientos le permiten especificar c&oacute;mo las modificaciones en un campo afectar&aacute;n otros campos en el mismo ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/accessForm.php"
+#args ""
+msgid "Bin Name"
+msgstr "Nombre de la Comunidad"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchList.php"
+#args ""
+msgid "Bin ticket is located in"
+msgstr "Comunidad en el que se encuentra el ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/listTickets.php"
+#args ""
+msgid "Bin"
+msgstr "Comunidad"
+
+
+#file "/home/ired/zentrack_2/www/reports/save.php"
+#args ""
+msgid "Bin(s)"
+msgstr "Comunidad(es)"
+
+
+#file "/home/ired/zentrack_2/www/help/help_header.php"
+#args ""
+msgid "Bins and Permissions"
+msgtr "Comunidades y Permisos"
+
+
+#file "/home/ired/zentrack_2/www/help/help_header.php"
+#args ""
+msgid "Data Types (standard ticket fields)"
+msgtr "Tipos de datos (campos est&aacute;ndar de los tickets)"
+
+
+#file "/home/ired/zentrack_2/www/help/help_header.php"
+#args ""
+msgid "Data Groups"
+msgtr "Grupos de Datos"
+
+
+#file "/home/ired/zentrack_2/www/help/help_header.php"
+#args ""
+msgid "Behaviors"
+msgtr "Comportamientos"
+
+
+#file "/home/ired/zentrack_2/www/help/help_header.php"
+#args ""
+msgid "Variable Fields (custom ticket fields)"
+msgtr "Campos variables (campos personalizables de los tickets)"
+
+
+#file "/home/ired/zentrack_2/www/help/help_header.php"
+#args ""
+msgid "System Settings"
+msgstr "Configuraciones del Sistema"
+
+
+#file "/home/ired/zentrack_2/includes/templates/adminMenu.php"
+#args ""
+msgid "Bins are departments or groups that tickets belong to."
+msgstr "Las Comunidades son departamentos o grupos a los que pertenecen los tickets"
+
+
+#file "/home/ired/zentrack_2/includes/templates/tutorial/english/view_tickets.php"
+#args ""
+msgid "Bins"
+msgstr "Comunidades"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchForm.php"
+#args ""
+msgid "By Date"
+msgstr "Por Fecha"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchForm.php"
+#args ""
+msgid "By Parameters"
+msgstr "Por Par&aacute;metros"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchForm.php"
+#args ""
+msgid "By Text Match"
+msgstr "Por Coincidencia Textual"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userSearchForm.php"
+#args ""
+msgid "By Text"
+msgstr "Por Texto"
+
+
+#file "/home/ired/zentrack_2/includes/templates/referencedGroupForm.php"
+#args ""
+msgid "Cancel the request. DO NOT delete the data group."
+msgstr "Cancelar el pedido. NO BORRAR el grupo de datos."
+
+
+#file "/home/ired/zentrack_2/includes/templates/optionsMenu.php"
+#args ""
+msgid "Change Default Bin"
+msgstr "Cambiar Comunidad Inicial"
+
+
+#file "/home/ired/zentrack_2/includes/templates/optionsMenu.php"
+#args ""
+msgid "Change Language"
+msgstr "Cambiar Idioma"
+
+
+#file "/home/ired/zentrack_2/includes/templates/optionsMenu.php"
+#args ""
+msgid "Change Password"
+msgstr "Cambiar Contrase&ntilde;a"
+
+
+#file "/home/ired/zentrack_2/includes/templates/optionsMenu.php"
+#args ""
+msgid "Change Password"
+msgtr "Cambiar Contrase&ntilde;a"
+
+
+#file "/home/ired/zentrack_2/includes/templates/optionsMenu.php"
+#args ""
+msgid "Tutorial"
+msgstr "Tutorial"
+
+
+#file "/home/ired/zentrack_2/includes/templates/pwcForm.php"
+#args ""
+msgid "Change User Password"
+msgstr "Cambiar Contrase&ntilde;a de Usuario"
+
+
+#file "/home/ired/zentrack_2/includes/templates/homebinForm.php"
+#args ""
+msgid "Change Your Default Bin"
+msgstr "Cambiar Su Comunidad Inicial"
+
+
+#file "/home/ired/zentrack_2/includes/templates/languageForm.php"
+#args ""
+msgid "Change Your Language"
+msgstr "Cambiar Su Idioma"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsDataMenu.php"
+#args ""
+msgid "Change"
+msgstr "Cambiar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/configSettingsForm.php"
+#args ""
+msgid "Changing these settings can have a severe impact on the system.  Please consider this before making modifications."
+msgstr "Cambiar estos valores puede tener un severo impacto en el sistema. Por favor asg&uacute;rese de que est&aacute; haciendo lo correcto."
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsOptionsMenu.php"
+#args ""
+msgid "Chart Options"
+msgstr "Opciones del Gr&aacute;fico"
+
+
+#file "/home/ired/zentrack_2/www/reports/saveSubmit.php"
+#args ""
+msgid "Chart could not be saved."
+msgstr "El Gr&aacute;fico no pudo ser salvado."
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/email.php"
+#args ""
+msgid "Choose one of the following options"
+msgstr "Seleccione una de las siguientes opciones"
+
+
+#file "/home/ired/zentrack_2/includes/templates/referencedGroupForm.php"
+#args ""
+msgid "Choose what to do before data group deletion"
+msgstr "Seleccione qu&eacute; hacer antes de la eliminaci&oacute;n del grupo de datos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchForm.php"
+#args ""
+msgid "Click 'Search' to execute the search"
+msgstr "Presione 'Buscar' para ejecutar la b&uacute;squeda"
+
+
+#file "/home/ired/zentrack_2/includes/templates/homebinForm.php"
+#args ""
+msgid "Click 'Update' to change your default bin"
+msgstr "Presione 'Actualizar' para cambiar su comunidad inicial"
+
+
+#file "/home/ired/zentrack_2/includes/templates/languageForm.php"
+#args ""
+msgid "Click 'Update' to change your language"
+msgstr "Presione 'Actualizar' para cambiar su idioma"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorForm.php"
+#args "array($button,$blurb)"
+msgid "Click ? to ?"
+msgstr "Presione ? para ?"
+
+
+#file "/home/ired/zentrack_2/www/admin/editUser.php"
+#args ""
+msgid "Click Here to search for users"
+msgstr "Presione Aqu&iacute; para buscar usuarios"
+
+
+#file "/home/ired/zentrack_2/www/admin/editBehavior.php"
+#args ""
+msgid "Click Here to view available behaviors"
+msgstr "Presione Aqu&iacute; para ver los comportamientos disponibles"
+
+
+#file "/home/ired/zentrack_2/www/admin/editGroup.php"
+#args ""
+msgid "Click Here to view available groups"
+msgstr "Presione Aqu&iacute; para ver los grupos de datos disponibles"
+
+
+#file "/home/ired/zentrack_2/includes/translations/english.trans"
+#args ""
+msgid "Click Here"
+msgstr "Presione Aqu&iacute;"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/contacts.php"
+#args ""
+msgid "Click button to add contact"
+msgstr "Presione el bot&oacute;n para agregar el contacto"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/notify.php"
+#args ""
+msgid "Click button to add recipients"
+msgstr "Presione el bot&oacute;n para agregar los destinatarios"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/relate.php"
+#args ""
+msgid "Click button to assign relations"
+msgstr "Presione el bot&oacute;n para establecer las relaciones"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/assign.php"
+#args ""
+msgid "Click button to assign"
+msgstr "Presione el bot&oacute;n para efectuar la asignaci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/close.php"
+#args ""
+msgid "Click button to close"
+msgstr "Presione el bot&oacute;n para cerrar el ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/log.php"
+#args ""
+msgid "Click button to create log"
+msgstr "Presione el bot&oacute;n para a&ntilde;adir la entrada al log"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/move.php"
+#args ""
+msgid "Click button to move ticket"
+msgstr "Presione el bot&oacute;n para mover el ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/reopen.php"
+#args ""
+msgid "Click button to open"
+msgstr "Presione el bot&oacute;n para abrir el ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/reject.php"
+#args ""
+msgid "Click button to reject"
+msgstr "Presione el bot&oacute;n para rechazar el ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/email.php"
+#args ""
+msgid "Click button to send email"
+msgstr "Presione el bot&oacute;n para enviar el e-mail"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/estimate.php"
+#args ""
+msgid "Click button to set estimated hours to completion"
+msgstr "Presione el bot&oacute;n para establecer las horas estimadas para completar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/upload.php"
+#args ""
+msgid "Click button to upload file and attach to ticket"
+msgstr "Presione el bot&oacute;n para adjuntar un archivo al ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/yank.php"
+#args ""
+msgid "Click button to yank ticket"
+msgstr "Presione el bot&oacute;n para capturar el ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newAgreementForm.php"
+#args ""
+msgid "Click button to"
+msgstr "Presione el bot&oacute;n para"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/close.php"
+#args ""
+msgid "Close Ticket"
+msgstr "Cerrar Ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/close.php"
+#args ""
+msgid "Close"
+msgstr "Cerrar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchForm.php"
+#args ""
+msgid "Closed"
+msgstr "Cerrado"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsOptionsMenu.php"
+#args "array(strip_tags($report_type))"
+msgid "Combine selected ?s"
+msgstr "Combinar los items seleccionados de ?"
+
+
+#file "/home/ired/zentrack_2/includes/templates/contact_list.php"
+#args ""
+msgid "Commentary"
+msgstr "Comentario"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/assign.php"
+#args ""
+msgid "Comments or Instructions"
+msgstr "Comentarios o Instrucciones"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/move.php"
+#args ""
+msgid "Comments"
+msgstr "Comentarios"
+
+
+#file "/home/ired/zentrack_2/includes/editTicketSubmit.php"
+#args ""
+msgid "Commit Edited Ticket"
+msgstr "Guardado de Cambios en Ticket"
+
+
+#file "/home/ired/zentrack_2/www/addAgreementSubmit.php"
+#args ""
+msgid "Commit New Agreement"
+msgstr "Generar Nuevo Acuerdo"
+
+
+#file "/home/ired/zentrack_2/www/addContactSubmit.php"
+#args ""
+msgid "Commit New Project"
+msgstr "Generar Nuevo Proyecto"
+
+
+#file "/home/ired/zentrack_2/www/addSubmit.php"
+#args ""
+msgid "Commit New Ticket"
+msgstr "Generar Nuevo Ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/contacts.php"
+#args ""
+msgid "Company"
+msgstr "Compa&ntilde;&iacute;a"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/notify.php"
+#args ""
+msgid "Company:"
+msgstr "Compa&ntilde;&iacute;a:"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorDetailForm.php"
+#args ""
+msgid "Compare Field"
+msgstr "Campo de Comparaci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorDetailForm.php"
+#args ""
+msgid "Compare Value"
+msgstr "Valor de Comparaci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/actions/print.php"
+#args ""
+msgid "Completed"
+msgstr "Completado"
+
+
+#file "/home/ired/zentrack_2/includes/templates/adminMenu.php"
+#args ""
+msgid "Configuration Settings"
+msgstr "Valores de Configuraci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/includes/templates/editAgreementForm.php"
+#args "array($id)"
+msgid "Contact #? could not be found"
+msgstr "El contacto #? no pudo ser encontrado"
+
+
+#file "/home/ired/zentrack_2/www/actions/contact_edit.php"
+#args "array($id)"
+msgid "Contact #?"
+msgstr "Contacto #?"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newContactForm.php"
+#args ""
+msgid "Contact Information"
+msgstr "Informaci&oacute;n del Contacto"
+
+
+#file "/home/ired/zentrack_2/www/contacts.php"
+#args ""
+msgid "Contact list - Company"
+msgstr "Lista de contactos - Compa&ntilde;&iacute;a"
+
+
+#file "/home/ired/zentrack_2/www/contacts.php"
+#args ""
+msgid "Contact list - Persons Extern"
+msgstr "Lista de contactos - Personal Externo"
+
+
+#file "/home/ired/zentrack_2/www/contacts.php"
+#args ""
+msgid "Contact list - Persons Intern"
+msgstr "Lista de contactos - Personal Interno"
+
+
+#file "/home/ired/zentrack_2/www/contact.php"
+#args ""
+msgid "Contact"
+msgstr "Contacto"
+
+
+#file "/home/ired/zentrack_2/www/newContact.php"
+#args ""
+msgid "Contacts Administration"
+msgstr "Administraci&oacute;n de Contactos"
+
+
+#file "/home/ired/zentrack_2/includes/editAgreementSubmit.php"
+#args ""
+msgid "Contacts"
+msgstr "Contactos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchForm.php"
+#args ""
+msgid "Containing"
+msgstr "Conteniendo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newAgreementForm.php"
+#args ""
+msgid "Agreement ID"
+msgstr "ID del Acuerdo"
+
+
+#file "/home/ired/zentrack_2/www/addAgreementSubmit.php"
+#args ""
+msgid "Could not create agreement."
+msgstr "No se pudo crear el acuerdo"
+
+
+#file "/home/ired/zentrack_2/www/addContactSubmit.php"
+#args ""
+msgid "Could not create contact."
+msgstr "No se pudo crear el contacto"
+
+
+#file "/home/ired/zentrack_2/www/actions/agreement_edit.php"
+#args ""
+msgid "Could not create item."
+msgstr "No se pudo crear el &iacute;tem"
+
+
+#file "/home/ired/zentrack_2/www/addProjectSubmit.php"
+#args ""
+msgid "Could not create ticket."
+msgstr "No se pudo crear el ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newContactForm.php"
+#args ""
+msgid "Country"
+msgstr "Pa&itilde;s"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newContactForm.php"
+#args ""
+msgid "County / State"
+msgstr "Provincia"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/contacts.php"
+#args ""
+msgid "Create New Contact"
+msgstr "Crear Nuevo Contacto"
+
+
+#file "/home/ired/zentrack_2/includes/leftTickets.php"
+#args ""
+msgid "Create New"
+msgstr "Crear Nuevo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportMenu.php"
+#args ""
+msgid "Create Reports"
+msgstr "Crear reportes"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_tasksBox.php"
+#args ""
+msgid "Create Sub-Project"
+msgstr "Crear Sub-Proyecto"
+
+
+#file "/home/ired/zentrack_2/www/newProject.php"
+#args ""
+msgid "Create a New Project"
+msgstr "Crear un Nuevo Proyecto"
+
+
+#file "/home/ired/zentrack_2/www/newTicket.php"
+#args ""
+msgid "Create a New Ticket"
+msgstr "Crear un Nuevo Ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/log.php"
+#args ""
+msgid "Create a log entry, or log hours worked"
+msgstr "Crear una entrada de log, o registrar horas trabajadas"
+
+
+#file "/home/ired/zentrack_2/www/newAgreement.php"
+#args ""
+msgid "Create a new Agreement"
+msgstr "Crear un Nuevo Acuerdo"
+
+
+#file "/home/ired/zentrack_2/www/newContact.php"
+#args ""
+msgid "Create a new Contact"
+msgstr "Crear un Nuevo Contacto"
+
+
+#file "/home/ired/zentrack_2/includes/templates/adminMenu.php"
+#args ""
+msgid "Create a new user account"
+msgstr "Crear una Nueva Cuenta de Usuario"
+
+
+#file "/home/ired/zentrack_2/includes/templates/editCustomsForm.php"
+#args ""
+msgid "Create new ticket window?"
+msgstr "Incluir en ventana de creaci&oacute;n de tickets?"
+
+
+#file "/home/ired/zentrack_2/includes/leftContacts.php"
+#args ""
+msgid "Create new"
+msgstr "Crear Nuevo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newProjectForm.php"
+#args ""
+msgid "Create"
+msgstr "Crear"
+
+
+#file "/home/ired/zentrack_2/www/actions/print.php"
+#args ""
+msgid "Created"
+msgstr "Creado"
+
+
+#file "/home/ired/zentrack_2/includes/leftBins.php"
+#args ""
+msgid "Current Bin"
+msgstr "Comunidad Actual"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchList.php"
+#args ""
+msgid "Current status of the ticket"
+msgstr "Estado actual del ticket"
+
+
+#file "/home/ired/zentrack_2/www/admin/access.php"
+#args "array($user_id)"
+msgid "Custom Access priviledges updated for user ?"
+msgstr "Privilegios de acceso actualizados para el usuario ?"
+
+
+#file "/home/ired/zentrack_2/includes/templates/customGroupDetailsForm.php"
+#args ""
+msgid "Custom Group Details"
+msgstr "Detalles del grupo personalizado"
+
+
+#file "/home/ired/zentrack_2/includes/templates/adminMenu.php"
+#args ""
+msgid "Custom defined fields for tickets."
+msgstr "Campos personalizados para tickets"
+
+
+#file "/home/ired/zentrack_2/includes/templates/editCustomsForm.php"
+#args ""
+msgid "Custom"
+msgstr "Personalizados"
+
+
+#file "/home/ired/zentrack_2/www/actions/print.php"
+#args ""
+msgid "DESCRIPTION"
+msgstr "DESCRIPCION"
+
+
+#file "/home/ired/zentrack_2/includes/templates/groupDetailsForm.php"
+#args ""
+msgid "Data Group Details"
+msgstr "Detalles del Grupo de Datos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorForm.php"
+#args ""
+msgid "Data Group"
+msgstr "Grupo de Datos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/groupForm.php"
+#args ""
+msgid "Data Groups"
+msgstr "Grupo de Datos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsOptionsMenu.php"
+#args ""
+msgid "Data Options"
+msgstr "Opciones de Datos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsDataMenu.php"
+#args ""
+msgid "Data Selection"
+msgstr "Selecci&oacute;n de Datos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/adminMenu.php"
+#args ""
+msgid "Data Types"
+msgstr "Tipos de Datos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/adminMenu.php"
+#args ""
+msgid "Data groups are a list created from a data type"
+msgstr "Los Grupos de Datos son listas creadas a partir de un tipo de datos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsDateMenu.php"
+#args ""
+msgid "Date Range"
+msgstr "Rango de Datos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchLogList.php"
+#args ""
+msgid "Date log was created"
+msgstr "Fecha de la entrada en el log"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchList.php"
+#args ""
+msgid "Date of ticket"
+msgstr "Fecha del ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchList.php"
+#args ""
+msgid "Date"
+msgstr "Fecha"
+
+
+#file "/home/ired/zentrack_2/includes/templates/agreement_box.php"
+#args ""
+msgid "Dates"
+msgstr "Fechas"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsDateMenu.php"
+#args ""
+msgid "Days"
+msgstr "D&iacute;as"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newProjectForm.php"
+#args ""
+msgid "Deadline"
+msgstr "Fecha l&iacute;mite"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userAdd.php"
+#args ""
+msgid "Default Access Level"
+msgstr "Nivel de acceso por omisi&oacute;n"
+
+
+#file "/home/ired/zentrack_2/includes/templates/editCustomsForm.php"
+#args ""
+msgid "Default"
+msgstr "Contenido inicial"
+
+
+#file "/home/ired/zentrack_2/www/admin/deleteBehavior.php"
+#args ""
+msgid "Delete Behavior"
+msgstr "Eliminar Comportamiento"
+
+
+#file "/home/ired/zentrack_2/www/admin/deleteGroup.php"
+#args ""
+msgid "Delete Data Group"
+msgstr "Eliminar Grupo de Datos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportMenu.php"
+#args ""
+msgid "Delete Reports"
+msgstr "Eliminar Reportes"
+
+
+#file "/home/ired/zentrack_2/www/admin/deleteUser.php"
+#args ""
+msgid "Delete User"
+msgstr "Eliminar Usuario"
+
+
+#file "/home/ired/zentrack_2/includes/templates/customGroupDetailsForm.php"
+#args ""
+msgid "Delete"
+msgstr "Eliminar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/contact_list.php"
+#args ""
+msgid "Department"
+msgstr "Departamento"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/upload.php"
+#args ""
+msgid "Description of Attachment"
+msgstr "Descripci&oacute;n del Archivo Adjunto"
+
+
+#file "/home/ired/zentrack_2/includes/templates/agreement_box.php"
+#args ""
+msgid "Description"
+msgstr "Descripci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/includes/templates/editCustomsForm.php"
+#args ""
+msgid "Details"
+msgstr "Detalles"
+
+
+#file "/home/ired/zentrack_2/includes/headerInc.php"
+#args ""
+msgid "Details"
+msgtr "Detalles"
+
+
+#file "/home/ired/zentrack_2/includes/headerInc.php"
+#args ""
+msgid "Log"
+msgtr "Log"
+
+
+#file "/home/ired/zentrack_2/includes/headerInc.php"
+#args ""
+msgid "Notify"
+msgtr "Notificar"
+
+
+#file "/home/ired/zentrack_2/includes/headerInc.php"
+#args ""
+msgid "Contacts"
+msgtr "Contactos"
+
+
+#file "/home/ired/zentrack_2/includes/headerInc.php"
+#args ""
+msgid "Related"
+msgtr "Relaciones"
+
+
+#file "/home/ired/zentrack_2/includes/headerInc.php"
+#args ""
+msgid "Attachments"
+msgtr "Adjuntos"
+
+
+#file "/home/ired/zentrack_2/includes/headerInc.php"
+#args ""
+msgid "System"
+msgstr "Consola"
+
+
+#file "/home/ired/zentrack_2/includes/templates/referencedGroupForm.php"
+#args ""
+msgid "Disable all varfields and behaviors that are currently using this data group."
+msgstr "Deshabilitar todos los campos personalizados y comportamientos que actualmente utilizan este grupo de datos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userSearchForm.php"
+#args ""
+msgid "Disabled"
+msgstr "Deshabilitado"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsOptionsMenu.php"
+#args ""
+msgid "Display Values"
+msgstr "Mostrar Valores"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_contactsBox.php"
+#args ""
+msgid "Drop Contacts"
+msgstr "Eliminar Contactos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newAgreementForm.php"
+#args ""
+msgid "Drop Items"
+msgstr "Eliminar Items"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_notifyBox.php"
+#args ""
+msgid "Drop Recipients"
+msgstr "Eliminar Destinatarios"
+
+
+#file "/home/ired/zentrack_2/www/reports/drop.php"
+#args ""
+msgid "Drop Template"
+msgstr "Eliminar Modelo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/contact_list.php"
+#args ""
+msgid "E-mail"
+msgstr "E-mail"
+
+
+#file "/home/ired/zentrack_2/www/actions/print.php"
+#args ""
+msgid "ETC"
+msgstr "ETC"
+
+
+#file "/home/ired/zentrack_2/www/admin/editBehaviorDetails.php"
+#args ""
+msgid "Edit Behavior Details"
+msgstr "Editar Detalles del Comportamiento"
+
+
+#file "/home/ired/zentrack_2/www/admin/editBehaviorSubmit.php"
+#args ""
+msgid "Edit Behavior Submit"
+msgstr "Guardado de Cambios en el Comportamiento"
+
+
+#file "/home/ired/zentrack_2/includes/leftAdmin.php"
+#args ""
+msgid "Edit Behaviors"
+msgstr "Editar Comportamientos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/adminMenu.php"
+#args ""
+msgid "Edit Bins"
+msgstr "Editar Comunidades"
+
+
+#file "/home/ired/zentrack_2/www/admin/editGroupDetails.php"
+#args ""
+msgid "Edit Data Group"
+msgstr "Editar Grupos de Datos"
+
+
+#file "/home/ired/zentrack_2/includes/leftAdmin.php"
+#args ""
+msgid "Edit Data Groups"
+msgstr "Editar Grupos de Datos"
+
+
+#file "/home/ired/zentrack_2/www/admin/editGroupSubmit.php"
+#args ""
+msgid "Edit Group Submit"
+msgstr "Guardado de Cambios en el Grupo de Datos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/adminMenu.php"
+#args ""
+msgid "Edit Priorities"
+msgstr "Editar Prioridades"
+
+
+#file "/home/ired/zentrack_2/includes/templates/configSettingsForm.php"
+#args ""
+msgid "Edit Settings"
+msgstr "Editar Configuraciones"
+
+
+#file "/home/ired/zentrack_2/includes/templates/adminMenu.php"
+#args ""
+msgid "Edit Systems"
+msgstr "Editar Sistemas"
+
+
+#file "/home/ired/zentrack_2/includes/templates/adminMenu.php"
+#args ""
+msgid "Edit Tasks"
+msgstr "Editar Tareas"
+
+
+#file "/home/ired/zentrack_2/www/actions/edit.php"
+#args ""
+msgid "Edit Ticket"
+msgstr "Editar Ticket"
+
+
+#file "/home/ired/zentrack_2/includes/leftAdmin.php"
+#args ""
+msgid "Edit Tickets"
+msgstr "Editar Tickets"
+
+
+#file "/home/ired/zentrack_2/includes/templates/adminMenu.php"
+#args ""
+msgid "Edit Types"
+msgstr "Editar Tipos"
+
+
+#file "/home/ired/zentrack_2/www/admin/editUserSubmit.php"
+#args ""
+msgid "Edit User Submit"
+msgstr "Guardado de Cambios en Usuario"
+
+
+#file "/home/ired/zentrack_2/includes/leftAdmin.php"
+#args ""
+msgid "Edit Users"
+msgstr "Editar Usuarios"
+
+
+#file "/home/ired/zentrack_2/includes/templates/adminMenu.php"
+#args ""
+msgid "Edit Users/Access"
+msgstr "Editar Usuarios/Accesos"
+
+
+#file "/home/ired/zentrack_2/includes/leftAdmin.php"
+#args ""
+msgid "Edit Variable Fields"
+msgstr "Editar Campos Personalizados"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorMenu.php"
+#args ""
+msgid "Edit existing behaviors or create a new one."
+msgstr "Editar comportamientos existentes o crear uno nuevo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/groupForm.php"
+#args ""
+msgid "Edit existing groups or create a new group."
+msgstr "Editar grupos de datos existentes o crear uno nuevo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/configForm.php"
+#args "array(ucfirst($type))"
+msgid "Edit the Active ?s"
+msgstr "Editar la lista de items de ?"
+
+
+#file "/home/ired/zentrack_2/includes/templates/editCustomsForm.php"
+#args ""
+msgid "Edit the Available Custom Fields"
+msgstr "Editar los Campos Personalizados Disponibles"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorMenu.php"
+#args ""
+msgid "Edit the Behaviors"
+msgstr "Editar los Comportamientos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/adminMenu.php"
+#args ""
+msgid "Edit the zenTrack settings.  Consult the documentation before using this feature."
+msgstr "Editar la configuraci&oacute;n de zenTrack. Consulte la documentaci&oacute;n antes de utilizar este m&oacute;dulo."
+
+
+#file "/home/ired/zentrack_2/includes/templates/adminMenu.php"
+#args ""
+msgid "Edit ticket information"
+msgstr "Editar el contenido de un ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/adminMenu.php"
+#args ""
+msgid "Edit user accounts and permissions."
+msgstr "Editar cuentas y permisos de usuarios"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_actionBar.php"
+#args ""
+msgid "Edit"
+msgstr "Editar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_titleBox.php"
+#args ""
+msgid "Elapsed"
+msgstr "Tiempo transcurrido"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/email.php"
+#args ""
+msgid "Email Ticket"
+msgstr "Enviar Ticket por E-mail"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/email.php"
+#args ""
+msgid "Email"
+msgstr "E-mail"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorMenu.php"
+#args ""
+msgid "Enabled"
+msgstr "Habilitado"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newProjectForm.php"
+#args ""
+msgid "Enter Project Information"
+msgstr "Ingrese Informaci&oacute;n del Proyecto"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/relate.php"
+#args ""
+msgid "Enter Ticket IDs"
+msgstr "Ingrese los N&uacute;meros de Ticket"
+
+
+#file "/home/ired/zentrack_2/includes/nav.php"
+#args ""
+msgid "Enter a ticket ID and press enter"
+msgstr "Ingrese el n&uacute;mero de ticket y presione enter"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/close.php"
+#args ""
+msgid "Enter any hours worked not previously accounted for"
+msgstr "Ingrese las horas trabajadas pero a&uacute;n no registradas"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/test.php"
+#args ""
+msgid "Enter hours worked"
+msgstr "Ingrese las horas trabajadas"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newTicketForm.php"
+#args ""
+msgid "Enter multiple ids, separated by a comma"
+msgstr "Ingrese los n&uacute;meros de ticket, separados por coma"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/notify.php"
+#args ""
+msgid "Enter registered users"
+msgstr "Ingrese usuarios registrados para notificar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/log.php"
+#args ""
+msgid "Enter the hours worked for this entry"
+msgstr "Ingrese las horas trabajadas para esta entrada del log"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorDetailForm.php"
+#args ""
+msgid "Enter the names of fields and the corresponding column numbers in the data file here:"
+msgstr "Ingrese los nombres de los campos y la posici&oacute;n de su columna en el archivo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/estimate.php"
+#args ""
+msgid "Enter the number of hours (can contain up to 2 decimal places)"
+msgstr "Ingrese la cantidad de horas (puede incluir hasta 2 posiciones decimales)"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/relate.php"
+#args ""
+msgid "Enter ticket ids, separated by commas"
+msgstr "Ingrese los n&uacute;meros de ticket, separados por coma"
+
+
+#file "/home/ired/zentrack_2/includes/templates/groupForm.php"
+#args ""
+msgid "Entries"
+msgstr "Elementos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userSearchForm.php"
+#args ""
+msgid "Equals"
+msgstr "Es igual a"
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "Equals"
+msgtr "Es igual a"
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "Not equal"
+msgtr "No es igual a"
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "Contains"
+msgtr "Contiene"
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "Does not contain"
+msgtr "No contiene"
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "Starts with"
+msgtr "Comienza con"
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "Ends with"
+msgtr "Termina con"
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "Greater than"
+msgtr "Es mayor a"
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "Less than"
+msgtr "Es menor a"
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "Greater than or equal"
+msgtr "Es mayor o igual a"
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "Less than or equal"
+msgtr "Es menor o igual a"
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "Evaluate"
+msgstr "Evaluar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/listTickets_workFormat.php"
+#args ""
+msgid "Est Hrs"
+msgstr "Hrs Est"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/estimate.php"
+#args ""
+msgid "Estimate Ticket Hours"
+msgstr "Horas Estimadas del Ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newTicketForm.php"
+#args ""
+msgid "Estimated Hours to Complete"
+msgstr "Horas Estimadas para Completar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_detailsBox.php"
+#args ""
+msgid "Estimated Hours"
+msgstr "Horas Estimadas"
+
+
+#file "/home/ired/zentrack_2/includes/templates/listTickets_workFormat.php"
+#args ""
+msgid "Estimated time to complete"
+msgstr "Tiempo estimado para completar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/groupAdd.php"
+#args ""
+msgid "Eval Script"
+msgstr "Script de Evaluaci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/includes/templates/groupAdd.php"
+#args ""
+msgid "Eval Type"
+msgstr "Tipo de Evaluaci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/includes/templates/agreementView.php"
+#args ""
+msgid "Expiration Date"
+msgstr "Fecha de Expiraci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/includes/templates/contact_titleBox.php"
+#args ""
+msgid "Fax no"
+msgstr "Nro de Fax"
+
+
+#file "/home/ired/zentrack_2/includes/templates/editCustomsForm.php"
+#args ""
+msgid "Field Label"
+msgstr "Etiqueta del Campo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorMenu.php"
+#args ""
+msgid "Field Name"
+msgstr "Nombre del Campo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorMenu.php"
+#args ""
+msgid "Field State"
+msgstr "Estado del Campo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorForm.php"
+#args ""
+msgid "Field is enabled"
+msgstr "El campo queda habilitado"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorForm.php"
+#args ""
+msgid "Field to change"
+msgstr "Campo a modificar"
+
+
+#file "/home/ired/zentrack_2/includes/editCustomSubmit.php"
+#args ""
+msgid "Fields updated successfully"
+msgstr "Campos actualizados exitosamente"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userAdd.php"
+#args ""
+msgid "First Name"
+msgstr "Nombre"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newContacteForm.php"
+#args ""
+msgid "First name"
+msgstr "Nombre"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newAgreementForm.php"
+#args ""
+msgid "Global"
+msgstr "Global"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userSearchForm.php"
+#args ""
+msgid "Greater Than"
+msgstr "Es mayor a"
+
+
+#file "/home/ired/zentrack_2/www/admin/addGroupSubmit.php"
+#args "array($NewGroupName)"
+msgid "Group '?' was updated successfully."
+msgstr "El Grupo '?' fue actualizado con &eacute;xito"
+
+
+#file "/home/ired/zentrack_2/includes/templates/groupAdd.php"
+#args ""
+msgid "Group Information"
+msgstr "Informaci&oacute;n del Grupo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/groupAdd.php"
+#args ""
+msgid "Group Name"
+msgstr "Nombre del Grupo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorMenu.php"
+#args ""
+msgid "Group to apply"
+msgstr "Grupo a aplicar"
+
+
+#file "/home/ired/zentrack_2/www/help/help_header.php"
+#args ""
+msgid "Help Menu"
+msgstr "Men&uacute; de Ayuda"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userAdd.php"
+#args ""
+msgid "Home Bin"
+msgstr "Comunidad Inicial"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userSearchList.php"
+#args ""
+msgid "Home"
+msgstr "Com.Inic."
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_detailsBox.php"
+#args ""
+msgid "Hours Worked"
+msgstr "Horas Trabajadas"
+
+
+#file "/home/ired/zentrack_2/www/actions/log.php"
+#args ""
+msgid "Hours must be entered if the activity is 'LABOR'"
+msgstr "Es obligatorio ingresar la cantidad de horas cuando la actividad es 'LABOR'"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsDateMenu.php"
+#args ""
+msgid "Hours"
+msgstr "Horas"
+
+
+#file "/home/ired/zentrack_2/includes/templates/listTickets_workFormat.php"
+#args "array($page_type)"
+msgid "ID of the ?"
+msgstr "ID del ?"
+
+
+#file "/home/ired/zentrack_2/includes/templates/agreementView.php"
+#args ""
+msgid "ID of the agreement"
+msgstr "ID del acuerdo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/listContacts.php"
+#args ""
+msgid "ID of the contact"
+msgstr "ID del contacto"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchList.php"
+#args ""
+msgid "ID of the ticket"
+msgstr "ID del ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/agreementView.php"
+#args ""
+msgid "ID"
+msgstr "ID"
+
+
+#file "/home/ired/zentrack_2/includes/templates/optionsMenu.php"
+#args "array($link)"
+msgid "If this is your first time logging in, please read the ?!"
+msgstr "Si es la primera vez que ingresa, por favor lea el ?!"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsOptionsMenu.php"
+#args ""
+msgid "Image Type"
+msgstr "Tipo de Im&aacute;gen"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsOptionsMenu.php"
+#args ""
+msgid "Image"
+msgstr "Im&aacute;gen"
+
+
+#file "/home/ired/zentrack_2/includes/templates/listTickets_workFormat.php"
+#args "array($page_type)"
+msgid "Importance of the ?"
+msgstr "Importancia del ?"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchForm.php"
+#args ""
+msgid "In any of these"
+msgstr "En cualquiera de estos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/agreement_box.php"
+#args ""
+msgid "Info"
+msgstr "Info"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newContacteForm.php"
+#args ""
+msgid "Initials"
+msgstr "Iniciales"
+
+
+#file "/home/ired/zentrack_2/www/ticket.php"
+#args "array(tr($page_type))"
+msgid "Invalid ? id requested"
+msgstr "El id ? solicitado es inv&aacute;lido"
+
+
+#file "/home/ired/zentrack_2/includes/templates/editCustomsForm.php"
+#args ""
+msgid "Is this field required?"
+msgstr "Es &eacute;ste un campo obligatorio?"
+
+
+#file "/home/ired/zentrack_2/includes/templates/groupDetailsForm.php"
+#args ""
+msgid "Item"
+msgstr "Item"
+
+
+#file "/home/ired/zentrack_2/includes/templates/agreement_box.php"
+#args ""
+msgid "Items"
+msgstr "Items"
+
+
+#file "/home/ired/zentrack_2/includes/templates/contact_list.php"
+#args ""
+msgid "Jobtitle"
+msgstr "Cargo"
+
+
+#file "/home/ired/zentrack_2/www/actions/print.php"
+#args ""
+msgid "LOG"
+msgstr "LOG"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userAdd.php"
+#args ""
+msgid "Last Name"
+msgstr "Apellido"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newContacteForm.php"
+#args ""
+msgid "Last name"
+msgstr "Apellido"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userSearchForm.php"
+#args ""
+msgid "Less Than"
+msgstr "Es menor a"
+
+
+#file "/home/ired/zentrack_2/includes/templates/configForm.php"
+#args ""
+msgid "Less"
+msgstr "Restar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/accessForm.php"
+#args ""
+msgid "Level"
+msgstr "Nivel"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsOptionsMenu.php"
+#args ""
+msgid "Line Chart"
+msgstr "Gr&aacute;fico de L&iacute;neas"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userSearchForm.php"
+#args ""
+msgid "List All Users"
+msgstr "Listar Todos los Usuarios"
+
+
+#file "/home/ired/zentrack_2/includes/templates/editCustomsForm.php"
+#args ""
+msgid "Lists"
+msgstr "Listados"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newContactForm.php"
+#args ""
+msgid "Location"
+msgstr "Localidad"
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "Log History")
+msgstr "Historia de Log"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_attachmentsBox.php"
+#args ""
+msgid "Log ID"
+msgstr "ID de Log"
+
+
+#file "/home/ired/zentrack_2/includes/leftMain.php"
+#args ""
+msgid "Log Off"
+msgstr "Cerrar Sesi&oacute;n"
+
+
+#file "/home/ired/zentrack_2/includes/leftMain.php"
+#args ""
+msgid "Log On"
+msgstr "Inicio de Sesi&oacute;n"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/log.php"
+#args ""
+msgid "Log"
+msgstr "Log"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userAdd.php"
+#args ""
+msgid "Login Name"
+msgstr "Nombre de Sesi&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/help/english/index.php"
+#args ""
+msgid "Main Menu"
+msgstr "Men&uacute; Principal"
+
+
+#file "/home/ired/zentrack_2/www/reports/save.php"
+#args ""
+msgid "Make Visible To"
+msgstr "Hacer Visible Para"
+
+
+#file "/home/ired/zentrack_2/www/reports/projectSearchbox.php"
+#args ""
+msgid "Make search of projects that returns comma delimited list"
+msgstr "Hacer que la b&uacute;squeda de proyectos devuelva una lista delimitada por comas"
+
+
+#file "/home/ired/zentrack_2/www/reports/ticketSearchbox.php"
+#args ""
+msgid "Make ticket search that returns comma delimited list"
+msgstr "Hacer que la b&uacute;squeda de tickets devuelva una lista delimitada por comas"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportMenu.php"
+#args ""
+msgid "Manage Reports"
+msgstr "Administrar Reportes"
+
+
+#file "/home/ired/zentrack_2/includes/leftHelp.php"
+#args ""
+msgid "Manual"
+msgstr "Manual"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newProjectForm.php"
+#args ""
+msgid "Master Project"
+msgstr "Proyecto Maestro"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorForm.php"
+#args ""
+msgid "Match Type"
+msgstr "Tipo de Coincidencia"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchLogList.php"
+#args "array($first,$last,$zen->total_records)"
+msgid "Matches ?-? of ?"
+msgstr "Coincidencias ?-? de ?"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchLogForm.php"
+#args ""
+msgid "Maximum Age"
+msgstr "Antig&#0252;edad M&aacute;xima"
+
+
+#file "/home/ired/zentrack_2/includes/templates/contact_list.php"
+#args ""
+msgid "Mobile no"
+msgstr "Celular"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newContacteForm.php"
+#args ""
+msgid "Mobile"
+msgstr "Celular"
+
+
+#file "/home/ired/zentrack_2/www/reports/save.php"
+#args ""
+msgid "Modify Existing"
+msgstr "Modificar Versi&oacute;n Existente"
+
+
+#file "/home/ired/zentrack_2/www/reports/view.php"
+#args ""
+msgid "Modify Report"
+msgstr "Modificar Reporte"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportMenu.php"
+#args ""
+msgid "Modify Reports"
+msgstr "Modificar Reportes"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchContact2List.php"
+#args ""
+msgid "Modify Search"
+msgstr "Modificar B&uacute;squeda"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportMenu.php"
+#args ""
+msgid "Modify"
+msgstr "Modificar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsDateMenu.php"
+#args ""
+msgid "Months"
+msgstr "Meses"
+
+
+#file "/home/ired/zentrack_2/includes/templates/accessForm.php"
+#args ""
+msgid "More"
+msgstr "M&aacute;s"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsDateMenu.php"
+#args ""
+msgid "Most Current"
+msgstr "M&aacute;s Actuales"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/move.php"
+#args ""
+msgid "Move Ticket"
+msgstr "Mover Ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/referencedGroupForm.php"
+#args ""
+msgid "Move all of it's references to"
+msgstr "Mover todas sus referencias a"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/move.php"
+#args ""
+msgid "Move"
+msgstr "Mover"
+
+
+#file "/home/ired/zentrack_2/includes/templates/listTickets_workFormat.php"
+#args "array($page_type)"
+msgid "Name of the ?"
+msgstr "Nombre del ?"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/notify.php"
+#args ""
+msgid "Name"
+msgstr "Nombre"
+
+
+#file "/home/ired/zentrack_2/www/newContact.php"
+#args ""
+msgid "New Company"
+msgstr "Nueva Compa&ntilde;&iacute;a"
+
+
+#file "/home/ired/zentrack_2/includes/templates/homebinForm.php"
+#args ""
+msgid "New Default Bin"
+msgstr "Nueva Comunidad Inicial"
+
+
+#file "/home/ired/zentrack_2/www/admin/addGroupSubmit.php"
+#args ""
+msgid "New Group Submit"
+msgstr "Guardado de Nuevo Grupo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/languageForm.php"
+#args ""
+msgid "New Language"
+msgstr "Nuevo Idioma"
+
+
+#file "/home/ired/zentrack_2/includes/templates/pwcForm.php"
+#args ""
+msgid "New Password"
+msgstr "Nueva Contrase&ntilde;a"
+
+
+#file "/home/ired/zentrack_2/www/newContact.php"
+#args ""
+msgid "New Person"
+msgstr "Nueva Persona"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportMenu.php"
+#args ""
+msgid "New Report"
+msgstr "Nuevo Reporte"
+
+
+#file "/home/ired/zentrack_2/includes/leftSearch.php"
+#args ""
+msgid "New Search"
+msgstr "Nueva B&uacute;squeda"
+
+
+#file "/home/ired/zentrack_2/www/reports/save.php"
+#args ""
+msgid "New Template"
+msgstr "Nuevo Modelo"
+
+
+#file "/home/ired/zentrack_2/includes/leftAdmin.php"
+#args ""
+msgid "New User"
+msgstr "Nuevo Usuario"
+
+
+#file "/home/ired/zentrack_2/includes/templates/editCustomsForm.php"
+#args ""
+msgid "New"
+msgstr "Nuevo"
+
+
+#file "/home/ired/zentrack_2/www/actions/print.php"
+#args ""
+msgid "No Log Entries"
+msgstr "No hay Entradas de Log"
+
+
+#file "/home/ired/zentrack_2/www/actions/print.php"
+#args ""
+msgid "No Related Tickets"
+msgstr "No hay Tickets Relacionados"
+
+
+#file "/home/ired/zentrack_2/www/actions/print.php"
+#args ""
+msgid "No Tasks Assigned to this Project"
+msgstr "No hay Tareas Asignadas a este Proyecto"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_attachmentsBox.php"
+#args "array($page_type)"
+msgid "No attachments exist for this ?"
+msgstr "No existen adjuntos para este ?"
+
+
+#file "/home/ired/zentrack_2/www/actions/log.php"
+#args ""
+msgid "No comments were entered."
+msgstr "No se ingresaron comentarios"
+
+
+#file "/home/ired/zentrack_2/includes/templates/contact_!19Box.php"
+#args ""
+msgid "No contacts in this section."
+msgstr "No hay contactos en esta secci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/actions/dropFromContacts.php"
+#args ""
+msgid "No contacts were selected to drop"
+msgstr "No se seleccionaron contactos para eliminar"
+
+
+#file "/home/ired/zentrack_2/www/actions/upload.php"
+#args ""
+msgid "No file was uploaded."
+msgstr "No se transfiri&oacute; ning&uacute;n archivo"
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "No logs found"
+msgstr "No se encontraron logs"
+
+
+#file "/home/ired/zentrack_2/www/actions/dropFromNotify.php"
+#args ""
+msgid "No recipients were selected to drop"
+msgstr "No se seleccionaron destinatarios para eliminar"
+
+
+#file "/home/ired/zentrack_2/www/admin/config.php"
+#args ""
+msgid "No settings were recieved"
+msgstr "No se recibi&oacute; ninguna configuraci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_tasksBox.php"
+#args ""
+msgid "No tickets have been added to this Project."
+msgstr "No se agregaron tickets a este Proyecto"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_relatedBox.php"
+#args ""
+msgid "No tickets have been associated with this ticket."
+msgstr "Este ticket no tiene otros tickets asociados"
+
+
+#file "/home/ired/zentrack_2/www/admin/resetPassword.php"
+#args ""
+msgid "No user id was recieved"
+msgstr "No se recibi&oacute; ning&uacute;n ID de usuario"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchContactResults.php"
+#args ""
+msgid "No valid fields were provided to conduct a search"
+msgstr "No se han suministrado los datos necesarios para realizar una b&uacute;squeda"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorMenu.php"
+#args ""
+msgid "No"
+msgstr "No"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorMenu.php"
+#args ""
+msgid "Normal"
+msgstr "Normal"
+
+
+#file "/home/ired/zentrack_2/www/actions/print.php"
+#args ""
+msgid "Not Required"
+msgstr "No Requerido"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/assign.php"
+#args ""
+msgid "Note"
+msgstr "Nota"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newContacteForm.php"
+#args ""
+msgid "Notes"
+msgstr "Notas"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_notifyBox.php"
+#args ""
+msgid "Notify List"
+msgstr "Lista de Notificaciones"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_box.php"
+#args ""
+msgid "Notify"
+msgstr "Notificaciones"
+
+
+#file "/home/ired/zentrack_2/includes/templates/agreementView.php"
+#args ""
+msgid "Nr"
+msgstr "Nr"
+
+
+#file "/home/ired/zentrack_2/includes/templates/contact_list.php"
+#args ""
+msgid "Numbers"
+msgstr "N&uacute;meros"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/email.php"
+#args ""
+msgid "OR manually enter email addresses, seperated by commas"
+msgstr "O -exclusivo- ingrese manualmente direcciones de correo, separadas por coma"
+
+
+#file "/home/ired/zentrack_2/includes/templates/configSettingsForm.php"
+#args ""
+msgid "Off"
+msgstr "Desactivado"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newContactForm.php"
+#args ""
+msgid "Office"
+msgstr "Oficina"
+
+
+#file "/home/ired/zentrack_2/includes/templates/configSettingsForm.php"
+#args ""
+msgid "On"
+msgstr "Activado"
+
+
+#file "/home/ired/zentrack_2/www/admin/resetPassword.php"
+#args ""
+msgid "Only the root administrator can change the root administrator's passphrase"
+msgstr "Solamente el Administrador Principal puede cambiar su contrase&ntilde;a"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/reopen.php"
+#args ""
+msgid "Open ticket closed in error"
+msgstr "Abrir tickets que se cerraron por error"
+
+
+#file "/home/ired/zentrack_2/includes/templates/listTickets.php"
+#args ""
+msgid "Opened"
+msgstr "Abierto"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorDetailForm.php"
+#args ""
+msgid "Operator"
+msgstr "Operador"
+
+
+#file "/home/ired/zentrack_2/www/reports/save.php"
+#args ""
+msgid "Optional.  Use control or shift to select multiples"
+msgstr "Opcional. Utilice la tecla Ctrl o May&uacute;sc para seleccionar m&aacute;s de uno"
+
+
+#file "/home/ired/zentrack_2/www/reports/save.php"
+#args ""
+msgid "Optional. You do not need to select yourself"
+msgstr "Opcional. No es necesario que se marque a Ud. mismo"
+
+
+#file "/home/ired/zentrack_2/includes/leftMain.php"
+#args ""
+msgid "Options"
+msgstr "Opciones"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/notify.php"
+#args ""
+msgid "Or Person:"
+msgstr "O Personas:"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/notify.php"
+#args ""
+msgid "Or add a contact"
+msgstr "O agregue un contacto"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/notify.php"
+#args ""
+msgid "Or add an unregistered user"
+msgstr "O agregue un usuario no registrado"
+
+
+#file "/home/ired/zentrack_2/includes/templates/configForm.php"
+#args ""
+msgid "Order"
+msgstr "Orden"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newProjectForm.php"
+#args ""
+msgid "Other Fields"
+msgstr "Otros Campos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/listTickets.php"
+#args ""
+msgid "Owner"
+msgstr "Responsable"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newContactForm.php"
+#args ""
+msgid "P.O. Box"
+msgstr "Casilla Postal"
+
+
+#file "/home/ired/zentrack_2/www/admin/resetPassword.php"
+#args "array($user_id)"
+msgid "Password reset to the default [user's last name] for user ?"
+msgstr "Se ha reiniciado al apellido la contrase&ntilde;a del usuario ?"
+
+
+#file "/home/ired/zentrack_2/www/misc/pwc.php"
+#args ""
+msgid "Password successfully changed"
+msgstr "La contrase&ntilde;a ha sido cambiada exitosamente"
+
+
+#file "/home/ired/zentrack_2/includes/templates/listTickets_workFormat.php"
+#args ""
+msgid "Percent completed"
+msgstr "Porcentaje completado"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorMenu.php"
+#args "array($v['behavior_id'])"
+msgid "Permanently remove behavior ??"
+msgstr "Eliminar permanentemente el comportamiento ??"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userSearchList.php"
+#args "array($u["user_id"])"
+msgid "Permanently remove user ??"
+msgstr "Eliminar permanentemente el usuario ??"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchList.php"
+#args ""
+msgid "Person ticket is assigned to"
+msgstr "Persona a la que se asigna el ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/contacts.php"
+#args ""
+msgid "Person"
+msgstr "Persona"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsTypeMenu.php"
+#args ""
+msgid "Pick a type"
+msgstr "Seleccione un tipo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsOptionsMenu.php"
+#args ""
+msgid "Pie Chart"
+msgstr "Gr&aacute;fico de torta"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newTicketForm.php"
+#args ""
+msgid "Please correct the following errors:"
+msgstr "Por favor corrija los siguientes errores:"
+
+
+#file "/home/ired/zentrack_2/includes/templates/editTicketForm.php"
+#args ""
+msgid "Please enter a ticket ID"
+msgstr "Por favor ingrese el ID del ticket"
+
+
+#file "/home/ired/zentrack_2/www/misc/pwc.php"
+#args ""
+msgid "Please fill in both of the fields"
+msgstr "Por favor complete ambos campos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/pwcForm.php"
+#args ""
+msgid "Please keep track of your new passphrase."
+msgstr "Por favor no olvide su nueva contrase&ntilde;a"
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "Please log in to view the entire ticket."
+msgstr "Por favor inicie su sesi&oacute;n para ver el ticket completo."
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorMenu.php"
+#args "array($str)"
+msgid "Please refer to the ? before using this feature"
+msgstr "Por favor consulte la ? antes de usar esta caracter&iacute;stica"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorDetailForm.php"
+#args "array($lnk)"
+msgid "Please refer to the ? for more information."
+msgstr "Por favor consulte la ? para m&aacute;s informaci&oacute;n."
+
+
+#file "/home/ired/zentrack_2/includes/templates/newContactForm.php"
+#args ""
+msgid "Postal Code(Zip)"
+msgstr "C&oacute;digo Postal"
+
+
+#file "/home/ired/zentrack_2/includes/templates/configSettingsForm.php"
+#args ""
+msgid "Press 'Reset' to restore the original values."
+msgstr "Presione 'Restaurar' para recuperar los valores originales."
+
+
+#file "/home/ired/zentrack_2/includes/templates/configSettingsForm.php"
+#args ""
+msgid "Press 'Save' when you are sure that the values are correct."
+msgstr "Presione 'Guardar' cuando est&eacute; seguro de que los valores son correctos."
+
+
+#file "/home/ired/zentrack_2/includes/templates/accessForm.php"
+#args ""
+msgid "Press LESS to remove blank fields"
+msgstr "Presione RESTAR para eliminar los campos en blanco"
+
+
+#file "/home/ired/zentrack_2/includes/templates/configForm.php"
+#args ""
+msgid "Press LESS to remove blank rows"
+msgstr "Presione RESTAR para eliminar los registros en blanco"
+
+
+#file "/home/ired/zentrack_2/includes/templates/accessForm.php"
+#args ""
+msgid "Press MORE to add more custom fields"
+msgstr "Presione AGREGAR para a&ntilde;adir m&aacute;s campos personalizados"
+
+
+#file "/home/ired/zentrack_2/includes/templates/configForm.php"
+#args ""
+msgid "Press MORE to create new rows"
+msgstr "Presione AGREGAR para crear nuevos registros"
+
+
+#file "/home/ired/zentrack_2/includes/templates/configForm.php"
+#args ""
+msgid "Press Reset to return to original values"
+msgstr "Presione Restaurar para recuperar los valores originales"
+
+
+#file "/home/ired/zentrack_2/includes/templates/accessForm.php"
+#args ""
+msgid "Press Reset to return to users existing values"
+msgstr "Presione Restaurar para volver a los valores pre-existentes"
+
+
+#file "/home/ired/zentrack_2/includes/templates/configForm.php"
+#args ""
+msgid "Press Save to save changes"
+msgstr "Presione Guardar para almacenar los cambios"
+
+
+#file "/home/ired/zentrack_2/includes/templates/accessForm.php"
+#args ""
+msgid "Press Update to save changes"
+msgstr "Presione Actualizar para almacenar los cambios"
+
+
+#file "/home/ired/zentrack_2/includes/templates/listTickets.php"
+#args ""
+msgid "Pri"
+msgstr "Pri"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_actionBar.php"
+#args ""
+msgid "Print"
+msgstr "Imprimir"
+
+
+#file "/home/ired/zentrack_2/includes/templates/adminMenu.php"
+#args ""
+msgid "Priorities represent the importance of an issue."
+msgstr "Las Prioridades representan la importancia de una solicitud"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newProjectForm.php"
+#args ""
+msgid "Priority"
+msgstr "Prioridad"
+
+
+#file "/home/ired/zentrack_2/www/admin/addUserSubmit.php"
+#args ""
+msgid "Process completed successfully.  Account not added, because this is a demo site"
+msgstr "Proceso finalizado satisfactoriamente. La cuenta no fue agregada porque &eacute;ste es un sitio de demostraci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/admin/bins.php"
+#args ""
+msgid "Process completed successfully.  Bins were not updated since this is a demo site."
+msgstr "Proceso finalizado satisfactoriamente. Las Comunidades no fueron actualizadas porque &eacute;ste es un sitio de demostraci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/admin/editCustom.php"
+#args ""
+msgid "Process completed successfully.  Changes were not updated since this is a demo site."
+msgstr "Proceso finalizado satisfactoriamente. Los cambios no fueron realizados porque &eacute;ste es un sitio de demostraci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/admin/resetPassword.php"
+#args ""
+msgid "Process completed successfully.  No changes were made because this is a demo site"
+msgstr "Proceso finalizado satisfactoriamente. Los cambios no fueron realizados porque &eacute;ste es un sitio de demostraci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/admin/config.php"
+#args ""
+msgid "Process completed successfully.  No changes were made, because this is a demo site."
+msgstr "Proceso finalizado satisfactoriamente. Los cambios no fueron realizados porque &eacute;ste es un sitio de demostraci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/admin/priorities.php"
+#args ""
+msgid "Process completed successfully.  Priorities were not updated since this is a demo site."
+msgstr "Proceso finalizado satisfactoriamente. Las Prioridades no fueron actualizadas porque &eacute;ste es un sitio de demostraci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/admin/systems.php"
+#args ""
+msgid "Process completed successfully.  Systems were not updated since this is a demo site."
+msgstr "Proceso finalizado satisfactoriamente. Los Sistemas no fueron actualizados porque &eacute;ste es un sitio de demostraci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/admin/tasks.php"
+#args ""
+msgid "Process completed successfully.  Tasks were not updated since this is a demo site."
+msgstr "Proceso finalizado satisfactoriamente. Las Tareas no fueron actualizadas porque &eacute;ste es un sitio de demostraci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/admin/types.php"
+#args ""
+msgid "Process completed successfully.  Types were not updated since this is a demo site."
+msgstr "Proceso finalizado satisfactoriamente. Los Tipos no fueron actualizados porque &eacute;ste es un sitio de demostraci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/admin/editBehaviorDetails.php"
+#args ""
+msgid "Process completed successfully. Behaviors were not updated since this is a demo site."
+msgstr "Proceso finalizado satisfactoriamente. Los Comportamientos no fueron actualizados porque &eacute;ste es un sitio de demostraci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/admin/editGroupDetails.php"
+#args ""
+msgid "Process completed successfully. Groups were not updated since this is a demo site."
+msgstr "Proceso finalizado satisfactoriamente. Los Grupos de Datos no fueron actualizados porque &eacute;ste es un sitio de demostraci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/admin/access.php"
+#args ""
+msgid "Process completed successfully. No privileges were changed, because this is a demo site."
+msgstr "Proceso finalizado satisfactoriamente. Los Provilegios no fueron modificados porque &eacute;ste es un sitio de demostraci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/admin/addBehaviorSubmit.php"
+#args ""
+msgid "Process successful.  Behavior was not added, because this is a demo site."
+msgstr "Proceso finalizado satisfactoriamente. El Comportamiento no fue agregado porque &eacute;ste es un sitio de demostraci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/admin/editBehaviorSubmit.php"
+#args ""
+msgid "Process successful.  Behavior was not updated, because this is a demo site."
+msgstr "Proceso finalizado satisfactoriamente. El Comportamiento no fue actualizado porque &eacute;ste es un sitio de demostraci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/admin/addGroupSubmit.php"
+#args ""
+msgid "Process successful.  Group was not added, because this is a demo site."
+msgstr "Proceso finalizado satisfactoriamente. El Grupo de Datos no fue agregado porque &eacute;ste es un sitio de demostraci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/admin/editGroupSubmit.php"
+#args ""
+msgid "Process successful.  Group was not updated, because this is a demo site."
+msgstr "Proceso finalizado satisfactoriamente. El Grupo de Datos no fue actualizado porque &eacute;ste es un sitio de demostraci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/admin/editUserSubmit.php"
+#args ""
+msgid "Process successful.  User was not updated, because this is a demo site."
+msgstr "Proceso finalizado satisfactoriamente. El Usuario no fue actualizado porque &eacute;ste es un sitio de demostraci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/reports/show.php"
+#args ""
+msgid "Processing Error: Report ID Missing"
+msgstr "Error de Procesamiento: ID del Reporte Falta"
+
+
+#file "/home/ired/zentrack_2/www/reports/saveSubmit.php"
+#args ""
+msgid "Processing error: tempid not found\n"
+msgstr "Error de Procesamiento: tempid no encontrado\n"
+
+
+#file "/home/ired/zentrack_2/www/reports/save.php"
+#args ""
+msgid "Processing error: template not found."
+msgstr "Error de Procesamiento: Modelo no encontrado"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsTypeMenu.php"
+#args ""
+msgid "Project ID"
+msgstr "ID del Proyecto"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newTicketForm.php"
+#args ""
+msgid "Project"
+msgstr "Proyecto"
+
+
+#file "/home/ired/zentrack_2/includes/leftTickets.php"
+#args ""
+msgid "Projects"
+msgstr "Proyectos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/yank.php"
+#args ""
+msgid "Pull ticket from the current owner"
+msgstr "Tomar como propio el ticket de otra persona"
+
+
+#file "/home/ired/zentrack_2/www/actions/print.php"
+#args ""
+msgid "RELATED TICKETS"
+msgstr "TICKETS RELACIONADOS"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsDateMenu.php"
+#args ""
+msgid "Range"
+msgstr "Rango"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorMenu.php"
+#args ""
+msgid "Read-only"
+msgstr "S&oacute;lo-Lectura"
+
+
+#file "/home/ired/zentrack_2/includes/leftMain.php"
+#args ""
+msgid "Really log out of zenTrack?"
+msgstr "Realmente desea desconectarse de zenTrack?"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/reject.php"
+#args ""
+msgid "Reason"
+msgstr "Motivo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/reject.php"
+#args ""
+msgid "Reject Ticket"
+msgstr "Rechazar Ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/reject.php"
+#args ""
+msgid "Reject"
+msgstr "Rechazar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/relate.php"
+#args ""
+msgid "Relate Ticket"
+msgstr "Relacionar Ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/relate.php"
+#args ""
+msgid "Relate"
+msgstr "Relacionar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_relatedBox.php"
+#args "array($page_type)"
+msgid "Related ?s"
+msgstr "Lista de ?s Relacionados"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_contactsBox.php"
+#args "array($page_type)"
+msgid "Related Contacts"
+msgstr "Contactos Relacionados"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newTicketForm.php"
+#args ""
+msgid "Related Tickets"
+msgstr "Tickets Relacionados"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_box.php"
+#args ""
+msgid "Related"
+msgstr "Relacionados"
+
+
+#file "/home/ired/zentrack_2/includes/templates/optionsMenu.php"
+#args ""
+msgid "Remember My Password"
+msgstr "Recordar mi contrase&ntilde;a"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/reopen.php"
+#args ""
+msgid "Reopen Ticket"
+msgstr "Reabrir Ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/reopen.php"
+#args ""
+msgid "Reopen"
+msgstr "Reabrir"
+
+
+#file "/home/ired/zentrack_2/www/reports/drop.php"
+#args ""
+msgid "Report Deleted"
+msgstr "Reporte Eliminado"
+
+
+#file "/home/ired/zentrack_2/www/reports/custom.php"
+#args ""
+msgid "Report ID not found"
+msgstr "ID del Reporte no encontrado"
+
+
+#file "/home/ired/zentrack_2/www/reports/saveSubmit.php"
+#args ""
+msgid "Report Name is required"
+msgstr "El Nombre del Reporte es necesario"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsTypeMenu.php"
+#args ""
+msgid "Report Type"
+msgstr "Tipo de Reporte"
+
+
+#file "/home/ired/zentrack_2/includes/leftReports.php"
+#args ""
+msgid "Reports"
+msgstr "Reportes"
+
+
+#file "/home/ired/zentrack_2/www/addSubmit.php"
+#args ""
+msgid "Required field missing:"
+msgstr "Falta campo obligatorio:"
+
+
+#file "/home/ired/zentrack_2/includes/templates/editCustomsForm.php"
+#args ""
+msgid "Required"
+msgstr "Obligatorio"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newProjectForm.php"
+#args ""
+msgid "Requirements"
+msgstr "Solicitudes"
+
+
+#file "/home/ired/zentrack_2/www/admin/resetPassword.php"
+#args ""
+msgid "Reset Password"
+msgstr "Restaurar Contrase&ntilde;a"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userSearchList.php"
+#args "array($u["user_id"])"
+msgid "Reset the password for user ??"
+msgstr "Restaurar la contrase&ntilde;a para el usuario ??"
+
+
+#file "/home/ired/zentrack_2/includes/templates/accessForm.php"
+#args ""
+msgid "Reset"
+msgstr "Resturar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/reject.php"
+#args ""
+msgid "Return ticket to sender"
+msgstr "Devolver el ticket a su creador"
+
+
+#file "/home/ired/zentrack_2/includes/templates/pwcForm.php"
+#args ""
+msgid "Retype New Password"
+msgstr "Repita la Nueva Contrase&ntilde;a"
+
+
+#file "/home/ired/zentrack_2/includes/templates/accessForm.php"
+#args ""
+msgid "Role"
+msgstr "Rol"
+
+
+#file "/home/ired/zentrack_2/www/reports/save.php"
+#args ""
+msgid "Save Report"
+msgstr "Guardar Reporte"
+
+
+#file "/home/ired/zentrack_2/www/reports/saveSubmit.php"
+#args ""
+msgid "Save Submit"
+msgstr "Operaci&oacute;n de Guardado"
+
+
+#file "/home/ired/zentrack_2/www/reports/save.php"
+#args ""
+msgid "Save Template"
+msgstr "Guardar Modelo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/configForm.php"
+#args ""
+msgid "Save"
+msgstr "Guardar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsOptionsMenu.php"
+#args ""
+msgid "Scatter Chart"
+msgstr "Gr&aacute;fico de Dispersi&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/searchContacts.php"
+#args ""
+msgid "Search Contacts"
+msgstr "Buscar Contactos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchLogForm.php"
+#args ""
+msgid "Search For Logs"
+msgstr "Buscar En Logs"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchForm.php"
+#args ""
+msgid "Search For Tickets"
+msgstr "Buscar En Cabeceras de Tickets"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userSearchForm.php"
+#args ""
+msgid "Search For Users"
+msgstr "Buscar Usuarios"
+
+
+#file "/home/ired/zentrack_2/includes/leftSearch.php"
+#args ""
+msgid "Search Logs"
+msgstr "Buscar Logs"
+
+
+#file "/home/ired/zentrack_2/www/helpers/projectSearchbox.php"
+#args ""
+msgid "Search Projects"
+msgstr "Buscar Proyectos"
+
+
+#file "/home/ired/zentrack_2/www/search.php"
+#args ""
+msgid "Search Tickets"
+msgstr "Buscar Tickets"
+
+
+#file "/home/ired/zentrack_2/www/helpers/userSearchbox.php"
+#args ""
+msgid "Search Users"
+msgstr "Buscar Usuarios"
+
+
+#file "/home/ired/zentrack_2/www/admin/listUsers.php"
+#args ""
+msgid "Search for Users"
+msgstr "Buscar Usuarios"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchContactForm.php"
+#args ""
+msgid "Search in agreements"
+msgstr "Buscar en Acuerdos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchContactForm.php"
+#args ""
+msgid "Search in company"
+msgstr "Buscar en Compa&ntilde;&iacute;a"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchContactForm.php"
+#args ""
+msgid "Search in items"
+msgstr "Buscar en Items"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchContactForm.php"
+#args ""
+msgid "Search in persons"
+msgstr "Buscar en Personas"
+
+
+#file "/home/ired/zentrack_2/includes/leftContacts.php"
+#args ""
+msgid "Search"
+msgstr "Buscar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/editCustomsForm.php"
+#args ""
+msgid "Searches"
+msgstr "B&uacute;squedas"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsDataMenu.php"
+#args "array($zen->ffv($report_type))"
+msgid "Select ?s"
+msgstr "Seleccionar ?s"
+
+
+#file "/home/ired/zentrack_2/www/helpers/projectSearchbox.php"
+#args ""
+msgid "Select Projects"
+msgstr "Seleccionar Proyectos"
+
+
+#file "/home/ired/zentrack_2/www/helpers/ticketSearchbox.php"
+#args ""
+msgid "Select Tickets"
+msgstr "Seleccionar Tickets"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/assign.php"
+#args ""
+msgid "Select a Recipient"
+msgstr "Seleccionar un Destinatario"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/email.php"
+#args ""
+msgid "Select a User"
+msgstr "Seleccionar un Usuario"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/contacts.php"
+#args ""
+msgid "Select a contact"
+msgstr "Seleccionar un contacto"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/upload.php"
+#args ""
+msgid "Select a file to upload"
+msgstr "Seleccionar un archivo para transferir"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/log.php"
+#args ""
+msgid "Select an activity"
+msgstr "Seleccionar una actividad"
+
+
+#file "/home/ired/zentrack_2/www/helpers/projectSearchbox.php"
+#args ""
+msgid "Select more than one by using control or shift"
+msgstr "Seleccionar m&aacute;s de uno con ayuda de las teclas May&uacute;sc &oacute; Control"
+
+
+#file "/home/ired/zentrack_2/includes/templates/customGroupDetailsForm.php"
+#args ""
+msgid "Select the items that will appear in this group and their order."
+msgstr "Seleccione los &iacute;tems que aparecer&aacute;n en este grupo y su orden."
+
+
+#file "/home/ired/zentrack_2/www/helpers/projectSearchbox.php"
+#args ""
+msgid "Select"
+msgstr "Seleccionar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/email.php"
+#args ""
+msgid "Send a link to this ticket only"
+msgstr "Env&iacute;e solamente un v&iacute;nculo a este ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/email.php"
+#args ""
+msgid "Send a summary of the ticket"
+msgstr "Env&iacute;e un resumen del ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/email.php"
+#args ""
+msgid "Send a summary, and the ticket's log"
+msgstr "Env&iacute;e el resumen, y el log del ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/move.php"
+#args ""
+msgid "Send ticket to another bin"
+msgstr "Trasladar el ticket a otra comunidad"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/email.php"
+#args ""
+msgid "Send ticket to specified recipients"
+msgstr "Enviar el ticket a los destinatarios especificados"
+
+
+#file "/home/ired/zentrack_2/includes/templates/accessForm.php"
+#args "array($zen->formatName($user_id))"
+msgid "Set Access for ?"
+msgstr "Establecer Acceso para ?"
+
+
+#file "/home/ired/zentrack_2/includes/templates/pwcForm.php"
+#args ""
+msgid "Set Password"
+msgstr "Establecer Contrase&ntilde;a"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/close.php"
+#args ""
+msgid "Set status to closed/pending"
+msgstr "Modificar el estado a cerrado/pendiente"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/test.php"
+#args ""
+msgid "Set testing to completed on ticket"
+msgstr "Marcar el testeo como completado en el ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/estimate.php"
+#args ""
+msgid "Set the expected hours this ticket will take to complete"
+msgstr "Establecer la cantidad de horas que se estima trabajar para completar este ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/estimate.php"
+#args ""
+msgid "Set"
+msgstr "Establecer"
+
+
+#file "/home/ired/zentrack_2/includes/templates/adminMenu.php"
+#args ""
+msgid "Settings Administration"
+msgstr "Administraci&oacute;n de Configuraci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/includes/leftAdmin.php"
+#args ""
+msgid "Settings"
+msgstr "Configuraci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userSearchForm.php"
+#args ""
+msgid "Show All Users"
+msgstr "Mostrar Todos los Usuarios"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsOptionsMenu.php"
+#args ""
+msgid "Show Both"
+msgstr "Mostrar Ambos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsOptionsMenu.php"
+#args ""
+msgid "Show Graph"
+msgstr "Mostrar Gr&aacute;fico"
+
+
+#file "/home/ired/zentrack_2/www/reports/show.php"
+#args ""
+msgid "Show Report"
+msgstr "Mostrar Reporte"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsOptionsMenu.php"
+#args ""
+msgid "Show Tables"
+msgstr "Mostrar Tablas"
+
+
+#file "/home/ired/zentrack_2/includes/templates/editCustomsForm.php"
+#args ""
+msgid "Show in custom tab?"
+msgstr "Mostrar en solapa de campos personalizados?"
+
+
+#file "/home/ired/zentrack_2/includes/templates/editCustomsForm.php"
+#args ""
+msgid "Show in detail tab?"
+msgstr "Mostrar en solapa de detalle?"
+
+
+#file "/home/ired/zentrack_2/includes/templates/groupDetailsForm.php"
+#args ""
+msgid "Show"
+msgstr "Mostrar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorDetailForm.php"
+#args ""
+msgid "Sort Order"
+msgstr "Orden"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsOptionsMenu.php"
+#args ""
+msgid "Stack Chart"
+msgstr "Gr&aacute;fico de Pila"
+
+
+#file "/home/ired/zentrack_2/includes/templates/agreement_box.php"
+#args ""
+msgid "Start Date"
+msgstr "Fecha de Inicio"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsDateMenu.php"
+#args ""
+msgid "Start From Date"
+msgstr "Iniciar Desde la Fecha"
+
+
+#file "/home/ired/zentrack_2/includes/templates/listTickets_workFormat.php"
+#args ""
+msgid "Status"
+msgstr "Estado"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsSubmit.php"
+#args ""
+msgid "Submit Results"
+msgstr "Generar Resultados"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsOptionsMenu.php"
+#args ""
+msgid "Subtitle"
+msgstr "Subt&iacute;tulo"
+
+
+#file "/home/ired/zentrack_2/includes/editAgreementSubmit.php"
+#args ""
+msgid "System Error"
+msgstr "Error del Sistema"
+
+
+#file "/home/ired/zentrack_2/www/admin/addGroupSubmit.php"
+#args "array($NewGroupName)"
+msgid "System Error: Could not add ? to the system"
+msgstr "Error del Sistema: No se pudo agregar ? al sistema"
+
+
+#file "/home/ired/zentrack_2/www/admin/addBehaviorSubmit.php"
+#args "array($NewBehaviorName)"
+msgid "System Error: Could not add ?"
+msgstr "Error del Sistema: No se pudo agregar ?"
+
+
+#file "/home/ired/zentrack_2/www/admin/addUserSubmit.php"
+#args "array($lname, $fname)"
+msgid "System Error: Could not add ?, ? to the system"
+msgstr "Error del Sistema: No se pudo agregar ?, ? al sistema"
+
+
+#file "/home/ired/zentrack_2/www/admin/editBehaviorSubmit.php"
+#args "array($NewBehaviorName)"
+msgid "System Error: Could not update ?"
+msgstr "Error del Sistema: No se pudo actualizar ?"
+
+
+#file "/home/ired/zentrack_2/www/admin/editUserSubmit.php"
+#args "array($lname, $fname)"
+msgid "System Error: Could not update ?, ?"
+msgstr "Error del Sistema: No se pudo actualizar ?, ?"
+
+
+#file "/home/ired/zentrack_2/www/misc/pwc.php"
+#args ""
+msgid "System Error: Unable to change user passphrase."
+msgstr "Error del Sistema: No se pudo cambiar la contrase&ntilde; del usuario"
+
+
+#file "/home/ired/zentrack_2/www/misc/homebin.php"
+#args ""
+msgid "System Error: Unable to update bin."
+msgstr "Error del Sistema: No se pudo actualizar la comunidad."
+
+
+#file "/home/ired/zentrack_2/www/admin/access.php"
+#args ""
+msgid "System Error: could not update access &#151; this is most likely because no bins were set, and no bins previously existed (i.e. nothing happened)"
+msgstr "Error del Sistema: No se pudo actualizar el acceso. Esto seguramente se debe a que no existen (ni existieron) comunidades"
+
+
+#file "/home/ired/zentrack_2/www/admin/access.php"
+#args "array($user_id)"
+msgid "System Error: could not update access for user ?"
+msgstr "Error del Sistema: No se pudo actualizar el acceso para el usuario ?"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_systemBox.php"
+#args ""
+msgid "System History"
+msgstr "Historial de Consola"
+
+
+#file "/home/ired/zentrack_2/www/actions/log.php"
+#args ""
+msgid "System error: Activity could not be logged."
+msgstr "Error del Sistema: La actividad no pudo ser registrada en el log"
+
+
+#file "/home/ired/zentrack_2/www/actions/upload.php"
+#args "array($userfile_name, $id)"
+msgid "System error: Attachment ? could not be uploaded for ticket ?. "
+msgstr "Error del Sistema: El adjunto ? no pudo ser transferido para el ticket ?"
+
+
+#file "/home/ired/zentrack_2/www/actions/addToNotify.php"
+#args ""
+msgid "System error: Notify list could not be updated "
+msgstr "Error del Sistema: La lista de notificaciones no pudo ser actualizada "
+
+
+#file "/home/ired/zentrack_2/www/actions/accept.php"
+#args "array($id)"
+msgid "System error: Ticket ? could not be accepted"
+msgstr "Error del Sistema: El ticket ? no pudo ser aceptado"
+
+
+#file "/home/ired/zentrack_2/www/actions/approve.php"
+#args "array($id)"
+msgid "System error: Ticket ? could not be approved"
+msgstr "Error del Sistema: El ticket ? no pudo ser aprobado"
+
+
+#file "/home/ired/zentrack_2/www/actions/assign.php"
+#args "array($id)"
+msgid "System error: Ticket ? could not be assigned"
+msgstr "Error del Sistema: El ticket ? no pudo ser asignado"
+
+
+#file "/home/ired/zentrack_2/www/actions/close.php"
+#args "array($id)"
+msgid "System error: Ticket ? could not be closed"
+msgstr "Error del Sistema: El ticket ? no pudo ser cerrado"
+
+
+#file "/home/ired/zentrack_2/www/actions/move.php"
+#args "array($id)"
+msgid "System error: Ticket ? could not be moved. "
+msgstr "Error del Sistema: El ticket ? no pudo ser movido. "
+
+
+#file "/home/ired/zentrack_2/www/actions/reject.php"
+#args "array($id)"
+msgid "System error: Ticket ? could not be rejected"
+msgstr "Error del Sistema: El ticket ? no pudo ser rechazado"
+
+
+#file "/home/ired/zentrack_2/www/actions/relate.php"
+#args "array($id)"
+msgid "System error: Ticket ? could not be related, or the entries were the same."
+msgstr "Error del Sistema: El ticket ? no pudo ser relacionado, o se trata de una referencia a s&iacute; mismo."
+
+
+#file "/home/ired/zentrack_2/www/actions/reopen.php"
+#args "array($id)"
+msgid "System error: Ticket ? could not be reopened."
+msgstr "Error del Sistema: El ticket ? no pudo ser reabierto"
+
+
+#file "/home/ired/zentrack_2/www/actions/test.php"
+#args "array($id)"
+msgid "System error: Ticket ? could not be tested"
+msgstr "Error del Sistema: El ticket ? no pudo ser testeado"
+
+
+#file "/home/ired/zentrack_2/www/actions/yank.php"
+#args "array($id)"
+msgid "System error: Ticket ? could not be yanked."
+msgstr "Error del Sistema: El ticket ? no pudo ser sustra&iacute;do"
+
+
+#file "/home/ired/zentrack_2/www/actions/estimate.php"
+#args "array($id)"
+msgid "System error: Ticket ? hours could not be set"
+msgstr "Error del Sistema: No se pudo establecer las horas para el ticket ?"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchList.php"
+#args ""
+msgid "System involved in ticket"
+msgstr "Sistema involucrado en el ticket"
+
+
+#file "/home/ired/zentrack_2/includes/leftMain.php"
+#args ""
+msgid "System"
+msgstr "Sistema"
+
+
+#file "/home/ired/zentrack_2/includes/templates/adminMenu.php"
+#args ""
+msgid "Systems represent a component or area the ticket is specific to."
+msgstr "Los Sistemas representan un componente o un &aacute;rea para la cual el ticket es espec&iacute;fico"
+
+
+#file "/home/ired/zentrack_2/www/actions/print.php"
+#args ""
+msgid "TASKS FOR COMPLETION"
+msgstr "TAREAS A COMPLETAR"
+
+
+#file "/home/ired/zentrack_2/includes/templates/groupAdd.php"
+#args ""
+msgid "Table Name"
+msgstr "Nombre de la Tabla"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_tasksBox.php"
+#args ""
+msgid "Tasks for this project"
+msgstr "Tareas para esta proyecto"
+
+
+#file "/home/ired/zentrack_2/includes/templates/adminMenu.php"
+#args ""
+msgid "Tasks represent types of log entries."
+msgstr "Las Tareas representan tipos de registros en el log"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_box.php"
+#args ""
+msgid "Tasks"
+msgstr "Tareas"
+
+
+#file "/home/ired/zentrack_2/includes/templates/listContacts.php"
+#args ""
+msgid "Telephone Nr."
+msgstr "Tel&eacute;fono"
+
+
+#file "/home/ired/zentrack_2/includes/templates/contact_list.php"
+#args ""
+msgid "Telephone no"
+msgstr "Tel&eacute;fono"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newContacteForm.php"
+#args ""
+msgid "Telephone"
+msgstr "Tel&eacute;fono"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/test.php"
+#args ""
+msgid "Test Ticket"
+msgstr "Testear Ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_actionBar.php"
+#args ""
+msgid "Test"
+msgstr "Testear"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/test.php"
+#args ""
+msgid "Tested"
+msgstr "Testeado"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newProjectForm.php"
+#args ""
+msgid "Testing Required"
+msgstr "Testeo Requerido"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_detailsBox.php"
+#args ""
+msgid "Testing"
+msgstr "Testeado"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsOptionsMenu.php"
+#args ""
+msgid "Text"
+msgstr "Texto"
+
+
+#file "/home/ired/zentrack_2/www/admin/editBehavior.php"
+#args ""
+msgid "That behavior could not be found"
+msgstr "Ese comportamiento no pudo ser encontrado"
+
+
+#file "/home/ired/zentrack_2/www/misc/homebin.php"
+#args ""
+msgid "That bin doesn't exist"
+msgstr "Esa comunidad no existe"
+
+
+#file "/home/ired/zentrack_2/www/agreement.php"
+#args ""
+msgid "That contact doesn't exist"
+msgstr "Ese contacto no existe"
+
+
+#file "/home/ired/zentrack_2/www/admin/editGroup.php"
+#args ""
+msgid "That group could not be found"
+msgstr "Ese grupo de datos no pudo ser encontrado"
+
+
+#file "/home/ired/zentrack_2/www/actions/upload.php"
+#args ""
+msgid "That is not a recognized file type, by your browsers determinations"
+msgstr "Ese tipo de archivo no es reconocido de acuerdo a la configuraci&oacute;n de su navegador de Internet"
+
+
+#file "/home/ired/zentrack_2/www/admin/addUserSubmit.php"
+#args ""
+msgid "That login name already exists.  Please choose another."
+msgstr "Esa cuenta de usuario ya existe. Por favor elija otro nombre."
+
+
+#file "/home/ired/zentrack_2/www/admin/editUserSubmit.php"
+#args ""
+msgid "That login name is in use by another account"
+msgstr "Ese nombre de usuario ya est&aacute; en uso por otra cuenta"
+
+
+#file "/home/ired/zentrack_2/www/reports/custom.php"
+#args ""
+msgid "That temporary report doesn't exist"
+msgstr "Ese reporte temporal no existe"
+
+
+#file "/home/ired/zentrack_2/www/ticket.php"
+#args ""
+msgid "That ticket doesn't exist"
+msgstr "Ese ticket no existe"
+
+
+#file "/home/ired/zentrack_2/www/admin/editUser.php"
+#args ""
+msgid "That user could not be found"
+msgstr "No pudo encontrarse ese usuario"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchContact2List.php"
+#args ""
+msgid "The E-mail address of the contact"
+msgstr "La direcci&oacute;n de E-mail del contacto"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchContact3List.php"
+#args ""
+msgid "The Expiration Date"
+msgstr "La Fecha de Expiraci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/misc/pwc.php"
+#args ""
+msgid "The Guest Password cannot be changed!"
+msgstr "La Contrase&ntilde;a de Guest no puede ser cambiada!"
+
+
+#file "/home/ired/zentrack_2/www/admin/editUser.php"
+#args ""
+msgid "The Root Admin Account can only be modified by the Root Administrator"
+msgstr "La Cuenta del Administrador Principal solamente puede ser modificada por &eacute;l mismo"
+
+
+#file "/home/ired/zentrack_2/www/admin/deleteUser.php"
+#args "array($user_id)"
+msgid "The account (?) could not be found/deleted successfully"
+msgstr "La cuenta (?) no pudo ser encontrada/eliminada con &eacute;xito"
+
+
+#file "/home/ired/zentrack_2/www/admin/deleteUser.php"
+#args "array($user_id)"
+msgid "The account(?) was successfully removed"
+msgstr "La cuenta (?) fue eliminada exitosamente"
+
+
+#file "/home/ired/zentrack_2/www/admin/deleteBehavior.php"
+#args ""
+msgid "The action completed successfully.  The account was not actually deleted, because this is a demo site"
+msgstr "La acci&oacute;n fue completada con &eacute;xito. La cuenta no fue realmente eliminada porque &eacute;ste es un sitio de demostraci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/admin/deleteGroup.php"
+#args ""
+msgid "The action completed successfully.  The data group was not actually deleted, because this is a demo site"
+msgstr "La acci&oacute;n fue completada con &eacute;xito. El grupo de datos no fue realmente eliminado porque &eacute;ste es un sitio de demostraci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/admin/deleteBehavior.php"
+#args "array($behavior_id)"
+msgid "The behavior (?) could not be found/deleted successfully"
+msgstr "El comportamiento (?) no pudo ser encontrado/eliminado con &eacute;xito"
+
+
+#file "/home/ired/zentrack_2/www/admin/deleteBehavior.php"
+#args "array($behavior_id)"
+msgid "The behavior (?) was successfully removed"
+msgstr "El comportamiento (?) fue eliminado exitosamente"
+
+
+#file "/home/ired/zentrack_2/includes/templates/agreementView.php"
+#args ""
+msgid "The company of the agreement"
+msgstr "La compa&ntilde;&iacute;a del acuerdo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/listContacts2.php"
+#args ""
+msgid "The company of the contact"
+msgstr "La compa&ntilde;&iacute;a del contacto"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchContact3List.php"
+#args ""
+msgid "The company where the agreement runs"
+msgstr "La compa&ntilde;&iacute;a donde el acuerdo est&aacute; vigente"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchContact2List.php"
+#args ""
+msgid "The company where the contact works"
+msgstr "La compa&ntilde;&iacute;a en la que trabaja el contacto"
+
+
+#file "/home/ired/zentrack_2/www/admin/deleteGroup.php"
+#args "array($group_id)"
+msgid "The data group (?) WAS NOT removed"
+msgstr "El grupo de datos (?) NO FUE eliminado"
+
+
+#file "/home/ired/zentrack_2/www/admin/deleteGroup.php"
+#args "array($group_id)"
+msgid "The data group (?) could not be found/deleted successfully"
+msgstr "El grupo de datos (?) no pudo ser encontrado/eliminado con &eacute;xito"
+
+
+#file "/home/ired/zentrack_2/www/admin/deleteGroup.php"
+#args "array($group_id)"
+msgid "The data group (?) was successfully removed"
+msgstr "El grupo de datos (?) fue eliminado con &eacute;xito"
+
+
+#file "/home/ired/zentrack_2/includes/templates/referencedGroupForm.php"
+#args "array($group_id)"
+msgid "The data group ? is currently being used."
+msgstr "El grupo de datos ? est&aacute; siendo utilizado."
+
+
+#file "/home/ired/zentrack_2/includes/templates/listContacts2.php"
+#args ""
+msgid "The e-mail of the contact"
+msgstr "El e-mail del contacto"
+
+
+#file "/home/ired/zentrack_2/includes/templates/listContacts.php"
+#args ""
+msgid "The email of the contact"
+msgstr "El e-mail del contacto"
+
+
+#file "/home/ired/zentrack_2/includes/templates/agreementView.php"
+#args ""
+msgid "The expiration date of the agreement"
+msgstr "La fecha de expiraci&oacute;n del acuerdo"
+
+
+#file "/home/ired/zentrack_2/www/actions/upload.php"
+#args ""
+msgid "The file could not be uploaded "
+msgstr "El archivo no pudo ser transferido"
+
+
+#file "/home/ired/zentrack_2/www/actions/upload.php"
+#args "array(number_format($userfile_size), number_format($max_size))"
+msgid "The file size (?) exceeded the maximum allowed (?)"
+msgstr "El archivo tiene un tama&ntilde;o (?) superior al m&aacute;ximo permitido (?)"
+
+
+#file "/home/ired/zentrack_2/www/actions/upload.php"
+#args "array(substr($max_size,0,strlen($max_size)-3))"
+msgid "The file was not recieved. Check to insure it's size does not exceed ?KB"
+msgstr "El archivo no fue recibido. Aseg&uacute;rese de que su tama&ntilde;o no exceda los ? KB"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchList.php"
+#args ""
+msgid "The importance of the ticket"
+msgstr "La importancia del ticket"
+
+
+#file "/home/ired/zentrack_2/www/misc/language.php"
+#args "$newlang"
+msgid "The language could not be changed to ?"
+msgstr "No pudo cambiarse al idioma ?"
+
+
+#file "/home/ired/zentrack_2/www/misc/language.php"
+#args ""
+msgid "The language file chosen was not valid"
+msgstr "El archivo de idioma seleccionado no es v&aacute;lido"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchContact3List.php"
+#args ""
+msgid "The name of the agreement"
+msgstr "El nombre del acuerdo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/listContacts2.php"
+#args ""
+msgid "The name of the contact"
+msgstr "El nombre del contacto"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchList.php"
+#args ""
+msgid "The name of the ticket"
+msgstr "El nombre del ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userSearchList.php"
+#args ""
+msgid "The name of the user"
+msgstr "El nombre del usuario"
+
+
+#file "/home/ired/zentrack_2/includes/templates/agreementView.php"
+#args ""
+msgid "The nr of the agreement"
+msgstr "El Nro del acuerdo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/configForm.php"
+#args ""
+msgid "The priority order fields should all be filled in and should be consecutive (for proper coloring)."
+msgstr "Los campos de ordenamiento de las prioridades deber&iacute;an estar todos completos y con n&uacute;meros consecutivos (para lograr una coloraci&oacute;n adecuada de los tickets)"
+
+
+#file "/home/ired/zentrack_2/www/admin/editUserSubmit.php"
+#args ""
+msgid "The root admin access cannot be less than the level_settings parameter"
+msgstr "El nivel de acceso del Administrador Principal no puede ser menor al par&aacute;metro level_settings"
+
+
+#file "/home/ired/zentrack_2/www/admin/editUserSubmit.php"
+#args ""
+msgid "The root admin account cannot be deactivated"
+msgstr "La cuenta del Administrador Principal no puede ser desactivada"
+
+
+#file "/home/ired/zentrack_2/www/admin/editUserSubmit.php"
+#args ""
+msgid "The root admin account must have access of 5 or greater"
+msgstr "La cuenta del Administrador Principal debe tener un nivel de acceso de 5 &oacute; m&aacute;s"
+
+
+#file "/home/ired/zentrack_2/www/admin/deleteUser.php"
+#args ""
+msgid "The root administrator account cannot be deleted"
+msgstr "La cuenta del Administrador Principal no puede ser eliminada"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchContact2List.php"
+#args ""
+msgid "The telephone number of the contact"
+msgstr "El n&uacute;mero de tel&eacute;fono del contacto"
+
+
+#file "/home/ired/zentrack_2/includes/templates/listContacts.php"
+#args ""
+msgid "The telephone of the contact"
+msgstr "El tel&eacute;fono del contacto"
+
+
+#file "/home/ired/zentrack_2/includes/templates/agreementView.php"
+#args ""
+msgid "The title of the agreement"
+msgstr "El t&iacute;tulo del acuerdo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/listContacts.php"
+#args ""
+msgid "The title of the contact"
+msgstr "El t&iacute;tulo del contacto"
+
+
+#file "/home/ired/zentrack_2/includes/templates/listTickets_workFormat.php"
+#args ""
+msgid "The type of ticket"
+msgstr "El tipo de ticket"
+
+
+#file "/home/ired/zentrack_2/www/actions/upload.php"
+#args ""
+msgid "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the html form."
+msgstr "El tama&ntilde;o del archivo transferido excede la directiva MAX_FILE_SIZE que se indica en el formulario HTML."
+
+
+#file "/home/ired/zentrack_2/www/actions/upload.php"
+#args ""
+msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini."
+msgstr "El tama&ntilde;o del archivo transferido excede la directiva max_filesize que se indica en el archivo php.ini"
+
+
+#file "/home/ired/zentrack_2/www/actions/upload.php"
+#args ""
+msgid "The uploaded file was only partially uploaded."
+msgstr "El archivo fue transferido PARCIALMENTE."
+
+
+#file "/home/ired/zentrack_2/www/admin/resetPassword.php"
+#args ""
+msgid "The user passphrase could not be found/edited"
+msgstr "La contrase&ntilde;a del usuario no pudo ser encontrado/editada"
+
+
+#file "/home/ired/zentrack_2/includes/templates/listContacts.php"
+#args ""
+msgid "The website of the contact"
+msgstr "El sitio web del contacto"
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "There are more log entries."
+msgstr "Existen m&aacute;s registros en el log."
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/contacts.php"
+#args ""
+msgid "There are no contacts to add."
+msgstr "No hay contactos para agregar."
+
+
+#file "/home/ired/zentrack_2/www/admin/bins.php"
+#args ""
+msgid "There was nothing provided to update"
+msgstr "No se di&oacute; nada para actualizar"
+
+
+#file "/home/ired/zentrack_2/www/admin/config.php"
+#args ""
+msgid "There were no changes made to the settings.  Procedure skipped."
+msgstr "No se realizaron cambios en la configuraci&oacute;n. Se saltea el procedimiento."
+
+
+#file "/home/ired/zentrack_2/www/searchLogs.php"
+#args ""
+msgid "There were no logs matching your search."
+msgstr "En el log no se encontraron registros coincidentes con su b&uacute;squeda."
+
+
+#file "/home/ired/zentrack_2/www/actions/email.php"
+#args ""
+msgid "There were no recipients"
+msgstr "No se indicaron destinatarios"
+
+
+#file "/home/ired/zentrack_2/www/admin/listUsers.php"
+#args ""
+msgid "There were no results for your search"
+msgstr "No hubo resultados para su b&uacute;squeda"
+
+
+#file "/home/ired/zentrack_2/www/search.php"
+#args ""
+msgid "There were no results for your search."
+msgstr "No hubo resultados para su b&uacute;squeda."
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsOptionsMenu.php"
+#args ""
+msgid "These options aren't useful when only graphing one element."
+msgstr "Estas opciones no son &uacute;tiles cuando se grafica un solo elemento"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userAdd.php"
+#args ""
+msgid "This grants the user the specified level of access to all bins not otherwise indicated by 'user access'."
+msgstr "Esto le d&aacute; al usuario el nivel de acceso indicado, para todas las comunidades (a menos que se indique otro valor en 'accesos de usuario'."
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorDetailForm.php"
+#args ""
+msgid "This screen will let you list, add, edit and delete behavior rules."
+msgstr "Esta pantalla le permitir&aacute; listar, agregar y eliminar reglas para el comportamiento."
+
+
+#file "/home/ired/zentrack_2/includes/editCustomSubmit.php"
+#args "array($id)"
+msgid "Ticket #?: Save Custom Fields"
+msgstr "Ticket #?: Guardar Campos Personalizados"
+
+
+#file "/home/ired/zentrack_2/includes/editCustomSubmit.php"
+#args "array($id)"
+msgid "Ticket #? cannot be edited in its current status"
+msgstr "El ticket #? no puede ser editado en el estado actual"
+
+
+#file "/home/ired/zentrack_2/www/actions/editCustomSubmit.php"
+#args "array($id)"
+msgid "Ticket #? cannot be edited right now"
+msgstr "El ticket #? no puede ser editado en este momento"
+
+
+#file "/home/ired/zentrack_2/includes/templates/editTicketForm.php"
+#args "array($id)"
+msgid "Ticket #? could not be found"
+msgstr "El ticket #? no pudo ser encontrado"
+
+
+#file "/home/ired/zentrack_2/www/actions/action_header.php"
+#args "array($id)"
+msgid "Ticket #?"
+msgstr "Ticket #?"
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args "array($id,$this->formatName($user_id,2))"
+msgid "Ticket #?: Log added by ?"
+msgstr "Ticket #?: Registro de Log a&ntilde;adido por ?"
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args "array($id,$name)"
+msgid "Ticket #?: assigned to ?"
+msgstr "Ticket #?: asignado a ?"
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args "array($id)"
+msgid "Ticket #?: closed"
+msgstr "Ticket #?: cerrado"
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args "array($id)"
+msgid "Ticket #?: created"
+msgstr "Ticket #?: creado"
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args "array($id,$this->getBinName($newBin))"
+msgid "Ticket #?: moved to ?"
+msgstr "Ticket #?: movido a ?"
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args "array($id)"
+msgid "Ticket #?: rejected"
+msgstr "Ticket #?: rechazado"
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args "array($id)"
+msgid "Ticket #?: reopened"
+msgstr "Ticket #?: reabierto"
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args "array($id,$name)"
+msgid "Ticket #?: yanked by ?"
+msgstr "Ticket #?: Sustra&iacute;do por ?"
+
+
+#file "/home/ired/zentrack_2/www/actions/editSubmit.php"
+#args "array($id)"
+msgid "Ticket ? could not edit ticket. "
+msgstr "El ticket ? no pudo ser editado. "
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args "array($id)"
+msgid "Ticket ? has been reopened."
+msgstr "El ticket ? ha sido reabierto"
+
+
+#file "/home/ired/zentrack_2/www/actions/email.php"
+#args "array($id, tr($err))"
+msgid "Ticket ? not mailed: ?"
+msgstr "El ticket ? NO FUE ENVIADO: ?"
+
+
+#file "/home/ired/zentrack_2/includes/templates/adminMenu.php"
+#args ""
+msgid "Ticket Administration"
+msgstr "Administraci&oacute;n de Tickets"
+
+
+#file "/home/ired/zentrack_2/includes/nav.php"
+#args ""
+msgid "Ticket ID"
+msgstr "ID del Ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newTicketForm.php"
+#args ""
+msgid "Ticket Information"
+msgstr "Informaci&oacute;n del Ticket"
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "Ticket Summary")
+msgstr "Resumen del Ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/editCustomsForm.php"
+#args ""
+msgid "Ticket lists?"
+msgstr "Listados de tickets?"
+
+
+#file "/home/ired/zentrack_2/www/ticket.php"
+#args ""
+msgid "Ticket"
+msgstr "Ticket"
+
+
+#file "/home/ired/zentrack_2/www/assignedTickets.php"
+#args ""
+msgid "Tickets assigned"
+msgstr "Tickets asignados"
+
+
+#file "/home/ired/zentrack_2/includes/leftTickets.php"
+#args ""
+msgid "Tickets"
+msgstr "Tickets"
+
+
+#file "/home/ired/zentrack_2/www/help/help_header.php"
+#args ""
+msgid "Tickets"
+msgtr "Tickets"
+
+
+#file "/home/ired/zentrack_2/www/help/help_header.php"
+#args ""
+msgid "Projects"
+msgtr "Proyectos"
+
+
+#file "/home/ired/zentrack_2/www/help/help_header.php"
+#args ""
+msgid "Personal Options"
+msgtr "Opciones Personales"
+
+
+#file "/home/ired/zentrack_2/www/help/help_header.php"
+#args ""
+msgid "Contacts"
+msgstr "Contactos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/listTickets.php"
+#args ""
+msgid "Time"
+msgstr "Tiempo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchContact3List.php"
+#args ""
+msgid "Title of the agreement"
+msgstr "T&iacute;tulo del acuerdo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/agreementView.php"
+#args ""
+msgid "Title"
+msgstr "T&iacute;tulo"
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "Title"
+msgtr "T&iacute;tulo"
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "Priority"
+msgtr "Prioridad"
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "Status"
+msgtr "Estado"
+ 
+     
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "Description"
+msgtr "Descripci&oacute;n"
+ 
+     
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "Open Time"
+msgtr "Fecha de Apertura"
+ 
+     
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "Close Time"
+msgtr "Fecha de Cierre"
+ 
+     
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "Bin"
+msgtr "Comunidad"
+ 
+     
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "Type"
+msgtr "Tipo"
+ 
+     
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "Owner"
+msgtr "Responsable"
+ 
+     
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "System"
+msgtr "Sistema"
+ 
+     
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "Created by"
+msgtr "Creado por"
+ 
+     
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "Tested"
+msgtr "Testeado"
+ 
+     
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "Approved"
+msgtr "Aprobado"
+ 
+     
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "Project"
+msgtr "Proyecto"
+ 
+     
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "Estimated Hours"
+msgtr "Horas Estimadas"
+ 
+     
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "Deadline"
+msgtr "Fecha L&iacute;mite"
+ 
+     
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid "Start Date"
+msgstr "Fecha de Inicio"
+
+
+#file "/home/ired/zentrack_2/www/actions/print.php"
+#args ""
+msgid "Totals"
+msgstr "Totales"
+
+
+#file "/home/ired/zentrack_2/includes/leftMain.php"
+#args ""
+msgid "Tracker"
+msgstr "Seguimiento"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsOptionsMenu.php"
+#args ""
+msgid "Try using Combine Selected with a very large number of elements, if you intend to view a graphical image."
+msgstr "Intente usar 'Combinar los items seleccionados' cuando tenga una gran cantidad de elementos, si su objetivo es ver un gr&aacute;fico"
+
+
+#file "/home/ired/zentrack_2/www/admin/access.php"
+#args ""
+msgid "Two or more bins were submitted with the same name"
+msgstr "Se suministraron dos o m&aacute;s Comunidades con el mismo nombre"
+
+
+#file "/home/ired/zentrack_2/www/reports/save.php"
+#args ""
+msgid "Type ids separated by commas, or click on the button."
+msgstr "Ingrese los IDs separador por comas, o haga click en el bot&oacute;n."
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchList.php"
+#args ""
+msgid "Type of ticket"
+msgstr "Tipo de ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/groupForm.php"
+#args ""
+msgid "Type"
+msgstr "Tipo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/adminMenu.php"
+#args ""
+msgid "Types represent the type of ticket activity."
+msgstr "Los Tipos representan por qu&eacute; se gener&oacute; el ticket."
+
+
+#file "/home/ired/zentrack_2/includes/templates/userAdd.php"
+#args ""
+msgid "Uncheck to disable this account."
+msgstr "Quite el tilde para deshabilitar esta cuenta."
+
+
+#file "/home/ired/zentrack_2/www/admin/bins.php"
+#args ""
+msgid "Update Bins"
+msgstr "Actualizar Comunidades"
+
+
+#file "/home/ired/zentrack_2/www/admin/priorities.php"
+#args ""
+msgid "Update Priorities"
+msgstr "Actualizar Prioridades"
+
+
+#file "/home/ired/zentrack_2/www/admin/systems.php"
+#args ""
+msgid "Update Systems"
+msgstr "Actualizar Sistemas"
+
+
+#file "/home/ired/zentrack_2/www/admin/tasks.php"
+#args ""
+msgid "Update Tasks"
+msgstr "Actualizar Tareas"
+
+
+#file "/home/ired/zentrack_2/www/admin/types.php"
+#args ""
+msgid "Update Types"
+msgstr "Actualizar Tipos"
+
+
+#file "/home/ired/zentrack_2/www/admin/editCustom.php"
+#args ""
+msgid "Update Variable Fields"
+msgstr "Actualizar Campos Personalizados"
+
+
+#file "/home/ired/zentrack_2/includes/templates/accessForm.php"
+#args ""
+msgid "Update"
+msgstr "Actualizar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/upload.php"
+#args ""
+msgid "Upload Attachment"
+msgstr "Transferir Archivo Adjunto"
+
+
+#file "/home/ired/zentrack_2/www/actions/upload.php"
+#args ""
+msgid "Uploaded file size 0 bytes"
+msgstr "El archivo transferido tiene 0 bytes"
+
+
+#file "/home/ired/zentrack_2/www/reports/index.php"
+#args ""
+msgid "Usage Reports"
+msgstr "Reportes de Utilizaci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userAdd.php"
+#args ""
+msgid "Use zero if unsure."
+msgstr "Use cero si no est&aacute; seguro"
+
+
+#file "/home/ired/zentrack_2/includes/templates/editCustomsForm.php"
+#args ""
+msgid "Used for projects?"
+msgstr "Usado para proyectos?"
+
+
+#file "/home/ired/zentrack_2/includes/templates/editCustomsForm.php"
+#args ""
+msgid "Used for searches?"
+msgstr "Usado para b&uacute;squedas?"
+
+
+#file "/home/ired/zentrack_2/includes/templates/editCustomsForm.php"
+#args ""
+msgid "Used for tickets?"
+msgstr "Usado para tickets?"
+
+
+#file "/home/ired/zentrack_2/www/admin/addUserSubmit.php"
+#args "array($user_id, "--link--" . tr("Click Here") . "</a>", $user_id)"
+msgid "User ? was added successfully. The password is the last name of the user. ? to customize user ?'s access permissions."
+msgstr "El usuario ? fue agregado con &eacute;xito. La contrase&ntilde;a es el apellido del usuario. ? para personalizar los permisos de acceso para el usuario ?."
+
+
+#file "/home/ired/zentrack_2/www/admin/editUserSubmit.php"
+#args "array($user_id, 			"--link--", 			$user_id)"
+msgid "User ? was updated successfully. ? to customize user ?'s access permissions."
+msgstr "El usuario ? fue actualizado con &eacute;xito. ? para personalizar los permisos de acceso para el usuario ?."
+
+
+#file "/home/ired/zentrack_2/includes/templates/adminMenu.php"
+#args ""
+msgid "User Administration"
+msgstr "Administraci&oacute;n de Usuarios"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsTypeMenu.php"
+#args ""
+msgid "User ID"
+msgstr "ID de Usuario"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userAdd.php"
+#args ""
+msgid "User Information"
+msgstr "Informaci&oacute;n de Usuario"
+
+
+#file "/home/ired/zentrack_2/www/options.php"
+#args ""
+msgid "User Options"
+msgstr "Opciones de Usuario"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchLogForm.php"
+#args ""
+msgid "User"
+msgstr "Usuario"
+
+
+#file "/home/ired/zentrack_2/www/help/english/tutorial.php"
+#args ""
+msgid "User's Manual"
+msgstr "Manual del Usuario"
+
+
+#file "/home/ired/zentrack_2/www/reports/save.php"
+#args ""
+msgid "User(s)"
+msgstr "Usuario(s)"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userSearchList.php"
+#args ""
+msgid "Users Default Bin"
+msgstr "Comunidad Inicial del Usuario"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userSearchList.php"
+#args ""
+msgid "Users Initials"
+msgstr "Iniciales del Usuario"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userSearchList.php"
+#args ""
+msgid "Users System ID"
+msgstr "ID del Usuario en el Sistema"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userSearchList.php"
+#args ""
+msgid "Users email address"
+msgstr "Direcci&oacute;n de e-mail del usuario"
+
+
+#file "/home/ired/zentrack_2/includes/templates/configSettingsForm.php"
+#args ""
+msgid "Value"
+msgstr "Valor"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsSubmit.php"
+#args ""
+msgid "View Chart"
+msgstr "Ver Gr&aacute;fico"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportMenu.php"
+#args ""
+msgid "View Reports"
+msgstr "Ver Reportes"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportMenu.php"
+#args ""
+msgid "View"
+msgstr "Ver"
+
+
+#file "/home/ired/zentrack_2/includes/templates/listContacts.php"
+#args ""
+msgid "Website"
+msgstr "Sitio Web"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsDateMenu.php"
+#args ""
+msgid "Weeks"
+msgstr "Semanas"
+
+
+#file "/home/ired/zentrack_2/www/index.php"
+#args ""
+msgid "Welcome to zenTrack"
+msgstr "Bienvenido a zenTrack"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsOptionsMenu.php"
+#args ""
+msgid "What to Graph"
+msgstr "Qu&eacute; Graficar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/listTickets_workFormat.php"
+#args "array($page_type)"
+msgid "Who the ? belongs to"
+msgstr "A qui&eacute;n pertenece el ?"
+
+
+#file "/home/ired/zentrack_2/includes/templates/listTickets_workFormat.php"
+#args ""
+msgid "Worked"
+msgstr "Trabajado"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/yank.php"
+#args ""
+msgid "Yank Ticket"
+msgstr "Capturar Ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/yank.php"
+#args ""
+msgid "Yank"
+msgstr "Capturar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsDateMenu.php"
+#args ""
+msgid "Years"
+msgstr "A&ntilde;os"
+
+
+#file "/home/ired/zentrack_2/www/ticket.php"
+#args ""
+msgid "You are not allowed to view the following in this bin"
+msgstr "Usted no tiene para acceder esta comunidad"
+
+
+#file "/home/ired/zentrack_2/includes/editTicketSubmit.php"
+#args ""
+msgid "You cannot edit a ticket in this bin "
+msgstr "Usted no puede editar tickets en esta comunidad "
+
+
+#file "/home/ired/zentrack_2/includes/templates/editTicketForm.php"
+#args ""
+msgid "You cannot edit a ticket in this bin"
+msgstr "Usted no puede esitar tickets en esta comunidad"
+
+
+#file "/home/ired/zentrack_2/includes/editCustomSubmit.php"
+#args ""
+msgid "You cannot edit a ticket's custom fields in this bin "
+msgstr "Usted no puede editar los campos personalizados de los tickets de esta comunidad "
+
+
+#file "/home/ired/zentrack_2/www/actions/editCustomSubmit.php"
+#args ""
+msgid "You cannot edit a ticket's custom fields in this bin"
+msgstr "Usted no puede editar los campos personalizados de los tickets de esta comunidad"
+
+
+#file "/home/ired/zentrack_2/www/admin/admin_header.php"
+#args ""
+msgid "You do not have access to administrate zenTrack."
+msgstr "Usted no tiene el nivel de acceso necesario para administrar zenTrack"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchResults.php"
+#args ""
+msgid "You do not have access to any bins."
+msgstr "Usted no tiene acceso a ninguna comunidad."
+
+
+#file "/home/ired/zentrack_2/www/index.php"
+#args ""
+msgid "You do not have access to any existing bins"
+msgstr "Usted no tiene acceso a ninguna comunidad existente"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newProjectForm.php"
+#args ""
+msgid "You do not have permission to create projects."
+msgstr "usted no tiene permiso de crear proyectos."
+
+
+#file "/home/ired/zentrack_2/www/addProjectSubmit.php"
+#args ""
+msgid "You do not have permission to create tickets in this bin."
+msgstr "Usted no tiene permiso para crear tickets en esta comunidad."
+
+
+#file "/home/ired/zentrack_2/includes/templates/newTicketForm.php"
+#args ""
+msgid "You do not have permission to create tickets."
+msgstr "Usted no tiene permiso para crear tickets."
+
+
+#file "/home/ired/zentrack_2/includes/templates/newTicketForm.php"
+#args ""
+msgid "You do not have permission to edit tickets."
+msgstr "Usted no tiene permiso para editar tickets."
+
+
+#file "/home/ired/zentrack_2/www/reports/reports_header.php"
+#args ""
+msgid "You do not have permission to view the reports."
+msgstr "Usted no tiene permiso para ver reportes."
+
+
+#file "/home/ired/zentrack_2/www/helpers/userSearchbox.php"
+#args ""
+msgid "You may use * for a wildcard in any field but the id.. i.e. J* would match anything starting with J"
+msgstr "Usted podr&iacute;a utilizar * como un comod&iacute;n en cualquier campo excepto el ID. Por ejemplo J* har&iacute;a coincidir cualquier cosa que comience con una J"
+
+
+#file "/home/ired/zentrack_2/www/helpers/projectSearchbox.php"
+#args ""
+msgid "You may use * for a wildcard in the title or description.. i.e. J* would match anything starting with J"
+msgstr "Usted podr&iacute;a utilizar * como un comod&iacute;n en el t&iacute;tulo o en la descripci&oacute;n. Por ejemplo J* har&iacute;a coincidir cualquier cosa que comience con una J"
+
+
+#file "/home/ired/zentrack_2/www/actions/addToNotify.php"
+#args ""
+msgid "You must provide at least one registered user, or a valid name and email address"
+msgstr "Usted debe brindar al menos un usuario registrado, o un nombre v&aacute;lido y direcci&oacute;n de e-mail"
+
+
+#file "/home/ired/zentrack_2/www/actions/addToContacts.php"
+#args ""
+msgid "You must select a Company or Person."
+msgstr "Usted debe seleccionar una Compa&ntilde;&iacute;a o Persona"
+
+
+#file "/home/ired/zentrack_2/www/misc/homebin.php"
+#args ""
+msgid "Your bin has been changed to"
+msgstr "Su comunidad ha sido cambiada a"
+
+
+#file "/home/ired/zentrack_2/www/reports/saveSubmit.php"
+#args "array($report_name)"
+msgid "Your chart has been successfully saved with title: ?"
+msgstr "Su gr&aacute;fico ha sido almacenada exitosamente con el t&iacute;tulo: ?"
+
+
+#file "/home/ired/zentrack_2/www/misc/language.php"
+#args ""
+msgid "Your language has been changed to ?"
+msgstr "Su idioma ha sido cambiado a ?"
+
+
+#file "/home/ired/zentrack_2/www/misc/pwc.php"
+#args ""
+msgid "Your new passphrase must contain at least 1 non-letter character"
+msgstr "Su nueva contrase&ntilde;a debe contener por lo menos 1 caracter que no sea una letra"
+
+
+#file "/home/ired/zentrack_2/includes/templates/pwcForm.php"
+#args ""
+msgid "Your passphrase must be at least 6 characters long and contain at least 1 non-letter character."
+msgstr "Su contrase&ntilde;a debe tener al menos 6 caracteres, y contener al menos uno que no sea una letra."
+
+
+#file "/home/ired/zentrack_2/www/misc/pwc.php"
+#args ""
+msgid "Your passphrase must be at least 6 digits long"
+msgstr "Su contrase&ntilde;a debe tener al menos 6 caracteres"
+
+
+#file "/home/ired/zentrack_2/www/misc/pwc.php"
+#args ""
+msgid "Your passwords did not match"
+msgstr "Sus contrase&ntilde;as no coinciden"
+
+
+#file "/home/ired/zentrack_2/www/misc/pwc.php"
+#args ""
+msgid "Your request was successful, but this is a demo site, so the passphrase was not altered"
+msgstr "Su solicitud fue exitosa, pero la contrase&ntilde;a no fue alterada porque &eacute;ste es un sitio de demostraci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/log.php"
+#args ""
+msgid "accepts up to 2 decimal places"
+msgstr "Acepta hasta 2 posiciones decimales"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userSearchList.php"
+#args ""
+msgid "access"
+msgstr "acceso"
+
+
+#file "/home/ired/zentrack_2/includes/templates/contact_titleBox.php"
+#args ""
+msgid "add"
+msgstr "agregar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchForm.php"
+#args ""
+msgid "and"
+msgstr "y"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchForm.php"
+#args ""
+msgid "between"
+msgstr "entre"
+
+
+#file "/home/ired/zentrack_2/includes/templates/ticket_detailsBox.php"
+#args ""
+msgid "completed"
+msgstr "completado"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/upload.php"
+#args ""
+msgid "create an attachment for this ticket"
+msgstr "agregar un archivo adjunto para este ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newProjectForm.php"
+#args ""
+msgid "create your ticket"
+msgstr "crear su ticket"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorMenu.php"
+#args ""
+msgid "delete"
+msgstr "eliminar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userSearchList.php"
+#args ""
+msgid "edit"
+msgstr "editar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userSearchForm.php"
+#args ""
+msgid "enter a number"
+msgstr "ingrese un n&uacute;mero"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/email.php"
+#args ""
+msgid "hold control or shift to select multiple users"
+msgstr "Mantenga presionada la tecla May&uacute;sc o Control para seleccionar m&aacute;s de un usuario"
+
+
+#file "/home/ired/zentrack_2/includes/templates/groupForm.php"
+#args ""
+msgid "id"
+msgstr "id"
+
+
+#file "/home/ired/zentrack_2/www/addAgreementSubmit.php"
+#args ""
+msgid "incorrect date values"
+msgstr "Valores de fecha incorrectos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/accessForm.php"
+#args ""
+msgid "less"
+msgstr "menos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/listTickets_workFormat.php"
+#args ""
+msgid "n/a"
+msgstr "n/a"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchContact4List.php"
+#args ""
+msgid "name"
+msgstr "nombre"
+
+
+#file "/home/ired/zentrack_2/www/helpers/projectSearchbox.php"
+#args ""
+msgid "no bins"
+msgstr "ninguna comunidad"
+
+
+#file "/home/ired/zentrack_2/www/helpers/projectSearchbox.php"
+#args ""
+msgid "ninguna prioridad"
+msgstr ""
+
+
+#file "/home/ired/zentrack_2/www/helpers/projectSearchbox.php"
+#args ""
+msgid "no systems"
+msgstr "ning&uacute;n sistema"
+
+
+#file "/home/ired/zentrack_2/www/helpers/ticketSearchbox.php"
+#args ""
+msgid "no types"
+msgstr "ning&uacute;n tipo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userSearchList.php"
+#args ""
+msgid "no"
+msgstr "no"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/contacts.php"
+#args ""
+msgid "none"
+msgstr "ninguno"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchContact3List.php"
+#args ""
+msgid "nr"
+msgstr "nro"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/assign.php"
+#args ""
+msgid "optional"
+msgstr "opcional"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userSearchList.php"
+#args ""
+msgid "password"
+msgstr "contrase&ntilde;a"
+
+
+#file "/home/ired/zentrack_2/www/addAgreementSubmit.php"
+#args ""
+msgid "required field missing:"
+msgstr "falta campo obligatorio:"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/close.php"
+#args ""
+msgid "required"
+msgstr "obligatorio"
+
+
+#file "/home/ired/zentrack_2/www/reports/view.php"
+#args ""
+msgid "required... processing error"
+msgstr "obligatorio... error de procesamiento"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newAgreementForm.php"
+#args ""
+msgid "save your changes"
+msgstr "guardar sus cambios"
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args "array($id,$name)"
+msgid "ticket #?: accepted by ?"
+msgstr "ticket #?: aceptado por ?"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchContact3List.php"
+#args ""
+msgid "title"
+msgstr "t&iacute;tulo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newTicketForm.php"
+#args ""
+msgid "up to two decimal places, optional"
+msgstr "hasta dos posiciones decimales, opcional"
+
+
+#file "/home/ired/zentrack_2/includes/templates/reportsDateMenu.php"
+#args ""
+msgid "use 4 digit year, time is optional"
+msgstr "utilice a&ntilde;o de 4 d&iacute;gitos, la hora es opcional"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userSearchForm.php"
+#args ""
+msgid "user ID"
+msgstr "ID de usuario"
+
+
+#file "/home/ired/zentrack_2/includes/leftMain.php"
+#args ""
+msgid "version"
+msgstr "versi&oacute;n"
+
+
+#file "/home/ired/zentrack_2/includes/templates/userSearchList.php"
+#args ""
+msgid "yes"
+msgstr "s&iacute;"
+
+
+#file "/home/ired/zentrack_2/www/help/help_header.php"
+#args ""
+msgid "zenTrack Help | "
+msgstr "Ayuda de zenTrack | "
+
+
+#file "/home/ired/zentrack_2/www/help/english/users/tickets.php"
+#args ""
+msgid 'Accept'
+msgstr "Aceptar"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/behaviors.php"
+#args ""
+msgid 'Active'
+msgstr "Activo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/tutorial/english/notify_list.php"
+#args ""
+msgid 'Add Recipient'
+msgstr "Agregar Destinatario"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/behaviors.php"
+#args ""
+msgid 'Admin'
+msgstr "Admin"
+
+
+#file "/home/ired/zentrack_2/includes/templates/tutorial/english/create_ticket.php"
+#args ""
+msgid 'Approval Required'
+msgstr "Se Requiere Aprobaci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/help/english/users/tickets.php"
+#args ""
+msgid 'Approval'
+msgstr "Aprobaci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/help/english/users/tickets.php"
+#args ""
+msgid 'Approve'
+msgstr "Aprobar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/tutorial/english/ownership.php"
+#args ""
+msgid 'Assign'
+msgstr "Asignar"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/data_types.php"
+#args ""
+msgid 'Bin'
+msgstr "Comunidad"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/bins.php"
+#args ""
+msgid 'Bins'
+msgstr "Comunidades"
+
+
+#file "/home/ired/zentrack_2/includes/templates/referencedGroupForm.php"
+#args ""
+msgid 'Cancel'
+msgstr "Cancelar"
+
+
+#file "/home/ired/zentrack_2/www/help/english/users/options.php"
+#args ""
+msgid 'Change Default Bin'
+msgstr "Cambiar Comunidad Inicial"
+
+
+#file "/home/ired/zentrack_2/www/help/english/users/options.php"
+#args ""
+msgid 'Change Language'
+msgstr "Cambiar Idioma"
+
+
+#file "/home/ired/zentrack_2/www/help/english/users/options.php"
+#args ""
+msgid 'Change Password'
+msgstr "Cambiar Contrase&ntilde;a"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/contacts.php"
+#args ""
+msgid 'Click Here'
+msgstr "Haga Click Aqu&iacute;"
+
+
+#file "/home/ired/zentrack_2/www/help/english/users/tickets.php"
+#args ""
+msgid 'Close'
+msgstr "Cerrar"
+
+
+#file "/home/ired/zentrack_2/www/help/english/users/tickets.php"
+#args ""
+msgid 'Closed'
+msgstr "Cerrado"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorDetailForm.php"
+#args ""
+msgid 'Column Number'
+msgstr "N&uacute;mero de Columna"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/behaviors.php"
+#args ""
+msgid 'Compare Value'
+msgstr "Comparar Valores"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newProjectForm.php"
+#args ""
+msgid 'Completed'
+msgstr "Completo"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/settings.php"
+#args ""
+msgid 'Configuration Settings'
+msgstr "Valores de Configuraci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/includes/templates/tutorial/english/contacts.php"
+#args ""
+msgid 'Contacts'
+msgstr "Contactos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/tutorial/english/contacts.php"
+#args ""
+msgid 'Create New'
+msgstr "Crear Nuevo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/tutorial/english/create_ticket.php"
+#args ""
+msgid 'Create new'
+msgstr "Crear nuevo"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/data_groups.php"
+#args ""
+msgid 'Custom'
+msgstr "Personalizado"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/behaviors.php"
+#args ""
+msgid 'Data Group'
+msgstr "Grupo de Datos"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/bins.php"
+#args ""
+msgid 'Data Types'
+msgstr "Tipos de Datos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/tutorial/english/create_ticket.php"
+#args ""
+msgid 'Deadline'
+msgstr "Fecha L&iacute;mite"
+
+
+#file "/home/ired/zentrack_2/includes/templates/bugForm.php"
+#args ""
+msgid 'Debug Output'
+msgstr "Debug Output"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/varfields.php"
+#args ""
+msgid 'Default'
+msgstr "Valor por Omisi&oacute;n"
+
+
+#file "/home/ired/zentrack_2/includes/templates/tutorial/english/create_ticket.php"
+#args ""
+msgid 'Description'
+msgstr "Descripci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/varfields.php"
+#args ""
+msgid 'Details'
+msgstr "Detalles"
+
+
+#file "/home/ired/zentrack_2/includes/templates/referencedGroupForm.php"
+#args ""
+msgid 'Disable'
+msgstr "Deshabilitar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorMenu.php"
+#args ""
+msgid 'Done'
+msgstr "Hecho"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/behaviors.php"
+#args ""
+msgid 'Edit Behaviors'
+msgstr "Editar Comportamientos"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/data_groups.php"
+#args ""
+msgid 'Edit Data Groups'
+msgstr "Editar Grupo de Datos"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/bins.php"
+#args ""
+msgid 'Edit Users'
+msgstr "Editar Usuarios"
+
+
+#file "/home/ired/zentrack_2/includes/templates/editCustomsForm.php"
+#args ""
+msgid 'Edit Variable Fields'
+msgstr "Editar Campos Personalizados"
+
+
+#file "/home/ired/zentrack_2/www/help/english/users/tickets.php"
+#args ""
+msgid 'Edit'
+msgstr "Editar"
+
+
+#file "/home/ired/zentrack_2/www/help/english/users/tickets.php"
+#args ""
+msgid 'Elapsed'
+msgstr "Transcurrido"
+
+
+#file "/home/ired/zentrack_2/includes/templates/bugForm.php"
+#args ""
+msgid 'Email'
+msgstr "Email"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/data_groups.php"
+#args ""
+msgid 'Entries'
+msgstr "Registros"
+
+
+#file "/home/ired/zentrack_2/includes/templates/tutorial/english/create_ticket.php"
+#args ""
+msgid 'Estimated Hours to Complete'
+msgstr "Horas Estimadas para Compeltar"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/data_groups.php"
+#args ""
+msgid 'Eval Script'
+msgstr "Script de Evaluaci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/data_groups.php"
+#args ""
+msgid 'Eval Type'
+msgstr "Tipo de Evaluaci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/includes/templates/bugForm.php"
+#args ""
+msgid 'Explanation'
+msgstr "Explicaci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/varfields.php"
+#args ""
+msgid 'Field Label'
+msgstr "Etiqueta del Campo"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/varfields.php"
+#args ""
+msgid 'Field Name'
+msgstr "Nombre del Campo"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/behaviors.php"
+#args ""
+msgid 'Field is enabled'
+msgstr "El campo queda habilitado"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/behaviors.php"
+#args ""
+msgid 'Field to change'
+msgstr "Campo a cambiar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/groupAdd.php"
+#args ""
+msgid 'File Name'
+msgstr "Nombre del Archivo"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/data_groups.php"
+#args ""
+msgid 'Group Name'
+msgstr "Nombre del Grupo de Datos"
+
+
+#file "/home/ired/zentrack_2/www/help/english/users/tickets.php"
+#args ""
+msgid 'ID'
+msgstr "ID"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/varfields.php"
+#args ""
+msgid 'JS Validation'
+msgstr "Validaci&oacute;n JS"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/data_groups.php"
+#args ""
+msgid 'Javascript'
+msgstr "Javascript"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/varfields.php"
+#args ""
+msgid 'Lists'
+msgstr "Listados"
+
+
+#file "/home/ired/zentrack_2/includes/templates/tutorial/english/log_ticket.php"
+#args ""
+msgid 'Log'
+msgstr "Log"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/behaviors.php"
+#args ""
+msgid "Exact Match"
+msgstr "Coincidencia exacta"
+
+#file "/home/ired/zentrack_2/www/help/english/admin/behaviors.php"
+#args ""
+msgid "Match All"
+msgstr "Coincidir todos (AND)"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/behaviors.php"
+#args ""
+msgid "Match Any"
+msgstr "Coincidir al menos uno (OR)"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/behaviors.php"
+#args ""
+msgid "Match Type"
+msgstr "Tipo de Coincidencia"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/data_groups.php"
+#args ""
+msgid "Matches"
+msgstr "Coincidencias"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorDetailForm.php"
+#args ""
+msgid 'More'
+msgstr "Agregar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/referencedGroupForm.php"
+#args ""
+msgid 'Move'
+msgstr "Mover"
+
+
+#file "/home/ired/zentrack_2/includes/templates/bugForm.php"
+#args ""
+msgid 'Name'
+msgstr "Nombre"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorMenu.php"
+#args ""
+msgid 'New'
+msgstr "Nuevo"
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid 'Next'
+msgstr "Siguiente"
+
+
+#file "/home/ired/zentrack_2/includes/templates/configForm.php"
+#args ""
+msgid 'Notes are special tickets which do not require any actions.'
+msgstr "Las Notas son tickets especiales que no requieren ninguna acci&oacute;n."
+
+
+#file "/home/ired/zentrack_2/includes/templates/tutorial/english/notify_list.php"
+#args ""
+msgid 'Notify'
+msgstr "Notificaciones"
+
+
+#file "/home/ired/zentrack_2/www/help/english/users/tickets.php"
+#args ""
+msgid 'Opened'
+msgstr "Abierto"
+
+
+#file "/home/ired/zentrack_2/includes/templates/groupAdd.php"
+#args ""
+msgid 'Optional'
+msgstr "Opcional"
+
+
+#file "/home/ired/zentrack_2/www/help/english/users/options.php"
+#args ""
+msgid 'Options'
+msgstr "Opciones"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/data_types.php"
+#args ""
+msgid 'Order'
+msgstr "Orden"
+
+
+#file "/home/ired/zentrack_2/www/help/english/users/tickets.php"
+#args ""
+msgid 'Owner'
+msgstr "Responsable"
+
+
+#file "/home/ired/zentrack_2/includes/templates/bugForm.php"
+#args ""
+msgid 'Page'
+msgstr "P&aacute;gina"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/contacts.php"
+#args ""
+msgid 'Person'
+msgstr "Persona"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorMenu.php"
+#args ""
+msgid 'Press DONE when you are finished'
+msgstr "Presione HECHO cuando haya finalizado"
+
+
+#file "/home/ired/zentrack_2/includes/templates/groupForm.php"
+#args ""
+msgid 'Press DONE when you have finished with the edition'
+msgstr "Presione HECHO cuando haya finalizado la edici&oacute;n"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorDetailForm.php"
+#args ""
+msgid 'Press LESS to remove blank rows'
+msgstr "Presione RESTAR para eliminar los registros vac&iacute;os"
+
+
+#file "/home/ired/zentrack_2/includes/templates/binForm.php"
+#args ""
+msgid 'Press MORE to create new bins'
+msgstr "Presione AGREGAR para crear nuevas comunidades"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorDetailForm.php"
+#args ""
+msgid 'Press MORE to create new detail items'
+msgstr "Presione AGREGAR para crear nuevos items de detalle"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorMenu.php"
+#args ""
+msgid 'Press NEW to create new behaviors'
+msgstr "Presione NUEVO para crear nuevos comportamientos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/groupForm.php"
+#args ""
+msgid 'Press NEW to create new data groups'
+msgstr "Presione NUEVO para crear nuevos grupos de datos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/customGroupDetailsForm.php"
+#args ""
+msgid 'Press Reset to ignore them'
+msgstr "Presione RESTAURAR para ignorarlos"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorDetailForm.php"
+#args ""
+msgid 'Press Reset to return to original values'
+msgstr "Presione RESTAURAR para volver a los valores originales"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorDetailForm.php"
+#args ""
+msgid 'Press Save to save changes'
+msgstr "Presione Guardar para almacenar los cambios"
+
+
+#file "/home/ired/zentrack_2/includes/templates/customGroupDetailsForm.php"
+#args ""
+msgid 'Press Save to store your changes'
+msgstr "Presione Guardar para almacenar los cambios"
+
+
+#file "/home/ired/zentrack_2/includes/zenTrack.class"
+#args ""
+msgid 'Prev'
+msgstr "Ant"
+
+
+#file "/home/ired/zentrack_2/www/help/english/users/tickets.php"
+#args ""
+msgid 'Print'
+msgstr "Imprimir"
+
+
+#file "/home/ired/zentrack_2/includes/templates/tutorial/english/create_ticket.php"
+#args ""
+msgid 'Priority'
+msgstr "Prioridad"
+
+
+#file "/home/ired/zentrack_2/includes/templates/tutorial/english/create_ticket.php"
+#args ""
+msgid 'Project'
+msgstr "Proyecto"
+
+
+#file "/home/ired/zentrack_2/includes/templates/configForm.php"
+#args ""
+msgid 'Projects act as containers, which can hold multiple tickets as "tasks" which are part of the projects completion requirements.'
+msgstr "Los Proyectos funcionan como contenedores, que pueden incluir varios tickets como si fueran 'tareas' que forman parte de los requerimientos para completar un proyecto."
+
+
+#file "/home/ired/zentrack_2/includes/templates/tutorial/english/create_ticket.php"
+#args ""
+msgid 'Projects'
+msgstr "Proyectos"
+
+
+#file "/home/ired/zentrack_2/www/help/english/users/tickets.php"
+#args ""
+msgid 'Reject'
+msgstr "Rechazar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/tutorial/english/relate_ticket.php"
+#args ""
+msgid 'Relate'
+msgstr "Relacionar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/tutorial/english/relate_ticket.php"
+#args ""
+msgid 'Related'
+msgstr "Relacionados"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newProjectForm.php"
+#args ""
+msgid 'Required'
+msgstr "Obligatorio"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorDetailForm.php"
+#args ""
+msgid 'Reset'
+msgstr "Restaurar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorDetailForm.php"
+#args ""
+msgid 'Save'
+msgstr "Guardar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/tutorial/english/use_project.php"
+#args ""
+msgid 'Search'
+msgstr "Buscar"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/varfields.php"
+#args ""
+msgid 'Searches'
+msgstr "B&uacute;squedas"
+
+
+#file "/home/ired/zentrack_2/includes/templates/bugForm.php"
+#args ""
+msgid 'Send'
+msgstr "Enviar"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/behaviors.php"
+#args ""
+msgid 'Settings Administration'
+msgstr "Administraci&oacute;n de la Configuraci&oacute;n"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/behaviors.php"
+#args ""
+msgid 'Sort Order'
+msgstr "Orden"
+
+
+#file "/home/ired/zentrack_2/includes/templates/tutorial/english/create_ticket.php"
+#args ""
+msgid 'Start Date'
+msgstr "Fecha de Inicio"
+
+
+#file "/home/ired/zentrack_2/includes/templates/bugForm.php"
+#args ""
+msgid 'Submit a Bug to Zentrack Team'
+msgstr "Enviar un Error al Equipo de Desarrollo de ZenTrack"
+
+
+#file "/home/ired/zentrack_2/www/help/english/users/tickets.php"
+#args ""
+msgid 'System'
+msgstr "Systema"
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/data_groups.php"
+#args ""
+msgid 'Table Name'
+msgstr "Nombre de la Tabla"
+
+
+#file "/home/ired/zentrack_2/includes/templates/tutorial/english/use_project.php"
+#args ""
+msgid 'Tasks'
+msgstr "Tareas"
+
+
+#file "/home/ired/zentrack_2/includes/templates/projectView.php"
+#args ""
+msgid 'Tasks'
+msgstr "Tareas"
+
+
+#file "/home/ired/zentrack_2/www/help/english/users/tickets.php"
+#args ""
+msgid 'Test'
+msgstr "Testeo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/tutorial/english/create_ticket.php"
+#args ""
+msgid 'Testing Required'
+msgstr "Se Requiere Testeo"
+
+
+#file "/home/ired/zentrack_2/www/help/english/users/tickets.php"
+#args ""
+msgid 'Testing'
+msgstr "Testeo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/contacts.php"
+#args ""
+msgid 'There are no employees assigned to this company.'
+msgstr "No hay empleados asignados a esta compa&ntilde;&iacute;a"
+
+
+#file "/home/ired/zentrack_2/includes/templates/configForm.php"
+#args ""
+msgid 'There are two special types, which can be set by including either the word <span class="error">project</span> or <span class="error">note</span> in the bin name.'
+msgstr "Hay dos tipos especiales, que pueden indicarse mediante la inclusi&oacute;n de la palabra <span class='error'>project</span> o <span class='error'>note</span> en el nombre de la comunidad."
+
+
+#file "/home/ired/zentrack_2/includes/templates/configForm.php"
+#args ""
+msgid 'They start their life closed, and do not need to be completed.'
+msgstr "Inician su vida en estado cerrado, y no necesitan completarse."
+
+
+#file "/home/ired/zentrack_2/www/help/english/admin/varfields.php"
+#args ""
+msgid 'Ticket Administration'
+msgstr "Administraci&oacute;n de Tickets"
+
+
+#file "/home/ired/zentrack_2/includes/templates/tutorial/english/create_ticket.php"
+#args ""
+msgid 'Tickets'
+msgstr "Tickets"
+
+
+#file "/home/ired/zentrack_2/includes/templates/tutorial/english/create_ticket.php"
+#args ""
+msgid 'Title'
+msgstr "T&iacute;tulo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/tutorial/english/create_ticket.php"
+#args ""
+msgid 'Type'
+msgstr "Tipo"
+
+
+#file "/home/ired/zentrack_2/includes/templates/configForm.php"
+#args ""
+msgid 'Use them only for tracking and documentation.'
+msgstr "Utilice solamente para seguimiento y documentaci&oaucte;n."
+
+
+#file "/home/ired/zentrack_2/includes/templates/bugForm.php"
+#args ""
+msgid 'User Info'
+msgstr "Informe de Usuario"
+
+
+#file "/home/ired/zentrack_2/www/help/english/users/tickets.php"
+#args ""
+msgid 'Yank'
+msgstr "Capturar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchLogResults.php"
+#args ""
+msgid 'You do not have access to any bins.'
+msgstr "Usted no tiene acceso a esta comunidad."
+
+
+#file "/home/ired/zentrack_2/includes/templates/searchLogResults.php"
+#args ""
+msgid 'You do not have permission to search this bin'
+msgstr "Usted no tiene permiso para hacer b&uacute;squedas en esta comunidad"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorDetailForm.php"
+#args ""
+msgid 'less'
+msgstr "restar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newProjectForm.php"
+#args ""
+msgid 'n/a'
+msgstr "n/a"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorMenu.php"
+#args ""
+msgid 'properties'
+msgstr "propiedades"
+
+
+#file "/home/ired/zentrack_2/includes/templates/behaviorMenu.php"
+#args ""
+msgid 'rules'
+msgstr "reglas"
+
+
+#file "/home/ired/zentrack_2/includes/templates/actions/contacts.php"
+#args ""
+msgid 'to add one'
+msgstr "para agregar uno"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newTicketForm.php"
+#args ""
+msgid 'Save'
+msgstr "Guardar"
+
+
+#file "/home/ired/zentrack_2/includes/templates/newTicketForm.php"
+#args ""
+msgid 'Create'
+msgstr "Crear"
+
+
+#file "/home/ired//zentrack_2/includes/templates/loginForm"
+#args ""
+msgid "Welcome!  Please Log On."
+msgstr "Bienvenido!  Por favor Inicie Su Sesi&oacute;n"
+
+
+#file "/home/ired//zentrack_2/includes/templates/loginForm"
+#args ""
+msgid "Login Name"
+msgstr "Cuenta de Usuario"
+
+
+#file "/home/ired//zentrack_2/includes/templates/loginForm"
+#args ""
+msgid "Password"
+msgstr "Contrase&ntilde;a"
+
+
