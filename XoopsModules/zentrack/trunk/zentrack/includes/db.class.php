@@ -234,7 +234,7 @@ class DB {
     $this->addDebug('db_list','['.$recordSet.'] '.$query,3);
     $vals = array();
     if( $recordSet ) {
-      $vars = $recordSet->getArray($recordSet->_numOfRows);
+      $vars = $recordSet->getArray();
       if( is_array($vars) && count($vars) > 0 ) {
         foreach($vars as $v) {
           $vals[] = $v[0];
