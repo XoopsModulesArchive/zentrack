@@ -1,4 +1,0 @@
-Credits
-===============
-
-Sqeezed into XOOPS and enhanced by Duncan Keir based on original 2.3.2 version by Wang Jue (aka wjue) (http://www.guanxiCRM.com, http://www.wjue.org)
