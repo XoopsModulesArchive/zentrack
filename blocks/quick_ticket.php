@@ -12,7 +12,7 @@ function b_zt_show_quickticket($options)
 
 	global $xoopsModule, $xoopsUser, $xoopsDB, $myts, $zt_zen;
 	$mydirname = basename( dirname( __FILE__ ) ) ;
-	$myts =& MyTextSanitizer::getInstance();
+	$myts = MyTextSanitizer::getInstance();
 	$block = array();
 	if($xoopsUser){
 		
